@@ -7,4 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
   ],
+  colorMode: {
+    preference: 'light',
+  },
 })
