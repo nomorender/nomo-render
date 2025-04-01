@@ -12,7 +12,7 @@
           with architects, designers, real estate developers, and manufacturers
           to bring future spaces to life today
         </p>
-        <div cclass="hidden md:block">
+        <div class="hidden md:block">
           <UButton  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
         </div>
         
