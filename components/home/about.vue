@@ -13,7 +13,7 @@
           to bring future spaces to life today
         </p>
         <div class="hidden md:block">
-          <UButton  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+            <UButton  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
         </div>
         
       </div>
