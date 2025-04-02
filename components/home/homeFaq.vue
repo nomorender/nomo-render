@@ -27,7 +27,7 @@ const items = [
 ]
 </script>
 <template>
-    <div class="bg-[#FAF8F5] p-[100px] grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
+    <div class="bg-[#FAF8F5] px-[100px] py-20 grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
         <h2 class="text-[64px] text-[#8D7662] font-[600] leading-tight">FAQ</h2>
         <div class="space-y-4">
             <UAccordion :collapsible="false" :items="items" :ui="{
