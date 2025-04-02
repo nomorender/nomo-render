@@ -9,10 +9,10 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="md:pl-[200px] transform px-10">
+            <div class="md:pl-[200px] md:transform px-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] w-[315px] h-[351px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg">
-                    <div class="md:w-[350px] md:h-[483px]">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg">
+                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-[268px]">
                         <div class="flex">
                             <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
                                 <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] ml-4 mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -52,7 +52,6 @@
                                 process</span> to ensure technical accuracy, and visual harmony at its best.
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="md:pl-[200px] transform px-10">
@@ -89,7 +88,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] ml-4 mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -135,7 +134,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] ml-4 mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -181,7 +180,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] ml-4 mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
