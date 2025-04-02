@@ -5,6 +5,7 @@
         <HomeAbout></HomeAbout>
         <HomeProject></HomeProject>
         <HomeServices></HomeServices>
+        <HomeBenefits></HomeBenefits>
         <HomeFeedBack/>
         <HomeFaq/>
     </div>
