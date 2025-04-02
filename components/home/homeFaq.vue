@@ -32,19 +32,20 @@ const items = [
         <div class="space-y-4">
             <UAccordion :collapsible="false" :items="items" :ui="{
                 item: {
-                    color : 'text-black',
+                    color: 'text-black',
                     padding: 'py-2 ml-2',
-                    size : 'text-[20px]'
+                    size: 'text-[20px]',
+                    icon : 'w-[48px] h-[48px]'
                 },
                 container: 'bg-transperent',
                 indicators: {
                     wrapper: 'relative bottom-0 mt-4',
                 },
-                base : 'text-black',
-                default :{
+                base: 'text-black',
+                default: {
                     variant: 'bg-transperent',
-                    class : 'text-[25px] font-medium py-3',
-                }
+                    class: 'text-[25px] font-medium py-3',
+                },
             }" />
         </div>
     </div>
