@@ -36,7 +36,7 @@ const items = [
 <template>
     <div class="bg-[#FAF8F5]">
         <div class="pt-20">
-            <p class="text-center text-xl md:text-3xl uppercase">Feedbacks</p>
+            <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
             <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
                 What partners talk about us
             </h2>
