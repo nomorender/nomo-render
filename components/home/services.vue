@@ -8,7 +8,7 @@
       <div
         v-for="(item, index) in services"
         :key="item.name"
-        class="flex flex-col md:flex-row gap-[45px] md:gap-[120px] mb-8"
+        class="flex flex-col md:flex-row gap-[45px] md:gap-[120px] mb-8 mt-20"
         :class="{ 'md:flex-row-reverse': index % 2 }"
       >
         <div>
@@ -72,8 +72,8 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <UButton color="gray" size="xl" variant="solid"
-          >SEE OUR WORKFLOW</UButton
+        <UButton color="gray" size="xl" variant="solid" class="bg-[#8D7662] uppercase text-[#F5F5F5] text-[20px] px-6 py-3 hover:bg-[#90755e]"
+          >See our workflow</UButton
         >
       </div>
     </div>
@@ -93,5 +93,30 @@ const services = [
 </ul>
 <p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
   },
+  {
+    name: "Exterior Rendering",
+    link: "/exterior",
+    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
+    content: `<p>We provide detailed and accurate representations of:</p>
+<ul class="list-disc pl-4">
+    <li>Buildings</li>
+    <li>Landscapes</li>
+    <li>Surroundings</li>
+</ul>
+<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+  },
+  {
+    name: "Exterior Rendering",
+    link: "/exterior",
+    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
+    content: `<p>We provide detailed and accurate representations of:</p>
+<ul class="list-disc pl-4">
+    <li>Buildings</li>
+    <li>Landscapes</li>
+    <li>Surroundings</li>
+</ul>
+<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+  },
+  
 ];
 </script>
