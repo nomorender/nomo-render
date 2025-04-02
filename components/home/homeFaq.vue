@@ -34,6 +34,7 @@ const items = [
                 item: {
                     color : 'text-black',
                     padding: 'py-2 ml-2',
+                    size : 'text-[20px]'
                 },
                 container: 'bg-transperent',
                 indicators: {
@@ -42,16 +43,9 @@ const items = [
                 base : 'text-black',
                 default :{
                     variant: 'bg-transperent',
-                    class : 'text-[25px] font-medium',
+                    class : 'text-[25px] font-medium py-3',
                 }
             }" />
         </div>
     </div>
-
-
-    <!-- <UAccordion :items="items">
-                <UAccordionItem class="text-4xl">
-                    Hello
-                </UAccordionItem>
-            </UAccordion> -->
 </template>
