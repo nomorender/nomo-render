@@ -27,8 +27,8 @@ const items = [
 ]
 </script>
 <template>
-    <div class="bg-[#FAF8F5] px-[100px] py-20 grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
-        <h2 class="text-[64px] text-[#8D7662] font-[600] leading-tight">FAQ</h2>
+    <div class="bg-[#FAF8F5] px-[100px] py-20 md:grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
+        <h2 class="text-[64px] text-[#8D7662] font-[600] leading-tight text-center">FAQ</h2>
         <div class="space-y-4">
             <UAccordion :collapsible="false" :items="items" :ui="{
                 item: {
@@ -41,10 +41,10 @@ const items = [
                 indicators: {
                     wrapper: 'relative bottom-0 mt-4',
                 },
-                base: 'text-black',
+                base: 'text-black  whitespace-normal break-words  w-full',
                 default: {
                     variant: 'bg-transperent',
-                    class: 'text-[25px] font-medium py-3',
+                    class: 'md:text-[25px] text-[15px] font-medium py-3 whitespace-normal break-words w-full overflow-visible',
                 },
             }" />
         </div>
