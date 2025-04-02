@@ -2,7 +2,7 @@
     <div>
       <Header></Header>
       <slot />
-      <HomeSubcribe/>
+      <!-- <HomeSubcribe/> -->
       <Footer/>
     </div>
 </template>

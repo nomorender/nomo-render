@@ -12,7 +12,7 @@ const items = [
         name: 'Name',
         position: 'Position',
         star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
         img: `/services/2.png`,
         ava: ''
     },
@@ -43,7 +43,7 @@ const items = [
         </div>
         <div class="h-fit flex justify-center items-center">
             <UCarousel v-slot="{ item }" :items="items" :ui="{
-                item: 'basis-1/3',
+                item: 'basis-full md:basis-1/3',
                 arrows: {
 
                 }
@@ -73,7 +73,8 @@ const items = [
                             </div>
                         </div>
                         <div>
-                            <div class="max-w-[340px] font-[300] italic mt-5">
+                            <div class="max-w-[340px] font-[300] italic mt-5 overflow-hidden" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; 
+    display: box; line-clamp: 4; box-orient: vertical;">
                                 {{ item.description }}
                             </div>
                         </div>
