@@ -73,8 +73,8 @@ const items = [
                             </div>
                         </div>
                         <div>
-                            <div class="max-w-[340px] font-[300] italic mt-5 overflow-hidden" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; 
-    display: box; line-clamp: 4; box-orient: vertical;">
+                            <div class="max-w-[340px] font-[300] italic mt-5 overflow-hidden"
+                                style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;">
                                 {{ item.description }}
                             </div>
                         </div>
