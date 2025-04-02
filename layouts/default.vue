@@ -5,4 +5,4 @@
       <HomeSubcribe/>
       <Footer/>
     </div>
-  </template>
+</template>
