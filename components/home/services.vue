@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#FAF8F5]">
-    <div class="py-10 md:py-20 max-w-7xl mx-auto mb-4">
+    <div class="py-10 md:py-20 max-w-7xl mx-auto mb-20">
       <p class="text-center text-xl md:text-3xl">SERVICES</p>
       <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
         What we do?

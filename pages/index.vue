@@ -8,6 +8,7 @@
         <HomeBenefits></HomeBenefits>
         <HomeFeedBack/>
         <HomeFaq/>
+        <HomeSubcribe/>
     </div>
     
 </template>
