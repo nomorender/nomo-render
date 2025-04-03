@@ -49,7 +49,6 @@ const items = [
         ava: ''
     },
 ]
-const carousel = ref()
 </script>
 
 <template>
@@ -62,15 +61,7 @@ const carousel = ref()
                 </h2>
             </div>
             <div class="h-fit flex justify-center items-center relative">
-                <UButton
-                    class="p-2 absolute left-[6rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg"
-                    @click="carousel.prev()">
-                    <div class="text-[#8D7662] flex justify-center">
-                        <UIcon name="mdi-light:arrow-left" class="size-10" />
-                    </div>
-                </UButton>
-
-                <UCarousel ref="carousel" v-slot="{ item }" :items="items" :ui="{
+                <UCarousel v-slot="{ item }" :items="items" :ui="{
                     item: 'basis-full md:basis-1/3 md:w-[200px] w-[80px]',
                     default: {
                         prevButton: {
@@ -123,14 +114,6 @@ const carousel = ref()
                         </div>
                     </div>
                 </UCarousel>
-
-                <UButton
-                    class="p-2 absolute right-[6rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-lg"
-                    @click="carousel.next()">
-                    <div class="text-[#980C0C] flex justify-center">
-                        <UIcon name="mdi-light:arrow-right text-[#FFFFFF]" class="size-10" />
-                    </div>
-                </UButton>
             </div>
         </div>
     </div>
