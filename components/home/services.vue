@@ -117,6 +117,18 @@ const services = [
 </ul>
 <p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
   },
+  {
+    name: "Exterior Rendering",
+    link: "/exterior",
+    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
+    content: `<p>We provide detailed and accurate representations of:</p>
+<ul class="list-disc pl-4">
+    <li>Buildings</li>
+    <li>Landscapes</li>
+    <li>Surroundings</li>
+</ul>
+<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+  },
   
 ];
 </script>
