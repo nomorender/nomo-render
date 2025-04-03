@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#D9D9D9] h-fit pb-[200px] pt-2">
+    <div class="bg-[#D9D9D9] h-fit md:pb-[200px] pt-2">
         <div class="py-10 flex justify-center md:justify-start">
             <div class="md:w-[1000px] md:px-[200px] w-[208px]">
                 <div class="md:text-[32px] text-[16px] font-[400] text-[#000000] text-center md:text-left">What is the
@@ -9,54 +9,9 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="md:pl-[200px] md:transform px-10">
+            <div class="md:pl-[200px] md:transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg">
-                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-[268px]">
-                        <div class="flex">
-                            <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
-                                <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
-                                    xml:space="preserve">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g>
-                                            <g>
-                                                <g>
-                                                    <path
-                                                        d="M281.336,353.976l11.92-11.92l-11.312-11.312l-11.92,11.92c-4.192-2.784-8.928-4.816-14.024-5.856V320h-16v16.808 c-5.096,1.04-9.832,3.072-14.024,5.856l-11.92-11.92l-11.312,11.312l11.92,11.92c-2.784,4.192-4.816,8.928-5.856,14.024H192v16 h16.808c1.04,5.096,3.072,9.832,5.856,14.024l-11.92,11.92l11.312,11.312l11.92-11.92c4.192,2.784,8.928,4.816,14.024,5.856V432 h16v-16.808c5.096-1.04,9.832-3.072,14.024-5.856l11.92,11.92l11.312-11.312l-11.92-11.92c2.784-4.192,4.816-8.928,5.856-14.024 H304v-16h-16.808C286.152,362.904,284.12,358.168,281.336,353.976z M248,400c-13.232,0-24-10.768-24-24s10.768-24,24-24 s24,10.768,24,24S261.232,400,248,400z">
-                                                    </path>
-                                                    <path
-                                                        d="M349.664,313.96l-51.184-7.44l-25.024-50.704c-3.6-7.28-9.944-12.496-17.456-14.68V232h48c13.232,0,24-10.768,24-24v-8 h16v-16h-18.8l96-184H283.152L248,67.376L212.848,0H74.8l96,184H152v16h16v8c0,13.232,10.768,24,24,24h48v9.144 c-7.512,2.184-13.856,7.4-17.456,14.688l-25.016,50.696l-51.184,7.44C131.328,316.144,120,329.232,120,344.408 c0,8.24,3.384,16.272,9.288,22.032l37.032,36.096l-11.44,66.712c-1.144,6.664,0.704,13.456,5.064,18.624 c6.752,8,18.944,10.368,28.144,5.504L248,461.872l59.904,31.488c3.264,1.728,6.952,2.64,10.656,2.64 c6.76,0,13.136-2.968,17.496-8.136c4.36-5.168,6.2-11.96,5.064-18.624l-11.44-66.712l37.032-36.104 c5.904-5.744,9.288-13.776,9.288-22.016C376,329.232,364.672,316.144,349.664,313.96z M394.8,16L308,182.368l-10.976-21.04 L372.848,16H394.8z M354.8,16L288,144.04L277.024,123l55.824-107H354.8z M292.848,16H314.8L268,105.704l-10.976-21.04L292.848,16 z M203.152,16L290.8,184h-21.952L181.2,16H203.152z M101.2,16h21.952l26.976,51.696l14.184-7.4L141.2,16h21.952L250.8,184 h-21.952L172.656,76.304l-14.184,7.4L210.8,184h-21.952L101.2,16z M192,216c-4.408,0-8-3.592-8-8v-8h128v8c0,4.408-3.592,8-8,8 H192z M355.536,354.976l-43.056,41.976l12.864,75c0.472,2.744-0.752,4.688-1.52,5.608c-0.776,0.912-2.48,2.44-5.264,2.44 c-1.112,0-2.216-0.272-3.2-0.792L248,443.8l-67.36,35.416c-0.976,0.512-2.088,0.784-3.2,0.784c-2.784,0-4.496-1.528-5.264-2.448 c-0.776-0.92-2-2.856-1.52-5.608l12.864-75l-43.056-41.968c-2.84-2.76-4.464-6.616-4.464-10.568c0-7.28,5.432-13.56,12.64-14.608 l59.504-8.648l28.744-58.24C239,258.648,243.256,256,248,256s9,2.648,11.104,6.904l28.744,58.248l59.512,8.648 c7.2,1.048,12.64,7.328,12.64,14.608C360,348.36,358.376,352.216,355.536,354.976z">
-                                                    </path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="ml-5">
-                                <div
-                                    class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
-                                    top-notch</div>
-                                <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
-                            </div>
-                        </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
-                            We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
-                            and
-                            <span class="font-[500]">consistency</span>. Every rendering
-                            undergoes
-                            a <span class="font-[500]">double-check</span> and <span class="font-[500]">review
-                                process</span> to ensure technical accuracy, and visual harmony at its best.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:pl-[200px] transform px-10">
-                <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] w-[315px] h-[351px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem]">
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex">
                             <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
@@ -88,7 +43,53 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                            We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
+                            and
+                            <span class="font-[500]">consistency</span>. Every rendering
+                            undergoes
+                            a <span class="font-[500]">double-check</span> and <span class="font-[500]">review
+                                process</span> to ensure technical accuracy, and visual harmony at its best.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:pl-[200px] transform px-10 pb-10">
+                <div
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem]">
+                    <div class="md:w-[350px] md:h-[483px]">
+                        <div class="flex">
+                            <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
+                                <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
+                                    xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M281.336,353.976l11.92-11.92l-11.312-11.312l-11.92,11.92c-4.192-2.784-8.928-4.816-14.024-5.856V320h-16v16.808 c-5.096,1.04-9.832,3.072-14.024,5.856l-11.92-11.92l-11.312,11.312l11.92,11.92c-2.784,4.192-4.816,8.928-5.856,14.024H192v16 h16.808c1.04,5.096,3.072,9.832,5.856,14.024l-11.92,11.92l11.312,11.312l11.92-11.92c4.192,2.784,8.928,4.816,14.024,5.856V432 h16v-16.808c5.096-1.04,9.832-3.072,14.024-5.856l11.92,11.92l11.312-11.312l-11.92-11.92c2.784-4.192,4.816-8.928,5.856-14.024 H304v-16h-16.808C286.152,362.904,284.12,358.168,281.336,353.976z M248,400c-13.232,0-24-10.768-24-24s10.768-24,24-24 s24,10.768,24,24S261.232,400,248,400z">
+                                                    </path>
+                                                    <path
+                                                        d="M349.664,313.96l-51.184-7.44l-25.024-50.704c-3.6-7.28-9.944-12.496-17.456-14.68V232h48c13.232,0,24-10.768,24-24v-8 h16v-16h-18.8l96-184H283.152L248,67.376L212.848,0H74.8l96,184H152v16h16v8c0,13.232,10.768,24,24,24h48v9.144 c-7.512,2.184-13.856,7.4-17.456,14.688l-25.016,50.696l-51.184,7.44C131.328,316.144,120,329.232,120,344.408 c0,8.24,3.384,16.272,9.288,22.032l37.032,36.096l-11.44,66.712c-1.144,6.664,0.704,13.456,5.064,18.624 c6.752,8,18.944,10.368,28.144,5.504L248,461.872l59.904,31.488c3.264,1.728,6.952,2.64,10.656,2.64 c6.76,0,13.136-2.968,17.496-8.136c4.36-5.168,6.2-11.96,5.064-18.624l-11.44-66.712l37.032-36.104 c5.904-5.744,9.288-13.776,9.288-22.016C376,329.232,364.672,316.144,349.664,313.96z M394.8,16L308,182.368l-10.976-21.04 L372.848,16H394.8z M354.8,16L288,144.04L277.024,123l55.824-107H354.8z M292.848,16H314.8L268,105.704l-10.976-21.04L292.848,16 z M203.152,16L290.8,184h-21.952L181.2,16H203.152z M101.2,16h21.952l26.976,51.696l14.184-7.4L141.2,16h21.952L250.8,184 h-21.952L172.656,76.304l-14.184,7.4L210.8,184h-21.952L101.2,16z M192,216c-4.408,0-8-3.592-8-8v-8h128v8c0,4.408-3.592,8-8,8 H192z M355.536,354.976l-43.056,41.976l12.864,75c0.472,2.744-0.752,4.688-1.52,5.608c-0.776,0.912-2.48,2.44-5.264,2.44 c-1.112,0-2.216-0.272-3.2-0.792L248,443.8l-67.36,35.416c-0.976,0.512-2.088,0.784-3.2,0.784c-2.784,0-4.496-1.528-5.264-2.448 c-0.776-0.92-2-2.856-1.52-5.608l12.864-75l-43.056-41.968c-2.84-2.76-4.464-6.616-4.464-10.568c0-7.28,5.432-13.56,12.64-14.608 l59.504-8.648l28.744-58.24C239,258.648,243.256,256,248,256s9,2.648,11.104,6.904l28.744,58.248l59.512,8.648 c7.2,1.048,12.64,7.328,12.64,14.608C360,348.36,358.376,352.216,355.536,354.976z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="ml-5">
+                                <div
+                                    class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                    top-notch</div>
+                                <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
+                            </div>
+                        </div>
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -100,9 +101,9 @@
 
                 </div>
             </div>
-            <div class="md:pl-[200px] transform px-10">
+            <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] w-[315px] h-[351px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem]">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem]">
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex">
                             <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
@@ -134,7 +135,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -146,9 +147,9 @@
 
                 </div>
             </div>
-            <div class="md:pl-[200px] transform px-10">
+            <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] w-[315px] h-[351px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem]">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem]">
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex">
                             <div class="md:h-[80px] md:w-[80px] h-[70px] w-[70px]">
@@ -180,7 +181,7 @@
                                 <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
                             </div>
                         </div>
-                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify">
+                        <div class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
