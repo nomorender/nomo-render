@@ -54,7 +54,7 @@ const carousel = ref()
 
 <template>
     <div class="py-20">
-        <div class="bg-[#FAF8F5]">
+        <div class="bg-[#FAF8F5] md:pb-0 pb-20">
             <div class="pt-20">
                 <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
                 <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
@@ -63,7 +63,7 @@ const carousel = ref()
             </div>
             <div class="h-fit flex justify-center items-center relative">
                 <UButton
-                    class="p-2 absolute left-[6rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg"
+                    class=" -translate-y-[-20rem] -translate-x-[-3rem] p-2 absolute left-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                     @click="carousel.prev()">
                     <div class="text-[#8D7662] flex justify-center">
                         <UIcon name="mdi-light:arrow-left" class="size-10" />
@@ -92,29 +92,29 @@ const carousel = ref()
                             </div>
                             <div class="mt-[30px] flex gap-5">
                                 <div>
-                                    <UAvatar src="" class="bg-[#D9D9D9] h-[60px] w-[60px]" />
+                                    <UAvatar src="" class="bg-[#D9D9D9] h-[70px] w-[70px]" />
                                 </div>
                                 <div>
-                                    <div class="text-[18px]">
+                                    <div class="text-[20px] font-[600]">
                                         {{ item.name }}
                                     </div>
-                                    <div class="text-[14px] font-[400] italic">
+                                    <div class="text-[16px] font-[400] italic">
                                         {{ item.position }}
                                     </div>
-                                    <div class="flex items-start text-left">
-                                        <UIcon v-for="n in item.star" :key="n" name="ic:baseline-star"
-                                            class=" text-[#FFE100] size-[22px]" />
+                                    <div class="flex items-start text-left mt-2 gap-1">
+                                        <UIcon v-for="n in item.star" :key="n" name="streamline:star-1-solid"
+                                            class=" text-[#FFC300] size-[20px]" />
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <div class="max-w-[340px] font-[300] italic mt-5 overflow-hidden"
+                                <div class="max-w-[340px] text-[20xp] leading-[150%] font-[300] italic mt-5 overflow-hidden"
                                     style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;">
                                     {{ item.description }}
                                 </div>
                             </div>
                             <div class="mt-5">
-                                <UButton variant="ghost" class="outline outline-1 outline-[#980C0C]">
+                                <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2">
                                     <div class="text-[#980C0C] flex justify-center">
                                         <UIcon name="cuida:arrow-right-outline" class="size-5" /> See more
                                     </div>
@@ -125,10 +125,10 @@ const carousel = ref()
                 </UCarousel>
 
                 <UButton
-                    class="p-2 absolute right-[6rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-lg"
+                    class="p-2 absolute md:right-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                     @click="carousel.next()">
-                    <div class="text-[#980C0C] flex justify-center">
-                        <UIcon name="mdi-light:arrow-right text-[#FFFFFF]" class="size-10" />
+                    <div class="text-[#FFFFFF] flex justify-center">
+                        <UIcon name="mdi-light:arrow-right" class="size-10" />
                     </div>
                 </UButton>
             </div>
