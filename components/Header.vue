@@ -27,7 +27,6 @@
           </div>
         </div>
 
-        <!-- Menu Mobile Nav-->
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid" class="lg:hidden text-white"
             :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
@@ -40,27 +39,33 @@
               <div class="flex flex-1 flex-col gap-10 mt-10">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"
-                    class=" text-xl cursor-pointer hover:underline font-semibold"
-                    :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
+                    class=" text-xl cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
-                  <UDropdown v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
-                    <div class="flex items-center gap-4">
-                      <p class=" text-xl hover:underline font-semibold"
-                        :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
+                  <div v-else class="flex flex-col items-end gap-3">
+                    <div @click="open = item.name === open ? null : item.name" 
+                         class="flex items-center justify-end gap-4 cursor-pointer">
+                      <div class="text-[20px] font-semibold text-[#8D7662]">
                         {{ item.name }}
-                      </p>
-                      <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"
-                        :class="isScrolled ? 'text-[#8D7662]' : 'text-white'" />
+                      </div>
+                      <UIcon name="gridicons:dropdown" 
+                             class="transition-transform duration-200 size-10"
+                             :class="{'transform rotate-180': open === item.name}" />
                     </div>
-                  </UDropdown>
-                  <span class=" absolute left-0 bottom-[-10px] h-[1px] bg-[#8D7662] w-full"></span>
+                    <div v-show="open === item.name" class="mt-2 pl-4 space-y-3 flex flex-col items-end">
+                      <div v-for="child in item.childen[0]" :key="child.label" 
+                         class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
+                        {{ child.label }}
+                    </div>
+                    </div>
+                  </div>
+                  <span v-if="item !== navList[navList.length - 1]"
+                    class="absolute left-0 bottom-[-10px] h-[1px] bg-[#8D7662] w-full"></span>
                 </div>
               </div>
             </div>
           </USlideover>
         </div>
-        <!-- End Mobile Nav -->
       </nav>
     </div>
   </div>
@@ -68,7 +73,7 @@
 
 <script lang="ts" setup>
 const router = useRouter();
-
+const open = ref<string | null>(null); 
 const navList = [
   {
     path: "/",
@@ -154,7 +159,6 @@ const navList = [
 ];
 
 const isOpenMenu = ref(false);
-const open = ref(false);
 
 
 const isScrolled = ref(false);
