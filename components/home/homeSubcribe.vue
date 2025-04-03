@@ -16,11 +16,11 @@
             </div>
             <div class="gap-1 ml-5">
               <div class="flex">
-                <UIcon name="ic:baseline-star" class="size-5 text-[#FFE100] size-[48px]" />
-                <UIcon name="ic:baseline-star" class="size-5 text-[#FFE100] size-[48px]" />
-                <UIcon name="ic:baseline-star" class="size-5 text-[#FFE100] size-[48px]" />
-                <UIcon name="ic:baseline-star" class="size-5 text-[#FFE100] size-[48px]" />
-                <UIcon name="ic:baseline-star" class="size-5 text-[#FFE100] size-[48px]" />
+                <UIcon name="ic:baseline-star" class=" text-[#FFE100] size-[48px]" />
+                <UIcon name="ic:baseline-star" class=" text-[#FFE100] size-[48px]" />
+                <UIcon name="ic:baseline-star" class=" text-[#FFE100] size-[48px]" />
+                <UIcon name="ic:baseline-star" class=" text-[#FFE100] size-[48px]" />
+                <UIcon name="ic:baseline-star" class=" text-[#FFE100] size-[48px]" />
               </div>
               <div class="flex items-start">
                 <p class="font-thin mt-2">200+ reviews</p>
