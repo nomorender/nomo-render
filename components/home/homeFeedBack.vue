@@ -50,80 +50,105 @@ const items = [
     },
 ]
 const carousel = ref()
+const isOpen = ref(false)
+
 </script>
 
 <template>
-    <div class="py-20">
-        <div class="bg-[#FAF8F5] md:pb-0 pb-20">
+    <div class="pt-20">
+        <div class="bg-[#FAF8F5]">
             <div class="pt-20">
                 <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
                 <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
                     What partners talk about us
                 </h2>
             </div>
-            <div class="h-fit flex justify-center items-center relative">
+            <div class="relative bg-[#FAF8F5]">
                 <UButton
-                    class=" -translate-y-[-20rem] -translate-x-[-3rem] p-2 absolute left-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                    class="hidden md:block p-2 absolute md:left-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                     @click="carousel.prev()">
                     <div class="text-[#8D7662] flex justify-center">
                         <UIcon name="mdi-light:arrow-left" class="size-10" />
                     </div>
                 </UButton>
+                <div class="max-w-7xl pt-5 mx-auto md:pb-10">
+                    <UCarousel :items="items" arrows :ui="{
+                        item: 'basis-full md:basis-1/2 lg:basis-1/3', arrows: {
+                            wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
+                        },
+                    }" ref="carousel">
+                        <template #default="{ item }">
+                            <div class="flex items-center justify-center w-full pb-10">
+                                <div>
+                                    <div>
+                                        <NuxtImg :src=item.img class="w-[360px] h-[250px] rounded-[8px]"
+                                            draggable="false" />
+                                    </div>
+                                    <div class="mt-[30px] flex gap-5">
+                                        <div>
+                                            <UAvatar src="" class="bg-[#D9D9D9] h-[70px] w-[70px]" />
+                                        </div>
+                                        <div>
+                                            <div class="text-[20px] font-[600]">
+                                                {{ item.name }}
+                                            </div>
+                                            <div class="text-[16px] font-[400] italic">
+                                                {{ item.position }}
+                                            </div>
+                                            <div class="flex items-start text-left mt-2 gap-1">
+                                                <UIcon v-for="n in item.star" :key="n" name="streamline:star-1-solid"
+                                                    class=" text-[#FFC300] size-[20px]" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="max-w-[340px] text-[20xp] leading-[150%] font-[300] italic mt-5 overflow-hidden"
+                                            style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;">
+                                            {{ item.description }}
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2">
+                                            <div class="text-[#980C0C] flex justify-center">
+                                                <UIcon name="cuida:arrow-right-outline" class="size-5" /> See more
+                                            </div>
+                                        </UButton>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <template #prev="{ onClick, disabled }">
+                            <UButton class="rounded-full p-5 bg-[#FFFFFF] hover:bg-white text-[#8D7662] shadow-lg"
+                                color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-left"
+                                square>
+                            </UButton>
+                        </template>
 
-                <UCarousel ref="carousel" v-slot="{ item }" :items="items" :ui="{
-                    item: 'basis-full md:basis-1/3 md:w-[200px] w-[80px]',
-                    default: {
-                        prevButton: {
-                            color: '',
-                            class: 'hidden',
-                            icon: '',
-                        },
-                        nextButton: {
-                            color: '',
-                            class: 'hidden',
-                            icon: '',
-                        },
-                    },
-                }" arrows class="w-fit h-fit flex items-center justify-center">
-                    <div class="flex items-center justify-center w-full pb-20">
-                        <div>
-                            <div>
-                                <NuxtImg :src=item.img class="w-[360px] h-[250px] rounded-[8px]" draggable="false" />
-                            </div>
-                            <div class="mt-[30px] flex gap-5">
+                        <template #next="{ onClick, disabled }">
+                            <UButton
+                                class="rounded-full p-5 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg"
+                                color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-right"
+                                square>
+                            </UButton>
+                        </template>
+                    </UCarousel>
+
+                    <UModal v-model="isOpen">
+                        <div class="p-4 relative">
+                            <UButton color="gray" square size="xl" icon="i-heroicons-x-mark-20-solid"
+                                class="absolute rounded-full right-4 top-4" @click="isOpen = false" />
+                            <div class="flex gap-2.5 mb-8">
+                                <NuxtImg class="w-[50px] h-[50px]" src="/logo-tron.png"></NuxtImg>
                                 <div>
-                                    <UAvatar src="" class="bg-[#D9D9D9] h-[70px] w-[70px]" />
-                                </div>
-                                <div>
-                                    <div class="text-[20px] font-[600]">
-                                        {{ item.name }}
-                                    </div>
-                                    <div class="text-[16px] font-[400] italic">
-                                        {{ item.position }}
-                                    </div>
-                                    <div class="flex items-start text-left mt-2 gap-1">
-                                        <UIcon v-for="n in item.star" :key="n" name="streamline:star-1-solid"
-                                            class=" text-[#FFC300] size-[20px]" />
-                                    </div>
+                                    <p class="text-lg font-semibold">Project’s Name</p>
+                                    <p class="font-light">Nomo Render - 3D Visualization Studio</p>
                                 </div>
                             </div>
-                            <div>
-                                <div class="max-w-[340px] text-[20xp] leading-[150%] font-[300] italic mt-5 overflow-hidden"
-                                    style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;">
-                                    {{ item.description }}
-                                </div>
-                            </div>
-                            <div class="mt-5">
-                                <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2">
-                                    <div class="text-[#980C0C] flex justify-center">
-                                        <UIcon name="cuida:arrow-right-outline" class="size-5" /> See more
-                                    </div>
-                                </UButton>
-                            </div>
+                            <p class="text-[#8D7662] font-semibold mb-5">PROJECT’S NAME</p>
+                            <div class="h-48">This is body</div>
                         </div>
-                    </div>
-                </UCarousel>
-
+                    </UModal>
+                </div>
                 <UButton
                     class="p-2 absolute md:right-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                     @click="carousel.next()">
@@ -134,5 +159,6 @@ const carousel = ref()
             </div>
         </div>
     </div>
+
 
 </template>

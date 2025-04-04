@@ -25,9 +25,7 @@ const isOpen = ref(false)
           </div>
           <NuxtImg :src="item" class="w-full  rounded-lg" draggable="false" />
         </div>
-
       </template>
-
       <template #prev="{ onClick, disabled }">
         <UButton class="rounded-full" color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-left"
           square>
@@ -39,8 +37,8 @@ const isOpen = ref(false)
           square>
         </UButton>
       </template>
-
     </UCarousel>
+
     <UModal v-model="isOpen">
       <div class="p-4 relative">
         <UButton color="gray" square size="xl" icon="i-heroicons-x-mark-20-solid"
@@ -54,7 +52,6 @@ const isOpen = ref(false)
         </div>
         <p class="text-[#8D7662] font-semibold mb-5">PROJECT’S NAME</p>
         <div class="h-48">This is body</div>
-
       </div>
     </UModal>
   </div>
