@@ -3,7 +3,7 @@
         <div class="pt-20 pb-10 flex justify-center md:justify-start">
             <div class="md:w-[1000px] md:px-[200px] w-[300px]">
                 <div class="md:text-[32px] text-[16px] leading-[150%] font-[600] text-[#000000] text-center md:text-left">What is the
-                    benefits of .</div>
+                    benefits of</div>
                 <div class="md:text-[64px] text-[30px] font-[600] text-[#8D7662] mt-2 text-center md:text-left">
                     partnering with Nomo Render?</div>
             </div>
