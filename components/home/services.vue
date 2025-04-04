@@ -44,7 +44,7 @@
         <div class="fex-grow flex-1 mx-8">
           <p class="mb-8 md:text-5xl text-xl">{{ item.name }}</p>
           <div
-            class="md:text-2xl text-sm font-light mb-6"
+            class="md:text-2xl text-sm font-light mb-6 "
             v-html="item.content"
           ></div>
           <div class="hidden md:block">
