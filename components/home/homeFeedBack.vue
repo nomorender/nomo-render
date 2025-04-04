@@ -150,7 +150,7 @@ const isOpen = ref(false)
                     </UModal>
                 </div>
                 <UButton
-                    class="p-2 absolute md:right-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                    class="hidden md:block p-2 absolute md:right-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                     @click="carousel.next()">
                     <div class="text-[#FFFFFF] flex justify-center">
                         <UIcon name="mdi-light:arrow-right" class="size-10" />

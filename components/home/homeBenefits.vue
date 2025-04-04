@@ -12,10 +12,10 @@
             <div class="md:pl-[200px] md:transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg">
-                    <div class="md:w-[350px] md:h-[483px]">
+                    <div class="md:w-[350px] md:h-[483px]]">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <!-- <img src="/public/Object.svg" class="md:h-[103px] md:w-[75px] h-[70px] w-[70px]"/> -->
+                                <NuxtImg src="/Logo1.png" class="md:h-[103px] md:w-[75px] h-[70px] w-[70px]"/>
                             </div>
                             <div class="ml-5">
                                 <div
@@ -42,7 +42,7 @@
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <!-- <img src="/public/TimeIcon.svg" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]"/> -->
+                                <NuxtImg src="/Time.png" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]"/>
                             </div>
                             <div class="ml-5">
                                 <div
@@ -70,7 +70,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                             <div class="">
-                                <!-- <img src="/public/Price.svg" class="md:h-[75px] md:w-[105px] h-[70px] w-[70px]"/> -->
+                                <NuxtImg src="/Save.png" class="md:h-[75px] md:w-[105px] h-[70px] w-[70px]"/>
                             </div>
                             <div class="ml-5">
                                 <div
@@ -99,7 +99,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                             <div class="">
-                                <!-- <img src="/public/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]"/> -->
+                                <NuxtImg src="/Hand.png" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]"/>
                             </div>
                             <div class="ml-5">
                                 <div
