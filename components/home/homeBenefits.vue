@@ -15,7 +15,7 @@
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <img src="/public/Object.svg" class="md:h-[103px] md:w-[75px] h-[70px] w-[70px]"/>
+                                <!-- <img src="/public/Object.svg" class="md:h-[103px] md:w-[75px] h-[70px] w-[70px]"/> -->
                             </div>
                             <div class="ml-5">
                                 <div
@@ -42,7 +42,7 @@
                     <div class="md:w-[350px] md:h-[483px]">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <img src="/public/TimeIcon.svg" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]"/>
+                                <!-- <img src="/public/TimeIcon.svg" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]"/> -->
                             </div>
                             <div class="ml-5">
                                 <div
@@ -70,7 +70,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                             <div class="">
-                                <img src="/public/Price.svg" class="md:h-[75px] md:w-[105px] h-[70px] w-[70px]"/>
+                                <!-- <img src="/public/Price.svg" class="md:h-[75px] md:w-[105px] h-[70px] w-[70px]"/> -->
                             </div>
                             <div class="ml-5">
                                 <div
@@ -99,7 +99,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                             <div class="">
-                                <img src="/public/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]"/>
+                                <!-- <img src="/public/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]"/> -->
                             </div>
                             <div class="ml-5">
                                 <div
