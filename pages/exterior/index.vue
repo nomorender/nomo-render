@@ -4,8 +4,8 @@
     <HomeAbout></HomeAbout>
   </div>
 </template>
-<script lang="ts" setup>
 
+<script lang="ts" setup>
 useHead({
   title: `Nomo Render | 3D visualization
 studio`,

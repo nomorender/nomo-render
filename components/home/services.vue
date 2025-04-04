@@ -94,40 +94,35 @@ const services = [
 <p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
   },
   {
-    name: "Exterior Rendering",
+    name: "Interior Rendering",
     link: "/exterior",
-    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
-    content: `<p>We provide detailed and accurate representations of:</p>
+    image: ["/services/1.png", "/services/2.png", "/services/3.png","/services/3.png"],
+    content: `<p>We enhance interior visualization by creating highly detailed, photorealistic images inside:</p>
 <ul class="list-disc pl-4">
-    <li>Buildings</li>
-    <li>Landscapes</li>
-    <li>Surroundings</li>
+    <li>Apartments</li>
+    <li>Houses</li>
+    <li>Restaurants</li>
+    <li>Offices</li>
 </ul>
-<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+<p>that seamlessly blend atmosphere, mood, and design elements while carefully selecting the perfect décor to bring the space to life.</p>`,
   },
   {
-    name: "Exterior Rendering",
+    name: "Furniture Modeling",
     link: "/exterior",
     image: ["/services/1.png", "/services/2.png", "/services/3.png"],
-    content: `<p>We provide detailed and accurate representations of:</p>
+    content: `<p>We ensure precise proportions, realistic textures, and manufacturing accuracy through processes by transforming:</p>
 <ul class="list-disc pl-4">
-    <li>Buildings</li>
-    <li>Landscapes</li>
-    <li>Surroundings</li>
+    <li>Sketches</li>
+    <li>Blueprints</li>
+    <li>Concepts</li>
 </ul>
-<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+<p>into highly detailed, production-ready models, which are refined to meet industry standards for execution.</p>`,
   },
   {
-    name: "Exterior Rendering",
+    name: "Customized Request",
     link: "/exterior",
     image: ["/services/1.png", "/services/2.png", "/services/3.png"],
-    content: `<p>We provide detailed and accurate representations of:</p>
-<ul class="list-disc pl-4">
-    <li>Buildings</li>
-    <li>Landscapes</li>
-    <li>Surroundings</li>
-</ul>
-<p>by showcasing realistic lighting, textures, weather conditions, & environmental elements to ensure clients experience a realistic preview of their project before it’s completed.</p>`,
+    content: `<p>At Nomo Render, every detail matters. From minor tweaks to full-scale conceptual transformations, our customized 3D rendering services ensure accuracy by adjusting scale, proportions, and real-world materiality.</p>`,
   },
   
 ];

@@ -3,8 +3,8 @@
     <div class="p-10 md:py-20">
       <div class="flex items-center flex-col md:flex-row justify-center max-w-7xl mx-auto gap-5 md:gap-14">
         <div class="flex flex-col w-[50%]">
-          <div class="font-[700] text-[72px] text-[#8D7662]">
-            3D EXTERIOR
+          <div class="font-[700] text-[72px] text-[#8D7662] uppercase">
+            3d exterior
           </div>
           <div class="font-[600] text-[64px] leading-[150%] text-[#000000]">
             Rendering Services

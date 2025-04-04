@@ -6,8 +6,15 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts'
   ],
   colorMode: {
     preference: 'light',
+  },
+  googleFonts: {
+    families: {
+      Jost: [300, 400, 500, 600, 700], 
+    },
+    display: "swap",
   },
 })
