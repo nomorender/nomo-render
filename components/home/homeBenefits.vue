@@ -50,18 +50,15 @@
                             <div class="ml-5">
                                 <div
                                     class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
-                                    top-notch</div>
-                                <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
+                                    on time</div>
+                                <div class="italic font-[300] md:text-[32px] text-[15px]">Delivery</div>
                             </div>
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
-                            and
-                            <span class="font-[500]">consistency</span>. Every rendering
-                            undergoes
-                            a <span class="font-[500]">double-check</span> and <span class="font-[500]">review
-                                process</span> to ensure technical accuracy, and visual harmony at its best.
+                            We focus on efficient project management to deliver high-quality renders on time. Our
+                            streamlined workflow, clear communication within the departments, and structured revision
+                            process help eliminate delays and keep projects moving forward.
                         </div>
                     </div>
 
@@ -71,25 +68,22 @@
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
-                            <div class="flex gap-6 items-center">
-                                <div class="">
-                                    <NuxtImg src="/Save.png" class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
-                                </div>
-                                <div class="ml-5">
-                                    <div
-                                        class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
-                                        top-notch</div>
-                                    <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
-                                </div>
+                        <div class="flex gap-6 items-center">
+                            <div class="">
+                                <NuxtImg src="/Save.png" class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
                             </div>
+                            <div class="ml-5">
+                                <div
+                                    class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                    cost</div>
+                                <div class="italic font-[300] md:text-[32px] text-[15px]">Efficiency</div>
+                            </div>
+                        </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
-                            and
-                            <span class="font-[500]">consistency</span>. Every rendering
-                            undergoes
-                            a <span class="font-[500]">double-check</span> and <span class="font-[500]">review
-                                process</span> to ensure technical accuracy, and visual harmony at its best.
+                            We provide services at competitive rates. With expertise and advanced technology allow us to
+                            deliver stunning results while keeping costs manageable, making professional 3D renderings
+                            accessible for projects of all sizes.
                         </div>
                     </div>
 
@@ -107,19 +101,16 @@
                                 <div class="ml-5">
                                     <div
                                         class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
-                                        top-notch</div>
-                                    <div class="italic font-[300] md:text-[32px] text-[15px]">Quality</div>
+                                        seamless</div>
+                                    <div class="italic font-[300] md:text-[32px] text-[15px]">Collaboration</div>
                                 </div>
                             </div>
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
-                            and
-                            <span class="font-[500]">consistency</span>. Every rendering
-                            undergoes
-                            a <span class="font-[500]">double-check</span> and <span class="font-[500]">review
-                                process</span> to ensure technical accuracy, and visual harmony at its best.
+                            We offer tailor-made solutions for architects, designers, and developers. Our flexible
+                            approach ensures each rendering perfectly matches your vision, supported by smooth
+                            communication, quick revisions, & consistent quality every time.
                         </div>
                     </div>
 
