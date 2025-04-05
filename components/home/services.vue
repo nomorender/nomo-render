@@ -20,6 +20,16 @@
               indicators: {
                 wrapper: 'relative bottom-0 mt-4',
               },
+              default : {
+                prevButton : {
+                  class : 'md:hidden flex p-3 bg-[#FFFFFF] text-[#8D7662]',
+                  icon : 'material-symbols:arrow-left-alt-rounded'
+                },
+                nextButton : {
+                  class : 'md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
+                  icon : 'material-symbols:arrow-left-alt-rounded'
+                }
+              }
             }"
             indicators
             arrows
