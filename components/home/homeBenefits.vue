@@ -14,7 +14,7 @@
             <div class="md:pl-[200px] md:transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg flex items-center justify-center py-10">
-                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
+                    <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
                                 <NuxtImg src="/Logo1.png" class="md:h-[103px] md:w-[75px] h-[75px] w-[55px]" />
@@ -41,8 +41,8 @@
 
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem] flex items-center justify-center">
-                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] py-10 px-[70px] md:w-[550px] md:h-fit rounded-[8px] shadow-lg md:translate-y-[-10rem] md:translate-x-[-7rem] flex items-center justify-center">
+                    <div class="md:w-[350px] w-[220px]">
                         <div class="flex gap-6 items-center">
                             <div class="">
                                 <NuxtImg src="/Time.png" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]" />
@@ -66,8 +66,8 @@
             </div>
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
-                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-fit md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
+                    <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
                                 <NuxtImg src="/Save.png" class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
@@ -91,8 +91,8 @@
             </div>
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem] flex items-center justify-center">
-                    <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem] flex items-center justify-center">
+                    <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                                 <div class="">
