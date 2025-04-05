@@ -9,7 +9,7 @@
         <HomeBenefits></HomeBenefits>
         <HomeFeedBack/>
         <HomeFaq/>
-        <!-- <HomeSubcribe/> -->
+        <HomeSubcribe/>
     </div>
     
 </template>

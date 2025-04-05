@@ -197,19 +197,15 @@ const isOpen = ref(false)
                                     </p>
                                 </div>
                                 <div class="grid grid-cols-2 gap-2">
-                                    <!-- First Image: Full width -->
                                     <div class="col-span-2">
                                         <NuxtImg src="/Bedroom.png" class="w-full h-auto object-cover" />
                                     </div>
-                                    <!-- Second Image: Left half -->
                                     <div class="col-span-1">
                                         <NuxtImg src="/Bedroom2.png" class="w-full h-auto object-cover" />
                                     </div>
-                                    <!-- Third Image: Right half -->
                                     <div class="col-span-1">
                                         <NuxtImg src="/Bedroom3.png" class="w-full h-auto object-cover" />
                                     </div>
-                                    <!-- Fourth Image: Full width -->
                                     <div class="col-span-2">
                                         <NuxtImg src="/Bedroom4.png" class="w-full h-auto object-cover" />
                                     </div>
