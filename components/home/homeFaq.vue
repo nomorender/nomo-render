@@ -43,7 +43,7 @@ const items = [
                                 class="w-[48px] h-[48px] transform transition-transform duration-200"
                                 :class="{ 'rotate-180': open }" />
                         </div>
-                        <span v-if="index !== items.length - 1" class="block h-[1px] bg-[#8D7662] w-full mt-2"></span>
+                        <span v-if="index !== items.length - 1" class="md:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
                     </div>
 
                 </template>

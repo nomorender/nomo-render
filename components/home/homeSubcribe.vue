@@ -23,7 +23,7 @@ const value = ref('');
               <UAvatar src="" size="2xl" class="-ml-8 bg-black border-2 border-white w-[100px] h-[100px]" />
             </div>
             <div class="ml-5">
-              <div class="flex gap-1">
+              <div class="flex">
                 <UIcon name="ic:baseline-star" class="text-[#FFE100] size-[48px]" />
                 <UIcon name="ic:baseline-star" class="text-[#FFE100] size-[48px]" />
                 <UIcon name="ic:baseline-star" class="text-[#FFE100] size-[48px]" />
