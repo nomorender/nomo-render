@@ -50,9 +50,9 @@
                             </div>
                             <div class="">
                                 <p
-                                    class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px] leading-[50px]">
+                                    class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
                                     on time</p>
-                                <p class="italic font-[300] md:text-[32px] text-[15px] leading-[50px]">Delivery</p>
+                                <p class="italic font-[300] md:text-[32px] text-[15px]">Delivery</p>
                             </div>
                         </div>
                         <div
