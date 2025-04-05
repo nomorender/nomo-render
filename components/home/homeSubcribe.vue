@@ -7,7 +7,7 @@ const value = ref('');
   <div class="bg-white border-x-[50px] border-y-[65px] border-white">
     <div class="bg-[#eeeeee] p-8 text-center rounded-xl px-20">
       <div class="flex items-center justify-between">
-        <div class="ml-10 mt-5 mb-5 w-1/2">
+        <div class="ml-10 mt-5 mb-5 w-[50%]">
           <div class="text-left">
             <div class="flex gap-4 mb-5">
               <div class="text-[32px]">Subcribe to</div>
@@ -36,7 +36,7 @@ const value = ref('');
             </div>
           </div>
         </div>
-        <div class="w-1/2">
+        <div class="w-[50%]">
           <div class="text-[25px] font-light text-justify leading-[200%]">
             <span class="font-medium">FREE CHECKLIST AND GOODIES</span> including pricing guides, templates, checklists, and exclusive freebies - to streamline your workflow and enhance your 3D projects.
           </div>
