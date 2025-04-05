@@ -56,9 +56,9 @@
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We focus on efficient project management to deliver high-quality renders on time. Our
+                            We focus on efficient project management to <span class="font-[500]">deliver high-quality renders on time</span>. Our
                             streamlined workflow, clear communication within the departments, and structured revision
-                            process help eliminate delays and keep projects moving forward.
+                            process help <span class="font-[500]">eliminate delays</span> and keep projects moving forward.
                         </div>
                     </div>
 
@@ -81,9 +81,9 @@
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We provide services at competitive rates. With expertise and advanced technology allow us to
-                            deliver stunning results while keeping costs manageable, making professional 3D renderings
-                            accessible for projects of all sizes.
+                            We provide services at <span class="font-[500]">competitive rates</span>. With expertise and advanced technology allow us to
+                            deliver <span class="font-[500]">stunning results</span> while keeping costs manageable, making professional 3D renderings
+                            accessible for <span class="font-[500]">projects of all sizes</span>.
                         </div>
                     </div>
 
@@ -108,8 +108,8 @@
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
-                            We offer tailor-made solutions for architects, designers, and developers. Our flexible
-                            approach ensures each rendering perfectly matches your vision, supported by smooth
+                            We offer <span class="font-[500]">tailor-made solutions</span> for architects, designers, and developers. Our flexible
+                            approach ensures <span class="font-[500]">each rendering perfectly matches your vision</span>, supported by smooth
                             communication, quick revisions, & consistent quality every time.
                         </div>
                     </div>
