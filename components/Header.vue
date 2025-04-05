@@ -49,7 +49,7 @@
                         {{ item.name }}
                       </div>
                       <UIcon name="gridicons:dropdown" 
-                             class="transition-transform duration-200 size-10"
+                             class="transition-transform duration-200 size-10 text-[#8D7662]"
                              :class="{'transform rotate-180': open === item.name}" />
                     </div>
                     <div v-show="open === item.name" class="mt-2 pl-4 space-y-3 flex flex-col items-end">
