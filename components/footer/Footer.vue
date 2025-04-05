@@ -62,7 +62,7 @@ const secondListItem = [
                 <div class="grid grid-cols-4 gap-5">
                     <nuxt-img src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />
                     <nuxt-img src="/SocialMedia/Instagram.svg" class="w-[56px] h-[58px]" />
-                    <nuxt-img src="/SocialMedia/whatsapp.svg" class="w-[56px] h-[58px]" />
+                    <nuxt-img src="/SocialMedia/whatsApp.svg" class="w-[56px] h-[58px]" />
                     <nuxt-img src="/SocialMedia/Trustpilot.svg" class="w-[56px] h-[58px]" />
                     <nuxt-img src="/SocialMedia/Facebook.svg" class="w-[56px] h-[58px]" />
                     <nuxt-img src="/SocialMedia/Linkedin.svg" class="w-[56px] h-[58px]" />
