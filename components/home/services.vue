@@ -31,10 +31,10 @@
 
             <template #indicator="{ onClick, page, active }">
               <UButton
-                color="orange"
+                color="white"
                 :label="String(page)"
-                :variant="active ? 'solid' : 'outline'"
-                class="rounded-full min-w-8 justify-center hidden md:block"
+                variant="ghost"
+                :class="active ? 'text-[#8D7662CC] bg-white rounded-full min-w-8 justify-center hidden md:block shadow-lg hover:bg-white' : 'bg-[#8D7662CC] hover:bg-[#8D7662CC] text-[#FFFFFF] rounded-full min-w-8 justify-center hidden md:block shadow-lg'"
                 @click="onClick(page)"
               />
             </template>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="fex-grow flex-1 mx-8">
-          <p class="mb-8 md:text-5xl text-xl">{{ item.name }}</p>
+          <p class="mb-8 md:text-5xl text-[40px] font-[600] md:w-[480px]">{{ item.name }}</p>
           <div
             class="md:text-2xl text-sm font-light mb-6 "
             v-html="item.content"
@@ -121,7 +121,7 @@ const services = [
   {
     name: "Customized Request",
     link: "/exterior",
-    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
+    image: ["/services/1.png", "/services/2.png", "/services/3.png","/services/3.png"],
     content: `<p>At Nomo Render, every detail matters. From minor tweaks to full-scale conceptual transformations, our customized 3D rendering services ensure accuracy by adjusting scale, proportions, and real-world materiality.</p>`,
   },
   
