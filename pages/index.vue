@@ -8,6 +8,7 @@
         <HomeServices></HomeServices>
         <HomeBenefits></HomeBenefits>
         <HomeFeedBack/>
+        <HomeContact></HomeContact>
         <HomeFaq/>
         <HomeSubcribe/>
     </div>
