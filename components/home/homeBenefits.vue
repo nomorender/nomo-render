@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="md:pl-[200px] md:transform px-[70px] pb-10">
+            <div class="md:pl-[200px] md:transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg flex items-center justify-center py-10">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="md:pl-[200px] transform px-[70px] pb-10">
+            <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
@@ -67,7 +67,7 @@
 
                 </div>
             </div>
-            <div class="md:pl-[200px] transform px-[70px] pb-10">
+            <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
@@ -95,7 +95,7 @@
 
                 </div>
             </div>
-            <div class="md:pl-[200px] transform px-[70px] pb-10">
+            <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
                     class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
