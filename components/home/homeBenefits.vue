@@ -1,6 +1,3 @@
-<script>
-    import TimeIcon from '~/assets/svg/TimeIcon.svg'
-</script>
 
 <template>
     <div class="bg-[#D9D9D9] h-fit md:pb-[200px] pt-2">
@@ -21,7 +18,7 @@
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <NuxtImg src="/Logo1.png" class="md:h-[103px] md:w-[75px] h-[75px] w-[55px]" />
+                                <nuxt-img src="/benefits/Object.svg" class="md:h-[103px] md:w-[75px] h-[75px] w-[55px]" />
                             </div>
                             <div class="">
                                 <p
@@ -49,7 +46,7 @@
                     <div class="md:w-[350px] w-[220px]">
                         <div class="flex gap-7 items-center">
                             <div class="">
-                                <nuxt-img src="price.svg" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]" />
+                                <nuxt-img src="/benefits/TimeIcon.svg" class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]" />
                             </div>
                             <div class="">
                                 <p
@@ -74,7 +71,7 @@
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <NuxtImg src="/Save.png" class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
+                                <nuxt-img src="/benefits/price.svg" class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
                             </div>
                             <div class="">
                                 <p
@@ -100,7 +97,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                                 <div class="">
-                                    <NuxtImg src="/Hand.png" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
+                                    <nuxt-img src="/benefits/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
                                 </div>
                                 <div class="">
                                     <p
