@@ -43,7 +43,7 @@ const value = ref('');
           <div class="italic text-[25px] font-light text-justify mt-2">No fluff, just the good stuff</div>
           <div class="mt-10 flex items-center bg-[#D9D9D9] p-2 rounded-lg shadow-md">
             <UInput v-model="value" variant="none" placeholder="Your email" size="xl" class="w-full bg-transparent text-gray-700 border-none rounded-l-md focus:outline-none focus:ring-2 focus:ring-brown-500 p-4" />
-            <UButton class="px-5 py-6 bg-[#8D7662] text-white uppercase">
+            <UButton class="px-5 py-6 bg-[#8D7662] text-white uppercase rounded-[8px]">
               <div class="text-[#F5F5F5] font-semibold text-[28px]">Subscribe</div>
             </UButton>
           </div>
