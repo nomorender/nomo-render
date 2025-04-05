@@ -49,6 +49,15 @@ const items = [
         ava: ''
     },
 ]
+
+const pics = {
+    image: [
+        '/Bedroom.png', // Hình ảnh 1 (lớn)
+        '/Bedroom2.png', // Hình ảnh 2
+        '/Bedroom3.png', // Hình ảnh 3
+        '/Bedroom4.png', // Hình ảnh 4
+    ],
+}
 const carousel = ref()
 const isOpen = ref(false)
 
@@ -108,9 +117,10 @@ const isOpen = ref(false)
                                         </div>
                                     </div>
                                     <div class="mt-5">
-                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2">
+                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2"
+                                            @click="isOpen = true">
                                             <div class="text-[#980C0C] flex justify-center">
-                                                <UIcon name="cuida:arrow-right-outline" class="size-5" /> See more
+                                                <UIcon name="cuida:arrow-right-outline" class="size-5" />See more
                                             </div>
                                         </UButton>
                                     </div>
@@ -145,7 +155,66 @@ const isOpen = ref(false)
                                 </div>
                             </div>
                             <p class="text-[#8D7662] font-semibold mb-5">PROJECT’S NAME</p>
-                            <div class="h-48">This is body</div>
+                            <div class="h-fit">
+                                <div class="text-[15px] leading-[150%] mb-5">Typology: <span
+                                        class="font-[500]">Interior</span>
+                                    <br />Status:
+                                    <span class="font-[500]">Completed</span> <br />Location: <span
+                                        class="font-[500]">New York, USA</span>
+                                    <br />
+                                    Client: <span class="font-[500]">Islyn Studio​​​​​​​​​​​​​</span>​ <br />
+                                    Visualization: <span class="font-[500]">Nomo Render</span> <br /> Completion
+                                    time: <span class="font-[500]">6 weeks</span>
+                                </div>
+                                <div class="text-justify leading-[180%]">
+                                    Islyn Studio has been our regular client since 2019. Over the years, we’ve completed
+                                    about 25 projects
+                                    together, some of which have already come to life. Romer Hell’s Kitchen is one such
+                                    example - a boutique
+                                    hotel that embodies the creative energy of NYC.
+                                </div>
+
+
+                                <div class="">
+                                    <NuxtImg src="/Modal.png" class="w-full h-fit" />
+                                </div>
+
+                                <div class="text-justify font-[300]">
+                                    <p class="leading-[180%]">The design features a mix of custom furniture, bold
+                                        artistic choices, and a
+                                        strong connection to the
+                                        Hell’s Kitchen lifestyle. Spacious rooms with velvet couches and curated local
+                                        art create an
+                                        atmosphere that feels both stylish and personal.</p>
+                                    <p class="leading-[180%]">
+                                        Islyn Studio is exceptionally detail-oriented when it comes to rendered
+                                        interiors. Their goal is to
+                                        present digital images that look as real as possible, with minimal
+                                        discrepancies. This high standard
+                                        means our work for them takes more time than usual, but the payoff is worth it.
+                                        Our precision allows
+                                        them to sell their ideas as fully realized, completed designs.
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <!-- First Image: Full width -->
+                                    <div class="col-span-2">
+                                        <NuxtImg src="/Bedroom.png" class="w-full h-auto object-cover" />
+                                    </div>
+                                    <!-- Second Image: Left half -->
+                                    <div class="col-span-1">
+                                        <NuxtImg src="/Bedroom2.png" class="w-full h-auto object-cover" />
+                                    </div>
+                                    <!-- Third Image: Right half -->
+                                    <div class="col-span-1">
+                                        <NuxtImg src="/Bedroom3.png" class="w-full h-auto object-cover" />
+                                    </div>
+                                    <!-- Fourth Image: Full width -->
+                                    <div class="col-span-2">
+                                        <NuxtImg src="/Bedroom4.png" class="w-full h-auto object-cover" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </UModal>
                 </div>
