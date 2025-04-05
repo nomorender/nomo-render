@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div
-                            class="h-[190px] md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                            class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
@@ -41,7 +41,7 @@
 
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem] flex items-center justify-center">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-7rem] md:translate-x-[-7rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
@@ -66,7 +66,7 @@
             </div>
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[6rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
@@ -91,7 +91,7 @@
             </div>
             <div class="md:pl-[200px] transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-[70px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem] flex items-center justify-center">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] px-[70px] py-10 md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg md:translate-y-[-1rem] md:translate-x-[-7rem] flex items-center justify-center">
                     <div class="md:w-[350px] md:h-[483px] w-[220px] h-auto">
                         <div class="flex">
                             <div class="flex gap-6 items-center">
