@@ -3,8 +3,6 @@ const items = [
   '/mobile-background.png',
   '/mobile-background.png',
   '/mobile-background.png',
-  '/mobile-background.png',
-  '/mobile-background.png',
 ]
 const isOpen = ref(false)
 </script>
@@ -19,11 +17,13 @@ const isOpen = ref(false)
       <template #default="{ item }">
         <div class="relative w-full mr-2 cursor-pointer" @click="isOpen = true">
           <div
-            class="absolute bottom-[60px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg py-3 w-[220px] text-center">
-            <p class="font-bold text-sm ">Project’s Name</p>
-            <p class="font-light text-sm ">Location</p>
+            class="absolute bottom-[60px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg py-3 w-[330px] h-[115px] text-center">
+            <div class="flex flex-col justify-center items-center w-full h-full">
+              <p class="font-[600] leading-[200%] text-[25px]">Project’s Name</p>
+              <p class="font-[300] leading-[200%] text-[25px]">Location</p>
+            </div>
           </div>
-          <NuxtImg :src="item" class="w-full  rounded-lg" draggable="false" />
+          <NuxtImg :src="item" class="w-full h-full  rounded-lg" draggable="false" />
         </div>
       </template>
       <template #prev="{ onClick, disabled }">
