@@ -52,9 +52,9 @@ const items = [
 
 const pics = {
     image: [
-        '/Bedroom.png', 
-        '/Bedroom2.png', 
-        '/Bedroom3.png', 
+        '/Bedroom.png',
+        '/Bedroom2.png',
+        '/Bedroom3.png',
         '/Bedroom4.png',
     ],
 }
@@ -80,7 +80,7 @@ const isOpen = ref(false)
                         <UIcon name="mdi-light:arrow-left" class="size-10" />
                     </div>
                 </UButton>
-                <div class="max-w-7xl pt-5 mx-auto md:pb-10">
+                <div class="max-w-[1112px] pt-5 mx-auto md:pb-10">
                     <UCarousel :items="items" arrows :ui="{
                         item: 'basis-full lg:basis-1/2 lg:basis-1/3', arrows: {
                             wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
