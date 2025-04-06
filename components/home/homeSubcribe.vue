@@ -14,8 +14,10 @@ const value = ref('');
               <nuxt-img src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
             </div>
             <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-10 mb-3">Nomo Render</div>
-            <p class="italic md:text-[20px] text-[15px] font-light pr-10 md:pr-0">Subscribe now & start creating
-              stunning visuals with ease!</p>
+            <div class="flex md:block">
+              <p class="italic md:text-[20px] text-[15px] font-light">Subscribe now & start creating
+                stunning visuals with ease!</p>
+            </div>
           </div>
           <div class="flex md:mt-10 mt-5">
             <div class="flex items-start">
