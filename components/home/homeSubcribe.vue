@@ -9,15 +9,15 @@ const value = ref('');
       <div class="md:flex md:items-center md:justify-between">
         <div class="ml-10 mt-5 mb-5 md:w-[50%]">
           <div class="text-left">
-            <div class="flex gap-4 mb-5">
+            <div class="flex gap-4 md:mb-5">
               <div class="md:text-[32px] text-[15px]">Subcribe to</div>
               <nuxt-img src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
             </div>
-            <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] mb-10">Nomo Render</div>
+            <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-10 mb-3">Nomo Render</div>
             <p class="italic md:text-[20px] text-[15px] font-light pr-10 md:pr-0">Subscribe now & start creating
               stunning visuals with ease!</p>
           </div>
-          <div class="flex mt-10">
+          <div class="flex md:mt-10 mt-5">
             <div class="flex items-start">
               <UAvatar src="" size="2xl"
                 class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
