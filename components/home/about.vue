@@ -4,7 +4,7 @@
       <h1 class="text-[#8D7662] md:text-6xl font-semibold text-3xl text-nowrap">About Us</h1>
       <div class="w-[1px] h-[300px] hidden md:block bg-black"></div>
       <div>
-        <p class="font-light text-sm md:text-2xl text-justify mb-8">
+        <p class="font-light text-sm md:text-2xl text-justify mb-8 md:leading-[200%] leading-[180%]">
           Before a building stands tall, before a space takes shape, Nomo Render
           makes sure that vision is seen. Think of us as your <span class="font-medium">creative partners
             in turning architectural ideas into vivid, high-quality 3D visuals.</span> 

@@ -6,7 +6,8 @@
         <HomeAbout></HomeAbout>
         <HomeProject></HomeProject>
         <HomeServices></HomeServices>
-        <HomeBenefits></HomeBenefits>
+        <!-- <HomeBenefits></HomeBenefits> -->
+        <HomeTest/>
         <HomeFeedBack/>
         <HomeContact></HomeContact>
         <HomeFaq/>
@@ -15,6 +16,8 @@
     
 </template>
 <script lang="ts" setup>
+import { HomeTest } from '#components';
+
 
 useHead({
   title: `Nomo Render | 3D visualization

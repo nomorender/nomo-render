@@ -49,9 +49,9 @@ const value = ref('');
           <div class="italic md:text-[25px] text-[15px] font-light text-justify mt-2">No fluff, just the good stuff
           </div>
           <div class="flex items-center justify-center md:block">
-            <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 rounded-lg shadow-lg">
-              <UInput v-model="value" variant="none" placeholder="Your email"
-                class="w-full bg-transparent text-gray-700 border-none rounded-l-md focus:outline-none focus:ring-2 focus:ring-brown-500 p-4" />
+            <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 py-2 rounded-lg shadow-lg w-full md:w-full">
+              <UInput  v-model="value" variant="none" placeholder="Your email"
+                class="flex-1 bg-transparent text-[#0000000] border-none rounded-l-md" size="xl"/>
               <UButton class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
               </UButton>

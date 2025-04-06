@@ -1,7 +1,7 @@
 <template>
   <div class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0" :class="{ 'bg-white': isScrolled }">
     <div class="mx-auto w-full xl:max-w-7xl relative">
-      <nav class="flex items-center justify-between gap-4 duration-200 p-4">
+      <nav class="flex items-center justify-between gap-4 duration-200 p-4 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
             <NuxtImg preload class="w-10 lg:hidden" src="/logo.png" />
@@ -166,7 +166,6 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 0;
 };
 
-// Add scroll listener on mount, remove on unmount
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
