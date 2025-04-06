@@ -44,9 +44,9 @@ async function onError(event: FormErrorEvent) {
                         transform your ideas into reality.
                     </p>
                     <div class="grid grid-cols-2 gap-2 mt-10 place-items-center md:place-items-start w-full px-0 mx-0">
-                        <NuxtImg src="/contact/Pic1.png"
+                        <NuxtImg src="/Contact1.png"
                             class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
-                        <NuxtImg src="/contact/Pic2.png"
+                        <NuxtImg src="/Contact2.png"
                             class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
                     </div>
                 </div>
