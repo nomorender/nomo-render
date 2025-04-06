@@ -30,13 +30,13 @@ async function onError(event: FormErrorEvent) {
         <div class="md:px-8">
             <div>
                 <p class="text-center text-xl md:text-3xl uppercase">contact</p>
-                <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662] px-6 md:px-20">
+                <div class="text-center font-semibold text-3xl md:text-[64px] leading-[100%] mb-5 md:mb-20 text-[#8D7662] px-6 md:px-20">
                     Let’s bring your vision to life!
-                </h2>
+                </div>
             </div>
             <div class="block lg:flex lg:gap-[100px] lg:px-[150px]">
                 <div class="lg:w-[50%]">
-                    <p class="text-justify font-[300] italic text-[15px] md:text-[25px] leading-[180%] md:leading-[150%] px-4 md:px-8 max-w-3xl mx-auto">
+                    <p class="text-justify font-[300] italic text-[15px] md:text-[25px] leading-[180%] md:leading-[150%] px-7 md:px-0 max-w-4xl mx-auto">
                         Have a project in mind? Whether you need stunning 3D renderings, detailed architectural visuals,
                         or custom design solutions, we’re here to help. Contact us, and let’s discuss how we can
                         transform your ideas into reality.

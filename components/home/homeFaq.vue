@@ -28,9 +28,9 @@ const items = [
 </script>
 
 <template>
-    <div class="bg-[#FAF8F5] md:px-[130px] px-10 py-20 md:grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
+    <div class="bg-[#FAF8F5] md:px-[130px] px-10 py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
         <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center">FAQ</div>
-        <div class="space-y-4">
+        <div class="space-y-4 lg:mt-0 mt-10">
             <UAccordion :collapsible="false" :items="items">
                 <template #default="{ item, index, open }">
                     <div class="relative">
@@ -43,9 +43,8 @@ const items = [
                                 class="w-[48px] h-[48px] transform transition-transform duration-200"
                                 :class="{ 'rotate-180': open }" />
                         </div>
-                        <span v-if="index !== items.length - 1" class="md:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
+                        <span v-if="index !== items.length - 1" class="lg:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
                     </div>
-
                 </template>
                 <template #item="{ item }">
                     <p>{{ item.content }}</p>
