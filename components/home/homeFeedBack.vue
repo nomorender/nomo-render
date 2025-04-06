@@ -82,7 +82,7 @@ const isOpen = ref(false)
                 </UButton>
                 <div class="max-w-7xl pt-5 mx-auto md:pb-10">
                     <UCarousel :items="items" arrows :ui="{
-                        item: 'basis-full md:basis-1/2 lg:basis-1/3', arrows: {
+                        item: 'basis-full lg:basis-1/2 lg:basis-1/3', arrows: {
                             wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
                         },
                     }" ref="carousel">
