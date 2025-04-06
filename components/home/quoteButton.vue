@@ -87,7 +87,7 @@ async function onError(event: FormErrorEvent) {
                                 </UFormGroup>
                                 <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
                                     <UButton color="gray" size="xl" variant="solid" type="submit" form="requestForm"
-                                        class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-10 lg:py-4  hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px] lg:w-full px-10 py-3 md:w-auto max-w-xs">
+                                        class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-3  hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px]  px-10 py-3 md:w-auto max-w-xs">
                                         <div
                                             class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
                                             submit
