@@ -50,7 +50,7 @@ const isOpen = ref(false)
             <p class="font-light">Nomo Render - 3D Visualization Studio</p>
           </div>
         </div>
-        <p class="text-[#8D7662] font-semibold mb-5">PROJECT’S NAME</p>
+        <p class="text-[#8D7662] font-semibold mb-5 uppercase">Project’s Name</p>
         <div class="h-48">This is body</div>
       </div>
     </UModal>
