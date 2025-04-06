@@ -5,7 +5,7 @@ const value = ref('');
 <template>
   <div class="bg-white md:border-x-[50px] border-x-[30px] border-y-[65px] border-white">
     <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5">
-      <div class="px-4 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
+      <div class="px-6 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
         <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
             <div class="flex gap-4 md:mb-5">
