@@ -4,7 +4,7 @@ const value = ref('');
 </script>
 
 <template>
-  <div class="bg-white md:border-x-[50px] border-x-[20px] border-y-[65px] border-white">
+  <div class="bg-white md:border-x-[50px] border-x-[30px] border-y-[65px] border-white">
     <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5 md:py-0">
       <div class="md:flex md:items-center md:justify-between">
         <div class="ml-10 mt-5 mb-5 md:w-[50%]">
