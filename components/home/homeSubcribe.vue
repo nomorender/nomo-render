@@ -1,16 +1,15 @@
 <script>
-
 const value = ref('');
 </script>
 
 <template>
   <div class="bg-white md:border-x-[50px] border-x-[30px] border-y-[65px] border-white">
     <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5">
-      <div class="md:flex md:items-center md:justify-between">
-        <div class="ml-10 mt-5 mb-5 md:w-[50%]">
+      <div class="px-4 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
+        <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
             <div class="flex gap-4 md:mb-5">
-              <div class="md:text-[32px] text-[15px]">Subcribe to</div>
+              <div class="md:text-[32px] text-[15px]">Subscribe to</div>
               <nuxt-img src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
             </div>
             <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-10 mb-3">Nomo Render</div>
@@ -30,11 +29,11 @@ const value = ref('');
             </div>
             <div class="md:ml-5 ml-3">
               <div class="flex">
-                <UIcon name="ic:baseline-star" class="text-[#FFE100] md:size-[48px] size-[24px]" />
-                <UIcon name="ic:baseline-star" class="text-[#FFE100] md:size-[48px] size-[24px]" />
-                <UIcon name="ic:baseline-star" class="text-[#FFE100] md:size-[48px] size-[24px]" />
-                <UIcon name="ic:baseline-star" class="text-[#FFE100] md:size-[48px] size-[24px]" />
-                <UIcon name="ic:baseline-star" class="text-[#FFE100] md:size-[48px] size-[24px]" />
+                <UIcon name="ic:baseline-star" class="text-[#FFE100] w-6 h-6 md:w-12 md:h-12" />
+                <UIcon name="ic:baseline-star" class="text-[#FFE100] w-6 h-6 md:w-12 md:h-12" />
+                <UIcon name="ic:baseline-star" class="text-[#FFE100] w-6 h-6 md:w-12 md:h-12" />
+                <UIcon name="ic:baseline-star" class="text-[#FFE100] w-6 h-6 md:w-12 md:h-12" />
+                <UIcon name="ic:baseline-star" class="text-[#FFE100] w-6 h-6 md:w-12 md:h-12" />
               </div>
               <div class="flex items-start">
                 <p class="font-[300] mt-2 items-start text-[15px]">200+ reviews</p>
@@ -42,14 +41,14 @@ const value = ref('');
             </div>
           </div>
         </div>
-        <div class="md:w-[50%]">
-          <div class="md:text-[25px] text-[15px] font-light text-justify leading-[200%] px-10 md:px-0">
+        <div class="lg:w-[50%]">
+          <div class="md:text-[25px] text-[15px] font-light text-justify leading-[200%]">
             <span class="font-medium">FREE CHECKLIST AND GOODIES</span> including pricing guides, templates, checklists,
             and exclusive freebies - to streamline your workflow and enhance your 3D projects.
           </div>
-          <div class="italic md:text-[25px] text-[15px] font-light text-justify mt-2 px-10 md:px-0">No fluff, just the
-            good stuff</div>
-          <div class="flex items-center justify-center md:block px-10 md:px-0">
+          <div class="italic md:text-[25px] text-[15px] font-light text-justify mt-2">No fluff, just the good stuff
+          </div>
+          <div class="flex items-center justify-center md:block">
             <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 rounded-lg shadow-lg">
               <UInput v-model="value" variant="none" placeholder="Your email"
                 class="w-full bg-transparent text-gray-700 border-none rounded-l-md focus:outline-none focus:ring-2 focus:ring-brown-500 p-4" />

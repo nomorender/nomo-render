@@ -52,10 +52,10 @@ const items = [
 
 const pics = {
     image: [
-        '/Bedroom.png', // Hình ảnh 1 (lớn)
-        '/Bedroom2.png', // Hình ảnh 2
-        '/Bedroom3.png', // Hình ảnh 3
-        '/Bedroom4.png', // Hình ảnh 4
+        '/Bedroom.png', 
+        '/Bedroom2.png', 
+        '/Bedroom3.png', 
+        '/Bedroom4.png',
     ],
 }
 const carousel = ref()

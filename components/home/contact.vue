@@ -4,13 +4,13 @@ import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
 const state = reactive({
     name: undefined,
     email: undefined,
-    desciption: undefined
+    description: undefined
 })
 
 const validate = (state: any): FormError[] => {
     const errors = []
     if (!state.email) errors.push({ path: 'email', message: 'Required' })
-    if (!state.password) errors.push({ path: 'password', message: 'Required' })
+    if (!state.name) errors.push({ path: 'name', message: 'Required' })
     return errors
 }
 
@@ -26,62 +26,54 @@ async function onError(event: FormErrorEvent) {
 </script>
 
 <template>
-    <div class="bg-[#D9D9D9] py-20">
-        <div>
+    <div class="bg-[#D9D9D9] py-10 md:py-20">
+        <div class="md:px-8">
             <div>
                 <p class="text-center text-xl md:text-3xl uppercase">contact</p>
-                <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
+                <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662] px-6 md:px-20">
                     Let’s bring your vision to life!
                 </h2>
             </div>
-
-            <div class="flex px-[250px] gap-[100px]">
-                <div class="w-[50%]">
-                    <p class="text-justify font-[300] italic text-[25px] leading-[150%]">Have a project in mind? Whether
-                        you need stunning 3D renderings, detailed architectural visuals,
+            <div class="block lg:flex lg:gap-[100px] lg:px-[150px]">
+                <div class="lg:w-[50%]">
+                    <p class="text-justify font-[300] italic text-[15px] md:text-[25px] leading-[180%] md:leading-[150%] px-4 md:px-8 max-w-3xl mx-auto">
+                        Have a project in mind? Whether you need stunning 3D renderings, detailed architectural visuals,
                         or custom design solutions, we’re here to help. Contact us, and let’s discuss how we can
-                        transform your ideas into reality.</p>
-                    <div>
-                        <div class="flex gap-4 mt-10">
-                            <NuxtImg src="/contact/Pic1.png" class="w-[335px] h-[325px]" />
-                            <NuxtImg src="/contact/Pic2.png" class="w-[335px] h-[325px]" />
-                        </div>
+                        transform your ideas into reality.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 mt-10 place-items-center md:place-items-start w-full px-0 mx-0">
+                        <NuxtImg src="/contact/Pic1.png" class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
+                        <NuxtImg src="/contact/Pic2.png" class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
                     </div>
                 </div>
 
-                <div class="w-[50%]">
-                    <div>
-                        <UForm id="contactForm" :validate="validate" :state="state" class="space-y-4" @submit="onSubmit"
-                            @error="onError">
-                            <UFormGroup>
-                                <UInput padded required color="white" variant="none" placeholder="Name (required)"
-                                    v-model="state.name" size="xl" class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg"
-                                    :ui="{
-                                        placeholder: 'placeholder-black font-[300] text-[25px] leading-[200%]',
-                                    }" />
-                            </UFormGroup>
+                <div class="lg:w-[50%] mt-6 lg:mt-0">
+                    <UForm id="contactForm" :validate="validate" :state="state" class="space-y-4 px-4 md:px-0" @submit="onSubmit" @error="onError">
+                        <UFormGroup>
+                            <UInput padded required color="white" variant="none" placeholder="Name (required)"
+                                v-model="state.name" size="xl" class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-full"
+                                :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
+                        </UFormGroup>
 
-                            <UFormGroup>
-                                <UInput padded required color="white" variant="none" placeholder="Email (required)"
-                                    v-model="state.name" size="xl" class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg"
-                                    :ui="{
-                                        placeholder: 'placeholder-black font-[300] text-[25px] leading-[200%]',
-                                    }" />
-                            </UFormGroup>
+                        <UFormGroup>
+                            <UInput padded required color="white" variant="none" placeholder="Email (required)"
+                                v-model="state.email" size="xl" class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-full"
+                                :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
+                        </UFormGroup>
 
-                            <UFormGroup>
-                                <UTextarea padded required color="white" variant="none"
-                                    placeholder="Describe your project" v-model="state.name" size="xl"
-                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg" :ui="{
-                                        placeholder: 'placeholder-black font-[300] text-[25px] leading-[200%]',
-                                    }" :rows="10" />
-                            </UFormGroup>
-                        </UForm>
+                        <UFormGroup>
+                            <UTextarea padded required color="white" variant="none" placeholder="Describe your project"
+                                v-model="state.description" size="xl" class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-full"
+                                :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" :rows="8" md:rows="10" />
+                        </UFormGroup>
 
-                        <UButton color="gray" size="xl" variant="solid" type="submit" form="contactForm"
-                                class="bg-gradient-to-r from-[#8D7662] to-[#27211B] uppercase text-[#F5F5F5] text-[20px] px-6 py-2 hover:bg-[#90755e] mt-10 rounded-[8px]">
-                                <div class="uppercase">let’s work together!</div></UButton>
-                    </div>
+                        <div class="px-4 md:px-0 mx-auto">
+                            <UButton color="gray" size="xl" variant="solid" type="submit" form="contactForm"
+                                class="bg-gradient-to-r from-[#8D7662] to-[#27211B] uppercase text-[#F5F5F5] text-[16px] md:text-[20px] px-6 py-2 hover:bg-[#90755e] mt-6 md:mt-10 rounded-[8px] w-full md:w-auto flex items-center justify-center">
+                                Let’s work together!
+                            </UButton>
+                        </div>
+                    </UForm>
                 </div>
             </div>
         </div>
