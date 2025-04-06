@@ -10,7 +10,7 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="max-w-7xl py-20 mx-auto">
+  <div class="py-20 mx-auto">
     <UCarousel :items="items" arrows :ui="{
       item: 'basis-full md:basis-1/2 lg:basis-1/3', arrows: {
         wrapper: 'flex items-center justify-center gap-2 mt-2 sm:hidden'
