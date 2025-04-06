@@ -15,7 +15,7 @@
 
                 <div class="mb-20">
                     <div
-                        class="bg-[#D8C3A566] w-full md:w-[550px] px-10 lg:px-6 md:px-[100px] py-8 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center ">
+                        class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex md:gap-6 gap-5 items-center">
                                 <div class="">
@@ -45,7 +45,7 @@
 
                 <div class="mb-20 lg:mb-0">
                     <div
-                        class="bg-[#D8C3A566] w-full md:w-[550px] px-10 lg:px-6 md:px-[100px] py-8 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
+                        class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex gap-6 items-center">
                                 <div class="">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
                                 We provide services at <span class="font-[500]">competitive rates</span>. With expertise
                                 and advanced technology allow us to
                                 deliver <span class="font-[500]">stunning results</span> while keeping costs manageable,
@@ -75,7 +75,7 @@
             <div class="flex flex-col justify-center items-center">
                 <div class="mb-20 md:mt-[5rem]">
                     <div
-                        class="bg-[#D8C3A566] w-full md:w-[550px] px-10 lg:px-6 md:px-[100px] py-8 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
+                        class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
 
                         <div class="md:w-[350px] w-[220px]">
                             <div class="flex gap-7 items-center">
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
                                 We focus on efficient project management to <span class="font-[500]">deliver
                                     high-quality renders on time</span>. Our
                                 streamlined workflow, clear communication within the departments, and structured
@@ -105,7 +105,7 @@
 
                 <div class="mb-10">
                     <div
-                        class="bg-[#D8C3A566] w-full md:w-[550px] px-10 lg:px-6 md:px-[100px] py-8 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
+                        class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex">
                                 <div class="flex gap-6 items-center">
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
                                 We offer <span class="font-[500]">tailor-made solutions</span> for architects,
                                 designers, and developers. Our flexible
                                 approach ensures <span class="font-[500]">each rendering perfectly matches your

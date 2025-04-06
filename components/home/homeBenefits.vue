@@ -13,7 +13,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="md:pl-[200px] md:transform px-10 pb-10">
                 <div
-                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg flex items-center justify-center py-10">
+                    class="bg-[#D8C3A566] md:px-[100px] md:py-[65px] md:w-[550px] md:h-[614px] rounded-[8px] shadow-lg flex items-center justify-center py-20">
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div
-                            class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                            class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
                             We deliver diverse and realistic 3D images with <span class="font-[500]">precision</span>
                             and
                             <span class="font-[500]">consistency</span>. Every rendering
