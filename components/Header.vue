@@ -11,7 +11,7 @@
         <div class="hidden gap-[100px] justify-center lg:flex">
           <div v-for="item in navList" :key="item.path">
             <p v-if="!item.childen" @click="$router.push(item.path)"
-              class=" text-xl cursor-pointer hover:underline font-semibold"
+              class=" md:text-[20px] cursor-pointer hover:underline font-semibold"
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>

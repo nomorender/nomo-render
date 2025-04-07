@@ -2,7 +2,7 @@
 const firstListItem = [
     {
         name: "Location",
-        body: `<p class="text-justify">US, New York NY 10016, 347 5th Ave Suite 1402-374<br/>Portugal, Lisbon, Cidade de Cardiff 1, 5D</p>`,
+        body: `<p class="text-justify">US, New York NY 10016, 347 5th Ave Suite 1402-374 Portugal, Lisbon, Cidade de Cardiff 1, 5D</p>`,
     },
     {
         name: "Contact",
