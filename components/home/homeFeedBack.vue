@@ -74,7 +74,7 @@ const isOpen = ref(false)
             </div>
             <div class="relative bg-[#FAF8F5]">
                 <UButton
-                    class="hidden md:block p-2 absolute md:left-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                    class="hidden md:block p-2 absolute md:left-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                     @click="carousel.prev()">
                     <div class="text-[#8D7662] flex justify-center">
                         <UIcon name="mdi-light:arrow-left" class="size-10" />
@@ -128,17 +128,18 @@ const isOpen = ref(false)
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton class="rounded-full p-5 bg-[#FFFFFF] hover:bg-white text-[#8D7662] shadow-lg"
-                                color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-left"
-                                square>
+                            <UButton
+                                class="rounded-full bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                color="white" :disabled="disabled" @click="onClick" square>
+                                <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
 
                         <template #next="{ onClick, disabled }">
                             <UButton
-                                class="rounded-full p-5 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg"
-                                color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-right"
-                                square>
+                                class="rounded-full bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                color="white" :disabled="disabled" @click="onClick" square>
+                                <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
                         </template>
                     </UCarousel>
@@ -215,7 +216,7 @@ const isOpen = ref(false)
                     </UModal>
                 </div>
                 <UButton
-                    class="hidden md:block p-2 absolute md:right-[6rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                    class="hidden md:block p-2 absolute md:right-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                     @click="carousel.next()">
                     <div class="text-[#FFFFFF] flex justify-center">
                         <UIcon name="mdi-light:arrow-right" class="size-10" />

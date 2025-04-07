@@ -16,7 +16,7 @@
             <UButton class="hover:bg-[#00a155] text-[#980e0c] transition-all"  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
         </div>
       </div>
-      <div >
+      <div class="">
         <UButton class="lg:hidden" to="/about" variant="outline"  :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
       </div>
     </div>

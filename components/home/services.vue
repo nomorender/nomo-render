@@ -1,11 +1,11 @@
 <template>
   <div class="bg-[#FAF8F5]">
-    <div class="py-10 md:py-20  mb-20">
-      <p class="text-center text-xl md:text-3xl mb-7">SERVICES</p>
-      <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
+    <div class="py-10 md:py-20 mb-20">
+      <p class="text-center text-[16px] md:text-3xl md:mb-7">SERVICES</p>
+      <h2 class="text-center font-semibold text-[30px] md:text-6xl md:mb-20 text-[#8D7662]">
         What we do?
       </h2>
-      <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-row mb-8 mt-20"
+      <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-row mb-8 mt-3"
         :class="{ 'md:flex-row-reverse': index % 2 }">
         <div class="md:w-[720px]">
           <UCarousel :items="item.image" :ui="{

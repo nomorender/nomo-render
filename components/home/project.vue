@@ -27,14 +27,18 @@ const isOpen = ref(false)
         </div>
       </template>
       <template #prev="{ onClick, disabled }">
-        <UButton class="rounded-full" color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-left"
-          square>
+        <UButton
+          class="rounded-full bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+          color="white" :disabled="disabled" @click="onClick"  square>
+          <UIcon name="mingcute:arrow-left-fill" class="size-5" />
         </UButton>
       </template>
 
       <template #next="{ onClick, disabled }">
-        <UButton class="rounded-full" color="white" :disabled="disabled" @click="onClick" icon="i-heroicons-arrow-right"
-          square>
+        <UButton
+          class="rounded-full bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+          color="white" :disabled="disabled" @click="onClick" square>
+          <UIcon name="mingcute:arrow-right-fill" class="size-5" />
         </UButton>
       </template>
     </UCarousel>
