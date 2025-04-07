@@ -10,11 +10,11 @@ const isOpen = ref(false)
 <template>
   <div class="py-20">
     <UCarousel :items="items" arrows :ui="{
-      item: 'basis-full md:basis-1/2 lg:basis-1/3', arrows: {
+      item: 'basis-full sm:basis-1/2 lg:basis-[33.5%] snap-center', arrows: {
         wrapper: 'flex items-center justify-center gap-2 mt-2 sm:hidden'
       },
     }">
-      <template #default="{ item }">
+      <template #default="{ item, index }">
         <div class="relative w-auto cursor-pointer max-h-[725px]" @click="isOpen = true">
           <div
             class="absolute bottom-[60px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg py-3 md:w-[330px] w-[220px] md:h-[115px] h-[76px] text-center">
@@ -23,7 +23,7 @@ const isOpen = ref(false)
               <p class="font-[300] leading-[200%] md:text-[25px] text-[15px]">Location</p>
             </div>
           </div>
-          <NuxtImg :src="item" class="w-[472px] max-h-[725px] rounded-lg" draggable="false" />
+          <NuxtImg :src="item" class="w-[472px] h-[725px] rounded-lg" draggable="false" />
         </div>
       </template>
       <template #prev="{ onClick, disabled }">
