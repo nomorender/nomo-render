@@ -18,6 +18,13 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     console.log(event.data)
 }
 
+// const state = reactive({
+//     name: undefined,
+//     email: undefined,
+//     description: undefined,
+//     agree: false
+// })
+
 async function onError(event: FormErrorEvent) {
     const element = document.getElementById(event.errors[0].id)
     element?.focus()
@@ -50,7 +57,7 @@ async function onError(event: FormErrorEvent) {
                             <NuxtImg src="/Contact1.png"
                                 class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
                             <NuxtImg src="/Contact2.png"
-                                class="w-full max-w-[190px] h-auto md:max-w-[335px] object-cover" />
+                                class="w-full max-w-[190px] h-full md:max-w-[335px] object-cover" />
                         </div>
                     </div>
 
@@ -76,14 +83,17 @@ async function onError(event: FormErrorEvent) {
                                     placeholder="Describe your project" v-model="state.description" size="xl"
                                     class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-full"
                                     :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }"
-                                    :rows="8" md:rows="10" />
+                                    :rows="10" md:rows="20" />
                             </UFormGroup>
 
                             <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
-                                <UButton color="gray" size="xl" variant="solid" type="submit" form="contactForm"
-                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-6 lg:py-4 px-10 py-6 hover:bg-[#90755e] mt-6 md:mt-10 rounded-[8px] w-full md:w-auto max-w-xs">
+                                <!-- <UCheckbox
+                                    label="I agree to the Terms of Use and the Privacy Policy *" required
+                                    class="text-[12px] italic lg:text-[20px] text-gray-700 mt-9" /> -->
+                                <UButton color="gray" variant="solid" type="submit" form="contactForm"
+                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 rounded-[8px] w-[390px] md:w-auto">
                                     <div
-                                        class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
+                                        class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                                         let’s work together!
                                     </div>
                                 </UButton>

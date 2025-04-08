@@ -2,11 +2,11 @@
 const firstListItem = [
     {
         name: "Location",
-        body: `<p class="text-justify">US, New York NY 10016, 347 5th Ave Suite 1402-374 Portugal, Lisbon, Cidade de Cardiff 1, 5D</p>`,
+        body: `<p class="text-justify leading-[180%]">US, New York NY 10016, 347 5th Ave Suite 1402-374 Portugal, Lisbon, Cidade de Cardiff 1, 5D</p>`,
     },
     {
         name: "Contact",
-        body: `<div>Email: team@nomorender.com<br/>WhatsApp: +84866943407</div>`,
+        body: `<div class="text-justify leading-[180%]">Email: team@nomorender.com<br/>WhatsApp: +84866943407</div>`,
     },
 ]
 
@@ -14,9 +14,9 @@ const secondListItem = [
     {
         name: "3D Rendering Services",
         body: `
-      <p>3D Exterior Rendering</p>
+      <div class="text-justify leading-[180%]"><p>3D Exterior Rendering</p>
       <p>3D Interior Rendering</p>
-      <p>3D Furniture Modeling Rendering</p>
+      <p>3D Furniture Modeling Rendering</p></div>
     `,
     },
     {
@@ -39,14 +39,14 @@ const secondListItem = [
 
 <template>
     <div class="flex items-center justify-center bg-[#FAF8F5]">
-        <div class=" md:px-[130px] px-5 py-16">
+        <div class=" py-16 md:w-[1210px] md:px-0 px-5">
             <div class="flex items-center">
-                <NuxtImg src="/logo.png" class="md:w-[190px] md:h-[143px] w-24 h-16" />
+                <NuxtImg src="/logo.png" class="md:w-[190px] md:h-[143px] w-[65px] h-[49px]" />
                 <div class="flex flex-col items-start justify-center ml-5">
-                    <div class="md:text-[32px] text-[17px] font-semibold text-left leading-[150%]">
+                    <div class="md:text-[32px] text-[15px] font-[700] text-left leading-[150%]">
                         Nomadic Creativity, Timeless Render
                     </div>
-                    <div class="md:text-[25px] text-[15px] font-thin italic text-left leading-[150%]">
+                    <div class="md:text-[25px] text-[12px] font-[400] italic text-left leading-[150%]">
                         More than just blueprints, it’s about storytelling
                     </div>
                 </div>

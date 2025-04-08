@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#FAF8F5] h-fit flex flex-col justify-center items-center">
     <div class="py-10 md:py-20 mb-20">
-      <p class="text-center text-[16px] md:text-3xl md:mb-7">SERVICES</p>
+      <p class="text-center text-[16px] lg:text-3xl lg:mb-7">SERVICES</p>
       <h2 class="text-center font-semibold text-[30px] md:text-6xl md:mb-20 text-[#8D7662]">
         What we do?
       </h2>
@@ -26,7 +26,7 @@
             }
           }" indicators arrows class="w-full max-w-[720px] mx-auto">
             <template #default="{ item }">
-              <NuxtImg :src="item" class="w-full max-w-[480px] sm:max-w-[600px] md:max-w-[720px] h-auto object-contain"
+              <NuxtImg :src="item" class="w-full sm:max-w-[600px] md:max-w-[720px] h-auto object-contain"
                 draggable="false" />
             </template>
 
@@ -38,7 +38,7 @@
           </UCarousel>
         </div>
 
-        <div class="fex-grow justify-center mx-10 md:mx-0 flex-1 md:max-w-[720px] md:ml-[100px] md:pr-[100px]">
+        <div class="mb-[100px] fex-grow justify-center mx-10 md:mx-0 flex-1 md:max-w-[720px] md:ml-[100px] md:pr-[100px]">
           <p class="mb-8 md:text-[40px] text-[18px] font-[600] mt-10 md:mt-0 md:w-[480px]">{{ item.name }}</p>
           <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
           <div class="hidden md:block ">
@@ -64,8 +64,9 @@ const services = [
     name: "Exterior Rendering",
     link: "/exterior",
     image: ["/services/1.png", "/services/2.png", "/services/3.png"],
-    content: `<p class="leading-[200%]">We provide detailed and accurate representations of:</p>
-<ul class="list-disc pl-4 leading-[200%]">
+    content: `<div class="leading-[200%] text-justify">We provide detailed and accurate representations of:
+   </div>
+    <ul class="list-disc pl-6 text-justify leading-[200%]">
     <li>Buildings</li>
     <li>Landscapes</li>
     <li>Surroundings</li>
@@ -76,8 +77,8 @@ const services = [
     name: "Interior Rendering",
     link: "/exterior",
     image: ["/services/1.png", "/services/2.png", "/services/3.png", "/services/3.png"],
-    content: `<p class="leading-[200%]">We enhance interior visualization by creating highly detailed, photorealistic images inside:</p>
-<ul class="list-disc pl-4 leading-[200%]">
+    content: `<p class="leading-[200%] text-justify">We enhance interior visualization by creating highly detailed, photorealistic images inside:</p>
+<ul class="list-disc pl-6 leading-[200%] text-justify">
     <li>Apartments</li>
     <li>Houses</li>
     <li>Restaurants</li>
@@ -89,8 +90,8 @@ const services = [
     name: "Furniture Modeling",
     link: "/exterior",
     image: ["/services/1.png", "/services/2.png", "/services/3.png"],
-    content: `<p class = "leading-[200%]">We ensure precise proportions, realistic textures, and manufacturing accuracy through processes by transforming:</p>
-<ul class="list-disc pl-4 leading-[200%]">
+    content: `<p class = "leading-[200%] text-justify">We ensure precise proportions, realistic textures, and manufacturing accuracy through processes by transforming:</p>
+<ul class="list-disc pl-6 leading-[200%] text-justify">
     <li>Sketches</li>
     <li>Blueprints</li>
     <li>Concepts</li>
