@@ -15,8 +15,9 @@
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>
-            <UDropdown v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
-              <div class="flex items-center gap-4">
+            <UDropdown :ui="{ item: { padding: 'py-2' } }" v-else :items="item.childen"
+              :popper="{ placement: 'bottom-start' }">
+              <div class="flex items-center gap-5">
                 <p class=" text-xl hover:underline font-semibold" :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
                   {{ item.name }}
                 </p>
@@ -30,8 +31,8 @@
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid" class="lg:hidden text-white"
             :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
-          <USlideover v-model="isOpenMenu">
-            <div class="p-8 mb-4">
+          <USlideover v-model="isOpenMenu" :ui="{ wrapper: 'w-[300px] fixed right-0 left-auto' }" side="right">
+            <div class="p-8 mb-">
               <!-- Close button -->
               <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
                 class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" />
@@ -39,24 +40,24 @@
               <div class="flex flex-1 flex-col gap-10 mt-10">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"
-                    class=" text-xl cursor-pointer font-semibold text-[#8D7662]">
+                    class="text-xl cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
                   <div v-else class="flex flex-col items-end gap-3">
-                    <div @click="open = item.name === open ? null : item.name" 
-                         class="flex items-center justify-end gap-4 cursor-pointer">
+                    <div @click="open = item.name === open ? null : item.name"
+                      class="flex items-center justify-end gap-4 cursor-pointer">
                       <div class="text-[20px] font-semibold text-[#8D7662]">
                         {{ item.name }}
                       </div>
-                      <UIcon name="gridicons:dropdown" 
-                             class="transition-transform duration-200 size-10 text-[#8D7662]"
-                             :class="{'transform rotate-180': open === item.name}" />
+                      <UIcon name="gridicons:dropdown" class="transition-transform duration-200 size-10 text-[#8D7662]"
+                        :class="{ 'transform rotate-180': open === item.name }" />
                     </div>
+                    <!-- Mobile -->
                     <div v-show="open === item.name" class="mt-2 pl-4 space-y-3 flex flex-col items-end">
-                      <div v-for="child in item.childen[0]" :key="child.label" 
-                         class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
+                      <div v-for="child in item.childen[0]" :key="child.label"
+                        class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
                         {{ child.label }}
-                    </div>
+                      </div>
                     </div>
                   </div>
                   <span v-if="item !== navList[navList.length - 1]"
@@ -73,7 +74,7 @@
 
 <script lang="ts" setup>
 const router = useRouter();
-const open = ref<string | null>(null); 
+const open = ref<string | null>(null);
 const navList = [
   {
     path: "/",
