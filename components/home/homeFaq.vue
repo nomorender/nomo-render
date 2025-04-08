@@ -28,28 +28,31 @@ const items = [
 </script>
 
 <template>
-    <div class="bg-[#FAF8F5] md:px-[130px] px-10 py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 mt-20">
-        <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center">FAQ</div>
-        <div class="space-y-4 lg:mt-0 mt-10">
-            <UAccordion :collapsible="false" :items="items">
-                <template #default="{ item, index, open }">
-                    <div class="relative">
-                        <div class="flex items-center justify-between py-2">
-                            <div
-                                class="font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
-                                {{ item.label }}
+    <di class=" bg-[#FAF8F5] w-full flex items-center justify-center">
+        <div class="px-10 py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 mt-20 w-[1207px]">
+            <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center">FAQ</div>
+            <div class="space-y-4 lg:mt-0 mt-10">
+                <UAccordion :collapsible="false" :items="items">
+                    <template #default="{ item, index, open }">
+                        <div class="relative">
+                            <div class="flex items-center justify-between py-2">
+                                <div
+                                    class="font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
+                                    {{ item.label }}
+                                </div>
+                                <UIcon name="material-symbols:keyboard-arrow-down-rounded"
+                                    class="w-[48px] h-[48px] transform transition-transform duration-200"
+                                    :class="{ 'rotate-180': open }" />
                             </div>
-                            <UIcon name="material-symbols:keyboard-arrow-down-rounded"
-                                class="w-[48px] h-[48px] transform transition-transform duration-200"
-                                :class="{ 'rotate-180': open }" />
+                            <span v-if="index !== items.length - 1"
+                                class="lg:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
                         </div>
-                        <span v-if="index !== items.length - 1" class="lg:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
-                    </div>
-                </template>
-                <template #item="{ item }">
-                    <p>{{ item.content }}</p>
-                </template>
-            </UAccordion>
+                    </template>
+                    <template #item="{ item }">
+                        <p>{{ item.content }}</p>
+                    </template>
+                </UAccordion>
+            </div>
         </div>
-    </div>
+    </di>
 </template>

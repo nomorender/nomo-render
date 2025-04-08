@@ -8,14 +8,14 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="py-20">
+  <div class="py-20 flex items-center justify-center gap-2 w-full">
     <UCarousel :items="items" arrows :ui="{
-      item: 'basis-full sm:basis-1/2 lg:basis-[33.5%] snap-center', arrows: {
+      item: 'basis-full sm:basis-1/2 lg:basis-1/3', arrows: {
         wrapper: 'flex items-center justify-center gap-2 mt-2 sm:hidden'
       },
     }">
       <template #default="{ item, index }">
-        <div class="relative w-auto cursor-pointer max-h-[725px]" @click="isOpen = true">
+        <div class="relative w-auto cursor-pointer max-h-[725px] mx-2" @click="isOpen = true">
           <div
             class="absolute bottom-[60px] left-1/2 transform -translate-x-1/2 bg-white rounded-lg py-3 md:w-[330px] w-[220px] md:h-[115px] h-[76px] text-center">
             <div class="flex flex-col justify-center items-center w-full h-full">

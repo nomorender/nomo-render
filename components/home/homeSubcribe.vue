@@ -3,8 +3,8 @@ const value = ref('');
 </script>
 
 <template>
-  <div class="bg-white md:border-x-[50px] border-x-[30px] border-y-[65px] border-white">
-    <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5">
+  <div class="flex items-center justify-center py-20">
+    <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5 w-[1360px] h-[450px]">
       <div class="px-6 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
         <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
