@@ -222,14 +222,15 @@ const openModal = (item: CarouselItem): void => {
                 </h2>
             </div>
             <div class="relative bg-[#FAF8F5]">
-                <UButton
-                    class="hidden md:block p-2 absolute md:left-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
-                    @click="carousel.prev()">
-                    <div class="text-[#8D7662] flex justify-center">
-                        <UIcon name="mdi-light:arrow-left" class="size-10" />
-                    </div>
-                </UButton>
-                <div class="max-w-[1112px] pt-5 mx-auto md:pb-10">
+                <!-- Button Prev -->
+                <div class="relative max-w-[1112px] pt-5 mx-auto md:pb-10">
+                    <UButton
+                        class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                        @click="carousel.prev()">
+                        <div class="text-[#8D7662] flex justify-center">
+                            <UIcon name="mdi-light:arrow-left" class="size-10" />
+                        </div>
+                    </UButton>
                     <UCarousel :items="items" arrows :ui="{
                         item: 'basis-full lg:basis-1/2 lg:basis-1/3', arrows: {
                             wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
@@ -295,15 +296,15 @@ const openModal = (item: CarouselItem): void => {
                         </template>
                     </UCarousel>
 
+                    <!-- Button Next -->
                     <UButton
-                        class="hidden md:block p-2 absolute md:right-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                        class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                         @click="carousel.next()">
                         <div class="text-[#FFFFFF] flex justify-center">
                             <UIcon name="mdi-light:arrow-right" class="size-10" />
                         </div>
                     </UButton>
 
-                    
                     <UModal v-model="isOpen"
                         :ui="{ background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
                         <div class="relative">
@@ -426,6 +427,27 @@ const openModal = (item: CarouselItem): void => {
                                         workflow
                                     </div>
                                 </div>
+                            </div>
+
+                            <div
+                                class="absolute top-[35%] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+                                <UButton
+                                    class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                                    @click="">
+                                    <div class="text-[#FFFFFF] flex justify-center">
+                                        <UIcon name="mdi-light:arrow-right" class="size-10" />
+                                    </div>
+                                </UButton>
+                            </div>
+
+                            <div class="absolute top-[35%] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+                                <UButton
+                                    class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                                    @click="">
+                                    <div class="text-[#8D7662] flex justify-center">
+                                        <UIcon name="mdi-light:arrow-left" class="size-10" />
+                                    </div>
+                                </UButton>
                             </div>
                         </div>
                     </UModal>
