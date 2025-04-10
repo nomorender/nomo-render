@@ -430,7 +430,7 @@ const openModal = (item: CarouselItem): void => {
                             </div>
 
                             <div
-                                class="absolute top-[35%] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+                                class="absolute top-[700px] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
                                 <UButton
                                     class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                                     @click="">
@@ -440,7 +440,7 @@ const openModal = (item: CarouselItem): void => {
                                 </UButton>
                             </div>
 
-                            <div class="absolute top-[35%] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+                            <div class="absolute top-[700px] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
                                 <UButton
                                     class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                                     @click="">
