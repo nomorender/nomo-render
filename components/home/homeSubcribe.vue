@@ -53,7 +53,7 @@ const value = ref('');
               <UInput padded required color="white" variant="none" placeholder="Your email"
                 size="xl" class="!bg-none px-2 rounded-[8px] w-full"
                 :ui="{ placeholder: 'placeholder-[#000000] font-[300] text-[15px] md:text-[25px] md:leading-[43px] leading-[180%]' }" />
-              <UButton class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3">
+              <UButton class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
               </UButton>
             </div>

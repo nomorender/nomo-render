@@ -13,25 +13,46 @@ const firstListItem = [
 const secondListItem = [
     {
         name: "3D Rendering Services",
-        body: `
-      <div class="text-justify leading-[180%]"><p>3D Exterior Rendering</p>
-      <p>3D Interior Rendering</p>
-      <p>3D Furniture Modeling Rendering</p></div>
-    `,
+        links: [
+            {
+                name: "3D Exterior Rendering",
+                link: '/exterior'
+            },
+            {
+                name: "3D Interior Rendering",
+                link: '/'
+            },
+            {
+                name: "3D Furniture Modeling Rendering",
+                link: '/'
+            }
+        ]
     },
     {
         name: "Our Work",
-        body: `
-      <p>Portfolio</p>
-      <p>Workflow</p>
-    `,
+        links: [
+            {
+                name: 'Portfolio',
+                link: '/'
+            },
+            {
+                name: 'Workflow',
+                link: '/'
+            }
+        ]
     },
     {
         name: "Explore",
-        body: `
-      <p>Inspire Space</p>
-      <p>Library</p>
-    `,
+        links: [
+            {
+                name: "Inspire Space",
+                link: '/'
+            },
+            {
+                name: "Library",
+                link: '/'
+            }
+        ]
     },
 ]
 </script>
@@ -61,12 +82,24 @@ const secondListItem = [
                 <div class="w-fit">
                     <div class="text-[#8D7662] font-[600] text-xl mb-5">Social</div>
                     <div class="grid grid-cols-4 gap-5">
-                        <nuxt-img src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />
-                        <nuxt-img src="/SocialMedia/Instagram.svg" class="w-[56px] h-[58px]" />
-                        <nuxt-img src="/SocialMedia/whatsApp.svg" class="w-[56px] h-[58px]" />
-                        <nuxt-img src="/SocialMedia/Trustpilot.svg" class="w-[56px] h-[58px]" />
-                        <nuxt-img src="/SocialMedia/Facebook.svg" class="w-[56px] h-[58px]" />
-                        <nuxt-img src="/SocialMedia/Linkedin.svg" class="w-[56px] h-[58px]" />
+                        <NuxtLink to="https://www.behance.net/nomorender" target="_blank">
+                            <nuxt-img src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
+                        <NuxtLink to="https://www.instagram.com/nomorender/" target="_blank">
+                            <nuxt-img src="/SocialMedia/Instagram.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
+                        <NuxtLink to="https://wa.me/84866943407" target="_blank">
+                            <nuxt-img src="/SocialMedia/whatsApp.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
+                        <NuxtLink to="https://www.trustpilot.com/review/nomorender.com" target="_blank">
+                            <nuxt-img src="/SocialMedia/Trustpilot.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
+                        <NuxtLink to="https://www.facebook.com/nomorender" target="_blank">
+                            <nuxt-img src="/SocialMedia/Facebook.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
+                        <NuxtLink to="https://www.linkedin.com/company/nomorender/" target="_blank">
+                            <nuxt-img src="/SocialMedia/Linkedin.svg" class="w-[56px] h-[58px]" />
+                        </NuxtLink>
                     </div>
                 </div>
 
@@ -74,7 +107,11 @@ const secondListItem = [
                     <div class="text-[#8D7662] font-semibold text-xl mb-5">
                         {{ item.name }}
                     </div>
-                    <div class="text-lg font-[300] w-fit" v-html="item.body"></div>
+
+                    <NuxtLink v-for="(link, linkIndex) in item.links" :key="linkIndex" :to="link.link"
+                        class="block mb-2">
+                        {{ link.name }}
+                    </NuxtLink>
                 </div>
             </div>
         </div>
