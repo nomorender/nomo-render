@@ -3,8 +3,9 @@ interface CarouselItem {
   name: string
   location: string
   mainPic: string
-  content: any
-  pic1: string
+  content1: any
+  content2: any
+  picDes: any
 }
 
 const items: CarouselItem[] = [
@@ -12,36 +13,98 @@ const items: CarouselItem[] = [
     name: 'Elevate NY',
     location: 'New York, USA',
     mainPic: '/mobile-background.png',
-    pic1: ``,
-    content: `
+    content1: `
     <div>
       <div>
           Typology: Interior
           <br/>Status: Completed
-          <br/>Location: New York, USA Client: Islyn Studio Visualization: Nomo Render
-          <br/>Completion time: 6 weeks
+          <br/>Location: New York, USA 
+          <br/>Client: Islyn Studio 
+          <br/>Visualization: Nomo Render
       </div>
 
       <div>
         This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
       </div>
     </div>
-  `
+  `,
+    content2: `
+      <div>
+          At street level, the restored arches and brickwork honor the fabric of the neighborhood, maintaining a sense of familiarity. Above a sleek geometric addition made by metal, creates a dynamic interplay of light and shadow.
+
+          While working with Demo Arch, we as Nomo Render follow their vision as a signature design on urban visualization, where heritage meets forward-thinking design to redefine contemporary city living.
+      </div>
+  `,
+    picDes: {
+      pic1: `/Service1Pic1.png`,
+      pic2: `/HAR01.jpg`,
+      pic3: '/HAR02.jpg',
+    }
   },
   {
     name: 'The Warmth Within',
     location: 'New York, USA',
     mainPic: '/Service02.png',
-    pic1: ``,
-    content: `<div></div>`
+    content1: `
+    <div>
+      <div>
+          Typology: Interior
+          <br/>Status: Completed
+          <br/>Location: New York, USA 
+          <br/>Client: Islyn Studio 
+          <br/>Visualization: Nomo Render
+      </div>
+
+      <div>
+        In collaboration with The Mib Project, we reimagine dining with an organic and modern aesthetic. This space is designed with a perfect balance of comfort and elegance, with soft earth stone and refined textures.
+      </div>
+    </div>
+  `,
+    content2: `
+      <div>
+          The Warmth Within is a combination of understated luxury and special artistic style, having:
+          Woven rattan chairs, Sculptural lighting, Abstract artwork, Warm wood tones, The shape composition enhanced the sense of depth and character, making the space feel both timeless and deeply personal with artisanal craftsmanship.
+      </div>
+  `,
+    picDes: {
+      pic1: `/HAR03.png`,
+      pic2: '/HAR04.png',
+      pic3: '/HAR05.png',
+      pic4: '/HAR06.png',
+    }
   },
   {
-    name: 'The Gilded Entrance',
-    location: 'San Francisco, USA',
+    name: 'Elevate NY',
+    location: 'The Gilded Entrance',
     mainPic: '/Service03.png',
-    pic1: ``,
-    content: `<div></div>`
-  }
+    content1: `
+    <div>
+      <div>
+          Typology: Exterior & Interior
+          <br/>Status: Completed
+          <br/>Location: New York, USA 
+          <br/>Client: frenchCALIFORNIA 
+          <br/>Visualization: Nomo Render
+      </div>
+
+      <div>
+        This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
+      </div>
+    </div>
+  `,
+    content2: `
+      <div>
+          Steeped in elegance, this design shows the threshold between the bustling city and a sanctuary of sophistication. Designed to present grandeur and intimacy, the entrance blended Art Deco influences with contemporary refinement.
+      </div>
+  `,
+    picDes: {
+      pic1: `/HAR07.png`,
+      pic2: '/HAR08.jpg',
+      pic3: '/HAR9.jpg',
+      pic4: '/HAR10.jpg',
+      pic5: '/HAR11.jpg',
+    }
+  },
 ]
 
 const isOpen = ref<boolean>(false)
@@ -89,44 +152,109 @@ const openModal = (item: CarouselItem): void => {
         </UButton>
       </template>
     </UCarousel>
-
     <UModal v-model="isOpen"
-      :ui="{ background: 'bg-transparent', container: 'border-none flex items-center justify-center', width: 'w-fit !max-w-none' }">
+      :ui="{ background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
       <div class="relative">
         <div class="flex gap-2.5 mb-8">
-          <UButton color="gray" square size="xl" icon="i-heroicons-x-mark-20-solid"
-            class="absolute bg-transparent outline-none border-none right-4 top-4" @click="isOpen = false" />
-          <div>
-            <div class="bg-[#FAF8F5] rounded-full flex items-center justify-center">
-              <NuxtImg class="w-[81px] h-[81px]" src="/logo-tron.png" />
+          <UButton variant="ghost" size="xl" class="absolute right-[-90px] top-4" @click="isOpen = false" :ui="{
+            base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
+          }">
+            <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 text-white" />
+          </UButton>
+          <div class="flex items-center justify-center gap-12">
+            <div class="p-5 bg-[#FAF8F5] rounded-full">
+              <nuxt-img class="size-[81px]" src="/logo3.svg" />
             </div>
-          </div>
-          <div>
-            <p class="text-[25px] text-[#8D7662] font-[600] leading-[200%]">{{ selectedItem?.name }}</p>
-            <p class="font-[300] text-[25px] leading-[200%]">Nomo Render - 3D Visualization Studio</p>
+            <div>
+              <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
+              <p class="font-[300] text-[25px] leading-[200%] text-[#FAF8F5]">Nomo Render - 3D Visualization Studio</p>
+            </div>
           </div>
         </div>
         <div class="bg-white rounded-[8px] w-[960px]">
-          <div class="p-5">
+          <div class="p-[4rem]">
             <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{ selectedItem?.name }}</p>
-            <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content"></div>
+            <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content1"></div>
           </div>
           <div class="bg-white">
             <div class="w-full h-full">
-              <NuxtImg src="/Service1Pic1.png" class="w-full h-fit" />
+              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-fit" />
             </div>
           </div>
+          <div class="px-[4rem] py-5">
+            <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content2"></div>
+          </div>
+
+
+          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
+            <div class="w-[50%]">
+              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            </div>
+            <div class="w-[50%]">
+              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+            </div>
+          </div>
+
+          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
+            <div class="col-span-2">
+              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            </div>
+            <div class="col-span-1">
+              <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+            </div>
+            <div class="col-span-1">
+              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+            </div>
+          </div>
+
+          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
+            <div class="col-span-2">
+              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            </div>
+            <div class="col-span-1">
+              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover" />
+            </div>
+            <div class="col-span-1">
+              <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+            </div>
+            <div class="col-span-2">
+              <NuxtImg :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+            </div>
+          </div>
+
+          <div class="flex w-full justify-center items-center py-10">
+            <UButton color="gray" variant="solid" type="submit" form="contactForm"
+              class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] rounded-[8px] w-[390px] md:w-auto">
+              <div
+                class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] text-[28px]">
+                see more our projects
+              </div>
+            </UButton>
+          </div>
+
         </div>
+        <div class="absolute top-[200px] right-[-130px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+          <div class="flex flex-col items-center justify-center">
+            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+              <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
+            </UButton>
+            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
+          </div>
 
+          <div class="flex flex-col items-center justify-center">
+            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+              <UIcon name="material-symbols:ios-share" class="size-12 text-[#8D7662]" />
+            </UButton>
+            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Share</div>
+          </div>
 
-
-       
-
-        <div class = "absolute top-[170px] right-[-60px] -translate-y-1/2 ">
-          <UButton
-          class=" bg-[#8D7662] text-white p-3 rounded-full shadow-lg hover:scale-105 transition">
-          <UIcon name="heroicons:arrow-right" class="w-5 h-5" />
-        </UButton>
+          <div class="flex flex-col items-center justify-center">
+            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+              <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
+            </UButton>
+            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">Our workflow
+            </div>
+          </div>
         </div>
       </div>
     </UModal>

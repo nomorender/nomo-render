@@ -26,7 +26,7 @@
             }
           }" indicators arrows class="w-full max-w-[720px] mx-auto">
             <template #default="{ item }">
-              <NuxtImg :src="item" class="w-full sm:max-w-[600px] lg:max-w-[720px] h-auto object-contain"
+              <NuxtImg :src="item" class="w-full sm:max-w-[600px] lg:max-w-[720px] h-[617px] max-h-[600px] object-cover object-center"
                 draggable="false" />
             </template>
 
@@ -37,8 +37,7 @@
             </template>
           </UCarousel>
         </div>
-
-        <div class="mb-[100px] fex-grow justify-center mx-10 md:mx-0 flex-1 lg:max-w-[720px] md:ml-[100px] md:pr-[100px]">
+        <div class="flex-grow justify-center mx-10 md:mx-0 flex-1 lg:max-w-[720px] md:ml-[100px] md:pr-[100px]">
           <p class="mb-8 md:text-[40px] text-[18px] font-[600] mt-10 md:mt-0 md:w-[480px]">{{ item.name }}</p>
           <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
           <div class="hidden md:block ">
@@ -63,7 +62,7 @@ const services = [
   {
     name: "Exterior Rendering",
     link: "/exterior",
-    image: ["/services/1.png", "/services/2.png", "/services/3.png"],
+    image: ["/services/7.png", "/services/2.webp", "/services/3.webp"],
     content: `<div class="leading-[200%] text-justify">We provide detailed and accurate representations of:
    </div>
     <ul class="list-disc pl-6 text-justify leading-[200%]">
@@ -76,7 +75,7 @@ const services = [
   {
     name: "Interior Rendering",
     link: "/exterior",
-    image: ["/services/1.png", "/services/2.png", "/services/3.png", "/services/3.png"],
+    image: ["/services/6.png", "/services/5.webp", "/services/6.tif", "/services/7.jpg"],
     content: `<p class="leading-[200%] text-justify">We enhance interior visualization by creating highly detailed, photorealistic images inside:</p>
 <ul class="list-disc pl-6 leading-[200%] text-justify">
     <li>Apartments</li>
