@@ -26,7 +26,7 @@
             }
           }" indicators arrows class="w-full max-w-[720px] mx-auto">
             <template #default="{ item }">
-              <NuxtImg :src="item" class="w-full sm:max-w-[600px] md:max-w-[720px] h-auto object-contain"
+              <NuxtImg :src="item" class="w-full sm:max-w-[600px] lg:max-w-[720px] h-auto object-contain"
                 draggable="false" />
             </template>
 
@@ -38,11 +38,11 @@
           </UCarousel>
         </div>
 
-        <div class="mb-[100px] fex-grow justify-center mx-10 md:mx-0 flex-1 md:max-w-[720px] md:ml-[100px] md:pr-[100px]">
+        <div class="mb-[100px] fex-grow justify-center mx-10 md:mx-0 flex-1 lg:max-w-[720px] md:ml-[100px] md:pr-[100px]">
           <p class="mb-8 md:text-[40px] text-[18px] font-[600] mt-10 md:mt-0 md:w-[480px]">{{ item.name }}</p>
           <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
           <div class="hidden md:block ">
-            <UButton class="hover:bg-[#00a155] text-[#980e0c] transition-all"
+            <UButton class="hover:bg-[#FAF8F5] text-[#980e0c] transition-all"
               :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
               variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
           </div>

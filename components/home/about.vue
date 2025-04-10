@@ -13,7 +13,7 @@
           to bring future spaces to life today
         </p>
         <div class="hidden lg:block ">
-            <UButton class="hover:bg-[#00a155] text-[#980e0c] transition-all"  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+            <UButton class="hover:bg-[#FAF8F5] text-[#980e0c] transition-all"  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
         </div>
       </div>
       <div class="">

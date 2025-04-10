@@ -117,7 +117,7 @@ const isOpen = ref(false)
                                         </div>
                                     </div>
                                     <div class="mt-5">
-                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] py-2"
+                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] hover:bg-[#FAF8F5] py-2"
                                             @click="isOpen = true">
                                             <div class="text-[#980C0C] flex justify-center">
                                                 <UIcon name="cuida:arrow-right-outline" class="size-5" />See more

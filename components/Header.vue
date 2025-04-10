@@ -15,10 +15,11 @@
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>
-            <UDropdown :ui="{ item: { padding: 'py-3' } }" v-else :items="item.childen"
+            <UDropdown :ui="{ item: { padding: 'py-3', label : 'text-[#000000]' } }" v-else :items="item.childen"
               :popper="{ placement: 'bottom-start' }">
-              <div class="flex items-center gap-5">
-                <p class=" text-xl hover:underline font-semibold" :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
+              <div class="flex items-center gap-2">
+                <p class=" text-xl  hover:underline font-semibold"
+                  :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
                   {{ item.name }}
                 </p>
                 <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"

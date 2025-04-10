@@ -73,10 +73,9 @@
             </div>
 
             <div class="flex flex-col justify-center items-center">
-                <div class="mb-20 md:mt-[5rem]">
+                <div class="mb-20 md:mt-[8rem]">
                     <div
                         class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
-
                         <div class="md:w-[350px] w-[220px]">
                             <div class="flex gap-7 items-center">
                                 <div class="">
