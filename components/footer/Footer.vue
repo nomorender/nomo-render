@@ -1,66 +1,10 @@
 <script setup>
-const firstListItem = [
-    {
-        name: "Location",
-        body: `<p class="text-justify leading-[180%]">US, New York NY 10016, 347 5th Ave Suite 1402-374 Portugal, Lisbon, Cidade de Cardiff 1, 5D</p>`,
-    },
-    {
-        name: "Contact",
-        body: `<div class="text-justify leading-[180%]">Email: team@nomorender.com<br/>WhatsApp: +84866943407</div>`,
-    },
-]
-
-const secondListItem = [
-    {
-        name: "3D Rendering Services",
-        links: [
-            {
-                name: "3D Exterior Rendering",
-                link: '/exterior'
-            },
-            {
-                name: "3D Interior Rendering",
-                link: '/'
-            },
-            {
-                name: "3D Furniture Modeling Rendering",
-                link: '/'
-            }
-        ]
-    },
-    {
-        name: "Our Work",
-        links: [
-            {
-                name: 'Portfolio',
-                link: '/'
-            },
-            {
-                name: 'Workflow',
-                link: '/'
-            }
-        ]
-    },
-    {
-        name: "Explore",
-        links: [
-            {
-                name: "Inspire Space",
-                link: '/'
-            },
-            {
-                name: "Library",
-                link: '/'
-            }
-        ]
-    },
-]
 </script>
 
 
 <template>
-    <div class="flex items-center justify-center bg-[#FAF8F5]">
-        <div class=" py-16 md:w-[1210px] md:px-0 px-5">
+    <div class=" bg-[#FAF8F5 flex items-center justify-center">
+        <div class=" py-16 md:w-[1208px] md:px-0 px-5">
             <div class="flex items-center">
                 <NuxtImg src="/logo.png" class="md:w-[190px] md:h-[143px] w-[65px] h-[49px]" />
                 <div class="flex flex-col items-start justify-center ml-5">
@@ -72,14 +16,29 @@ const secondListItem = [
                     </div>
                 </div>
             </div>
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-16">
-                <div v-for="(item, index) in firstListItem" :key="index" class="max-w-xs">
-                    <div class="text-[#8D7662] font-semibold text-xl mb-5">
-                        {{ item.name }}
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-10 gap-16">
+                <div class="col-span-4">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-5">
+                        Location
                     </div>
-                    <div class="text-lg font-[300] w-fit" v-html="item.body"></div>
+                    <div>
+                        <div class="text-[25px] font-[300] leading-[200%] text-justify">
+                            US, New York NY 10016, 347 5th Ave Suite 1402-374Portugal, Lisbon, Cidade de cardiff 1, 5D
+                        </div>
+                    </div>
                 </div>
-                <div class="w-fit">
+                <div class="col-span-3">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-5">
+                        Contact
+                    </div>
+                    <div>
+                        <div class="text-[25px] font-[300] leading-[200%] text-justify">
+                            Email: team@nomorender.com<br />
+                            WhatsApp: +84866943407
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-3">
                     <div class="text-[#8D7662] font-[600] text-xl mb-5">Social</div>
                     <div class="grid grid-cols-4 gap-5">
                         <NuxtLink to="https://www.behance.net/nomorender" target="_blank">
@@ -103,15 +62,57 @@ const secondListItem = [
                     </div>
                 </div>
 
-                <div v-for="(item, index) in secondListItem" :key="index" class="max-w-xs">
-                    <div class="text-[#8D7662] font-semibold text-xl mb-5">
-                        {{ item.name }}
+                <div class="col-span-4">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-5">3D Rendering Services</div>
+                    <div class="text-[25px] font-[300] leading-[200%] text-justify">
+                        <div>
+                            <NuxtLink to="/exterior">
+                                3D Exterior Rendering
+                            </NuxtLink>
+                        </div>
+                        <div>
+                            <NuxtLink to="">
+                                3D Interior Rendering
+                            </NuxtLink>
+                        </div>
+                        <div>
+                            <NuxtLink to="">
+                                3D Furniture Modeling Rendering
+                            </NuxtLink>
+                        </div>
                     </div>
+                </div>
 
-                    <NuxtLink v-for="(link, linkIndex) in item.links" :key="linkIndex" :to="link.link"
-                        class="block mb-2">
-                        {{ link.name }}
-                    </NuxtLink>
+                <div class="col-span-3">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-5">Our Work</div>
+                    <div class="text-[25px] font-[300] leading-[200%] text-justify">
+                        <div>
+                            <NuxtLink to="/">
+                                Portfolio
+                            </NuxtLink>
+                        </div>
+                        <div>
+                            <NuxtLink to="">
+                                Workflow
+                            </NuxtLink>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-3">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-5">Explore</div>
+                    <div class="text-[25px] font-[300] leading-[200%] text-justify">
+                        <div>
+                            <NuxtLink to="/">
+                                Inspire Space
+                            </NuxtLink>
+                        </div>
+                        <div>
+                            <NuxtLink to="">
+                                Library
+                            </NuxtLink>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
