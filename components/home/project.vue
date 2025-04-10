@@ -163,7 +163,7 @@ const openModal = (item: CarouselItem): void => {
           </UButton>
           <div class="flex items-center justify-center gap-12">
             <div class="p-5 bg-[#FAF8F5] rounded-full">
-              <nuxt-img class="size-[81px]" src="/logo3.svg" />
+              <nuxt-img class="size-[81px]" src="/Logo3.svg" />
             </div>
             <div>
               <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
@@ -172,13 +172,13 @@ const openModal = (item: CarouselItem): void => {
           </div>
         </div>
         <div class="bg-white rounded-[8px] w-[960px]">
-          <div class="p-[4rem]">
+          <div class="px-[4rem] pt-10 pb-5">
             <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{ selectedItem?.name }}</p>
             <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content1"></div>
           </div>
           <div class="bg-white">
-            <div class="w-full h-full">
-              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-fit" />
+            <div class="w-[960px] h-full">
+              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-[960px] h-[960px] object-cover object-center" />
             </div>
           </div>
           <div class="px-[4rem] py-5">
