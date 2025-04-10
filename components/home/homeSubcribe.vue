@@ -8,11 +8,11 @@ const value = ref('');
       <div class="px-8 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
         <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
-            <div class="flex gap-4 md:mb-5">
+            <div class="flex gap-4 md:mb-0">
               <div class="md:text-[32px] text-[15px]">Subscribe to</div>
               <nuxt-img src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
             </div>
-            <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-10 mb-3">Nomo Render</div>
+            <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-5 mb-3">Nomo Render</div>
             <div class="flex md:block">
               <p class="italic md:text-[20px] text-[15px] font-light">Subscribe now & start creating
                 stunning visuals with ease!</p>
@@ -50,8 +50,9 @@ const value = ref('');
           </div>
           <div class="flex items-center justify-center md:block">
             <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 py-2 rounded-lg shadow-lg w-full md:w-full">
-              <UInput  v-model="value" variant="none" placeholder="Your email"
-                class="flex-1 bg-transparent text-[#0000000] border-none rounded-l-md" size="xl"/>
+              <UInput padded required color="white" variant="none" placeholder="Your email"
+                size="xl" class="!bg-none px-2 rounded-[8px] w-full"
+                :ui="{ placeholder: 'placeholder-[#000000] font-[300] text-[15px] md:text-[25px] md:leading-[43px] leading-[180%]' }" />
               <UButton class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
               </UButton>
