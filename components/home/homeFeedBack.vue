@@ -1,63 +1,46 @@
 <script setup lang="ts">
 const items = [
     {
-        name: 'Name',
-        position: 'Position',
+        name: 'John S',
+        position: 'Architect from USA',
         star: 4,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/1.png`,
+        description: `I appreciated how quick they are; they’ve always met our deadlines without sacrificing quality. Definitely a go-to for any architects like me`,
+        img: `/Feedback/1.jpg`,
         ava: ''
     },
     {
-        name: 'Name',
-        position: 'Position',
+        name: 'Emma J',
+        position: 'Visualization Studio from the UK',
         star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/2.png`,
+        description: `Team really understands the demands of visualization. The renders are crisp, vivid, and come through faster than expected. We’ve partnered on multiple projects and I’m always impressed with their work.`,
+        img: `/Feedback/2.webp`,
         ava: ''
     },
     {
-        name: 'Name',
-        position: 'Position',
+        name: 'Lucas Müller',
+        position: 'Product Designer',
         star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/3.png`,
+        description: `The renders they produce are sharp and lifelike, making it so much easier to present our ideas to clients. They’re always quick to respond and easy to work with.`,
+        img: `/Feedback/3.png`,
         ava: ''
     },
     {
-        name: 'Name',
-        position: 'Position',
+        name: 'Maria Gonzalez',
+        position: 'Architect',
         star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/1.png`,
+        description: `I’ve worked with a lot of companies for my real estate projects, and Nomo Render is by far the best. The renders they create are incredibly detailed and look like actual photographs. This makes a huge difference in showing our properties to potential buyers.`,
+        img: `/Feedback/4.webp`,
         ava: ''
     },
     {
-        name: 'Name',
-        position: 'Position',
+        name: 'David Lee',
+        position: 'Marketing Manager',
         star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/1.png`,
-        ava: ''
-    },
-    {
-        name: 'Name',
-        position: 'Position',
-        star: 5,
-        description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
-        img: `/services/1.png`,
+        description: `Their team is always on time, and the quality is exactly what we need. I wouldn’t hesitate to recommend them for any commercial project.`,
+        img: `/Feedback/5.jpg`,
         ava: ''
     },
 ]
-
-const pics = {
-    image: [
-        '/Bedroom.png',
-        '/Bedroom2.png',
-        '/Bedroom3.png',
-        '/Bedroom4.png',
-    ],
-}
 const carousel = ref()
 const isOpen = ref(false)
 
@@ -87,10 +70,11 @@ const isOpen = ref(false)
                         },
                     }" ref="carousel">
                         <template #default="{ item }">
-                            <div class="flex items-center justify-center w-full pb-10">
+                            <div class="flex justify-center w-full pb-10">
                                 <div>
-                                    <div>
-                                        <NuxtImg :src=item.img class="w-[360px] h-[250px] rounded-[8px]"
+                                    <div class="max-w-[360px] w-full">
+                                        <NuxtImg :src="item.img"
+                                            class="w-full h-[250px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>
                                     <div class="mt-[30px] flex gap-5">
@@ -111,13 +95,13 @@ const isOpen = ref(false)
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="max-w-[340px] text-[20xp] leading-[150%] font-[300] italic mt-5 overflow-hidden"
-                                            style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4;">
+                                        <div class="max-w-[340px] text-[20xp] leading-[150%] font-[300] md:h-[120px] italic mt-5 overflow-hidden">
                                             {{ item.description }}
                                         </div>
                                     </div>
                                     <div class="mt-5">
-                                        <UButton variant="ghost" class="outline outline-1 outline-[#980C0C] hover:bg-[#FAF8F5] py-2"
+                                        <UButton variant="ghost"
+                                            class="outline outline-1 outline-[#980C0C] hover:bg-[#FAF8F5] py-2"
                                             @click="isOpen = true">
                                             <div class="text-[#980C0C] flex justify-center">
                                                 <UIcon name="cuida:arrow-right-outline" class="size-5" />See more
