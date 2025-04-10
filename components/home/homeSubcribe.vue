@@ -3,7 +3,7 @@ const value = ref('');
 </script>
 
 <template>
-  <div class="flex items-center justify-center py-20">
+  <div class="flex items-center justify-center py-20 md:pb-[5rem] md:pt-20">
     <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5 md:w-[1360px] w-[345px] h-fit">
       <div class="px-8 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
         <div class="mt-5 mb-5 lg:w-[50%]">

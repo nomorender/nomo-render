@@ -213,7 +213,7 @@ const openModal = (item: CarouselItem): void => {
 </script>
 
 <template>
-    <div class="pt-20">
+    <div class="mt-[8rem] mb-[6rem]">
         <div class="bg-[#FAF8F5]">
             <div class="pt-20">
                 <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
@@ -295,6 +295,15 @@ const openModal = (item: CarouselItem): void => {
                         </template>
                     </UCarousel>
 
+                    <UButton
+                        class="hidden md:block p-2 absolute md:right-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                        @click="carousel.next()">
+                        <div class="text-[#FFFFFF] flex justify-center">
+                            <UIcon name="mdi-light:arrow-right" class="size-10" />
+                        </div>
+                    </UButton>
+
+                    
                     <UModal v-model="isOpen"
                         :ui="{ background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
                         <div class="relative">
@@ -421,13 +430,6 @@ const openModal = (item: CarouselItem): void => {
                         </div>
                     </UModal>
                 </div>
-                <UButton
-                    class="hidden md:block p-2 absolute md:right-[3rem] md:top-1/2 md:-translate-y-1/2 md:-translate-x-0 -translate-y-[-20rem] -translate-x-[-3rem] z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
-                    @click="carousel.next()">
-                    <div class="text-[#FFFFFF] flex justify-center">
-                        <UIcon name="mdi-light:arrow-right" class="size-10" />
-                    </div>
-                </UButton>
             </div>
         </div>
     </div>

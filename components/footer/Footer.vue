@@ -3,7 +3,7 @@
 
 
 <template>
-    <div class=" bg-[#FAF8F5 flex items-center justify-center">
+    <div class=" bg-[#FAF8F5] flex items-center justify-center">
         <div class=" py-16 md:w-[1208px] md:px-0 px-5">
             <div class="flex items-center">
                 <NuxtImg src="/logo.png" class="md:w-[190px] md:h-[143px] w-[65px] h-[49px]" />
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-span-3">
-                    <div class="text-[#8D7662] font-[600] text-xl mb-5">Social</div>
+                    <div class="text-[#8D7662] font-[600] text-[25px] mb-5 leading-[200%]">Social</div>
                     <div class="grid grid-cols-4 gap-5">
                         <NuxtLink to="https://www.behance.net/nomorender" target="_blank">
                             <nuxt-img src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />

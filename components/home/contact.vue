@@ -33,7 +33,7 @@ async function onError(event: FormErrorEvent) {
 </script>
 
 <template>
-    <div class="bg-[#D9D9D9] py-10 md:py-20">
+    <div class="bg-[#D9D9D9] py-10 md:pt-20">
         <div class="md:px-8 flex items-center justify-center">
             <div class="w-[1072px]">
                 <div>
