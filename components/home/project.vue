@@ -15,21 +15,21 @@ const items: CarouselItem[] = [
     mainPic: '/mobile-background.png',
     content1: `
     <div>
-      <div>
-          Typology: Interior
-          <br/>Status: Completed
-          <br/>Location: New York, USA 
-          <br/>Client: Islyn Studio 
-          <br/>Visualization: Nomo Render
+      <div class = "font-[300]">
+          Typology: <span class = "font-[500]">Interior</span>
+          <br/>Status: <span class = "font-[500]">Completed</span>
+          <br/>Location: <span class = "font-[500]">New York, USA </span>
+          <br/>Client: <span class = "font-[500]">Islyn Studio </span>
+          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div>
+      <div class = "font-[300]">
         This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
       </div>
     </div>
   `,
     content2: `
-      <div>
+      <div class = "font-[300]">
           At street level, the restored arches and brickwork honor the fabric of the neighborhood, maintaining a sense of familiarity. Above a sleek geometric addition made by metal, creates a dynamic interplay of light and shadow.
 
           While working with Demo Arch, we as Nomo Render follow their vision as a signature design on urban visualization, where heritage meets forward-thinking design to redefine contemporary city living.
@@ -47,21 +47,21 @@ const items: CarouselItem[] = [
     mainPic: '/Service02.png',
     content1: `
     <div>
-      <div>
-          Typology: Interior
-          <br/>Status: Completed
-          <br/>Location: New York, USA 
-          <br/>Client: Islyn Studio 
-          <br/>Visualization: Nomo Render
+      <div class = "font-[300]">
+          Typology: <span class = "font-[500]">Interior</span>
+          <br/>Status: <span class = "font-[500]">Completed</span>
+          <br/>Location: <span class = "font-[500]">New York, USA</span>
+          <br/>Client: <span class = "font-[500]">The Mib Project</span>
+          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div>
+      <div class = "font-[300]">
         In collaboration with The Mib Project, we reimagine dining with an organic and modern aesthetic. This space is designed with a perfect balance of comfort and elegance, with soft earth stone and refined textures.
       </div>
     </div>
   `,
     content2: `
-      <div>
+      <div class = "font-[300]">
           The Warmth Within is a combination of understated luxury and special artistic style, having:
           Woven rattan chairs, Sculptural lighting, Abstract artwork, Warm wood tones, The shape composition enhanced the sense of depth and character, making the space feel both timeless and deeply personal with artisanal craftsmanship.
       </div>
@@ -79,21 +79,21 @@ const items: CarouselItem[] = [
     mainPic: '/Service03.png',
     content1: `
     <div>
-      <div>
-          Typology: Exterior & Interior
-          <br/>Status: Completed
-          <br/>Location: New York, USA 
-          <br/>Client: frenchCALIFORNIA 
-          <br/>Visualization: Nomo Render
+      <div class = "font-[300]">
+          Typology: <span class = "font-[500]">Exterior & Interior</span>
+          <br/>Status: <span class = "font-[500]">Completed</span>
+          <br/>Location: <span class = "font-[500]">San Francisco, USA</span>
+          <br/>Client: <span class = "font-[500]">frenchCALIFORNIA</span>
+          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div>
+      <div class = "font-[300]">
         This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
       </div>
     </div>
   `,
     content2: `
-      <div>
+      <div class = "font-[300]">
           Steeped in elegance, this design shows the threshold between the bustling city and a sanctuary of sophistication. Designed to present grandeur and intimacy, the entrance blended Art Deco influences with contemporary refinement.
       </div>
   `,

@@ -7,7 +7,7 @@ const state = reactive({
     name: undefined,
     email: undefined,
     description: undefined,
-    agree: false // Thêm trạng thái cho checkbox
+    agree: false
 })
 
 const validate = (state: any): FormError[] => {
