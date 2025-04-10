@@ -178,7 +178,7 @@ const openModal = (item: CarouselItem): void => {
           </div>
           <div class="bg-white">
             <div class="w-[960px] h-full">
-              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-[960px] h-[960px] object-cover object-center" />
+              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
             </div>
           </div>
           <div class="px-[4rem] py-5">
