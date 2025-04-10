@@ -171,12 +171,12 @@ const openModal = (item: CarouselItem): void => {
             </div>
           </div>
         </div>
-        <div class="bg-white rounded-[8px] w-[960px]">
+        <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
           <div class="px-[4rem] pt-10 pb-5">
             <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{ selectedItem?.name }}</p>
             <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content1"></div>
           </div>
-          <div class="bg-white">
+          <div class="bg-[#FAF8F5]">
             <div class="w-[960px] h-full">
               <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
             </div>
