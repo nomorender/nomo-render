@@ -15,7 +15,7 @@
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>
-            <UDropdown :ui="{ item: { padding: 'py-3', label : 'text-[#000000]' } }" v-else :items="item.childen"
+            <UDropdown :ui="{ width : 'w-fit', item: { padding: 'py-4 px-4', label : 'text-[#000000] text-[18px]' } }" v-else :items="item.childen"
               :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
                 <p class=" text-xl  hover:underline font-semibold"
@@ -34,10 +34,8 @@
             :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
           <USlideover v-model="isOpenMenu" :ui="{ wrapper: 'w-[300px] fixed right-0 left-auto' }" side="right">
             <div class="p-8 mb-">
-              <!-- Close button -->
               <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
                 class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" />
-              <!-- End Close Button -->
               <div class="flex flex-1 flex-col gap-10 mt-10">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"

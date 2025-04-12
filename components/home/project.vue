@@ -74,8 +74,8 @@ const items: CarouselItem[] = [
     }
   },
   {
-    name: 'Elevate NY',
-    location: 'The Gilded Entrance',
+    name: 'The Gilded Entrance',
+    location: 'San Francisco, USA',
     mainPic: '/Service03.png',
     content1: `
     <div>
@@ -152,13 +152,17 @@ const openModal = (item: CarouselItem): void => {
         </UButton>
       </template>
     </UCarousel>
+
+    
     <UModal v-model="isOpen"
-      :ui="{ background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
-      <div class="relative">
-        <div class="flex gap-2.5 mb-8">
-          <UButton variant="ghost" size="xl" class="absolute right-[-90px] top-4" @click="isOpen = false" :ui="{
-            base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
-          }">
+      :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
+      <div class="relative w-fit">
+        <div class="flex gap-2.5 mb-8 w-fit">
+          <UButton variant="ghost" size="xl"
+            class="fixed top-[50px] right-[135px] -translate-y-[12%] hidden md:flex flex-col gap-7"
+            @click="isOpen = false" :ui="{
+              base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
+            }">
             <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 text-white" />
           </UButton>
           <div class="flex items-center justify-center gap-12">
@@ -233,19 +237,14 @@ const openModal = (item: CarouselItem): void => {
           </div>
 
         </div>
-        <div class="absolute top-[200px] right-[-130px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+
+        <!-- TWO BUTTON SOCIAL -->
+        <div class="fixed top-[200px] right-[105px] -translate-y-[12%] hidden md:flex flex-col gap-7">
           <div class="flex flex-col items-center justify-center">
             <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
               <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
             </UButton>
             <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
-          </div>
-
-          <div class="flex flex-col items-center justify-center">
-            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-              <UIcon name="material-symbols:ios-share" class="size-12 text-[#8D7662]" />
-            </UButton>
-            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Share</div>
           </div>
 
           <div class="flex flex-col items-center justify-center">
@@ -256,7 +255,9 @@ const openModal = (item: CarouselItem): void => {
             </div>
           </div>
         </div>
-        <div class="absolute top-[700px] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+
+        <!-- Next Previous -->
+        <div class="absolute top-[500px] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
           <UButton
             class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
             @click="">
@@ -266,7 +267,7 @@ const openModal = (item: CarouselItem): void => {
           </UButton>
         </div>
 
-        <div class="absolute top-[700px] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
+        <div class="absolute top-[500px] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
           <UButton
             class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
             @click="">

@@ -306,7 +306,7 @@ const openModal = (item: CarouselItem): void => {
                     </UButton>
 
                     <UModal v-model="isOpen"
-                        :ui="{ background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
+                        :ui="{overlay : {background : 'bg-[#000000] opacity-[50%]'}, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
                         <div class="relative">
                             <div class="flex gap-2.5 mb-8">
                                 <UButton variant="ghost" size="xl" class="absolute right-[-90px] top-4"
@@ -407,15 +407,6 @@ const openModal = (item: CarouselItem): void => {
                                     </UButton>
                                     <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
                                 </div>
-
-                                <div class="flex flex-col items-center justify-center">
-                                    <UButton
-                                        class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                                        <UIcon name="material-symbols:ios-share" class="size-12 text-[#8D7662]" />
-                                    </UButton>
-                                    <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Share</div>
-                                </div>
-
                                 <div class="flex flex-col items-center justify-center">
                                     <UButton
                                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
