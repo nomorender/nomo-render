@@ -285,7 +285,7 @@ const goPrev = () => {
                                     <div class="mt-[30px] flex gap-5">
                                         <div class="flex items-center justify-center">
                                             <UAvatar :src="item.ava"
-                                                class="!w-fit !h-fit [&>img]:!w-[70px] [&>img]:!h-[70px]" />
+                                                class="!w-fit !h-fit [&>img]:!w-[70px] [&>img]:!h-[70px] [&>img]:object-cover [&>img]:object-center" />
                                         </div>
                                         <div>
                                             <div class="text-[20px] font-[600] leading-[150%]">
