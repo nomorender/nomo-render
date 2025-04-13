@@ -220,31 +220,35 @@ const openModal = (item: CarouselItem): void => {
 }
 
 const currentIndex = ref<number>(0)
+
+
 const goToNextItem = () => {
-    if (selectedIndex.value !== null) {
-        selectedIndex.value = (selectedIndex.value + 1) % items.length
-        selectedItem.value = items[selectedIndex.value]
-        currentIndex.value = selectedIndex.value
-        carousel.value?.moveTo(selectedIndex.value)
+  if (selectedIndex.value !== null) {
+    selectedIndex.value = (selectedIndex.value + 1) % items.length
+    selectedItem.value = items[selectedIndex.value]
+    const modal = document.querySelector('.modal-container')
+    if (modal) {
+      modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+  }
 }
 
 
 
 const goToPrevItem = () => {
-    if (selectedIndex.value !== null) {
-        selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
-        selectedItem.value = items[selectedIndex.value]
-        currentIndex.value = selectedIndex.value
-        carousel.value?.moveTo(selectedIndex.value)
-    }
-}
+  if (selectedIndex.value !== null) {
+    selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
+    selectedItem.value = items[selectedIndex.value]
 
-const goPrev = () => {
-    if (currentIndex.value > 0) {
-        carousel.value?.prev()
-        currentIndex.value--
+    const modal = document.querySelector('.modal-container')
+    if (modal) {
+      modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+  }
 }
 
 
@@ -345,7 +349,7 @@ const goPrev = () => {
                     </UButton>
 
                     <UModal v-model="isOpen"
-                        :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: '' }">
+                        :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
                         <div class="flex gap-2.5 mb-8">
                             <div class="fixed translate-x-[64rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
                                 <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
