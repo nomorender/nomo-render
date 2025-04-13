@@ -20,12 +20,12 @@ const value = ref('');
           </div>
           <div class="flex md:mt-10 mt-5">
             <div class="flex items-start">
-              <UAvatar src="" size="2xl"
+              <UAvatar src="/Avatar/Sub1.jpg" size="4xl"
                 class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
-              <UAvatar src="" size="2xl"
+              <UAvatar src="/Avatar/Sub2.jpg" size="4xl"
                 class="md:-ml-8 -ml-4 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
-              <UAvatar src="" size="2xl"
-                class="md:-ml-8 -ml-4 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
+              <UAvatar src="/Avatar/Sub3.jpg"size="4xl"
+                class="md:-ml-8 -ml-4 bg-black border-2 border-white w-[50px] h-[50px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
             </div>
             <div class="md:ml-5 ml-3">
               <div class="flex">

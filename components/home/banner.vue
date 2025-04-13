@@ -43,8 +43,8 @@ async function onError(event: FormErrorEvent) {
             <UButton class="sm:hidden" color="white" variant="outline">REQUEST A QUOTE</UButton>
         </div>
 
-        <UModal v-model="isOpen" :ui="{ width: 'sm:max-w-5xl', container: 'border-none flex items-center justify-center !shadow-none' }">
-            <div class=" relative bg-[#FAF8F5]">
+        <UModal v-model="isOpen" :ui="{base: 'rounded-[32px]', overlay: { background: 'bg-[#000000] opacity-[50%]' }, width: 'sm:max-w-5xl', container: 'border-none flex items-center justify-center !shadow-none' }">
+            <div class="relative bg-[#FAF8F5] rounded-[32px]">
                 <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
                     class="absolute rounded-full right-4 top-4 text-black hover:bg-transperent"
                     @click="isOpen = false" />
@@ -91,8 +91,10 @@ async function onError(event: FormErrorEvent) {
                             </UForm>
                         </div>
                     </div>
+
+                    <!-- ANH BEN TRAI -->
                     <div class="lg:w-[40%]">
-                        <NuxtImg src="/Form.png" class="w-full h-full hidden lg:block" />
+                        <NuxtImg src="/Form.png" class="w-full h-full hidden lg:block object-cover object-center" />
                     </div>
                 </div>
             </div>

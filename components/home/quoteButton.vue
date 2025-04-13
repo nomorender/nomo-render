@@ -50,8 +50,8 @@ async function onError(event: FormErrorEvent) {
             </div>
         </UButton>
 
-        <UModal v-model="isOpen" :ui="{ width: 'sm:max-w-5xl', container: 'border-none flex items-center justify-center !shadow-none' }">
-            <div class=" relative bg-[#FAF8F5]">
+        <UModal v-model="isOpen" :ui="{overlay: { background: 'bg-[#000000] opacity-[50%]' }, width: 'sm:max-w-5xl', container: 'border-none flex items-center justify-center !shadow-none' }">
+            <div class=" relative bg-[#FAF8F5] rounded-[32px]">
                 <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
                     class="absolute rounded-full right-4 top-4 text-black hover:bg-transperent"
                     @click="isOpen = false" />
