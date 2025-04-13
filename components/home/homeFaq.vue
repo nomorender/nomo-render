@@ -55,7 +55,7 @@ const items = [
 </script>
 
 <template>
-    <di class=" bg-[#FAF8F5] w-full flex items-center justify-center mt-[8rem] mb-10">
+    <di class=" bg-[#FAF8F5] w-full flex items-center justify-center my-[5rem]">
         <div class="px-10 md:py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 md:mt-20 mt-10 w-[1207px]">
             <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center">FAQ</div>
             <div class="space-y-4 lg:mt-0 mt-10">

@@ -185,9 +185,9 @@ const goToPrevItem = () => {
 
 
     <UModal v-model="isOpen"
-      :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
+      :ui="{ overlay: { background: 'bg-[#000000] opacity-[80%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
       <div class="flex gap-2.5 mb-8">
-        <div class="fixed translate-x-[64rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[64.1rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
           <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
             base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
           }">

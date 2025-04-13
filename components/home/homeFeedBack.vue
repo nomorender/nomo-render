@@ -33,7 +33,6 @@ const items: CarouselItem[] = [
 
       <div class = "font-[300] my-4">
         Located in the heart of Luxembourg, this home design redefines modern luxury with its minimalist yet bold architectural approach. <br/>
-        <br/>
         Designed for IMMO SOOO Service, it harmonizes natural elements with contemporary elegance, featuring: <span class = "italic font-[500]">clean lines, expansive glass facades, a refined palette of brick and dark metal. The structured and inviting composition ensures privacy while allowing open indoor-outdoor living</span>.
       </div>
     </div>
@@ -69,7 +68,6 @@ const items: CarouselItem[] = [
 
       <div class = "font-[300] my-4">
         Let’s discover a sculptural dining room with artistic Coastal style designed by Nomo Render in collaboration with Firefinish Interiors. <br/>
-        <br/>
         This is a masterclass of aesthetics and practically featuring standout elements: <span class ="font-[500] italic">Smooth organic curves and creamy white finish dining table, Modern wooden chairs with plush white cushions, and Light wood tones in a neutral colour palette</span> that create a cohesive look of warmth and inviting. Every element in this dining room is carefully curated to elevate the overall experience. The 3D renderings provided a photorealistic preview of the space and allowed our design team to experiment with different layouts, material, and lighting options
       </div>
     </div>
@@ -115,7 +113,6 @@ const items: CarouselItem[] = [
         content2: `
       <div class = "font-[300] my-3">
         The design blends contemporary style with natural coziness: <span class ="font-[500] italic">Plush seating in deep black velvet sofa, Neutral tone of soft textiles, Custom-built cabinetry</span> to enhance depth and elegance adding to the room’s ambient atmosphere. Moreover, a bespoke circular chandelier acts as a focal point, casting a soft, diffused glow that compliments the natural daylight streaming. <br/>
-        <br/>
         Both realism and emotion is the focus of a stunning, immersive visualization when it combines the rich wood grain of shelving, the quality of fabrics, and the reflection room lighting to set a new benchmark for photorealistic rendering experience. 
       </div>
   `,
@@ -152,9 +149,7 @@ const items: CarouselItem[] = [
       <div class = "font-[300] my-3">
         From a rendering perspective, an attention to materiality and lighting was important to keep: <span class ="font-[500] italic">the depth of natural wood grains, the softness textiles, and the subtle of metal accents</span>. We emphasize the exposed beams of the high ceilings by strategic lighting to ensure the space feels more grand and spatial. 
         <br/>
-        <br/>
         A key challenge was to deliver the tactile richness of hand-selected materials to a highly realistic visualization from the aged leather armchairs to the textured stone fireplace. 
-        <br/>
         <br/>
         Advancing rendering techniques, including lighting and ray tracing, allowed us to achieve an accurate interplay of natural and professional light and keep staying true to the design intent.
 
@@ -255,7 +250,7 @@ const goToPrevItem = () => {
 </script>
 
 <template>
-    <div class="mt-[8rem] mb-[6rem]">
+    <div class="my-[5rem]">
         <div class="bg-[#FAF8F5]">
             <div class="pt-[60px]">
                 <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
@@ -349,9 +344,9 @@ const goToPrevItem = () => {
                     </UButton>
 
                     <UModal v-model="isOpen"
-                        :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
+                        :ui="{ overlay: { background: 'bg-[#000000] opacity-[80%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
                         <div class="flex gap-2.5 mb-8">
-                            <div class="fixed translate-x-[64rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
+                            <div class="fixed translate-x-[64.1rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
                                 <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
                                     base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
                                 }">
@@ -364,7 +359,7 @@ const goToPrevItem = () => {
                                 </div>
                                 <div>
                                     <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{
-                                        selectedItem?.name }}</p>
+                                        selectedItem?.projectName }}</p>
                                     <p class="font-[300] text-[25px] leading-[200%] text-[#FAF8F5]">Nomo Render - 3D
                                         Visualization Studio
                                     </p>
@@ -375,7 +370,7 @@ const goToPrevItem = () => {
                         <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
                             <div class="px-[4rem] pt-10 pb-5">
                                 <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{
-                                    selectedItem?.name }}</p>
+                                    selectedItem?.projectName }}</p>
                                 <div class="text-[25px] leading-[200%] font-[300] text-justify"
                                     v-html="selectedItem?.content1"></div>
                             </div>

@@ -50,56 +50,52 @@ async function onError(event: FormErrorEvent) {
             </div>
         </UButton>
 
-        <UModal v-model="isOpen" :ui="{overlay: { background: 'bg-[#000000] opacity-[50%]' }, width: 'sm:max-w-5xl', container: 'border-none flex items-center justify-center !shadow-none' }">
-            <div class=" relative bg-[#FAF8F5] rounded-[32px]">
-                <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
-                    class="absolute rounded-full right-4 top-4 text-black hover:bg-transperent"
-                    @click="isOpen = false" />
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-[60%] p-10">
-                        <div class="lg:mb-4 flex flex-col justify-center items-center lg:block">
-                            <NuxtImg src="/logo.png" class="w-[65px] h-[45px] lg:mb-5 mb-4" />
-                            <div class="uppercase text-[#8D7662] lg:text-[25px] text-[18px] font-[600] mb-4">Send the request</div>
+        <UModal v-model="isOpen" :ui="{
+            overlay: { background: 'bg-[#000000] opacity-[80%]' },
+            width: 'sm:max-w-5xl',
+            height: '',
+            container: 'border-none flex items-center justify-center shadow-none',
+            rounded: 'rounded-lg',
+            base: 'bg-[#FAF8F5] rounded-xl'
+        }">
+            <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
+                class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent" @click="isOpen = false" />
+            <div class="flex flex-wrap">
+                <div class="w-full p-10 lg:w-3/5">
+                    <div class="mb-4 flex flex-col items-center lg:block">
+                        <NuxtImg src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-5" />
+                        <div class="mb-4 text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
+                            Send the request
                         </div>
-                        <div>
-                            <UForm id="requestForm" :validate="validate" :state="state"
-                                class="space-y-4 lg:px-0 md:px-0" @submit="onSubmit" @error="onError">
-                                <UFormGroup>
-                                    <UInput padded required color="white" variant="none" placeholder="Your name"
-                                        v-model="state.name" size="xl"
-                                        class="bg-gray-200 px-4  rounded-lg w-full text-black placeholder-black mb-2 shadow-lg"
-                                        :ui="{ placeholder: 'placeholder-black font-[300] text-[16px] md:text-[18px]' }" />
-
-                                    <UInput padded required color="white" variant="none" placeholder="Your email"
-                                        v-model="state.email" size="xl"
-                                        class="bg-gray-200 px-4  rounded-lg w-full text-black placeholder-black  mb-2 shadow-lg"
-                                        :ui="{ placeholder: 'placeholder-black font-[300] text-[16px] md:text-[18px]' }" />
-
-                                    <UTextarea padded required color="white" variant="none" placeholder="Your message"
-                                        v-model="state.description" size="xl"
-                                        class="bg-gray-200 px-4 rounded-lg w-full text-black placeholder-black  mb-2 shadow-lg"
-                                        :ui="{ placeholder: 'placeholder-black font-[300] text-[16px] md:text-[18px]' }"
-                                        :rows="6" md:rows="8" />
-
-                                    <!-- <UCheckbox v-model="state.agree"
-                                        label="I agree to the Terms of Use and the Privacy Policy *" required
-                                        class="text-sm md:text-base text-gray-700" /> -->
-                                </UFormGroup>
-                                <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
-                                    <UButton color="gray" size="xl" variant="solid" type="submit" form="requestForm"
-                                        class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-3  hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px]  px-10 py-3 md:w-auto max-w-xs">
-                                        <div
-                                            class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
-                                            submit
-                                        </div>
-                                    </UButton>
+                    </div>
+                    <UForm id="requestForm" :validate="validate" :state="state" class="space-y-4" @submit="onSubmit"
+                        @error="onError">
+                        <UFormGroup>
+                            <UInput v-model="state.name" required variant="none" placeholder="Your name" size="xl"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-lg"
+                                :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" />
+                            <UInput v-model="state.email" required variant="none" placeholder="Your email" size="xl"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-lg"
+                                :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" />
+                            <UTextarea v-model="state.description" required variant="none" placeholder="Your message"
+                                size="xl"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-lg"
+                                :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" :rows="6"
+                                md:rows="8" />
+                        </UFormGroup>
+                        <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
+                            <UButton color="gray" size="xl" variant="solid" type="submit" form="requestForm"
+                                class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-3  hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px]  px-10 py-3 md:w-auto max-w-xs">
+                                <div
+                                    class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
+                                    submit
                                 </div>
-                            </UForm>
+                            </UButton>
                         </div>
-                    </div>
-                    <div class="lg:w-[40%]">
-                        <NuxtImg src="/Form.png" class="w-full h-full hidden lg:block" />
-                    </div>
+                    </UForm>
+                </div>
+                <div class="hidden lg:block lg:w-2/5">
+                    <NuxtImg src="/Form.png" class="w-full" alt="Form Pic" />
                 </div>
             </div>
         </UModal>

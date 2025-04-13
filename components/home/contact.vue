@@ -53,11 +53,11 @@ async function onError(event: FormErrorEvent) {
                             transform your ideas into reality.
                         </p>
                         <div
-                            class="grid grid-cols-2 gap-2 mt-5 place-items-center md:place-items-start w-full px-0 mx-0">
-                            <NuxtImg src="/Contact1.png"
-                                class="w-full lg:h-full h-[250px] md:max-w-[335px] object-cover" />
-                            <NuxtImg src="/Contact2.png"
-                                class="w-full lg:h-full h-[250px] md:max-w-[335px] object-cover" />
+                            class="flex items-center justify-center md:grid grid-cols-2 gap-2 mt-5 place-items-center md:place-items-start w-full px-0 mx-0 max-w-[470px] md:max-w-none">
+                            <NuxtImg src="/contact/contact1.png" class="lg:h-[325px] lg:w-[235px] object-cover"
+                                alt="Contact Image 1" />
+                            <NuxtImg src="/contact/contact2.png" class="lg:h-[325px] lg:w-[235px] object-cover"
+                                alt="Contact Image 2" />
                         </div>
                     </div>
                     <div class="lg:w-[50%] w-full mt-6 lg:mt-0 md:px-0">

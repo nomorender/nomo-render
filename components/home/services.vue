@@ -1,5 +1,5 @@
 <template>
-  <div class="md:mb-[6rem]">
+  <div class="md:mb-[5rem]">
     <div class="bg-[#FAF8F5] h-fit flex flex-col justify-center items-center">
       <div class="py-10 md:pt-[70px] md:pb-0">
         <p class="text-center text-[16px] lg:text-3xl lg:mb-7">SERVICES</p>
