@@ -23,7 +23,7 @@ const items: CarouselItem[] = [
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div class = "font-[300]">
+      <div class = "font-[300] my-4">
         This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
       </div>
     </div>
@@ -55,7 +55,7 @@ const items: CarouselItem[] = [
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div class = "font-[300]">
+      <div class = "font-[300] my-4">
         In collaboration with The Mib Project, we reimagine dining with an organic and modern aesthetic. This space is designed with a perfect balance of comfort and elegance, with soft earth stone and refined textures.
       </div>
     </div>
@@ -87,7 +87,7 @@ const items: CarouselItem[] = [
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
-      <div class = "font-[300]">
+      <div class = "font-[300] my-4">
         This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
       </div>
     </div>
@@ -110,9 +110,26 @@ const items: CarouselItem[] = [
 const isOpen = ref<boolean>(false)
 const selectedItem = ref<CarouselItem | null>(null)
 
+const selectedIndex = ref<number | null>(null)
+
 const openModal = (item: CarouselItem): void => {
   selectedItem.value = item
+  selectedIndex.value = items.findIndex(i => i === item)
   isOpen.value = true
+}
+
+const goToNextItem = () => {
+  if (selectedIndex.value !== null) {
+    selectedIndex.value = (selectedIndex.value + 1) % items.length
+    selectedItem.value = items[selectedIndex.value]
+  }
+}
+
+const goToPrevItem = () => {
+  if (selectedIndex.value !== null) {
+    selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
+    selectedItem.value = items[selectedIndex.value]
+  }
 }
 </script>
 
@@ -153,129 +170,127 @@ const openModal = (item: CarouselItem): void => {
       </template>
     </UCarousel>
 
-    
+
     <UModal v-model="isOpen"
-      :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: 'w-fit !max-w-none' }">
-      <div class="relative w-fit">
-        <div class="flex gap-2.5 mb-8 w-fit">
-          <UButton variant="ghost" size="xl"
-            class="fixed top-[50px] right-[135px] -translate-y-[12%] hidden md:flex flex-col gap-7"
-            @click="isOpen = false" :ui="{
-              base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
-            }">
+      :ui="{ overlay: { background: 'bg-[#000000] opacity-[50%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none', width: '' }">
+      <div class="flex gap-2.5 mb-8">
+        <div class="fixed translate-x-[64rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
+          <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
+            base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
+          }">
             <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 text-white" />
           </UButton>
-          <div class="flex items-center justify-center gap-12">
-            <div class="p-5 bg-[#FAF8F5] rounded-full">
-              <nuxt-img class="size-[81px]" src="/Logo3.svg" />
-            </div>
-            <div>
-              <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
-              <p class="font-[300] text-[25px] leading-[200%] text-[#FAF8F5]">Nomo Render - 3D Visualization Studio</p>
-            </div>
+        </div>
+        <div class="flex items-center justify-center gap-12">
+          <div class="p-5 bg-[#FAF8F5] rounded-full">
+            <nuxt-img class="size-[81px]" src="/Logo3.svg" />
+          </div>
+          <div>
+            <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
+            <p class="font-[300] text-[25px] leading-[200%] text-[#FAF8F5]">Nomo Render - 3D Visualization Studio</p>
           </div>
         </div>
-        <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
-          <div class="px-[4rem] pt-10 pb-5">
-            <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{ selectedItem?.name }}</p>
-            <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content1"></div>
-          </div>
-          <div class="bg-[#FAF8F5]">
-            <div class="w-[960px] h-full">
-              <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
-            </div>
-          </div>
-          <div class="px-[4rem] py-5">
-            <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content2"></div>
-          </div>
+      </div>
 
-
-          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
-            <div class="w-[50%]">
-              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-            </div>
-            <div class="w-[50%]">
-              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
-            </div>
+      <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
+        <div class="px-[4rem] pt-10 pb-5">
+          <p class="text-[#8D7662] text-[32px] font-[600] mb-6 uppercase leading-[150%]">{{ selectedItem?.name }}</p>
+          <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content1"></div>
+        </div>
+        <div class="bg-[#FAF8F5]">
+          <div class="w-[960px] h-full">
+            <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
           </div>
-
-          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
-            <div class="col-span-2">
-              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-            </div>
-            <div class="col-span-1">
-              <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
-            </div>
-            <div class="col-span-1">
-              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
-            </div>
-          </div>
-
-          <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
-            <div class="col-span-2">
-              <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-            </div>
-            <div class="col-span-1">
-              <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover" />
-            </div>
-            <div class="col-span-1">
-              <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
-            </div>
-            <div class="col-span-2">
-              <NuxtImg :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
-            </div>
-          </div>
-
-          <div class="flex w-full justify-center items-center py-10">
-            <UButton color="gray" variant="solid" type="submit" form="contactForm"
-              class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] rounded-[8px] w-[390px] md:w-auto">
-              <div
-                class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] text-[28px]">
-                see more our projects
-              </div>
-            </UButton>
-          </div>
-
+        </div>
+        <div class="px-[4rem] py-5">
+          <div class="text-[25px] leading-[200%] font-[300] text-justify" v-html="selectedItem?.content2"></div>
         </div>
 
-        <!-- TWO BUTTON SOCIAL -->
-        <div class="fixed top-[200px] right-[105px] -translate-y-[12%] hidden md:flex flex-col gap-7">
-          <div class="flex flex-col items-center justify-center">
-            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-              <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
-            </UButton>
-            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
-          </div>
 
-          <div class="flex flex-col items-center justify-center">
-            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-              <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
-            </UButton>
-            <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">Our workflow
-            </div>
+        <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
+          <div class="w-[50%]">
+            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+          </div>
+          <div class="w-[50%]">
+            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
           </div>
         </div>
 
-        <!-- Next Previous -->
-        <div class="absolute top-[500px] right-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
-          <UButton
-            class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
-            @click="">
-            <div class="text-[#FFFFFF] flex justify-center">
-              <UIcon name="mdi-light:arrow-right" class="size-10" />
+        <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
+          <div class="col-span-2">
+            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+          </div>
+          <div class="col-span-1">
+            <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+          </div>
+          <div class="col-span-1">
+            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
+          <div class="col-span-2">
+            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+          </div>
+          <div class="col-span-1">
+            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover" />
+          </div>
+          <div class="col-span-1">
+            <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+          </div>
+          <div class="col-span-2">
+            <NuxtImg :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <div class="flex w-full justify-center items-center py-10">
+          <UButton color="gray" variant="solid" type="submit" form="contactForm"
+            class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] rounded-[8px] w-[390px] md:w-auto">
+            <div
+              class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] text-[28px]">
+              see more our projects
             </div>
           </UButton>
         </div>
 
-        <div class="absolute top-[500px] left-[0px] -translate-y-[12%] hidden md:flex flex-col gap-7">
-          <UButton
-            class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
-            @click="">
-            <div class="text-[#8D7662] flex justify-center">
-              <UIcon name="mdi-light:arrow-left" class="size-10" />
-            </div>
+      </div>
+
+      <!-- TWO BUTTON SOCIAL -->
+      <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex flex-col gap-7">
+        <div class="flex flex-col items-center justify-center">
+          <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+            <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
           </UButton>
+          <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
         </div>
+        <div class="flex flex-col items-center justify-center">
+          <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+            <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
+          </UButton>
+          <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">Our workflow
+          </div>
+        </div>
+      </div>
+
+      <!-- Next Previous -->
+      <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <UButton
+          class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+          @click="goToNextItem">
+          <div class="text-[#FFFFFF] flex justify-center">
+            <UIcon name="mdi-light:arrow-right" class="size-10" />
+          </div>
+        </UButton>
+      </div>
+
+      <div class="fixed translate-x-[-0.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <UButton
+          class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+          @click="goToPrevItem">
+          <div class="text-[#8D7662] flex justify-center">
+            <UIcon name="mdi-light:arrow-left" class="size-10" />
+          </div>
+        </UButton>
       </div>
     </UModal>
   </div>
