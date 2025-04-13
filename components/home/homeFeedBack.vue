@@ -33,12 +33,15 @@ const items: CarouselItem[] = [
 
       <div class = "font-[300] my-4">
         Located in the heart of Luxembourg, this home design redefines modern luxury with its minimalist yet bold architectural approach. <br/>
-        Designed for IMMO SOOO Service, it harmonizes natural elements with contemporary elegance, featuring: <span class = "italic font-[500]">clean lines, expansive glass facades, a refined palette of brick and dark metal. The structured and inviting composition ensures privacy while allowing open indoor-outdoor living</span>.
+      </div>
+
+      <div class = "font-[300] my-4">
+        Designed for IMMO SOOO Service, it harmonizes natural elements with contemporary elegance, featuring: <span class = "italic font-[500]">clean lines, expansive glass facades, a refined palette of brick and dark metal.</span> The structured and inviting composition ensures privacy while allowing open indoor-outdoor living.
       </div>
     </div>
   `,
         content2: `
-      <div class = "font-[300] my-3">
+      <div class = "font-[300] my-4">
           Having a chance joining this project, we as Nomo Render, pay attention to detail in materiality and spatial dynamics, to deliver a final product that shows sophistication and urban serenity.
       </div>
   `,
@@ -68,14 +71,18 @@ const items: CarouselItem[] = [
 
       <div class = "font-[300] my-4">
         Let’s discover a sculptural dining room with artistic Coastal style designed by Nomo Render in collaboration with Firefinish Interiors. <br/>
+      </div>
+
+      <div class = "font-[300] my-4">
         This is a masterclass of aesthetics and practically featuring standout elements: <span class ="font-[500] italic">Smooth organic curves and creamy white finish dining table, Modern wooden chairs with plush white cushions, and Light wood tones in a neutral colour palette</span> that create a cohesive look of warmth and inviting. Every element in this dining room is carefully curated to elevate the overall experience. The 3D renderings provided a photorealistic preview of the space and allowed our design team to experiment with different layouts, material, and lighting options
       </div>
     </div>
   `,
         content2: `
-      <div class = "font-[300] my-3">
+      <div class = "font-[300] my-4">
         This cozy atmosphere extends beyond the dining room, and we bring it into the laid-back beach inspired bedroom with: <span class="font-[500] italic">Wood platform bed anchors, Matching nightstands, A light wood dressers, Full-length double doors</span>. <br/>
-        <br/>
+      </div>
+      <div class = "font-[300] my-4">
         Designed with calm tones, soft textures and just the right amount of sunshine, every detail adds to the effortless and airy feel - from the natural wood finishes to the woven chair and relaxed lighting. Very warm, easy-going and full of charm.
       </div>
   `,
@@ -111,15 +118,18 @@ const items: CarouselItem[] = [
     </div>
   `,
         content2: `
-      <div class = "font-[300] my-3">
+      <div class = "font-[300] my-4">
         The design blends contemporary style with natural coziness: <span class ="font-[500] italic">Plush seating in deep black velvet sofa, Neutral tone of soft textiles, Custom-built cabinetry</span> to enhance depth and elegance adding to the room’s ambient atmosphere. Moreover, a bespoke circular chandelier acts as a focal point, casting a soft, diffused glow that compliments the natural daylight streaming. <br/>
+      </div>
+
+      <div class = "font-[300] my-4">
         Both realism and emotion is the focus of a stunning, immersive visualization when it combines the rich wood grain of shelving, the quality of fabrics, and the reflection room lighting to set a new benchmark for photorealistic rendering experience. 
       </div>
   `,
         picDes: {
             pic1: `/Feedback/UserFeedback/9.png`,
-            pic2: `/Feedback/UserFeedback/10.png`,
-            pic3: '/Feedback/UserFeedback/11.png',
+            pic2: `/Feedback/TheLounge1.png`,
+            pic3: '/Feedback/TheLounge2.png',
         }
     },
     {
@@ -146,13 +156,16 @@ const items: CarouselItem[] = [
     </div>
   `,
         content2: `
-      <div class = "font-[300] my-3">
+      <div class = "font-[300] my-4">
         From a rendering perspective, an attention to materiality and lighting was important to keep: <span class ="font-[500] italic">the depth of natural wood grains, the softness textiles, and the subtle of metal accents</span>. We emphasize the exposed beams of the high ceilings by strategic lighting to ensure the space feels more grand and spatial. 
-        <br/>
-        A key challenge was to deliver the tactile richness of hand-selected materials to a highly realistic visualization from the aged leather armchairs to the textured stone fireplace. 
-        <br/>
-        Advancing rendering techniques, including lighting and ray tracing, allowed us to achieve an accurate interplay of natural and professional light and keep staying true to the design intent.
+      </div>
 
+      <div class = "font-[300] my-4">
+        A key challenge was to deliver the tactile richness of hand-selected materials to a highly realistic visualization from the aged leather armchairs to the textured stone fireplace. 
+      </div>
+
+      <div class = "font-[300] my-4">
+        Advancing rendering techniques, including lighting and ray tracing, allowed us to achieve an accurate interplay of natural and professional light and keep staying true to the design intent.
       </div>
   `,
         picDes: {
@@ -218,32 +231,32 @@ const currentIndex = ref<number>(0)
 
 
 const goToNextItem = () => {
-  if (selectedIndex.value !== null) {
-    selectedIndex.value = (selectedIndex.value + 1) % items.length
-    selectedItem.value = items[selectedIndex.value]
-    const modal = document.querySelector('.modal-container')
-    if (modal) {
-      modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (selectedIndex.value !== null) {
+        selectedIndex.value = (selectedIndex.value + 1) % items.length
+        selectedItem.value = items[selectedIndex.value]
+        const modal = document.querySelector('.modal-container')
+        if (modal) {
+            modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
     }
-  }
 }
 
 
 
 const goToPrevItem = () => {
-  if (selectedIndex.value !== null) {
-    selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
-    selectedItem.value = items[selectedIndex.value]
+    if (selectedIndex.value !== null) {
+        selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
+        selectedItem.value = items[selectedIndex.value]
 
-    const modal = document.querySelector('.modal-container')
-    if (modal) {
-      modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+        const modal = document.querySelector('.modal-container')
+        if (modal) {
+            modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
     }
-  }
 }
 
 

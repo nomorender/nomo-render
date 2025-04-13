@@ -102,9 +102,9 @@ const navList = [
           },
         },
         {
-          label: "Pricing",
+          label: "Pricing Plan",
           click: () => {
-            router.push({ path: "/pricing" });
+            router.push({ path: "/Pricing-plan" });
           },
         },
       ],

@@ -55,7 +55,6 @@ async function onError(event: FormErrorEvent) {
             width: 'sm:max-w-5xl',
             height: '',
             container: 'border-none flex items-center justify-center shadow-none',
-            rounded: 'rounded-lg',
             base: 'bg-[#FAF8F5] rounded-xl'
         }">
             <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
@@ -95,7 +94,7 @@ async function onError(event: FormErrorEvent) {
                     </UForm>
                 </div>
                 <div class="hidden lg:block lg:w-2/5">
-                    <NuxtImg src="/Form.png" class="w-full" alt="Form Pic" />
+                    <NuxtImg src="/mobile-background.png" class="w-full h-[580px] rounded-xl object-cover object-bottom" alt="Form Pic" />
                 </div>
             </div>
         </UModal>
