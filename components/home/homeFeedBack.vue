@@ -398,7 +398,7 @@ const isLastItem = computed(() => {
                             </div>
                         </div>
                         <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
-                            <div class="px-[4rem] pt-10 pb-5">
+                            <div class="px-[4rem] pt-[55px] pb-5">
                                 <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{
                                     selectedItem?.projectName
                                 }}</p>
