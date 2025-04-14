@@ -293,7 +293,6 @@ const isLastItem = computed(() => {
                         </div>
                     </UButton>
 
-
                     <!-- BUTTON NEXT PC -->
                     <UButton :class="[
                         'hidden md:flex items-center justify-center p-2 absolute right-[-5rem] top-1/2 -translate-y-1/2 z-10 rounded-full shadow-2xl',
@@ -327,7 +326,7 @@ const isLastItem = computed(() => {
                                     </div>
                                     <div class="mt-[30px] flex gap-5">
                                         <div class="flex items-center justify-center">
-                                            <UAvatar :src="item.ava"
+                                            <UAvatar :src="item.ava" alt="Avatar"
                                                 class="!w-fit !h-fit [&>img]:!w-[70px] [&>img]:!h-[70px] [&>img]:object-cover [&>img]:object-center" />
                                         </div>
                                         <div>
