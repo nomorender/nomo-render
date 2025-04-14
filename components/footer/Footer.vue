@@ -6,7 +6,7 @@
     <div class=" bg-[#FAF8F5] flex items-center justify-center">
         <div class=" py-16 md:w-[1208px] md:px-0 px-5">
             <div class="flex items-center">
-                <nuxt-img src="/Logo3.svg" class="md:w-[190px] md:h-[143px] w-[65px] h-[49px]" />
+                <nuxt-img alt="logo" src="/Logo3.svg" class="md:w-[190px] md:h-[143px] w-[65px] h-[49px]" />
                 <div class="flex flex-col items-start justify-center ml-5">
                     <div class="md:text-[32px] text-[15px] font-[700] text-left leading-[150%]">
                         Nomadic Creativity, Timeless Render
@@ -43,35 +43,35 @@
                     <div class="grid grid-cols-4 gap-7">
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.behance.net/nomorender" target="_blank">
-                                <nuxt-img src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="behance" src="/SocialMedia/Behance.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.instagram.com/nomorender/" target="_blank">
-                                <nuxt-img src="/SocialMedia/Instagram.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="instagram" src="/SocialMedia/Instagram.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://wa.me/84866943407" target="_blank">
-                                <nuxt-img src="/SocialMedia/whatsApp.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="whatsapp" src="/SocialMedia/whatsApp.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
 
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.trustpilot.com/review/nomorender.com" target="_blank">
-                                <nuxt-img src="/SocialMedia/Trustpilot.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="trust pilot" src="/SocialMedia/Trustpilot.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
 
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.facebook.com/nomorender" target="_blank">
-                                <nuxt-img src="/SocialMedia/Facebook.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="facebook" src="/SocialMedia/Facebook.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
 
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.linkedin.com/company/nomorender/" target="_blank">
-                                <nuxt-img src="/SocialMedia/Linkedin.svg" class="w-[56px] h-[58px]" />
+                                <nuxt-img alt="linkedin" src="/SocialMedia/Linkedin.svg" class="w-[56px] h-[58px]" />
                             </NuxtLink>
                         </div>
                     </div>

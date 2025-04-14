@@ -19,7 +19,7 @@
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex md:gap-6 gap-5 items-center">
                                 <div class="">
-                                    <nuxt-img src="/benefits/Object.svg"
+                                    <nuxt-img alt="Object" src="/benefits/Object.svg"
                                         class="md:h-[103px] md:w-[75px] w-[46.7px] h-[64.1px]" />
                                 </div>
                                 <div class="">
@@ -49,7 +49,7 @@
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex gap-6 items-center">
                                 <div class="">
-                                    <nuxt-img src="/benefits/price.svg"
+                                    <nuxt-img alt="Price icon" src="/benefits/price.svg"
                                         class="md:h-[75px] md:w-[105px] h-[33px] w-[46.1px]" />
                                 </div>
                                 <div class="">
@@ -79,7 +79,7 @@
                         <div class="md:w-[350px] w-[220px]">
                             <div class="flex gap-7 items-center">
                                 <div class="">
-                                    <nuxt-img src="/benefits/TimeIcon.svg"
+                                    <nuxt-img alt="Time icon" src="/benefits/TimeIcon.svg"
                                         class="md:h-[100px] md:w-[91px] h-[42px] w-[46.6px]" />
                                 </div>
                                 <div class="">
@@ -109,7 +109,7 @@
                             <div class="flex">
                                 <div class="flex gap-6 items-center">
                                     <div class="">
-                                        <nuxt-img src="/benefits/Graphic.svg"
+                                        <nuxt-img alt="grapic icon" src="/benefits/Graphic.svg"
                                             class="md:h-[100px] md:w-[100px] h-[44.6px] w-[46.01px]" />
                                     </div>
                                     <div class="">

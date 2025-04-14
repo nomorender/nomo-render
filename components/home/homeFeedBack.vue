@@ -100,7 +100,7 @@ const items: CarouselItem[] = [
         projectName: 'The Lounge',
         star: 5,
         description: `The renders they produce are sharp and lifelike, making it so much easier to present our ideas to clients. They’re always quick to respond and easy to work with.`,
-        img: `/Feedback/3.png`,
+        img: `/Feedback/HCR0603.png`,
         ava: '/Avatar/3.jpg',
         content1: `
     <div>
@@ -145,7 +145,7 @@ const items: CarouselItem[] = [
       <div class = "font-[300]">
           Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">New Atlanta, USA</span>
+          <br/>Location: <span class = "font-[500]">Atlanta, USA</span>
           <br/>Client: <span class = "font-[500]">Kristin Wadsworth Interior</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
@@ -209,56 +209,62 @@ const items: CarouselItem[] = [
         }
     },
 ]
-const carousel = ref()
-const isOpen = ref<boolean>(false)
-const selectedItem = ref<CarouselItem | null>(null)
-
-const selectedIndex = ref<number | null>(null)
-
-onMounted(() => {
-    if (carousel.value) {
-        currentIndex.value = carousel.value?.current || 0
-    }
-})
+const carousel = ref();
+const isOpen = ref<boolean>(false);
+const selectedItem = ref<CarouselItem | null>(null);
+const selectedIndex = ref<number | null>(null);
+const totalPage = ref(0);
+const currentPage = ref(0);
 
 const openModal = (item: CarouselItem): void => {
-    selectedItem.value = item
-    isOpen.value = true
-    selectedIndex.value = items.findIndex(i => i === item)
-}
+    selectedItem.value = item;
+    isOpen.value = true;
+    selectedIndex.value = items.findIndex(i => i === item);
+};
 
-const currentIndex = ref<number>(0)
+const scrollToModal = () => {
+    const modal = document.querySelector('.modal-container');
+    if (modal) {
+        modal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+};
 
+onMounted(() => {
+    nextTick(() => {
+        watch(
+            () => [carousel.value?.pages, carousel.value?.page],
+            ([pages, page]) => {
+                if (pages > 0) {
+                    totalPage.value = pages;
+                }
+                currentPage.value = page ?? 0;
+            },
+            { immediate: true }
+        );
+    });
+});
 
 const goToNextItem = () => {
     if (selectedIndex.value !== null) {
-        selectedIndex.value = (selectedIndex.value + 1) % items.length
-        selectedItem.value = items[selectedIndex.value]
-        const modal = document.querySelector('.modal-container')
-        if (modal) {
-            modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
+        selectedIndex.value = (selectedIndex.value + 1) % items.length;
+        selectedItem.value = items[selectedIndex.value];
+        scrollToModal();
     }
-}
-
-
+};
 
 const goToPrevItem = () => {
     if (selectedIndex.value !== null) {
-        selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length
-        selectedItem.value = items[selectedIndex.value]
-
-        const modal = document.querySelector('.modal-container')
-        if (modal) {
-            modal.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
+        selectedIndex.value = (selectedIndex.value - 1 + items.length) % items.length;
+        selectedItem.value = items[selectedIndex.value];
+        scrollToModal();
     }
-}
+};
 
+const isLastItem = computed(() => {
+    return currentPage.value === totalPage.value;
+});
 
 </script>
 
@@ -273,25 +279,50 @@ const goToPrevItem = () => {
             </div>
             <div class="relative bg-[#FAF8F5]">
                 <div class="relative max-w-[1112px] pt-5 mx-auto md:pb-10">
-                    <!-- Button Prev -->
+
+                    <!-- BUTTON PREVIOUS PC -->
                     <UButton
                         class="hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                        :class="['hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10  rounded-full shadow-2xl',
+                            isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']"
                         @click="carousel.prev()">
-                        <div class="text-[#8D7662] flex justify-center">
+                        <div :class="[
+                            ' flex justify-center',
+                            isLastItem ? 'text-[#FFFFFF]' : 'text-[#8D7662]']">
                             <UIcon name="mdi-light:arrow-left" class="size-10" />
                         </div>
                     </UButton>
-                    <UCarousel :loop="true" :items="items" arrows :ui="{
-                        item: 'basis-full lg:basis-1/2 lg:basis-1/3', arrows: {
+
+
+                    <!-- BUTTON NEXT PC -->
+                    <UButton :class="[
+                        'hidden md:flex items-center justify-center p-2 absolute right-[-5rem] top-1/2 -translate-y-1/2 z-10 rounded-full shadow-2xl',
+                        isLastItem ? 'bg-[#FFFFFF] hover:bg-[#FFFFFF]' : 'bg-[#8D7662] hover:bg-[#8D7662]'
+                    ]" @click="carousel.next()">
+                        <!-- <div class="text-[#FFFFFF] flex justify-center">
+                            <UIcon name="mdi-light:arrow-right" class="size-10" />
+                        </div> -->
+                        <div :class="[
+                            ' flex justify-center',
+                            isLastItem ? 'text-[#8D7662]' : 'text-[#FFFFFF]'
+                        ]">
+                            <UIcon name="mdi-light:arrow-right" class="size-10" />
+                        </div>
+                    </UButton>
+
+
+                    <UCarousel :items="items" arrows :ui="{
+                        item: 'basis-full lg:basis-1/2 lg:basis-1/3',
+                        arrows: {
                             wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
-                        },
+                        }
                     }" ref="carousel">
                         <template #default="{ item }">
                             <div class="flex justify-center w-full pb-10">
                                 <div>
                                     <div class="max-w-[360px] w-full">
-                                        <NuxtImg :src="item.img"
-                                            class="w-full h-[250px] rounded-[8px] object-cover object-center"
+                                        <NuxtImg :src="item.img" alt="img"
+                                            class="w-[360px] h-[250px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>
                                     <div class="mt-[30px] flex gap-5">
@@ -308,13 +339,13 @@ const goToPrevItem = () => {
                                             </div>
                                             <div class="flex items-start text-left gap-1 pt-2">
                                                 <UIcon v-for="n in item.star" :key="n" name="streamline:star-1-solid"
-                                                    class=" text-[#FFC300] size-[15px]" />
+                                                    class="text-[#FFC300] size-[15px]" />
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div
-                                            class="text-justify max-w-[340px] text-[20xp] leading-[150%] font-[300] md:h-[120px] italic mt-5 overflow-hidden">
+                                            class="text-justify max-w-[340px] text-[20px] leading-[150%] font-[300] md:h-[120px] italic mt-5 overflow-hidden">
                                             {{ item.description }}
                                         </div>
                                     </div>
@@ -337,38 +368,27 @@ const goToPrevItem = () => {
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
-
                         <template #next="{ onClick, disabled }">
                             <UButton
-                                class="rounded-full bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                class="md:hidden rounded-full bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
                         </template>
                     </UCarousel>
 
-                    <!-- Button Next -->
-                    <UButton
-                        class="hidden md:flex items-center justify-center p-2 absolute right-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
-                        @click="carousel.next()">
-                        <div class="text-[#FFFFFF] flex justify-center">
-                            <UIcon name="mdi-light:arrow-right" class="size-10" />
-                        </div>
-                    </UButton>
-
                     <UModal v-model="isOpen"
                         :ui="{ overlay: { background: 'bg-[#000000] opacity-[80%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
                         <div class="flex gap-2.5 mb-8">
                             <div class="fixed translate-x-[64.1rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
-                                <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
-                                    base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0',
-                                }">
+                                <UButton variant="ghost" size="xl" class="" @click="isOpen = false"
+                                    :ui="{ base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0' }">
                                     <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 text-white" />
                                 </UButton>
                             </div>
                             <div class="flex items-center justify-center gap-12">
                                 <div class="p-5 bg-[#FAF8F5] rounded-full">
-                                    <nuxt-img class="size-[81px]" src="/Logo3.svg" />
+                                    <nuxt-img alt="Logo" class="size-[81px]" src="/Logo3.svg" />
                                 </div>
                                 <div>
                                     <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{
@@ -379,17 +399,17 @@ const goToPrevItem = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
                             <div class="px-[4rem] pt-10 pb-5">
                                 <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{
-                                    selectedItem?.projectName }}</p>
+                                    selectedItem?.projectName
+                                }}</p>
                                 <div class="text-[25px] leading-[200%] font-[300] text-justify"
                                     v-html="selectedItem?.content1"></div>
                             </div>
                             <div class="bg-[#FAF8F5]">
                                 <div class="w-[960px] h-full">
-                                    <NuxtImg :src="selectedItem?.picDes.pic1"
+                                    <NuxtImg :src="selectedItem?.picDes.pic1" alt="img"
                                         class="w-full h-auto object-cover object-center" />
                                 </div>
                             </div>
@@ -397,47 +417,48 @@ const goToPrevItem = () => {
                                 <div class="text-[25px] leading-[200%] font-[300] text-justify"
                                     v-html="selectedItem?.content2"></div>
                             </div>
-
-
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
-                                <div class="w-[50%]">
+                                <div class="w-[50%]" alt="img des">
                                     <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
                                 </div>
-                                <div class="w-[50%]">
+                                <div class="w-[50%]" alt="img des">
                                     <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
                                 </div>
                             </div>
-
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic2" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic4" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic3" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                             </div>
-
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic2" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic3"
-                                        class="w-full max-h-[357px] object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover"
+                                        alt="img des" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic4" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+                                    <NuxtImg :src="selectedItem?.picDes.pic5" alt="img des"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                             </div>
-
                             <div class="flex w-full justify-center items-center py-10">
                                 <UButton color="gray" variant="solid" type="submit" form="contactForm"
                                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] rounded-[8px] w-[390px] md:w-auto">
@@ -447,9 +468,7 @@ const goToPrevItem = () => {
                                     </div>
                                 </UButton>
                             </div>
-
                         </div>
-
                         <!-- TWO BUTTON SOCIAL -->
                         <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex flex-col gap-7">
                             <div class="flex flex-col items-center justify-center">
@@ -470,7 +489,6 @@ const goToPrevItem = () => {
                                 </div>
                             </div>
                         </div>
-
                         <!-- Next Previous -->
                         <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
                             <UButton
@@ -481,7 +499,6 @@ const goToPrevItem = () => {
                                 </div>
                             </UButton>
                         </div>
-
                         <div class="fixed translate-x-[-0.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
                             <UButton
                                 class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"

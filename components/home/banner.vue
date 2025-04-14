@@ -56,7 +56,7 @@ async function onError(event: FormErrorEvent) {
             <div class="flex flex-wrap">
                 <div class="w-full p-10 lg:w-3/5">
                     <div class="mb-4 flex flex-col items-center lg:block">
-                        <NuxtImg src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-5" />
+                        <NuxtImg alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-5" />
                         <div class="mb-4 text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
                             Send the request
                         </div>

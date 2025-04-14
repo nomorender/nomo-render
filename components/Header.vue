@@ -4,7 +4,7 @@
       <nav class="flex items-center justify-between gap-4 duration-200 p-4 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
-            <NuxtImg preload class="w-10 lg:hidden" src="/logo.png" />
+            <NuxtImg alt="Logo" preload class="w-10 lg:hidden" src="/logo.png" />
           </NuxtLink>
         </div>
 

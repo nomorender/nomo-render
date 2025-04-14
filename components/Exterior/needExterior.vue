@@ -11,7 +11,7 @@
                 <div class="flex gap-2 justify-between">
                     <div class="w-[600px] h-fit bg-[#D8C3A566] py-10 flex flex-col items-center">
                         <div class="flex items-center mb-4 gap-4">
-                            <NuxtImg src="/Extorior/Drawing.png" class="w-[63px] h-[63px]"/>
+                            <!-- <NuxtImg alt="" src="/Extorior/Drawing.png" class="w-[63px] h-[63px]"/> -->
                             <div class="text-xl font-bold">Architectural Design Drawings</div>
                         </div>
                         <ul class="space-y-2">

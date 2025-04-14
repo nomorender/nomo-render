@@ -28,7 +28,7 @@
                 }
               }" indicators arrows class="w-full max-w-[720px] mx-auto">
                 <template #default="{ item }">
-                  <NuxtImg :src="item"
+                  <NuxtImg :src="item" alt="item pic"
                     class="w-full sm:max-w-[600px] lg:max-w-[720px] h-[617px] max-h-[600px] object-cover object-center"
                     draggable="false" />
                 </template>

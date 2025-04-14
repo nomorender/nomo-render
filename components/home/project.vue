@@ -16,10 +16,10 @@ const items: CarouselItem[] = [
     content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Interior</span>
+          Typology: <span class = "font-[500]">Exterior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">New York, USA </span>
-          <br/>Client: <span class = "font-[500]">Islyn Studio </span>
+          <br/>Location: <span class = "font-[500]">New York, USA</span>
+          <br/>Client: <span class = "font-[500]">DEMO Arch</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
@@ -31,7 +31,9 @@ const items: CarouselItem[] = [
     content2: `
       <div class = "font-[300]">
           At street level, the restored arches and brickwork honor the fabric of the neighborhood, maintaining a sense of familiarity. Above a sleek geometric addition made by metal, creates a dynamic interplay of light and shadow.
+      </div>
 
+      <div class = "font-[300] my-4">
           While working with Demo Arch, we as Nomo Render follow their vision as a signature design on urban visualization, where heritage meets forward-thinking design to redefine contemporary city living.
       </div>
   `,
@@ -88,13 +90,22 @@ const items: CarouselItem[] = [
       </div>
 
       <div class = "font-[300] my-4">
-        This project is an architectural fusion blending historic charm of classic New York City with innovation, to preserve the character of the brick element while introducing a bold, geometric extension.
+        Steeped in elegance, this design shows the threshold between the bustling city and a sanctuary of sophistication. Designed to present grandeur and intimacy, the entrance blended Art Deco influences with contemporary refinement.
       </div>
     </div>
   `,
     content2: `
       <div class = "font-[300]">
-          Steeped in elegance, this design shows the threshold between the bustling city and a sanctuary of sophistication. Designed to present grandeur and intimacy, the entrance blended Art Deco influences with contemporary refinement.
+        A tribute to luxury and urban living, The Gilded Entrance sets the tone for an experience, capturing the essences of San Francisco's element through the timeless mindset of frenchCALIFORNIA: <span class = "font-[500] italic">The striking black canopy, Geometric lighting, Intricate glass and metal work on the doors</span> 
+      </div>
+      <div class = "font-[300] mt-4">
+        All reflect in the polished surfaces, invite guests into space and have the best experience of history and modernity. 
+      </div>
+      <div class = "font-[300] mt-4">
+        frenchCALIFORNIA also partnered up with us in rendering the interior for this luxury project. Inside, the lobby unfolds as a welcoming space with <span class="font-[500] italic">Plush, Sculptural furnishings, Warm lightings, A palette of rich textures</span>
+      </div>
+      <div class = "font-[300] mt-4">
+        Every detail, from the intricate floor patterns to artworks, offer a colourful yet chic retreat in the heart of the city.
       </div>
   `,
     picDes: {
@@ -161,7 +172,7 @@ const goToPrevItem = () => {
               <p class="font-[300] leading-[200%] md:text-[25px] text-[15px]">{{ item.location }}</p>
             </div>
           </div>
-          <NuxtImg :src="item.mainPic" class="object-cover object-center w-[472px] h-[725px] rounded-lg"
+          <NuxtImg :src="item.mainPic"  alt="main img" class="object-cover object-center w-[472px] h-[725px] rounded-lg"
             draggable="false" />
         </div>
       </template>
@@ -196,7 +207,7 @@ const goToPrevItem = () => {
         </div>
         <div class="flex items-center justify-center gap-12">
           <div class="p-5 bg-[#FAF8F5] rounded-full">
-            <nuxt-img class="size-[81px]" src="/Logo3.svg" />
+            <nuxt-img  class="size-[81px]" src="/Logo3.svg" alt="Logo"/>
           </div>
           <div>
             <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
@@ -212,7 +223,7 @@ const goToPrevItem = () => {
         </div>
         <div class="bg-[#FAF8F5]">
           <div class="w-[960px] h-full">
-            <NuxtImg :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
+            <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1" class="w-full h-auto object-cover object-center" />
           </div>
         </div>
         <div class="px-[4rem] py-5">
@@ -222,37 +233,37 @@ const goToPrevItem = () => {
 
         <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
           <div class="w-[50%]">
-            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
           </div>
           <div class="w-[50%]">
-            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
           </div>
         </div>
 
         <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
           <div class="col-span-2">
-            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
           </div>
           <div class="col-span-1">
-            <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
           </div>
           <div class="col-span-1">
-            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
           </div>
         </div>
 
         <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
           <div class="col-span-2">
-            <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
           </div>
           <div class="col-span-1">
-            <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover" />
           </div>
           <div class="col-span-1">
-            <NuxtImg :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
           </div>
           <div class="col-span-2">
-            <NuxtImg :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+            <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
           </div>
         </div>
 

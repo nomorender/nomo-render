@@ -10,7 +10,7 @@ const value = ref('');
           <div class="text-left">
             <div class="flex gap-4 md:mb-0">
               <div class="md:text-[32px] text-[15px]">Subscribe to</div>
-              <nuxt-img src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
+              <nuxt-img alt="Plane" src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
             </div>
             <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-5 mb-3">Nomo Render</div>
             <div class="flex md:block">

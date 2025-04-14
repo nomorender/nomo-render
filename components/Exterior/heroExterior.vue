@@ -22,6 +22,6 @@
         </div>
       </div>
     </div>
-    <NuxtImg src="/heroPicture.png" class="w-full h-[600px] rounded-[8px]" draggable="false" />
+    <NuxtImg alt="heroPic" src="/heroPicture.png" class="w-full h-[600px] rounded-[8px]" draggable="false" />
   </div>
 </template>
