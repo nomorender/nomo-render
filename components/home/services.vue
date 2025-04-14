@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-center pb-[60px]">
+        <div class="flex justify-center md:pb-[75px]">
           <UButton color="gray" size="xl" variant="solid"
             class="bg-[#8D7662] uppercase text-[#F5F5F5] text-[20px] px-6 py-3 hover:bg-[#90755e] md:mt-[3rem]">See our
             workflow

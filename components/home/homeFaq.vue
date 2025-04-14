@@ -56,19 +56,19 @@ const items = [
 
 <template>
     <di class=" bg-[#FAF8F5] w-full flex items-center justify-center my-[5rem]">
-        <div class="px-10 md:py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 md:mt-20 mt-10 w-[1207px]">
-            <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center">FAQ</div>
+        <div class="px-10 md:py-20 lg:grid grid-cols-[auto,1fr] h-fit gap-20 w-[1207px]">
+            <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center mt-5">FAQ</div>
             <div class="space-y-4 lg:mt-0 mt-10">
                 <UAccordion :collapsible="false" :items="items">
                     <template #default="{ item, index, open }">
                         <div class="relative">
                             <div class="flex items-center justify-between py-2">
                                 <div
-                                    class="font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
+                                    class="hover:cursor-pointer font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
                                     {{ item.label }}
                                 </div>
                                 <UIcon name="material-symbols:keyboard-arrow-down-rounded"
-                                    class="w-[48px] h-[48px] transform transition-transform duration-200"
+                                    class="hover:cursor-pointer w-[48px] h-[48px] transform transition-transform duration-200"
                                     :class="{ 'rotate-180': open }" />
                             </div>
                             <span v-if="index !== items.length - 1"

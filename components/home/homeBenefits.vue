@@ -96,7 +96,7 @@
                         <div class="flex">
                             <div class="flex gap-6 items-center">
                                 <div class="">
-                                    <nuxt-img alt="Graphic icon" src="/benefits/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
+                                    <nuxt-img alt="Time icon" src="/benefits/Graphic.svg" class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
                                 </div>
                                 <div class="">
                                     <p

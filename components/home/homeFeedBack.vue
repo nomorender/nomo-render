@@ -270,16 +270,15 @@ const isLastItem = computed(() => {
 
 <template>
     <div class="my-[5rem]">
-        <div class="bg-[#FAF8F5]">
-            <div class="pt-[60px]">
+        <div class="bg-[#FAF8F5] pt-[55px] pb-[58px]">
+            <div class="">
                 <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
                 <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:pb-[40px] text-[#8D7662]">
                     What partners talk about us
                 </h2>
             </div>
             <div class="relative bg-[#FAF8F5]">
-                <div class="relative max-w-[1112px] pt-5 mx-auto md:pb-10">
-
+                <div class="relative max-w-[1112px] pt-5 mx-auto">
                     <!-- BUTTON PREVIOUS PC -->
                     <UButton
                         class="hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
@@ -317,7 +316,7 @@ const isLastItem = computed(() => {
                         }
                     }" ref="carousel">
                         <template #default="{ item }">
-                            <div class="flex justify-center w-full pb-10">
+                            <div class="flex justify-center w-full pb-1">
                                 <div>
                                     <div class="max-w-[360px] w-full">
                                         <NuxtImg :src="item.img" alt="img"
@@ -344,7 +343,7 @@ const isLastItem = computed(() => {
                                     </div>
                                     <div>
                                         <div
-                                            class="text-justify max-w-[340px] text-[20px] leading-[150%] font-[300] md:h-[120px] italic mt-5 overflow-hidden">
+                                            class="text-justify max-w-[340px] text-[20px] leading-[150%] font-[300] md:h-[220px] italic mt-5">
                                             {{ item.description }}
                                         </div>
                                     </div>

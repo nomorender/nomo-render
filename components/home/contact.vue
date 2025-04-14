@@ -33,7 +33,7 @@ async function onError(event: FormErrorEvent) {
 </script>
 
 <template>
-    <div class="bg-[#D9D9D9] py-10 md:pt-[60px]">
+    <div class="bg-[#D9D9D9] py-[60px]">
         <div class="md:px-8 flex items-center justify-center">
             <div class="w-[1072px]">
                 <div class="px-20">
@@ -54,9 +54,9 @@ async function onError(event: FormErrorEvent) {
                         </p>
                         <div
                             class="flex items-center justify-center md:grid grid-cols-2 gap-2 mt-5 place-items-center md:place-items-start w-full px-0 mx-0 max-w-[470px] md:max-w-none">
-                            <NuxtImg src="/contact/contact1.jpg" class="lg:h-[325px] lg:w-[235px] w-[182px] h-[252px] md:w-full md:h-full object-cover"
+                            <NuxtImg src="/contact/contact1.jpg" class="rounded-[8px] lg:h-[325px] lg:w-[235px] w-[182px] h-[252px] md:w-full md:h-full object-cover"
                                 alt="Contact Image 1" />
-                            <NuxtImg src="/contact/contact2.jpg" class="lg:h-[325px] lg:w-[235px] w-[182px] h-[252px]  md:w-full md:h-full  object-cover"
+                            <NuxtImg src="/contact/contact2.jpg" class="rounded-[8px] lg:h-[325px] lg:w-[235px] w-[182px] h-[252px]  md:w-full md:h-full  object-cover"
                                 alt="Contact Image 2" />
                         </div>
                     </div>
