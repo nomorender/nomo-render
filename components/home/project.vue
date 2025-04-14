@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
+
 interface CarouselItem {
   name: string
   location: string
@@ -172,7 +174,7 @@ const goToPrevItem = () => {
               <p class="font-[300] leading-[200%] md:text-[25px] text-[15px]">{{ item.location }}</p>
             </div>
           </div>
-          <NuxtImg :src="item.mainPic"  alt="main img" class="object-cover object-center w-[472px] h-[725px] rounded-lg"
+          <NuxtImg :src="item.mainPic" alt="main img" class="object-cover object-center w-[472px] h-[725px] rounded-lg"
             draggable="false" />
         </div>
       </template>
@@ -207,7 +209,7 @@ const goToPrevItem = () => {
         </div>
         <div class="flex items-center justify-center gap-12">
           <div class="p-5 bg-[#FAF8F5] rounded-full">
-            <nuxt-img  class="size-[81px]" src="/Logo3.svg" alt="Logo"/>
+            <nuxt-img class="size-[81px]" src="/Logo3.svg" alt="Logo" />
           </div>
           <div>
             <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{ selectedItem?.name }}</p>
@@ -282,9 +284,12 @@ const goToPrevItem = () => {
       <!-- TWO BUTTON SOCIAL -->
       <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex flex-col gap-7">
         <div class="flex flex-col items-center justify-center">
-          <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-            <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
-          </UButton>
+          <NuxtLink to="https://wa.me/84967563407" target="_blank">
+            <UButton class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+              <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
+            </UButton>
+          </NuxtLink>
+
           <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
         </div>
         <div class="flex flex-col items-center justify-center">

@@ -401,7 +401,7 @@ const isLastItem = computed(() => {
                             <div class="px-[4rem] pt-[55px] pb-5">
                                 <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{
                                     selectedItem?.projectName
-                                }}</p>
+                                    }}</p>
                                 <div class="text-[25px] leading-[200%] font-[300] text-justify"
                                     v-html="selectedItem?.content1"></div>
                             </div>
@@ -470,10 +470,12 @@ const isLastItem = computed(() => {
                         <!-- TWO BUTTON SOCIAL -->
                         <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex flex-col gap-7">
                             <div class="flex flex-col items-center justify-center">
-                                <UButton
-                                    class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                                    <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
-                                </UButton>
+                                <NuxtLink to="https://wa.me/84967563407" target="_blank">
+                                    <UButton
+                                        class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                                        <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
+                                    </UButton>
+                                </NuxtLink>
                                 <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
                             </div>
                             <div class="flex flex-col items-center justify-center">
