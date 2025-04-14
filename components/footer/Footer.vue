@@ -18,7 +18,7 @@
             </div>
             <div class="mt-16 grid grid-cols-1 md:grid-cols-10 gap-16">
                 <div class="col-span-4">
-                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-2">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-1">
                         Location
                     </div>
                     <div>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="col-span-3">
-                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-2">
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-1">
                         Contact
                     </div>
                     <div>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-span-3">
-                    <div class="text-[#8D7662] font-[600] text-[25px] mb-2 leading-[200%]">Social</div>
+                    <div class="text-[#8D7662] font-[600] text-[25px] mb-1 leading-[200%]">Social</div>
                     <div class="grid grid-cols-4 gap-7">
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.behance.net/nomorender" target="_blank">
@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="col-span-4">
-                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-2">3D Rendering Services</div>
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-1">3D Rendering Services</div>
                     <div class="text-[25px] font-[300] leading-[200%]">
                         <div>
                             <NuxtLink to="/exterior">
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="col-span-3">
-                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-2">Our Work</div>
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-1">Our Work</div>
                     <div class="text-[25px] font-[300] leading-[200%] text-justify">
                         <div>
                             <NuxtLink to="/">
@@ -115,7 +115,7 @@
                 </div>
 
                 <div class="col-span-3">
-                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-2">Explore</div>
+                    <div class="text-[#8D7662] leading-[200%] font-[600] text-[25px] mb-1">Explore</div>
                     <div class="text-[25px] font-[300] leading-[200%] text-justify">
                         <div>
                             <NuxtLink to="/">
