@@ -3,14 +3,14 @@ const value = ref('');
 </script>
 
 <template>
-  <div class="flex items-center justify-center py-20 md:pb-[5rem] md:py-0">
+  <div class="flex items-center justify-center py-[45px] md:pb-[5rem] md:py-0">
     <div class="bg-[#eeeeee] md:p-8 text-center rounded-xl md:px-20 py-5 md:w-[1360px] w-[345px] h-fit">
       <div class="px-8 md:px-0  mx-auto lg:flex lg:items-center lg:justify-between">
         <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
             <div class="flex gap-4 md:mb-0">
               <div class="md:text-[32px] text-[15px]">Subscribe to</div>
-              <nuxt-img alt="Plane" src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[67px] h-[30px] rotate-2" />
+              <nuxt-img alt="Plane" src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[66px] h-[30px] rotate-2" />
             </div>
             <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-5 mb-3">Nomo Render</div>
             <div class="flex md:block">

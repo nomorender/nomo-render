@@ -1,19 +1,19 @@
 <template>
-    <div class="bg-[#D9D9D9] h-fit pt-[25px] pb-[35px]">
+    <div class="bg-[#D9D9D9] h-fit pt-[25px] pb-[50px] lg:pt-[25px] lg:pb-[50px] md:pt-[55px] md:pb-[50px]">
         <div class="lg:grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-12 max-w-[1200px] mx-auto lg:px-4 md:px-0">
             <div class="flex flex-col justify-center items-center">
-                <div class="mb-8">
+                <div class="mb-8 md:mt-0 mt-[20px] lg:flex md:flex-col justify-center items-center">
                     <div
                         class="text-[16px] md:text-[32px] leading-[150%] font-[400] text-[#000000] text-center md:text-left">
                         What is the benefits of
                     </div>
                     <div
-                        class="text-[30px] md:text-[64px] font-semibold text-[#8D7662] mt-2 text-center leading-tight px-[50px] md:px-0 md:text-left">
+                        class="text-[30px] md:text-[64px] font-semibold text-[#8D7662] mt-2 text-center leading-tight px-[50px] md:px-0 lg:text-left">
                         partnering with Nomo Render?
                     </div>
                 </div>
 
-                <div class="mb-20">
+                <div class="lg:mb-20 mb-10">
                     <div
                         class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
 
-                <div class="mb-20 lg:mb-0">
+                <div class="mb-10 lg:mb-0">
                     <div
                         class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
@@ -73,7 +73,7 @@
             </div>
 
             <div class="flex flex-col justify-center items-center">
-                <div class="mb-20 md:mt-[8rem]">
+                <div class="lg:mb-20 mb-10 lg:mt-[8rem]">
                     <div
                         class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] w-[220px]">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
 
-                <div class="mb-10">
+                <div class="lg:mb-10 sm:mb-[15px]">
                     <div
                         class="bg-[#D8C3A566] w-full md:w-[550px] px-12 lg:px-6 md:px-[100px] py-10 md:py-[65px] rounded-[8px] shadow-lg flex items-center justify-center">
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">

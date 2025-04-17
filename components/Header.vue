@@ -32,7 +32,7 @@
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid" class="lg:hidden text-white"
             :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
-          <USlideover v-model="isOpenMenu" :ui="{ wrapper: 'w-[300px] fixed right-0 left-auto' }" side="right">
+          <USlideover v-model="isOpenMenu" :ui="{overlay : {base : 'bg-black/80', background : ''}, wrapper: 'w-[75%] fixed right-0 left-auto' }" side="right">
             <div class="p-8 mb-">
               <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
                 class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" />

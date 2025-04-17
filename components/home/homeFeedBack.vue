@@ -269,11 +269,12 @@ const isLastItem = computed(() => {
 </script>
 
 <template>
-    <div class="my-[5rem]">
-        <div class="bg-[#FAF8F5] pt-[55px] pb-[58px]">
+    <div class="md:my-[5rem] my-[3rem]">
+        <div class="bg-[#FAF8F5] pt-[55px] pb-[58px] md:px-0">
             <div class="">
-                <p class="text-center text-xl md:text-3xl uppercase mb-5">Feedbacks</p>
-                <h2 class="text-center font-semibold text-3xl md:text-6xl mb-5 md:pb-[40px] text-[#8D7662]">
+                <p class="text-center text-xl md:text-3xl uppercase md:mb-5">Feedbacks</p>
+                <h2
+                    class="md:px-0 px-20 text-center font-semibold text-3xl md:text-6xl md:mb-5 mb-2 md:pb-[40px] text-[#8D7662]">
                     What partners talk about us
                 </h2>
             </div>
@@ -308,17 +309,16 @@ const isLastItem = computed(() => {
                         </div>
                     </UButton>
 
-
                     <UCarousel :items="items" arrows :ui="{
-                        item: 'basis-full lg:basis-1/2 lg:basis-1/3',
+                        item: 'basis-full lg:basis-1/2 lg:basis-1/3 px-6 md:px-0',
                         arrows: {
-                            wrapper: 'flex items-center justify-center mt-2 sm:hidden gap-3 pb-10'
+                            wrapper: 'flex items-center justify-center md:mt-2 mt-8 sm:hidden gap-[15px] md:pb-10'
                         }
                     }" ref="carousel">
                         <template #default="{ item }">
                             <div class="flex justify-center w-full pb-1">
                                 <div>
-                                    <div class="max-w-[360px] w-full">
+                                    <div class="max-w-[360px] w-full md:mb-0 mb-[45px]">
                                         <NuxtImg :src="item.img" alt="img"
                                             class="w-[360px] h-[250px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
@@ -361,14 +361,14 @@ const isLastItem = computed(() => {
                         </template>
                         <template #prev="{ onClick, disabled }">
                             <UButton
-                                class="rounded-full bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
                             <UButton
-                                class="md:hidden rounded-full bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] shadow-lg p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
@@ -376,119 +376,190 @@ const isLastItem = computed(() => {
                     </UCarousel>
 
                     <UModal v-model="isOpen"
-                        :ui="{ overlay: { background: 'bg-[#000000] opacity-[80%]' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container', width: '' }">
-                        <div class="flex gap-2.5 mb-8">
-                            <div class="fixed translate-x-[64.1rem] -translate-y-[-30px] hidden md:flex flex-col gap-7">
-                                <UButton variant="ghost" size="xl" class="" @click="isOpen = false"
-                                    :ui="{ base: '!p-[15px] !focus:outline-none hover:none border-none !bg-[#8D7662] !rounded-full hover:bg-none !ring-0' }">
-                                    <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 text-white" />
-                                </UButton>
-                            </div>
-                            <div class="flex items-center justify-center gap-12">
-                                <div class="p-5 bg-[#FAF8F5] rounded-full">
-                                    <nuxt-img alt="Logo" class="size-[81px]" src="/Logo3.svg" />
+                        :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container pb-[120px]', width: '' }">
+                        <div class="flex md:gap-2.5 mb-8 justify-between">
+                            <div class="flex items-center justify-center md:gap-12 gap-3">
+                                <div class="md:p-5 p-2 bg-[#FAF8F5] rounded-full">
+                                    <nuxt-img class="md:size-[81px] size-[33px]" src="/Logo3.svg" alt="Logo" />
                                 </div>
                                 <div>
-                                    <p class="text-[25px] text-[#FAF8F5] font-[500] leading-[200%]">{{
-                                        selectedItem?.projectName }}</p>
-                                    <p class="font-[300] text-[25px] leading-[200%] text-[#FAF8F5]">Nomo Render - 3D
-                                        Visualization Studio
-                                    </p>
+                                    <p
+                                        class="md:text-[25px] text-[18px] text-[#FAF8F5] md:font-[500] font-[600] md:leading-[200%] leading-[100%]">
+                                        {{ selectedItem?.projectName }}</p>
+                                    <p
+                                        class="font-[300] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] text-[#FAF8F5]">
+                                        Nomo Render - 3D Visualization Studio</p>
                                 </div>
+                            </div>
+
+                            <div class="md:fixed md:translate-x-[64.1rem] md:-translate-y-[-30px]  flex flex-col gap-7">
+                                <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
+                                    base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
+                                }">
+                                    <UIcon name="i-heroicons-x-mark-20-solid"
+                                        class="size-7 md:text-white text-[#1D1B20]" />
+                                </UButton>
                             </div>
                         </div>
-                        <div class="bg-[#FAF8F5] rounded-[8px] w-[960px]">
-                            <div class="px-[4rem] pt-[55px] pb-5">
-                                <p class="text-[#8D7662] text-[32px] font-[600] mb-5 uppercase leading-[150%]">{{
-                                    selectedItem?.projectName
-                                    }}</p>
-                                <div class="text-[25px] leading-[200%] font-[300] text-justify"
-                                    v-html="selectedItem?.content1"></div>
+
+                        <div class="bg-[#FAF8F5] rounded-[8px] md:w-[960px] w-[355px]">
+                            <div class="md:px-[4rem] px-[35px] md:pt-[55px] pt-[40px] md:pb-5 pb-3">
+                                <p
+                                    class="text-[#8D7662] md:text-[32px] text-[16px] font-[600] mb-5 uppercase leading-[150%]">
+                                    {{ selectedItem?.projectName }}</p>
+                                <div class="md:text-[25px] text-[15px] leading-[200%] font-[300] text-justify"
+                                    v-html="selectedItem?.content1">
+                                </div>
                             </div>
                             <div class="bg-[#FAF8F5]">
-                                <div class="w-[960px] h-full">
-                                    <NuxtImg :src="selectedItem?.picDes.pic1" alt="img"
-                                        class="w-full h-auto object-cover object-center" />
+                                <div class="md:w-[960px] h-full w-[355px]">
+                                    <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
+                                        class=":w-full h-auto object-cover object-center" />
                                 </div>
                             </div>
-                            <div class="px-[4rem] py-5">
-                                <div class="text-[25px] leading-[200%] font-[300] text-justify"
+                            <div class="md:px-[4rem] px-[35px] py-[30px]">
+                                <div class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify"
                                     v-html="selectedItem?.content2"></div>
                             </div>
+
+
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
-                                <div class="w-[50%]" alt="img des">
-                                    <NuxtImg :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                                <div class="w-[50%]">
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
+                                        class="w-full h-auto object-cover" />
                                 </div>
-                                <div class="w-[50%]" alt="img des">
-                                    <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+                                <div class="w-[50%]">
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                                        class="w-full h-auto object-cover" />
                                 </div>
                             </div>
+
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic2" alt="img des"
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic4" alt="img des"
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic3" alt="img des"
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
                                         class="w-full h-auto object-cover" />
                                 </div>
                             </div>
+
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic2" alt="img des"
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
                                         class="w-full h-auto object-cover" />
                                 </div>
-                                <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic3" class="w-full max-h-[357px] object-cover"
-                                        alt="img des" />
+                                <div class="col-span-1 md:h-[357px] h-[131px]">
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                                        class="w-full h-full object-cover" />
                                 </div>
-                                <div class="col-span-1">
-                                    <NuxtImg :src="selectedItem?.picDes.pic4" alt="img des"
+                                <div class="col-span-1 ">
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-2">
-                                    <NuxtImg :src="selectedItem?.picDes.pic5" alt="img des"
+                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5"
                                         class="w-full h-auto object-cover" />
                                 </div>
                             </div>
+
                             <div class="flex w-full justify-center items-center py-10">
                                 <UButton color="gray" variant="solid" type="submit" form="contactForm"
-                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] rounded-[8px] w-[390px] md:w-auto">
+                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
                                     <div
-                                        class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] text-[28px]">
+                                        class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">
                                         see more our projects
                                     </div>
                                 </UButton>
                             </div>
+
                         </div>
-                        <!-- TWO BUTTON SOCIAL -->
-                        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex flex-col gap-7">
-                            <div class="flex flex-col items-center justify-center">
-                                <NuxtLink to="https://wa.me/84967563407" target="_blank">
+
+
+                        <!-- 2 BUTTON NEXT TO THE MODAL PC -->
+                        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex">
+                            <!-- TWO BUTTON SOCIAL -->
+                            <div class="md:flex flex-col gap-7">
+                                <div class="flex flex-col items-center justify-center">
+                                    <NuxtLink to="https://wa.me/84967563407" target="_blank">
+                                        <UButton
+                                            class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                                            <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
+                                        </UButton>
+                                    </NuxtLink>
+                                    <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
+                                </div>
+                                <div class="flex flex-col items-center justify-center">
                                     <UButton
                                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                                        <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
+                                        <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                                     </UButton>
-                                </NuxtLink>
-                                <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
-                            </div>
-                            <div class="flex flex-col items-center justify-center">
-                                <UButton
-                                    class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                                    <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
-                                </UButton>
-                                <div
-                                    class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">
-                                    Our workflow
+                                    <div
+                                        class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">
+                                        Our
+                                        workflow
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- BAR FOR MODAL MOBILE  -->
+                        <div class="w-full fixed bottom-0 left-0 py-3 md:hidden bg-[#D9D9D9]">
+                            <!-- TWO BUTTON SOCIAL -->
+                            <div class="flex w-full justify-center items-center gap-10">
+                                <div class="flex flex-col items-center justify-center gap-1">
+                                    <UButton
+                                        class="flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                                        @click="goToPrevItem">
+                                        <div class="text-[#8D7662] flex justify-center">
+                                            <UIcon name="mdi-light:arrow-left" class="size-4" />
+                                        </div>
+                                    </UButton>
+                                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Back</div>
+                                </div>
+
+                                <div class="flex flex-col items-center justify-center gap-1">
+                                    <NuxtLink to="https://wa.me/84967563407" target="_blank">
+                                        <UButton
+                                            class="bg-[#FFFFFF] md:p-[20px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                                            <UIcon name="material-symbols:mail"
+                                                class="md:size-12 size-5 text-[#8D7662]" />
+                                        </UButton>
+                                    </NuxtLink>
+                                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Message</div>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-1">
+                                    <UButton
+                                        class="bg-[#FFFFFF] md:p-[20px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                                        <UIcon name="hugeicons:flowchart-02" class="md:size-12 size-5 text-[#8D7662]" />
+                                    </UButton>
+                                    <div
+                                        class="font-[300] text-[10px] leading-[150%] text-[#000000] items-center justify-center">
+                                        Our
+                                        workflow
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center justify-center gap-1">
+                                    <UButton
+                                        class="flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                                        @click="goToNextItem">
+                                        <div class="text-[#FFFFFF] flex justify-center">
+                                            <UIcon name="mdi-light:arrow-right" class="size-4" />
+                                        </div>
+                                    </UButton>
+                                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Next</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Next Previous -->
                         <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
                             <UButton
@@ -508,6 +579,8 @@ const isLastItem = computed(() => {
                                 </div>
                             </UButton>
                         </div>
+
+                        <!-- 2 BUTTON NEXT TO THE MODAL MOBILE -->
                     </UModal>
                 </div>
             </div>

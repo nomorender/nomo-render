@@ -1,11 +1,13 @@
 <template>
-  <div class="md:mb-[5rem]">
-    <div class="bg-[#FAF8F5] h-fit flex flex-col justify-center items-center">
-      <div class="py-10 md:pt-[70px] md:pb-0">
-        <p class="text-center text-[16px] lg:text-3xl lg:mb-7">SERVICES</p>
-        <h2 class="text-center font-semibold text-[30px] md:text-6xl md:mb-20 text-[#8D7662]">
-          What we do?
-        </h2>
+  <div class="md:mb-[5rem] mb-[3rem]">
+    <div class="bg-[#FAF8F5] flex flex-col justify-center items-center">
+      <div class="md:py-10 py-[45px] md:pt-[70px] md:pb-0">
+        <div class="md:mb-0 mb-5">
+          <p class="text-center text-[16px] lg:text-3xl lg:mb-7">SERVICES</p>
+          <h2 class="text-center font-semibold text-[30px] md:text-6xl md:mb-20 text-[#8D7662]">
+            What we do?
+          </h2>
+        </div>
         <div class="flex flex-col md:gap-y-20">
           <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-row"
             :class="{ 'md:flex-row-reverse': index % 2 }">
@@ -18,18 +20,18 @@
                 },
                 default: {
                   prevButton: {
-                    class: 'md:hidden flex p-3 bg-[#FFFFFF] text-[#8D7662]',
+                    class: 'absolute  !top-[80%] rounded-lg !ring-0 md:hidden flex p-3 bg-[#FFFFFF] text-[#8D7662]',
                     icon: 'material-symbols:arrow-left-alt-rounded'
                   },
                   nextButton: {
-                    class: 'md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
-                    icon: 'material-symbols:arrow-left-alt-rounded'
+                    class: ' absolute !top-[80%] rounded-lg !ring-0 md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
+                    icon: '!material-symbols:arrow-left-alt-rounded'
                   }
                 }
               }" indicators arrows class="w-full max-w-[720px] mx-auto">
                 <template #default="{ item }">
                   <NuxtImg :src="item" alt="item pic"
-                    class="w-full sm:max-w-[600px] lg:max-w-[720px] h-[617px] max-h-[600px] object-cover object-center"
+                    class="w-full lg:max-w-[720px] md:h-[617px] h-[322px] max-h-[600px] object-cover object-center"
                     draggable="false" />
                 </template>
 
@@ -41,14 +43,14 @@
               </UCarousel>
             </div>
             <div class="flex-grow justify-center mx-10 md:mx-0 flex-1 lg:max-w-[720px] md:ml-[100px] md:pr-[100px]">
-              <p class="mb-5 md:text-[40px] text-[18px] font-[600] mt-10 md:mt-0 md:w-[480px]">{{ item.name }}</p>
+              <p class="mb-5 md:text-[40px] text-[18px] font-[600] mt-[25px] md:mt-0 md:w-[480px]">{{ item.name }}</p>
               <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
               <div class="hidden md:block">
                 <UButton class="hover:bg-[#D9D9D9] text-[#980e0c] transition-all"
                   :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
                   variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
               </div>
-              <UButton class="md:hidden" v-if="item.link" :to="item.link" variant="outline" :trailing="false"
+              <UButton class="md:hidden mb-[45px] md:mb-0" v-if="item.link" :to="item.link" variant="outline" :trailing="false"
                 color="red" icon="i-heroicons-arrow-right">See more</UButton>
             </div>
           </div>

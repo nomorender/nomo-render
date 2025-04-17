@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#D9D9D9] md:px-[100px] py-[70px] px-6">
+  <div class="bg-[#D9D9D9] md:px-[100px] md:py-[70px] py-[45px] px-10">
     <div class="flex items-center flex-col lg:flex-row justify-center max-w-7xl mx-auto gap-5 md:gap-14">
       <h1 class="text-[#8D7662] md:text-6xl font-semibold text-3xl text-nowrap">About Us</h1>
       <div class="w-[1px] h-[370px] hidden lg:block bg-black"></div>
