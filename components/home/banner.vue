@@ -41,7 +41,7 @@ async function onError(event: FormErrorEvent) {
             <UButton class="hidden sm:block hover:bg-[#1e1e1e] transition-all" color="white" variant="outline" size="xl"
                 @click="isOpen = true">REQUEST A
                 QUOTE</UButton>
-            <UButton class="sm:hidden" color="white" variant="outline">REQUEST A QUOTE</UButton>
+            <UButton class="sm:hidden"  @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
         </div>
 
         <UModal v-model="isOpen" :ui="{
