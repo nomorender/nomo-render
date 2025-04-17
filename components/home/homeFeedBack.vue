@@ -462,7 +462,7 @@ const isLastItem = computed(() => {
                                 </div>
                                 <div class="col-span-1 ">
                                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
-                                        class="w-full h-auto object-cover" />
+                                        class="w-full h-[131px]  md:h-[357px] object-cover" />
                                 </div>
                                 <div class="col-span-2">
                                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5"

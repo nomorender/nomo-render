@@ -63,7 +63,7 @@ async function onError(event: FormErrorEvent) {
                     <div class="lg:w-[50%] w-full mt-[40px] lg:mt-0 md:px-0">
                         <UForm id="contactForm" :validate="validate" :state="state" class="space-y-4 md:px-0 w-full"
                             @submit="onSubmit" @error="onError">
-                            <UFormGroup class="flex items-center justify-center md:block">
+                            <UFormGroup class="flex items-center justify-center md:block ">
                                 <UInput padded required color="white" variant="none" placeholder="Name (required)"
                                     v-model="state.name" size="xl"
                                     class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[320px] md:w-full"
