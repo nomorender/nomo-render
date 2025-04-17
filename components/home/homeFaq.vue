@@ -76,7 +76,7 @@ const items = [
                         </div>
                     </template>
                     <template #item="{ item }">
-                        <div class="text-[25px] font-[300] leading-[200%] text-justify text-[#000000]"
+                        <div class="md:text-[25px] text-[15px] font-[300] leading-[200%] text-justify text-[#000000]"
                             v-html="item.content"></div>
                     </template>
                 </UAccordion>
