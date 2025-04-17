@@ -58,7 +58,7 @@ const items = [
     <di class=" bg-[#FAF8F5] w-full flex items-center justify-center md:my-[5rem] mt-[45px]">
         <div class="px-10 py-[30px] md:py-[40px] lg:grid grid-cols-[auto,1fr] h-fit gap-20 w-[1207px]">
             <div class="md:text-[64px] text-[30px] text-[#8D7662] font-[600] leading-[100%] text-center mt-5">FAQ</div>
-            <div class="space-y-4 lg:mt-0 mt-10">
+            <div class="space-y-4 lg:mt-0 mt-3">
                 <UAccordion :collapsible="false" :items="items">
                     <template #default="{ item, index, open }">
                         <div class="relative">
