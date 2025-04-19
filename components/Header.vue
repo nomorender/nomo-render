@@ -42,7 +42,7 @@
               <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
               class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
 
-              <div class="flex flex-1 flex-col gap-10 mt-[5rem]">
+              <div class="flex flex-1 flex-col gap-9 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"
                     class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
