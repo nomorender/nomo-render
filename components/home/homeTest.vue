@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
+                                class="md:text-[25px] text-[15px] font-[300] md:mt-[30px] mt-[20px] text-justify md:leading-[200%] leading-[180%]">
                                 We deliver diverse and realistic 3D images with <span
                                     class="font-[500]">precision</span>
                                 and
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
+                                class="md:text-[25px] text-[15px] font-[300] md:mt-[30px] mt-[20px] text-justify md:leading-[200%] leading-[180%]">
                                 We provide services at <span class="font-[500]">competitive rates</span>. With expertise
                                 and advanced technology allow us to
                                 deliver <span class="font-[500]">stunning results</span> while keeping costs manageable,
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
+                                class="md:text-[25px] text-[15px] font-[300] md:mt-[30px] mt-[20px] text-justify md:leading-[200%] leading-[180%]">
                                 We focus on efficient project management to <span class="font-[500]">deliver
                                     high-quality renders on time</span>. Our
                                 streamlined workflow, clear communication within the departments, and structured
@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                             <div
-                                class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[180%]">
+                                class="md:text-[25px] text-[15px] font-[300] md:mt-[30px] mt-[20px] text-justify md:leading-[200%] leading-[180%]">
                                 We offer <span class="font-[500]">tailor-made solutions</span> for architects,
                                 designers, and developers. Our flexible
                                 approach ensures <span class="font-[500]">each rendering perfectly matches your

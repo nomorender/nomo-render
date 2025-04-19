@@ -13,11 +13,11 @@
           to bring future spaces to life today
         </p>
         <div class="hidden lg:block mb-2">
-            <UButton class="hover:bg-[#FAF8F5] text-[#980e0c] transition-all"  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+            <UButton class="text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"  to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
         </div>
       </div>
       <div class="">
-        <UButton class="lg:hidden" to="/about" variant="outline"  :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+        <UButton class=" text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all lg:hidden" to="/about" variant="outline"  :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
       </div>
     </div>
   </div>

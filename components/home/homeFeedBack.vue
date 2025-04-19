@@ -13,6 +13,48 @@ interface CarouselItem {
 }
 
 const items: CarouselItem[] = [
+{
+        name: 'Maria Gonzalez',
+        position: 'Architect',
+        projectName: 'Rustic Elegance',
+        star: 5,
+        description: `I’ve worked with a lot of companies for my real estate projects, and Nomo Render is by far the best. The renders they create are incredibly detailed and look like actual photographs. This makes a huge difference in showing our properties to potential buyers.`,
+        img: `/Feedback/4.webp`,
+        ava: '/Avatar/4.jpg',
+        content1: `
+    <div>
+      <div class = "font-[300]">
+          Typology: <span class = "font-[500]">Interior</span>
+          <br/>Status: <span class = "font-[500]">Completed</span>
+          <br/>Location: <span class = "font-[500]">Atlanta, USA</span>
+          <br/>Client: <span class = "font-[500]">Kristin Wadsworth Interior</span>
+          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
+      </div>
+
+      <div class = "font-[300] my-4">
+        At Nomo Render, working with Kristin Wadsworth Interior on this project was an enriching experience. The lodge is a mixture of warmth and sophistication, bringing together rustic textures, earthy tones, and curated furnishings to create an inviting and cozy atmosphere.
+      </div>
+    </div>
+  `,
+        content2: `
+      <div class = "font-[300] my-4">
+        From a rendering perspective, an attention to materiality and lighting was important to keep: <span class ="font-[500] italic">the depth of natural wood grains, the softness textiles, and the subtle of metal accents</span>. We emphasize the exposed beams of the high ceilings by strategic lighting to ensure the space feels more grand and spatial. 
+      </div>
+
+      <div class = "font-[300] my-4">
+        A key challenge was to deliver the tactile richness of hand-selected materials to a highly realistic visualization from the aged leather armchairs to the textured stone fireplace. 
+      </div>
+
+      <div class = "font-[300] my-4">
+        Advancing rendering techniques, including lighting and ray tracing, allowed us to achieve an accurate interplay of natural and professional light and keep staying true to the design intent.
+      </div>
+  `,
+        picDes: {
+            pic1: `/Feedback/UserFeedback/12.webp`,
+            pic2: `/Feedback/UserFeedback/13.webp`,
+            pic3: '/Feedback/UserFeedback/14.webp',
+        }
+    },
     {
         name: 'John S',
         projectName: 'Lumea Living',
@@ -130,48 +172,6 @@ const items: CarouselItem[] = [
             pic1: `/Feedback/UserFeedback/9.png`,
             pic2: `/Feedback/TheLounge1.png`,
             pic3: '/Feedback/TheLounge2.png',
-        }
-    },
-    {
-        name: 'Maria Gonzalez',
-        position: 'Architect',
-        projectName: 'Rustic Elegance',
-        star: 5,
-        description: `I’ve worked with a lot of companies for my real estate projects, and Nomo Render is by far the best. The renders they create are incredibly detailed and look like actual photographs. This makes a huge difference in showing our properties to potential buyers.`,
-        img: `/Feedback/4.webp`,
-        ava: '/Avatar/4.jpg',
-        content1: `
-    <div>
-      <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Interior</span>
-          <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">Atlanta, USA</span>
-          <br/>Client: <span class = "font-[500]">Kristin Wadsworth Interior</span>
-          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
-      </div>
-
-      <div class = "font-[300] my-4">
-        At Nomo Render, working with Kristin Wadsworth Interior on this project was an enriching experience. The lodge is a mixture of warmth and sophistication, bringing together rustic textures, earthy tones, and curated furnishings to create an inviting and cozy atmosphere.
-      </div>
-    </div>
-  `,
-        content2: `
-      <div class = "font-[300] my-4">
-        From a rendering perspective, an attention to materiality and lighting was important to keep: <span class ="font-[500] italic">the depth of natural wood grains, the softness textiles, and the subtle of metal accents</span>. We emphasize the exposed beams of the high ceilings by strategic lighting to ensure the space feels more grand and spatial. 
-      </div>
-
-      <div class = "font-[300] my-4">
-        A key challenge was to deliver the tactile richness of hand-selected materials to a highly realistic visualization from the aged leather armchairs to the textured stone fireplace. 
-      </div>
-
-      <div class = "font-[300] my-4">
-        Advancing rendering techniques, including lighting and ray tracing, allowed us to achieve an accurate interplay of natural and professional light and keep staying true to the design intent.
-      </div>
-  `,
-        picDes: {
-            pic1: `/Feedback/UserFeedback/12.webp`,
-            pic2: `/Feedback/UserFeedback/13.webp`,
-            pic3: '/Feedback/UserFeedback/14.webp',
         }
     },
     {
@@ -343,7 +343,7 @@ const isLastItem = computed(() => {
                                     </div>
                                     <div>
                                         <div
-                                            class="text-justify max-w-[340px] text-[20px] leading-[150%] font-[300] md:h-[220px] italic mt-5">
+                                            class="text-justify max-w-[340px] md:text-[20px] text-[15px] md:leading-[150%] leading-[180%] font-[300] md:h-[220px] italic mt-5">
                                             {{ item.description }}
                                         </div>
                                     </div>

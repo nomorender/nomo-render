@@ -14,7 +14,7 @@ const items: CarouselItem[] = [
   {
     name: 'Elevate NY',
     location: 'New York, USA',
-    mainPic: '/mobile-background.png',
+    mainPic: '/HAR011.png',
     content1: `
     <div>
       <div class = "font-[300]">
