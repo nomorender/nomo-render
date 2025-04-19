@@ -67,17 +67,19 @@ const items = [
                                     class="hover:cursor-pointer font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
                                     {{ item.label }}
                                 </div>
-                                <UIcon name="material-symbols:keyboard-arrow-down-rounded"
-                                    class="hover:cursor-pointer w-[48px] h-[48px] transform transition-transform duration-200"
+                                <UIcon name="iconamoon:arrow-down-2-light"
+                                    class="hover:cursor-pointer md:w-[48px] md:h-[48px] w-[38px] h-[38px] transform transition-transform duration-200"
                                     :class="{ 'rotate-180': open }" />
                             </div>
-                            <span v-if="index !== items.length - 1"
-                                class="lg:hidden block h-[1px] bg-[#8D7662] w-full mt-2"></span>
+                            <span v-if="index !== items.length - 1 && !open"
+                                class="lg:hidden block h-[1px] bg-[#8D7662] w-full my-2 transition-all"></span>
                         </div>
                     </template>
                     <template #item="{ item }">
                         <div class="md:text-[25px] text-[15px] font-[300] leading-[200%] text-justify text-[#000000]"
                             v-html="item.content"></div>
+                        <span
+                            class="lg:hidden block h-[1px] bg-[#8D7662] w-full mt-2 transition-all"></span>
                     </template>
                 </UAccordion>
             </div>

@@ -20,11 +20,11 @@
                 },
                 default: {
                   prevButton: {
-                    class: 'absolute  !top-[80%] rounded-lg !ring-0 md:hidden flex p-3 bg-[#FFFFFF] text-[#8D7662]',
+                    class: 'disabled:bg-white disabled:opacity-100 hover:bg-white active:bg-white absolute !top-[80%] rounded-lg !ring-0 md:hidden flex p-3 bg-[#FFFFFF] text-[#8D7662]',
                     icon: 'material-symbols:arrow-left-alt-rounded'
                   },
                   nextButton: {
-                    class: ' absolute !top-[80%] rounded-lg !ring-0 md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
+                    class: ' absolute !top-[80%] hover:bg-[#8D7662] active:bg-[#8D7662] rounded-lg !ring-0 md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
                     icon: '!material-symbols:arrow-left-alt-rounded'
                   }
                 }

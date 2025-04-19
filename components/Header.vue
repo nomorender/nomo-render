@@ -1,10 +1,10 @@
 <template>
   <div class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0" :class="{ 'bg-white': isScrolled }">
     <div class="mx-auto w-full xl:max-w-7xl relative">
-      <nav class="flex items-center justify-between gap-4 duration-200 p-4 w-full">
+      <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-9  px-8 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
-            <NuxtImg alt="Logo" preload class="w-10 lg:hidden" src="/logo.png" />
+            <NuxtImg alt="Logo" preload class="!drop-shadow-2xl md:w-10 w-[50px] lg:hidden" src="/logo.png" />
           </NuxtLink>
         </div>
 
@@ -15,8 +15,8 @@
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>
-            <UDropdown :ui="{ width : 'w-fit', item: { padding: 'py-4 px-4', label : 'text-[#000000] text-[18px]' } }" v-else :items="item.childen"
-              :popper="{ placement: 'bottom-start' }">
+            <UDropdown :ui="{ width: 'w-fit', item: { padding: 'py-4 px-4', label: 'text-[#000000] text-[18px]' } }"
+              v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
                 <p class=" text-xl  hover:underline font-semibold"
                   :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
@@ -30,21 +30,27 @@
         </div>
 
         <div class="h-fit">
-          <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid" class="lg:hidden text-white"
+          <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
+            class=" hover:bg-transparent active:bg-transparent lg:hidden text-white"
             :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
-          <USlideover v-model="isOpenMenu" :ui="{overlay : {base : 'bg-black/80', background : ''}, wrapper: 'w-[75%] fixed right-0 left-auto' }" side="right">
-            <div class="p-8 mb-">
-              <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
-                class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" />
-              <div class="flex flex-1 flex-col gap-10 mt-10">
+          <USlideover v-model="isOpenMenu"
+            :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
+            side="right">
+            <div class="p-8">
+              <!-- <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
+                class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" /> -->
+              <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
+              class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
+
+              <div class="flex flex-1 flex-col gap-10 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"
-                    class="text-xl cursor-pointer font-semibold text-[#8D7662]">
+                    class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
-                  <div v-else class="flex flex-col items-end gap-3">
+                  <div v-else class="flex flex-col items-end gap-1">
                     <div @click="open = item.name === open ? null : item.name"
-                      class="flex items-center justify-end gap-4 cursor-pointer">
+                      class="flex items-center justify-end cursor-pointer">
                       <div class="text-[20px] font-semibold text-[#8D7662]">
                         {{ item.name }}
                       </div>
@@ -52,7 +58,7 @@
                         :class="{ 'transform rotate-180': open === item.name }" />
                     </div>
                     <!-- Mobile -->
-                    <div v-show="open === item.name" class="mt-2 pl-4 space-y-3 flex flex-col items-end">
+                    <div v-show="open === item.name" class="mt-2 pl-4 space-y-1 flex flex-col items-end">
                       <div v-for="child in item.childen[0]" :key="child.label"
                         class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
                         {{ child.label }}
@@ -60,7 +66,7 @@
                     </div>
                   </div>
                   <span v-if="item !== navList[navList.length - 1]"
-                    class="absolute left-0 bottom-[-10px] h-[1px] bg-[#8D7662] w-full"></span>
+                    class="absolute left-0 bottom-[-18px] h-[1px] bg-[#8D7662] w-full"></span>
                 </div>
               </div>
             </div>
@@ -77,10 +83,10 @@ const open = ref<string | null>(null);
 const navList = [
   {
     path: "/",
-    name: "HOME",
+    name: "Home",
   },
   {
-    name: "SERVICES",
+    name: "Services",
     childen: [
       [
         {
@@ -111,7 +117,7 @@ const navList = [
     ],
   },
   {
-    name: "OUR WORK",
+    name: "Our Work",
     childen: [
       [
         {
@@ -130,7 +136,7 @@ const navList = [
     ],
   },
   {
-    name: "EXPLORE",
+    name: "Explore",
     childen: [
       [
         {
@@ -150,11 +156,11 @@ const navList = [
   },
   {
     path: "/about",
-    name: "ABOUT US",
+    name: "About Us",
   },
   {
     path: "/contact",
-    name: "CONTACT",
+    name: "Contact",
   },
 ];
 

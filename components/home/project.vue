@@ -214,9 +214,9 @@ const goToPrevItem = () => {
           </div>
         </div>
 
-        <div class="md:fixed md:translate-x-[64.1rem] md:-translate-y-[-30px]  flex flex-col gap-7">
+        <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
           <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
-            base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
+            base: 'md:!p-[15px] !p-[6px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
           }">
             <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 md:text-white text-[#1D1B20]" />
           </UButton>
