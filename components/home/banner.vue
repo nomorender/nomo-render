@@ -54,7 +54,7 @@ async function onError(event: FormErrorEvent) {
             <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
                 class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent" @click="isOpen = false" />
             <div class="flex flex-wrap">
-                <div class="w-full md:p-10 py-5 px-5 lg:w-3/5">
+                <div class="w-full md:p-10 py-6 px-5 lg:w-3/5">
                     <div class="mb-4 flex flex-col items-center lg:block">
                         <NuxtImg alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-5" />
                         <div class="mb-4 text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
