@@ -39,7 +39,7 @@ async function onError(event: FormErrorEvent) {
                 <div class="px-20">
                     <p class="text-center text-xl md:text-3xl md:mb-[20px] uppercase">contact</p>
                     <div
-                        class="text-center font-semibold text-3xl md:text-[64px] leading-[100%] mb-5 md:mb-20 text-[#8D7662]  md:px-6">
+                        class="text-center font-semibold text-3xl md:text-[64px] w-[220px] md:w-full leading-[100%] mb-5 md:mb-20 text-[#8D7662]  md:px-6">
                         Let’s bring your vision to life!
                     </div>
                 </div>

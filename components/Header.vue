@@ -11,14 +11,14 @@
         <div class="hidden gap-[100px] justify-center lg:flex">
           <div v-for="item in navList" :key="item.path">
             <p v-if="!item.childen" @click="$router.push(item.path)"
-              class=" md:text-[20px] cursor-pointer hover:underline font-semibold"
+              class=" md:text-[20px] cursor-pointer hover:underline font-semibold uppercase"
               :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
               {{ item.name }}
             </p>
             <UDropdown :ui="{ width: 'w-fit', item: { padding: 'py-4 px-4', label: 'text-[#000000] text-[18px]' } }"
               v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
-                <p class=" text-xl  hover:underline font-semibold"
+                <p class=" text-xl  hover:underline font-semibold uppercase"
                   :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
                   {{ item.name }}
                 </p>
@@ -54,7 +54,7 @@
                       <div class="text-[20px] font-semibold text-[#8D7662]">
                         {{ item.name }}
                       </div>
-                      <UIcon name="gridicons:dropdown" class="transition-transform duration-200 size-10 text-[#8D7662]"
+                      <UIcon name="gridicons:dropdown" class="transition-transform duration-200 size-9 text-[#8D7662]"
                         :class="{ 'transform rotate-180': open === item.name }" />
                     </div>
                     <!-- Mobile -->

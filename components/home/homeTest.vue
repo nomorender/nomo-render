@@ -2,13 +2,13 @@
     <div class="bg-[#D9D9D9] h-fit pt-[25px] pb-[50px] lg:pt-[25px] lg:pb-[50px] md:pt-[55px] md:pb-[50px]">
         <div class="lg:grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-12 max-w-[1200px] mx-auto lg:px-4 md:px-0">
             <div class="flex flex-col justify-center items-center">
-                <div class="mb-8 md:mt-0 mt-[20px] lg:flex md:flex-col justify-center items-center">
+                <div class="mb-8 md:mt-0 mt-[20px]">
                     <div
                         class="text-[16px] md:text-[32px] leading-[150%] font-[400] text-[#000000] text-center md:text-left">
                         What is the benefits of
                     </div>
                     <div
-                        class="text-[30px] md:text-[64px] font-semibold text-[#8D7662] mt-2 text-center leading-tight px-[50px] md:px-0 lg:text-left">
+                        class="text-[30px] md:text-[64px] font-semibold text-[#8D7662] mt-2 text-center leading-tight w-[250px] md:w-full md:px-0 lg:text-left">
                         partnering with Nomo Render?
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="">
                                     <p
-                                        class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                        class="uppercase md:text-[25px] md:font-[900] font-[800] md:leading-[50px] leading-[100%] text-[#8D7662] text-[16px]">
                                         top-notch</p>
                                     <p class="italic font-[300] md:text-[32px] text-[15px]">Quality</p>
                                 </div>
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="">
                                     <p
-                                        class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                        class="uppercase md:text-[25px] md:font-[900] font-[800] md:leading-[50px] leading-[100%] text-[#8D7662] text-[16px]">
                                         cost</p>
                                     <p class="italic font-[300] md:text-[32px] text-[15px]">Efficiency</p>
                                 </div>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="">
                                     <p
-                                        class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                        class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px] md:leading-[50px] leading-[100%]">
                                         on time</p>
                                     <p class="italic font-[300] md:text-[32px] text-[15px]">Delivery</p>
                                 </div>
@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="">
                                         <p
-                                            class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                            class="md:leading-[50px] leading-[100%] uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
                                             seamless</p>
                                         <p class="italic font-[300] md:text-[32px] text-[15px]">Collaboration</p>
                                     </div>

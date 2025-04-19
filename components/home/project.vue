@@ -242,7 +242,6 @@ const goToPrevItem = () => {
             v-html="selectedItem?.content2"></div>
         </div>
 
-
         <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
           <div class="w-[50%]">
             <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />

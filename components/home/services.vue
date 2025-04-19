@@ -24,7 +24,7 @@
                     icon: 'material-symbols:arrow-left-alt-rounded'
                   },
                   nextButton: {
-                    class: ' absolute !top-[80%] hover:bg-[#8D7662] active:bg-[#8D7662] rounded-lg !ring-0 md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
+                    class: ' absolute !top-[80%] disabled:bg-white disabled:opacity-100 disabled:text-[#8D7662] hover:bg-[#8D7662] active:bg-[#8D7662] rounded-lg !ring-0 md:hidden flex p-3 bg-[#8D7662] text-[#FFFFFF]',
                     icon: '!material-symbols:arrow-left-alt-rounded'
                   }
                 }
@@ -46,18 +46,23 @@
               <p class="mb-5 md:text-[40px] text-[18px] font-[600] mt-[25px] md:mt-0 md:w-[480px]">{{ item.name }}</p>
               <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
               <div class="hidden md:block">
-                <UButton class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
+                <UButton
+                  class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                   :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
                   variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
               </div>
-              <UButton class="md:hidden mb-[45px] md:mb-0 text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all" v-if="item.link" :to="item.link" variant="outline" :trailing="false"
-              :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+              <UButton
+                class="md:hidden mb-[45px] md:mb-0 text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
+                v-if="item.link" :to="item.link" variant="outline" :trailing="false"
+                :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right">See more
+              </UButton>
             </div>
           </div>
         </div>
         <div class="flex justify-center md:pb-[75px]">
           <UButton color="gray" size="xl" variant="solid"
-            class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">See our
+            class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">
+            See our
             workflow
           </UButton>
         </div>
@@ -67,6 +72,9 @@
 </template>
 
 <script lang="ts" setup>
+
+
+
 const services = [
   {
     name: "Exterior Rendering",
@@ -113,4 +121,8 @@ const services = [
     content: `<p class="leading-[200%]">At Nomo Render, every detail matters. From minor tweaks to full-scale conceptual transformations, our customized 3D rendering services ensure accuracy by adjusting scale, proportions, and real-world materiality.</p>`,
   },
 ];
+
+
+const currentIndex = ref(0);
+const isLastItem = computed(() => currentIndex.value === services.length - 1);
 </script>
