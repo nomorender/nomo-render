@@ -1,7 +1,7 @@
 <template>
   <div class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0" :class="{ 'bg-white': isScrolled }">
     <div class="mx-auto w-full xl:max-w-7xl relative">
-      <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-9  px-8 w-full">
+      <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-7 px-8 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
             <NuxtImg alt="Logo" preload class="!drop-shadow-2xl md:w-10 w-[50px] lg:hidden" src="/logo.png" />
