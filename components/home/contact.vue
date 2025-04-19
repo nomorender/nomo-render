@@ -36,7 +36,7 @@ async function onError(event: FormErrorEvent) {
     <div class="bg-[#D9D9D9] md:py-[60px] py-[45px]">
         <div class="md:px-8 flex items-center justify-center">
             <div class="w-[1072px]">
-                <div class="px-20">
+                <div class="px-20 md:block flex flex-col justify-center items-center">
                     <p class="text-center text-xl md:text-3xl md:mb-[20px] uppercase">contact</p>
                     <div
                         class="text-center font-semibold text-3xl md:text-[64px] w-[220px] md:w-full leading-[100%] mb-5 md:mb-20 text-[#8D7662]  md:px-6">
