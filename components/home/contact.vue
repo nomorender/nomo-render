@@ -66,21 +66,21 @@ async function onError(event: FormErrorEvent) {
                             <UFormGroup class="flex items-center justify-center md:block ">
                                 <UInput padded required color="white" variant="none" placeholder="Name (required)"
                                     v-model="state.name" size="xl"
-                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[320px] md:w-full"
+                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[380px] md:w-full"
                                     :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
                             </UFormGroup>
 
                             <UFormGroup class="flex items-center justify-center md:block">
                                 <UInput padded required color="white" variant="none" placeholder="Email (required)"
                                     v-model="state.email" size="xl"
-                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[320px] md:w-full"
+                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[380px] md:w-full"
                                     :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
                             </UFormGroup class="flex items-center justify-center md:block">
 
                             <UFormGroup class="flex items-center justify-center md:block">
                                 <UTextarea padded required color="white" variant="none"
                                     placeholder="Describe your project" v-model="state.description" size="xl"
-                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[320px] md:w-full"
+                                    class="bg-[#C6C6C6] px-2 rounded-[8px] shadow-lg w-[380px] md:w-full"
                                     :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }"
                                     :rows="7" md:rows="20" />
                             </UFormGroup>
