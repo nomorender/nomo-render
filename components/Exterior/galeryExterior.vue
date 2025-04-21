@@ -341,7 +341,7 @@
       </div>
 
       <div>
-        <div class="flex w-full justify-center items-center py-10">
+        <div class="flex w-full justify-center items-center pt-10">
           <UButton
             color="gray"
             variant="solid"
