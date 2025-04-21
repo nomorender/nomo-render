@@ -61,9 +61,9 @@ async function onError(event: FormErrorEvent) {
                 class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent" @click="isOpen = false" />
             <div class="flex flex-wrap">
                 <div class="w-full md:p-10 py-6 px-5 lg:w-3/5">
-                    <div class="mb-4 flex flex-col items-center lg:block">
-                        <NuxtImg alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-5" />
-                        <div class="mb-4 text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
+                    <div class="mb-5 flex flex-col items-center lg:block">
+                        <NuxtImg alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-2" />
+                        <div class="text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
                             Send the request
                         </div>
                     </div>
@@ -71,14 +71,14 @@ async function onError(event: FormErrorEvent) {
                         @error="onError">
                         <UFormGroup>
                             <UInput v-model="state.name" required variant="none" placeholder="Your name" size="xl"
-                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-2 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
                                 :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" />
                             <UInput v-model="state.email" required variant="none" placeholder="Your email" size="xl"
-                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-2 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
                                 :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" />
                             <UTextarea v-model="state.description" required variant="none" placeholder="Your message"
                                 size="xl"
-                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-4 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                                class="mb-2 w-full rounded-lg bg-[#D9D9D9] px-2 text-black placeholder-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
                                 :ui="{ placeholder: 'text-[#000000] font-[300] text-[15px] md:text-[16px]' }" :rows="6"
                                 md:rows="8" />
                         </UFormGroup>
