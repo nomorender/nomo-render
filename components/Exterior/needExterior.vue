@@ -12,7 +12,7 @@
                     <div class="w-[600px] h-fit bg-[#D8C3A566] py-10 flex flex-col items-center p-10 rounded-[8px]">
                         <div class="flex items-left w-full px-10">
                             <div class ="flex items-center justify-center gap-4">
-                                <nuxt-img alt="" src="/extorior/group.svg" class="w-[62px] h-[62px]"/>
+                                <nuxt-img alt="" src="/Extorior/Group.svg" class="w-[62px] h-[62px]"/>
                                 <div class="text-[25px] font-[500] leading-[200%]">Architectural Design Drawings</div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                     <div class="w-[600px] h-[480px] bg-[#D8C3A566] rounded-[8px] p-10 py-10">
                         <div class="flex items-left w-full px-10">
                             <div class ="flex items-center justify-center gap-4">
-                                <nuxt-img alt="" src="/extorior/Group2.svg" class="w-[62px] h-[62px]"/>
+                                <nuxt-img alt="" src="/Extorior/Group2.svg" class="w-[62px] h-[62px]"/>
                                 <div class="text-[25px] font-[500] leading-[200%]">Surrounding Context References</div>
                             </div>
                         </div>
