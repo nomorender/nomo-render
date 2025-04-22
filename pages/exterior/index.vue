@@ -4,6 +4,7 @@
     <WhatWeDoExterior></WhatWeDoExterior>
     <GaleryExterior></GaleryExterior>
     <ExteriorNeedExterior></ExteriorNeedExterior>
+    <HomeContact></HomeContact>
   </div>
 </template>
 

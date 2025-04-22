@@ -8,40 +8,52 @@
                 </h2>
             </div>
             <div class="flex justify-center">
-                <div class="flex gap-2 justify-between">
-                    <div class="w-[600px] h-fit bg-[#D8C3A566] py-10 flex flex-col items-center">
-                        <div class="flex items-center mb-4 gap-4">
-                            <!-- <NuxtImg alt="" src="/Extorior/Drawing.png" class="w-[63px] h-[63px]"/> -->
-                            <div class="text-xl font-bold">Architectural Design Drawings</div>
+                <div class="flex gap-4 justify-between">
+                    <div class="w-[600px] h-fit bg-[#D8C3A566] py-10 flex flex-col items-center p-10 rounded-[8px]">
+                        <div class="flex items-left w-full px-10">
+                            <div class ="flex items-center justify-center gap-4">
+                                <nuxt-img alt="" src="/extorior/group.svg" class="w-[62px] h-[62px]"/>
+                                <div class="text-[25px] font-[500] leading-[200%]">Architectural Design Drawings</div>
+                            </div>
                         </div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center">
-                                <Icon name="material-symbols-light:crop-square-outline" />
+                        <ul class="px-10 pt-5">
+                            <li class="flex items-center gap-5 mb-1">
+                                <icon name="material-symbols-light:crop-square-outline" class ="size-7" />
 
-                                <span class="text-lg">Floor plans</span>
+                                <span class="text-[25px] leading-[200%] font-[300] text-justify">floor plans</span>
                             </li>
-                            <li class="flex items-center">
-                                <Icon name="material-symbols-light:crop-square-outline" />
+                            <li class="flex items-center gap-5 mb-1">
+                                <icon name="material-symbols-light:crop-square-outline" class ="size-7" />
 
-                                <span class="text-lg">Elevation views</span>
+                                <span class="text-[25px] leading-[200%] font-[300] text-justify">elevation views</span>
                             </li>
-                            <li class="flex items-center">
-                                <Icon name="material-symbols-light:crop-square-outline" />
+                            <li class="flex items-center gap-5 mb-1">
+                                <icon name="material-symbols-light:crop-square-outline" class ="size-7" />
 
-                                <span class="text-lg">Section drawings</span>
+                                <span class="text-[25px] leading-[200%] font-[300] text-justify">section drawings</span>
                             </li>
-                            <li class="flex items-center">
-                                <Icon name="material-symbols-light:crop-square-outline" />
+                            <li class="flex items-start gap-5 mb-1">
+                                <icon name="material-symbols-light:crop-square-outline pt-[47px]" class ="size-7" />
 
-                                <span class="text-lg">Detailed construction documents</span>
-                            </li>
-                            <li class="ml-7 text-lg">
-                                (material specifications as indicated in the design plans)
+                                <span class="w-[90%] text-[25px] leading-[200%] font-[300]">Detailed construction documents
+(material specifications as indicated in the design plans)</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="w-[600px] h-[480px] bg-[#D8C3A566]">
+                    <div class="w-[600px] h-[480px] bg-[#D8C3A566] rounded-[8px] p-10 py-10">
+                        <div class="flex items-left w-full px-10">
+                            <div class ="flex items-center justify-center gap-4">
+                                <nuxt-img alt="" src="/extorior/Group2.svg" class="w-[62px] h-[62px]"/>
+                                <div class="text-[25px] font-[500] leading-[200%]">Surrounding Context References</div>
+                            </div>
+                        </div>
+                        <ul class="px-10 pt-5">
+                            <li class="flex items-start gap-5 mb-1">
+                                <icon name="material-symbols-light:crop-square-outline pt-[50px]" class ="size-7" />
 
+                                <span class="w-[90%] text-[25px] leading-[200%] font-[300]">Images/drawings of the surrounding landscape and structures (If the rendering needs to reflect the real environment)</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
