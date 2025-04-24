@@ -1,6 +1,6 @@
 <template>
     <div class="my-20">
-        <div class="bg-[#FAF8F5] w-full flex flex-col justify-center items-center pt-[60px] pb-[70px]">
+        <div class="bg-[#FAF8F5] w-full flex flex-col justify-center items-center pb-[66px] pt-[55px]">
             <div class="flex flex-col justify-center items-center">
                 <div class="text-[32px] leading-[150%] font-[400]">Our other</div>
                 <div class="text-[64px] font-[600] leading-[150%] text-[#8D7662]">Services</div>

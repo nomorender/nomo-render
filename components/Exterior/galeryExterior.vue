@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center">
+  <div class="flex justify-center items-center mb-20 mt-20">
     <div>
       <div class="columns-3 gap-2 space-y-2">
         <div class="relative group w-full h-[706.98828125px] cursor-pointer">
