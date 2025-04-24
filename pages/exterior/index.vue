@@ -4,6 +4,7 @@
     <WhatWeDoExterior></WhatWeDoExterior>
     <GaleryExterior></GaleryExterior>
     <ExteriorNeedExterior></ExteriorNeedExterior>
+    <ExteriorSlide></ExteriorSlide>
     <HomeContact></HomeContact>
     <ExteriorOtherService></ExteriorOtherService>
   </div>
