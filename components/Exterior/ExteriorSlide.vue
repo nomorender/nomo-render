@@ -129,45 +129,7 @@ const prevSlide = () => {
     isAnimating.value = false;
   }, 300);
 };
-// Image load/error handlers
 const onImageLoad = () => {
   imagesLoaded.value = true;
 };
-
-
-onMounted(() => {
-  activeSlide.value = 0;
-  isAnimating.value = false;
-  imagesLoaded.value = false;
-
-  slides.forEach((slide) => {
-    const img = new Image();
-    img.src = slide.img;
-    img.onload = () => {
-      imagesLoaded.value = true;
-    };
-    img.onerror = () => {
-      console.error('Failed to preload image:', slide.img);
-      imagesLoaded.value = true;
-    };
-  });
-});
-
-router.afterEach(() => {
-  activeSlide.value = 0;
-  isAnimating.value = false;
-  imagesLoaded.value = false;
-
-  slides.forEach((slide) => {
-    const img = new Image();
-    img.src = slide.img;
-    img.onload = () => {
-      imagesLoaded.value = true;
-    };
-    img.onerror = () => {
-      console.error('Failed to preload image:', slide.img);
-      imagesLoaded.value = true;
-    };
-  });
-});
 </script>
