@@ -2,7 +2,7 @@
     <div class="my-20">
         <div class="w-full pt-[70px] pb-[80px] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
-                <div class="text-[32px] font-[400] leading-[150%] tracking-[2%]">
+                <div class="text-[32px] font-[400] leading-[150%] tracking-[2%] mb-5">
                     Timeline of
                 </div>
                 <div class="text-[#8D7662] leading-[50px] font-[600] text-[64px] tracking-[2%]">
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="w-[calc(40vw-25px)]">
                                     <NuxtImg :src="step.image" :class="[
-                                        'w-[calc(40vw-25px)] object-cover rounded-[8px]',
+                                        'w-[calc(40vw-25px)] h-[calc(25vw-25px)] object-cover rounded-[8px]',
                                         'max-w-[620px] min-w-[400px]'
                                     ]" />
                                     <div class="font-[300] text-[25px] leading-[200%] mt-10">
@@ -93,21 +93,21 @@ const timeline = [
         title: "Modeling",
         description: "Build the main 3D structure of the building and terrain, defining overall shape, proportions, and layout.",
         active: false,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL01.png',
     },
     {
         id: 2,
         title: "Initial environment setup",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL02.png',
     },
     {
         id: 3,
         title: "Modeling",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL03.png',
     },
     {
         id: 4,
@@ -121,21 +121,21 @@ const timeline = [
         title: "Modeling",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL05.png',
     },
     {
         id: 6,
         title: "Modeling",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL06.png',
     },
     {
         id: 7,
         title: "Modeling",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL07.png',
     },
 ];
 </script>

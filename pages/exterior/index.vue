@@ -3,9 +3,9 @@
     <ExteriorHeroExterior></ExteriorHeroExterior>
     <WhatWeDoExterior></WhatWeDoExterior>
     <GaleryExterior></GaleryExterior>
+    <ExteriorSlide></ExteriorSlide>
     <ExteriorTimeline></ExteriorTimeline>
     <ExteriorNeedExterior></ExteriorNeedExterior>
-    <ExteriorSlide></ExteriorSlide>
     <HomeContact></HomeContact>
     <ExteriorOtherService></ExteriorOtherService>
     <HomeQuoteButton></HomeQuoteButton>
