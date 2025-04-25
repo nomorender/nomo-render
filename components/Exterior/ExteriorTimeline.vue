@@ -44,9 +44,10 @@
                                 </div>
                                 <div class="w-[calc(40vw-25px)]">
                                     <NuxtImg :src="step.image" :class="[
-                                        'w-[calc(40vw-25px)] h-[400px] object-cover rounded-[8px] max-w-[620px] min-w-[400px]',
+                                        'w-[calc(40vw-25px)] h-[calc(min(30vw,400px))] object-cover rounded-[8px] max-w-[620px] min-w-[400px]',
                                     ]" />
-                                    <div class="font-[300] text-[25px] leading-[200%] mt-10">
+                                    <!-- w-[620px] h-[400px] object-cover rounded-[8px] max-h-[620px] -->
+                                    <div class="w-[calc(39vw-25px)] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
                                         {{ step.description }}
                                     </div>
                                 </div>
