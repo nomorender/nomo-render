@@ -3,10 +3,12 @@
     <ExteriorHeroExterior></ExteriorHeroExterior>
     <WhatWeDoExterior></WhatWeDoExterior>
     <GaleryExterior></GaleryExterior>
+    <ExteriorTimeline></ExteriorTimeline>
     <ExteriorNeedExterior></ExteriorNeedExterior>
     <ExteriorSlide></ExteriorSlide>
     <HomeContact></HomeContact>
     <ExteriorOtherService></ExteriorOtherService>
+    <HomeQuoteButton></HomeQuoteButton>
   </div>
 </template>
 

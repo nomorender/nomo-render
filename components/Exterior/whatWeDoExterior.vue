@@ -17,6 +17,7 @@
                     environmental details - is meticulously designed to align with their vision.
                 </p>
             </div>
+            
         </div>
     </div>
 </template>
