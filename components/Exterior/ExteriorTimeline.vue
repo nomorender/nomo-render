@@ -95,7 +95,7 @@ const scrollRight = () => {
 
 
 const startDragging = (event) => {
-    event.preventDefault(); // Ngăn hành vi mặc định như chọn văn bản
+    event.preventDefault();
     isDragging.value = true;
     startX.value = event.pageX || (event.touches && event.touches[0].pageX);
     scrollLeftStart.value = scrollContainer.value.scrollLeft;
@@ -107,7 +107,7 @@ const onDrag = (event) => {
     if (!isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
-    const walk = (x - startX.value) * 1.5; // Tăng tốc độ kéo nhẹ
+    const walk = (x - startX.value) * 1.5;
     scrollContainer.value.scrollLeft = scrollLeftStart.value - walk;
 };
 
@@ -125,49 +125,49 @@ const timeline = [
         title: "Modeling",
         description: "Build the main 3D structure of the building and terrain, defining overall shape, proportions, and layout.",
         active: false,
-        image: '/slide/TL01.png',
+        image: '/slide/PHO01.png',
     },
     {
         id: 2,
         title: "Initial environment setup",
         description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
         active: true,
-        image: '/slide/TL02.png',
+        image: '/slide/TL05.png',
     },
     {
         id: 3,
         title: "Lighting",
         description: "Adjust natural and artificial lighting based on time of day (daylight, sunset, night) to create realistic shadows and reflections",
         active: true,
-        image: '/slide/TL03.png',
+        image: '/slide/TL06.png',
     },
     {
         id: 4,
         title: "Texturing & Materials",
         description: "Apply high-quality meterials and textures to surfaces such as walls, glass, roofing, pavement, and greenery for a lifelike appearance.",
         active: true,
-        image: '/slide/PHO01.png',
+        image: '/slide/TL07.png',
     },
     {
         id: 5,
         title: "Final enviroment refinements",
         description: "Refine landscaping, water features, urban furniture, and additional elements like people, vehicles, and weather effects for a complete scene.",
         active: true,
-        image: '/slide/TL05.png',
+        image: '/slide/TL03.png',
     },
     {
         id: 6,
         title: "Final Rendering",
         description: "Define camera angles and perspectives (eye-level, aerial, close-up) to capture the best views of the design. Process high-resolution images or animations using rendering software, optimizing settings for quality and speed.",
         active: true,
-        image: '/slide/TL06.png',
+        image: '/slide/TL02.png',
     },
     {
         id: 7,
         title: "Post-Processing (Optional)",
         description: "Enhance the final render in Photoshop or other tools with color correction, contrast adjustments, and additional effects for a polished look.",
         active: true,
-        image: '/slide/TL07.png',
+        image: '/slide/TL01.png',
     },
 ];
 

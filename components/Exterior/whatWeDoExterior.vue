@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-[#D9D9D9] md:px-[160px] md:py-[30px] py-[45px] px-10">
-        <div class="flex items-center flex-col lg:flex-row justify-center max-w-7xl mx-auto gap-5 md:gap-14">
+    <div class="bg-[#D9D9D9] md:py-[30px] py-[45px]">
+        <div class="flex items-center flex-col lg:flex-row justify-center px-[150px] mx-auto gap-5 md:gap-14">
             <div class="hidden lg:block">
                 <h1 class="text-[#8D7662] md:text-[64px] font-semibold text-3xl text-nowrap mb-10">What</h1>
                 <h1 class="text-[#8D7662] md:text-[64px] font-semibold text-3xl text-nowrap">We Do</h1>
