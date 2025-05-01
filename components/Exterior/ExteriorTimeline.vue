@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <div class="text-[25px] leading-[200%] font-[300] w-[calc(75vw-25px)] mt-20 mb-10 text-justify">
+                <div class="text-[25px] leading-[200%] font-[300] w-[calc(75vw-25px)] mt-[70px] mb-[20px] text-justify">
                     On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
@@ -18,7 +18,10 @@
             <div class="flex flex-col items-center mx-auto pl-[calc(10vw+50px)]">
                 <div class="w-full relative">
                     <div ref="scrollContainer"
-                        class="overflow-x-auto w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]">
+                        class="overflow-x-auto w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
+                        @mousedown="startDragging" @mousemove="onDrag" @mouseup="stopDragging"
+                        @mouseleave="stopDragging" @touchstart="startDragging" @touchmove="onDrag"
+                        @touchend="stopDragging">
                         <div class="flex">
                             <div v-for="step in timeline" :key="step.id"
                                 class="flex flex-col items-start gap-[35px] w-[calc(42vw-25px)] snap-start shrink-0">
@@ -36,7 +39,7 @@
                                     </div>
                                     <div class="flex items-center flex-grow">
                                         <div class="w-[25.54px] h-px bg-black opacity-50"></div>
-                                        <div class=" text-[#000000] text-[25px] whitespace-nowrap">
+                                        <div class="font-[500] mx-3 text-[#000000] text-[25px] whitespace-nowrap">
                                             {{ step.title }}
                                         </div>
                                         <div class="h-px flex-grow bg-black"></div>
@@ -47,7 +50,8 @@
                                         'w-[calc(40vw-25px)] h-[calc(min(30vw,400px))] object-cover rounded-[8px] max-w-[620px] min-w-[400px]',
                                     ]" />
                                     <!-- w-[620px] h-[400px] object-cover rounded-[8px] max-h-[620px] -->
-                                    <div class="w-[calc(39vw-25px)] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
+                                    <div
+                                        class="w-[calc(39vw-25px)] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
                                         {{ step.description }}
                                     </div>
                                 </div>
@@ -74,7 +78,9 @@
 
 <script setup>
 const scrollContainer = ref(null);
-
+const isDragging = ref(false);
+const startX = ref(0);
+const scrollLeftStart = ref(0);
 const scrollLeft = () => {
     if (!scrollContainer.value) return;
     const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
@@ -85,6 +91,32 @@ const scrollRight = () => {
     if (!scrollContainer.value) return;
     const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
     scrollContainer.value.scrollBy({ left: slideWidth, behavior: 'smooth' });
+};
+
+
+const startDragging = (event) => {
+    event.preventDefault(); // Ngăn hành vi mặc định như chọn văn bản
+    isDragging.value = true;
+    startX.value = event.pageX || (event.touches && event.touches[0].pageX);
+    scrollLeftStart.value = scrollContainer.value.scrollLeft;
+    scrollContainer.value.style.cursor = 'grabbing';
+    scrollContainer.value.style.userSelect = 'none';
+};
+
+const onDrag = (event) => {
+    if (!isDragging.value) return;
+    event.preventDefault();
+    const x = event.pageX || (event.touches && event.touches[0].pageX);
+    const walk = (x - startX.value) * 1.5; // Tăng tốc độ kéo nhẹ
+    scrollContainer.value.scrollLeft = scrollLeftStart.value - walk;
+};
+
+const stopDragging = () => {
+    if (isDragging.value) {
+        isDragging.value = false;
+        scrollContainer.value.style.cursor = 'grab';
+        scrollContainer.value.style.userSelect = 'auto';
+    }
 };
 
 const timeline = [
@@ -104,38 +136,39 @@ const timeline = [
     },
     {
         id: 3,
-        title: "Modeling",
-        description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
+        title: "Lighting",
+        description: "Adjust natural and artificial lighting based on time of day (daylight, sunset, night) to create realistic shadows and reflections",
         active: true,
         image: '/slide/TL03.png',
     },
     {
         id: 4,
-        title: "Modeling",
-        description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
+        title: "Texturing & Materials",
+        description: "Apply high-quality meterials and textures to surfaces such as walls, glass, roofing, pavement, and greenery for a lifelike appearance.",
         active: true,
         image: '/slide/PHO01.png',
     },
     {
         id: 5,
-        title: "Modeling",
-        description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
+        title: "Final enviroment refinements",
+        description: "Refine landscaping, water features, urban furniture, and additional elements like people, vehicles, and weather effects for a complete scene.",
         active: true,
         image: '/slide/TL05.png',
     },
     {
         id: 6,
-        title: "Modeling",
-        description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
+        title: "Final Rendering",
+        description: "Define camera angles and perspectives (eye-level, aerial, close-up) to capture the best views of the design. Process high-resolution images or animations using rendering software, optimizing settings for quality and speed.",
         active: true,
         image: '/slide/TL06.png',
     },
     {
         id: 7,
-        title: "Modeling",
-        description: "Add basic surrounding elements like roads, sidewalks, trees, fences, and neighboring buildings to provide context.",
+        title: "Post-Processing (Optional)",
+        description: "Enhance the final render in Photoshop or other tools with color correction, contrast adjustments, and additional effects for a polished look.",
         active: true,
         image: '/slide/TL07.png',
     },
 ];
+
 </script>

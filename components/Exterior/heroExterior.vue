@@ -1,8 +1,8 @@
 <template>
   <div class="pb-20">
-    <div class="p-10 md:py-20">
-      <div class="flex items-center flex-col md:flex-row justify-center max-w-7xl mx-auto gap-5 md:gap-14">
-        <div class="flex flex-col w-[50%]">
+    <div class="md:px-[180px] md:py-[80px] py-[45px] px-10">
+      <div class="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-[50px]">
+        <div class="flex flex-col w-[calc(700px)]">
           <div class="font-[700] text-[72px] text-[#8D7662] uppercase">
             3d exterior
           </div>
@@ -10,11 +10,14 @@
             Rendering Services
           </div>
           <div class="mt-10">
-            <UButton  @click="isOpen = true" class="hidden sm:block" color="white" variant="outline" size="xl">REQUEST A QUOTE</UButton>
+            <UButton class="hidden sm:block hover:bg-[#1e1e1e] hover:text-white transition-all" color="white"
+              variant="outline" size="xl" @click="isOpen = true">REQUEST A
+              QUOTE</UButton>
+            <UButton class="sm:hidden" @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
           </div>
         </div>
 
-        <div class=" w-[50%]">
+        <div class="w-[43%]">
           <p class="text-[25px] font-[300] leading-[200%] text-justify"><span class="font-[500]">Top-notch
               quality</span>
             3D exterior visualizations bring architectural concepts to life with photorealistic

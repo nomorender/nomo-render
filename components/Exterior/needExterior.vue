@@ -22,18 +22,18 @@
                                 <li class="flex items-center gap-5 mb-1">
                                     <icon name="material-symbols-light:crop-square-outline" class="size-7" />
 
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">floor plans</span>
+                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Floor plans</span>
                                 </li>
                                 <li class="flex items-center gap-5 mb-1">
                                     <icon name="material-symbols-light:crop-square-outline" class="size-7" />
 
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">elevation
+                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Elevation
                                         views</span>
                                 </li>
                                 <li class="flex items-center gap-5 mb-1">
                                     <icon name="material-symbols-light:crop-square-outline" class="size-7" />
 
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">section
+                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Section
                                         drawings</span>
                                 </li>
                                 <li class="flex items-start gap-5 mb-1">

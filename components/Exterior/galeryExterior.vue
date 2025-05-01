@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center mb-20 mt-10">
     <div>
-      <div class="columns-3 gap-2 space-y-2">
+      <div class="columns-3 gap-1 space-y-1">
         <div class="relative group w-full h-[706.98828125px] cursor-pointer" @click="openModal(1)">
           <NuxtImg src="/HAR011.png" class="w-full h-full object-cover object-center" />
           <div
@@ -26,8 +26,8 @@
           </div>
         </div>
         <!-- Project 5 -->
-        <div class="relative group w-full h-[595px] cursor-pointer" @click="openModal(5)">
-          <NuxtImg src="/Extorior/4.png" class="w-full h-[595px] break-inside-avoid object-cover object-center" />
+        <div class="relative group w-full h-[592px] cursor-pointer" @click="openModal(5)">
+          <NuxtImg src="/Extorior/4.png" class="w-full h-[592px] break-inside-avoid object-cover object-center" />
           <div
             class="pt-8 px-10 pb-5 absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -177,9 +177,9 @@
         </div>
 
         <!-- Project 7 -->
-        <div class="relative group w-full h-[354.13427734375px] cursor-pointer" @click="openModal(7)">
+        <div class="relative group w-full h-[353.488px] cursor-pointer" @click="openModal(7)">
           <NuxtImg src="/Extorior/3.png"
-            class="w-full h-[354.13427734375px] break-inside-avoid object-cover object-center" />
+            class="w-full h-[353.488px] break-inside-avoid object-cover object-center" />
           <div
             class="pt-8 px-10 pb-5 absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -202,7 +202,7 @@
           </div>
         </div>
       </div>
-      <div class="flex gap-2">
+      <div class="flex mt-[1.2px] gap-1">
         <!-- Project 10 -->
         <div class="w-[60%]">
           <div class="relative group w-full h-[480px] cursor-pointer">
