@@ -1,6 +1,6 @@
 <template>
     <div class="my-20">
-        <div class="w-full pt-[70px] pb-[80px] bg-[#D9D9D9]">
+        <div class="w-full pt-[60px] pb-[70px] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
                 <div class="text-[32px] font-[400] leading-[150%] tracking-[2%] mb-5">
                     Timeline of
@@ -10,15 +10,15 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <div class="text-[25px] leading-[200%] font-[300] w-[calc(75vw-25px)] mt-[70px] mb-[20px] text-justify">
+                <div class="text-[25px] leading-[200%] font-[300] w-[calc(75vw-25px)] mt-[70px] mb-[18px] text-justify">
                     On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto pl-[calc(10vw+50px)]">
+            <div class="flex flex-col items-center mx-auto pl-[calc(10vw-20px)] scrollbar-none">
                 <div class="w-full relative">
                     <div ref="scrollContainer"
-                        class="overflow-x-auto w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
+                        class="scrollbar-none overflow-x-hidden w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
                         @mousedown="startDragging" @mousemove="onDrag" @mouseup="stopDragging"
                         @mouseleave="stopDragging" @touchstart="startDragging" @touchmove="onDrag"
                         @touchend="stopDragging">
