@@ -1,13 +1,13 @@
 <template>
   <div class="pb-20">
-    <div class=" md:py-[80px] py-[45px]">
-      <div class="flex items-center justify-center flex-col md:flex-row gap-10">
-        <div class="flex flex-col w-[calc(690px)]">
-          <div class="w-fit">
+    <div class="md:py-[80px] py-[45px] flex justify-center items-center w-full">
+      <div class="flex items-center justify-center gap-[50px] w-[81vw] max-w-[1200px] transition-all">
+        <div class="flex flex-col w-[50%]">
+          <div class="">
             <div class="font-[700] text-[72px] w-fit text-[#8D7662] uppercase">
               3d exterior
             </div>
-            <div class="font-[600] text-[64px] w-fit leading-[150%] text-[#000000]">
+            <div class="font-[600] text-[60px] w-fit leading-[150%] text-[#000000]">
               Rendering Service
             </div>
           </div>
@@ -18,7 +18,6 @@
             <UButton class="sm:hidden" @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
           </div>
         </div>
-
         <div class="">
           <p class="text-[25px] w-[480px] font-[300] leading-[200%] text-justify"><span class="font-[500]">Top-notch
               quality</span>
