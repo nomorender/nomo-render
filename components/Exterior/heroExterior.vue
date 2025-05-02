@@ -1,14 +1,14 @@
 <template>
   <div class="pb-20">
-    <div class="md:px-[100px] md:py-[80px] py-[45px] px-10">
-      <div class="flex items-center justify-center flex-col md:flex-row gap-5 md:gap-[50px]">
+    <div class=" md:py-[80px] py-[45px]">
+      <div class="flex items-center justify-center flex-col md:flex-row gap-10">
         <div class="flex flex-col w-[calc(690px)]">
-          <div class="w-[800px]">
-            <div class="font-[700] text-[72px] text-[#8D7662] uppercase">
+          <div class="w-fit">
+            <div class="font-[700] text-[72px] w-fit text-[#8D7662] uppercase">
               3d exterior
             </div>
-            <div class="font-[600] text-[64px] leading-[150%] text-[#000000]">
-              Rendering Services
+            <div class="font-[600] text-[64px] w-fit leading-[150%] text-[#000000]">
+              Rendering Service
             </div>
           </div>
           <div class="mt-10">
@@ -19,8 +19,8 @@
           </div>
         </div>
 
-        <div class="w-[43%]">
-          <p class="text-[25px] font-[300] leading-[200%] text-justify"><span class="font-[500]">Top-notch
+        <div class="">
+          <p class="text-[25px] w-[480px] font-[300] leading-[200%] text-justify"><span class="font-[500]">Top-notch
               quality</span>
             3D exterior visualizations bring architectural concepts to life with photorealistic
             renderings of buildings, landscapes, and urban spaces.</p>

@@ -12,18 +12,18 @@
           <div v-for="item in navList" :key="item.path">
             <p v-if="!item.childen" @click="$router.push(item.path)"
               class=" md:text-[20px] cursor-pointer hover:underline font-semibold uppercase"
-              :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
+              :class="isScrolled ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
               {{ item.name }}
             </p>
             <UDropdown :ui="{ width: 'w-fit', item: { padding: 'py-4 px-4', label: 'text-[#000000] text-[18px]' } }"
               v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
-                <p class=" text-xl  hover:underline font-semibold uppercase"
-                  :class="isScrolled ? 'text-[#8D7662]' : 'text-white'">
+                <p class="text-xl hover:underline font-semibold uppercase"
+                  :class="isScrolled ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
                   {{ item.name }}
                 </p>
                 <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"
-                  :class="isScrolled ? 'text-[#8D7662]' : 'text-white'" />
+                :class="isScrolled ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
               </div>
             </UDropdown>
           </div>
@@ -40,7 +40,7 @@
               <!-- <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
                 class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" /> -->
               <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
-              class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
+                class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
 
               <div class="flex flex-1 flex-col gap-9 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
@@ -78,7 +78,10 @@
 </template>
 
 <script lang="ts" setup>
+
 const router = useRouter();
+const currRoute = computed(() => router.currentRoute.value.fullPath);
+console.log(router.currentRoute.value.fullPath)
 const open = ref<string | null>(null);
 const navList = [
   {

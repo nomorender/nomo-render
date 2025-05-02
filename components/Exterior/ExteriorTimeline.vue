@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center">
-                <div class="text-[25px] leading-[200%] font-[300] w-[calc(75vw-25px)] mt-[70px] mb-[18px] text-justify">
+                <div class="text-[25px] leading-[200%] font-[300] px-[calc(9%)] mt-[70px] mb-[18px] text-justify">
                     On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
@@ -28,11 +28,11 @@
                                 <div class="flex items-center w-full">
                                     <div :class="[
                                         'flex items-center justify-center w-[60px] h-[60px] rounded-[30px]',
-                                        step.id === 1 ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
+                                        activeStep === step.id ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
                                     ]">
                                         <span :class="[
                                             'text-[25px] leading-[200%] font-[500]',
-                                            step.id === 1 ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
+                                            activeStep === step.id ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
                                         ]">
                                             {{ step.id }}
                                         </span>
@@ -49,7 +49,6 @@
                                     <NuxtImg :src="step.image" :class="[
                                         'w-[calc(40vw-25px)] h-[calc(min(30vw,400px))] object-cover rounded-[8px] max-w-[620px] min-w-[400px]',
                                     ]" />
-                                    <!-- w-[620px] h-[400px] object-cover rounded-[8px] max-h-[620px] -->
                                     <div
                                         class="w-[calc(39vw-25px)] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
                                         {{ step.description }}
@@ -81,6 +80,16 @@ const scrollContainer = ref(null);
 const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeftStart = ref(0);
+const activeStep = ref(1);
+
+const updateActiveStep = () => {
+  if (!scrollContainer.value) return;
+  const scrollLeft = scrollContainer.value.scrollLeft;
+  const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
+  const currentStepIndex = Math.round(scrollLeft / slideWidth) + 1;
+  activeStep.value = currentStepIndex;
+};
+
 const scrollLeft = () => {
     if (!scrollContainer.value) return;
     const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
@@ -170,5 +179,18 @@ const timeline = [
         image: '/slide/TL01.png',
     },
 ];
+
+onMounted(() => {
+  if (scrollContainer.value) {
+    scrollContainer.value.addEventListener('scroll', updateActiveStep);
+    updateActiveStep(); 
+  }
+});
+
+onUnmounted(() => {
+  if (scrollContainer.value) {
+    scrollContainer.value.removeEventListener('scroll', updateActiveStep);
+  }
+});
 
 </script>
