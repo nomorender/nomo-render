@@ -1,6 +1,6 @@
 <template>
   <div class="pb-20">
-    <div class="md:py-[80px] py-[45px] flex justify-center items-center w-full">
+    <div class=" pb-[80px] pt-[90px] flex justify-center items-center w-full">
       <div class="flex items-center justify-center gap-[30px] w-[81vw] max-w-[1200px] transition-all">
         <div class="flex flex-col w-[50%]">
           <div class="">
@@ -11,7 +11,7 @@
               Rendering Service
             </div>
           </div>
-          <div class="mt-10">
+          <div class="mt-7">
             <UButton class="hidden sm:block hover:bg-[#1e1e1e] hover:text-white transition-all" color="white"
               variant="outline" size="xl" @click="isOpen = true">REQUEST A
               QUOTE</UButton>

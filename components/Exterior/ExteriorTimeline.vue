@@ -24,7 +24,7 @@
                         @touchend="stopDragging">
                         <div class="flex">
                             <div v-for="step in timeline" :key="step.id"
-                                class="flex flex-col items-start gap-[35px] w-[calc(42vw-25px)] snap-start shrink-0">
+                                class="flex flex-col items-start gap-[35px] w-[655px] snap-start shrink-0">
                                 <div class="flex items-center w-full">
                                     <div :class="[
                                         'flex items-center justify-center w-[60px] h-[60px] rounded-[30px]',
@@ -45,12 +45,12 @@
                                         <div class="h-px flex-grow bg-black"></div>
                                     </div>
                                 </div>
-                                <div class="w-[calc(40vw-25px)]">
+                                <div class="w-[655px]">
                                     <NuxtImg :src="step.image" :class="[
-                                        'w-[calc(40vw-25px)] h-[calc(min(30vw,400px))] object-cover rounded-[8px] max-w-[620px] min-w-[400px]',
+                                        'w-[620px] h-[400px] object-cover rounded-[8px]',
                                     ]" />
                                     <div
-                                        class="w-[calc(39vw-25px)] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
+                                        class="w-[600px] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
                                         {{ step.description }}
                                     </div>
                                 </div>

@@ -6,11 +6,11 @@
                 <div class="text-[64px] font-[600] leading-[150%] text-[#8D7662]">Services</div>
             </div>
             <!-- Picture + text -->
-            <div class="mt-[70px]">
+            <div class="mt-[70px] flex flex-col justify-center items-center">
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="w-[60%]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/HAR03.png" class="w-full h-[550px] object-cover" />
+                            <NuxtImg src="/HAR03.png" class="w-[960px] h-[500px] object-cover" />
                         </div>
                     </div>
                     <div class="basis-[400px]">
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="md:flex gap-[4rem] justify-end w-full mt-20">
-                    <div class="basis-[380px]">
+                    <div class="basis-[400px]">
                         <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Furniture Modeling</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8">Our precision-crafted CGI
                             models let manufacturers and designers showcase products flawlessly - no physical prototypes
@@ -44,10 +44,10 @@
                         </div>
                     </div>
                     <div class="w-[60%]">
-                        <div class="md:flex justify-end ">
-                            <NuxtImg src="/Chair.jpg" class="w-full md:w-[58%] h-auto aspect-square object-cover" />
+                        <div class="md:flex ">
+                            <NuxtImg src="/Chair.jpg" class="w-[450px] h-[500px]  aspect-square object-cover" />
                             <NuxtImg src="/services/10.jpg"
-                                class="w-full md:w-[42%] h-auto aspect-[3/4] object-cover" />
+                                class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
                         </div>
                     </div>
                 </div>

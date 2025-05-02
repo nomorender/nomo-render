@@ -38,37 +38,35 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- Button Next and Prev -->
-        <div
-          class="z-[10] flex flex-col justify-center items-center absolute"
-          :style="{
-            left: 'calc(2vw + 1.5rem)',
-            top: 'calc(50% - 80px)',
-          }"
-          :class="{
-            'gap-[calc(0.5vw+0.5rem)]': true,
-            'md:gap-[calc(1vw+0.75rem)]': true,
-            'bottom-[calc(1rem+1vw)] md:bottom-auto': true,
-            'left-[calc(2vw+1rem)] sm:left-[calc(3vw+1.5rem)]': true,
-          }"
-        >
-          <UButton
-            @click="nextSlide"
-            variant="ghost"
-            class="flex items-center justify-center bg-white hover:bg-white shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
-            :disabled="isAnimating"
+          <!-- Button Next and Prev -->
+          <div
+            class="z-[10] flex flex-col justify-center items-center absolute top-1/2 -translate-y-1/2"
+            :class="{
+              'gap-[calc(0.5vw+0.5rem)]': true,
+              'md:gap-[calc(1vw+0.75rem)]': true,
+            }"
+            :style="{
+              left: `calc(50% - min(40vw, 600px) - 7rem)`,
+              top : 'calc(50% - 80px)'
+            }"
           >
-            <Icon name="material-symbols:arrow-upward-rounded" class="size-5 sm:size-6 text-[#8D7662]" />
-          </UButton>
-          <UButton
-            @click="prevSlide"
-            variant="ghost"
-            class="flex items-center justify-center bg-[#8D7662] disabled:bg-[#947b65] hover:bg-[#8D7662] shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
-            :disabled="isAnimating"
-          >
-            <Icon name="material-symbols:arrow-downward-rounded" class="size-5 sm:size-6 text-white" />
-          </UButton>
+            <UButton
+              @click="nextSlide"
+              variant="ghost"
+              class="flex items-center justify-center bg-white hover:bg-white shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
+              :disabled="isAnimating"
+            >
+              <Icon name="material-symbols:arrow-upward-rounded" class="size-5 sm:size-6 text-[#8D7662]" />
+            </UButton>
+            <UButton
+              @click="prevSlide"
+              variant="ghost"
+              class="flex items-center justify-center bg-[#8D7662] disabled:bg-[#947b65] hover:bg-[#8D7662] shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
+              :disabled="isAnimating"
+            >
+              <Icon name="material-symbols:arrow-downward-rounded" class="size-5 sm:size-6 text-white" />
+            </UButton>
+          </div>
         </div>
       </div>
       <div class="flex justify-center items-center pt-[70px]">
