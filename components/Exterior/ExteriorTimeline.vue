@@ -2,20 +2,23 @@
     <div class="my-20">
         <div class="w-full pt-[60px] pb-[70px] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
-                <div class="text-[32px] font-[400] leading-[150%] tracking-[2%] mb-5">
+                <div
+                    class="md:text-[32px] text-[16px] font-[400] md:leading-[150%] leading-[100%] md:tracking-[2%] mb-[5px]">
                     Timeline of
                 </div>
-                <div class="text-[#8D7662] leading-[50px] font-[600] text-[64px] tracking-[2%]">
+                <div
+                    class="text-center text-[#8D7662] md:leading-[50px] font-[600] leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
                     3D Exterior Rendering Project
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center">
-                <div class="text-[25px] leading-[200%] font-[300] px-[calc(9%)] mt-[70px] mb-[18px] text-justify">
+            <div class="flex flex-col items-center justify-center my-[20px]">
+                <div
+                    class="px-9 md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
                     On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto pl-[calc(10vw-20px)] scrollbar-none">
+            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-9 scrollbar-none">
                 <div class="w-full relative">
                     <div ref="scrollContainer"
                         class="scrollbar-none overflow-x-hidden w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
@@ -24,14 +27,14 @@
                         @touchend="stopDragging">
                         <div class="flex">
                             <div v-for="step in timeline" :key="step.id"
-                                class="flex flex-col items-start gap-[35px] w-[655px] snap-start shrink-0">
+                                class="flex flex-col items-start gap-[35px] md:w-[655px] snap-start shrink-0">
                                 <div class="flex items-center w-full">
                                     <div :class="[
-                                        'flex items-center justify-center w-[60px] h-[60px] rounded-[30px]',
+                                        'flex items-center justify-center md:w-[60px] md:h-[60px] w-[28px] h-[28px] rounded-[30px]',
                                         activeStep === step.id ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
                                     ]">
                                         <span :class="[
-                                            'text-[25px] leading-[200%] font-[500]',
+                                            'md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] font-[500]',
                                             activeStep === step.id ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
                                         ]">
                                             {{ step.id }}
@@ -39,18 +42,19 @@
                                     </div>
                                     <div class="flex items-center flex-grow">
                                         <div class="w-[25.54px] h-px bg-black opacity-50"></div>
-                                        <div class="font-[500] mx-3 text-[#000000] text-[25px] whitespace-nowrap">
+                                        <div
+                                            class="font-[500] mx-3 text-[#000000] md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] whitespace-nowrap">
                                             {{ step.title }}
                                         </div>
                                         <div class="h-px flex-grow bg-black"></div>
                                     </div>
                                 </div>
-                                <div class="w-[655px]">
+                                <div class="md:w-[655px] w-[300px]">
                                     <NuxtImg :src="step.image" :class="[
-                                        'w-[620px] h-[400px] object-cover rounded-[8px]',
+                                        'md:w-[620px] md:h-[400px] w-[280px] h-[200px] object-cover rounded-[8px]',
                                     ]" />
                                     <div
-                                        class="w-[600px] font-[300] text-[25px] leading-[200%] mt-10 text-justify">
+                                        class="md:w-[600px] w-[280px] font-[300] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
                                         {{ step.description }}
                                     </div>
                                 </div>
@@ -81,13 +85,15 @@ const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeftStart = ref(0);
 const activeStep = ref(1);
+const isMobile = ref(false);
+
 
 const updateActiveStep = () => {
-  if (!scrollContainer.value) return;
-  const scrollLeft = scrollContainer.value.scrollLeft;
-  const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
-  const currentStepIndex = Math.round(scrollLeft / slideWidth) + 1;
-  activeStep.value = currentStepIndex;
+    if (!scrollContainer.value) return;
+    const scrollLeft = scrollContainer.value.scrollLeft;
+    const slideWidth = scrollContainer.value.querySelector('.snap-start').offsetWidth;
+    const currentStepIndex = Math.round(scrollLeft / slideWidth) + 1;
+    activeStep.value = currentStepIndex;
 };
 
 const scrollLeft = () => {
@@ -104,6 +110,7 @@ const scrollRight = () => {
 
 
 const startDragging = (event) => {
+    if (isMobile.value) return;
     event.preventDefault();
     isDragging.value = true;
     startX.value = event.pageX || (event.touches && event.touches[0].pageX);
@@ -113,7 +120,7 @@ const startDragging = (event) => {
 };
 
 const onDrag = (event) => {
-    if (!isDragging.value) return;
+    if (isMobile.value || !isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
     const walk = (x - startX.value) * 1.5;
@@ -181,16 +188,17 @@ const timeline = [
 ];
 
 onMounted(() => {
-  if (scrollContainer.value) {
-    scrollContainer.value.addEventListener('scroll', updateActiveStep);
-    updateActiveStep(); 
-  }
+    isMobile.value = window.innerWidth <= 768;
+    if (scrollContainer.value) {
+        scrollContainer.value.addEventListener('scroll', updateActiveStep);
+        updateActiveStep();
+    }
 });
 
 onUnmounted(() => {
-  if (scrollContainer.value) {
-    scrollContainer.value.removeEventListener('scroll', updateActiveStep);
-  }
+    if (scrollContainer.value) {
+        scrollContainer.value.removeEventListener('scroll', updateActiveStep);
+    }
 });
 
 </script>

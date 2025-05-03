@@ -1,11 +1,11 @@
 <template>
   <div class="my-20">
-    <div class="relative h-fit w-full pb-[50px] pt-[55px] bg-[#FAF8F5]">
-      <div class="flex flex-col items-center justify-center mb-[50px]">
+    <div class="relative h-fit w-full md:pb-[50px] md:pt-[55px] pt-[45px] pb-[40px] bg-[#FAF8F5]">
+      <div class="flex flex-col items-center justify-center">
         <div class="font-[400] md:text-[32px] text-[16px] md:leading-[150%] text-[#000000]">
           Who can benefit from
         </div>
-        <div class="font-[600] md:text-[64px] text-[30px] md:leading-[150%] text-[#8D7662]">
+        <div class="text-center font-[600] md:text-[64px] text-[30px] md:leading-[150%] text-[#8D7662]">
           3D Exterior Rendering Service?
         </div>
       </div>
@@ -54,32 +54,31 @@
 
 
       <!-- Slide for Mobile -->
-
       <div class="md:hidden block">
-        <div class="relative max-w-[1112px] pt-5 mx-auto">
+        <div class="relative pt-5 mx-auto">
           <UCarousel :items="slides" arrows :ui="{
-            item: 'basis-full lg:basis-1/2 lg:basis-1/3 px-6 md:px-0',
+            item: 'basis-full px-3',
             arrows: {
               wrapper: 'flex items-center justify-center md:mt-2 mt-8 sm:hidden gap-[15px] md:pb-10'
             }
           }" ref="carousel">
             <template #default="{ item }">
-              <div class="flex justify-center w-full pb-1 bg-[#ffffff]">
+              <div class="flex justify-center w-full bg-[#ffffff] rounded-[8px]">
                 <div class="">
-                  <div class="max-w-[360px] w-full md:mb-0 mb-[45px]">
+                  <div class="w-full md:mb-0 mb-[40px]">
                     <NuxtImg :src="item.img" alt="img"
-                      class="w-[360px] h-[250px] rounded-[8px] object-cover object-center" draggable="false" />
+                      class="w-full h-[280px] rounded-[8px] object-cover object-center" draggable="false" />
                   </div>
-                  <div class="mt-[30px] mx-5 flex gap-5">
+                  <div class="mx-5 flex gap-5">
                     <div>
-                      <div class="text-[20px] font-[600] leading-[150%]">
+                      <div class="text-[18px] text-[#8D7662] font-[600]">
                         {{ item.name }}
                       </div>
                     </div>
                   </div>
-                  <div class="mx-5">
+                  <div class="mx-5 mt-[15px] mb-[35px]">
                     <div
-                      class="text-justify max-w-[340px] md:text-[20px] text-[15px] md:leading-[150%] leading-[180%] font-[300] md:h-[220px] italic mt-5">
+                      class="text-justify text-[15px] leading-[180%] font-[300]">
                       {{ item.desc }}
                     </div>
                   </div>
@@ -105,8 +104,8 @@
       </div>
 
 
-      <div class="flex justify-center items-center pt-[70px]">
-        <div class="w-[calc(80vw)] max-w-[1200px] text-[25px] font-[300] leading-[200%] text-justify">
+      <div class="flex justify-center items-center md:pt-[70px] pt-[25px]">
+        <div class="md:w-[calc(80vw)] md:max-w-[1200px] md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify px-9">
           By integrating 3D exterior visualization into their workflow, these professionals
           <span class="font-[500]">can reduce misinterpretations, accelerate decision-making</span>, and achieve more
           refined, market-ready project outcomes.
