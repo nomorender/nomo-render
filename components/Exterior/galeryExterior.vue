@@ -3,7 +3,7 @@
     <div>
       <div class="md:columns-3 columns-2 gap-1 space-y-1">
         <div class="relative group md:w-full md:h-[706.98828125px] h-[265px] cursor-pointer" @click="openModal(1)">
-          <NuxtImg src="/HAR011.png" class="w-full h-full object-cover object-center" />
+          <NuxtImg src="/HAR011.png" class="w-full h-[265px] object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -27,7 +27,7 @@
         </div>
         <!-- Project 5 -->
         <div class="relative group md:w-full md:h-[592px] cursor-pointer" @click="openModal(5)">
-          <NuxtImg src="/Extorior/4.png" class="md:w-full md:h-[592px] break-inside-avoid object-cover object-center" />
+          <NuxtImg src="/Extorior/4.png" class="md:w-full md:h-[592px] w-full h-[169px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -51,9 +51,9 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="relative group md:w-full md:h-[467px] h-[152px] cursor-pointer" @click="openModal(2)">
+        <div class="relative group md:w-full md:h-[467px] w-full h-[152px] cursor-pointer" @click="openModal(2)">
           <NuxtImg src="/HAR07.png"
-            class="md:w-full md:h-[467px] h-[152px] break-inside-avoid object-cover object-center" />
+            class="md:w-full md:h-[467px] w-full h-[152px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -77,9 +77,9 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="relative group md:w-full md:h-[396px] h-[110px] cursor-pointer" @click="openModal(4)">
+        <div class="relative group md:w-full md:h-[396px] w-full h-[110px] cursor-pointer" @click="openModal(4)">
           <NuxtImg src="/Extorior/5.png"
-            class="md:w-full md:h-[396px] h-[110px] break-inside-avoid object-cover object-center" />
+            class="md:w-full md:h-[396px] w-full h-[110px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -103,8 +103,8 @@
         </div>
 
         <!-- Project 9 -->
-        <div class="relative group md:w-full md:h-[432px] cursor-pointer">
-          <NuxtImg src="/Extorior/8.png" class="md:w-full md:h-[432px] break-inside-avoid object-cover object-center" />
+        <div class="relative group md:w-full md:h-[432px] h-[163.5px] w-full cursor-pointer">
+          <NuxtImg src="/Extorior/8.png" class="md:w-full md:h-[432px] h-[163.5px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -128,9 +128,9 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="relative group md:w-full md:h-[353px] h-[155px] cursor-pointer" @click="openModal(3)">
+        <div class="relative group md:w-full md:h-[353px] h-[155px] w-full cursor-pointer" @click="openModal(3)">
           <NuxtImg src="/Extorior/6.png"
-            class="md:w-full md:h-[353px] h-[155px] break-inside-avoid object-cover object-center" />
+            class="md:w-full md:h-[353px] h-[155px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -154,9 +154,9 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="relative group md:w-full md:h-[588.2685546875px] h-[170px] cursor-pointer" @click="openModal(6)">
+        <div class="relative group md:w-full md:h-[588.2685546875px] h-[170px] w-full cursor-pointer" @click="openModal(6)">
           <NuxtImg src="/Extorior/7.png"
-            class="md:w-full md:h-[588.2685546875px] h-[170px] break-inside-avoid object-cover object-center" />
+            class="md:w-full md:h-[588.2685546875px] h-[170px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -180,8 +180,8 @@
         </div>
 
         <!-- Project 7 -->
-        <div class="relative group md:w-full md:h-[353.488px] h-[186px] cursor-pointer" @click="openModal(7)">
-          <NuxtImg src="/Extorior/3.png" class="md:w-full md:h-[353.488px] h-[186px] break-inside-avoid object-cover object-center" />
+        <div class="relative group md:w-full md:h-[353.488px] h-[186px] w-full cursor-pointer" @click="openModal(7)">
+          <NuxtImg src="/Extorior/3.png" class="md:w-full md:h-[353.488px] w-full h-[186px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -229,9 +229,9 @@
           </div>
         </div>
 
-        <div class="md:hidden block relative group md:w-full md:h-[480px] h-[125.5px] cursor-pointer" @click="openModal(8)">
+        <div class="md:hidden block relative group md:w-full md:h-[480px] h-[168.5px]  cursor-pointer" @click="openModal(8)">
           <NuxtImg src="/Feedback/UserFeedback/15.jpg"
-            class="md:w-full md:h-[480px] h-full break-inside-avoid object-cover object-center" />
+            class="md:w-full md:h-[480px] h-[168.5px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
