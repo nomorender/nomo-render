@@ -85,7 +85,6 @@ const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeftStart = ref(0);
 const activeStep = ref(1);
-const isMobile = ref(false);
 
 
 const updateActiveStep = () => {
@@ -110,7 +109,6 @@ const scrollRight = () => {
 
 
 const startDragging = (event) => {
-    if (isMobile.value) return;
     event.preventDefault();
     isDragging.value = true;
     startX.value = event.pageX || (event.touches && event.touches[0].pageX);
@@ -120,7 +118,7 @@ const startDragging = (event) => {
 };
 
 const onDrag = (event) => {
-    if (isMobile.value || !isDragging.value) return;
+    if (!isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
     const walk = (x - startX.value) * 1.5;
@@ -188,7 +186,6 @@ const timeline = [
 ];
 
 onMounted(() => {
-    isMobile.value = window.innerWidth <= 768;
     if (scrollContainer.value) {
         scrollContainer.value.addEventListener('scroll', updateActiveStep);
         updateActiveStep();
