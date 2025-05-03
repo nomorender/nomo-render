@@ -2,73 +2,109 @@
   <div class="my-20">
     <div class="relative h-fit w-full pb-[50px] pt-[55px] bg-[#FAF8F5]">
       <div class="flex flex-col items-center justify-center mb-[50px]">
-        <div class="font-[400] text-[32px] leading-[150%] text-[#000000]">
+        <div class="font-[400] md:text-[32px] text-[16px] md:leading-[150%] text-[#000000]">
           Who can benefit from
         </div>
-        <div class="font-[600] text-[64px] leading-[150%] text-[#8D7662]">
+        <div class="font-[600] md:text-[64px] text-[30px] md:leading-[150%] text-[#8D7662]">
           3D Exterior Rendering Service?
         </div>
       </div>
-      <div class="md:flex block gap-8 items-center justify-center">
+      <div class="md:flex hidden gap-8 items-center justify-center">
         <div class="relative w-full h-[420px] flex justify-center items-center mt-[10rem]">
-          <div
-            v-for="(slide, slideIndex) in orderedSlides"
-            :key="slide.id"
+          <div v-for="(slide, slideIndex) in orderedSlides" :key="slide.id"
             class="absolute w-[calc(80vw)] max-w-[1200px] rounded-[8px] h-full shadow-[0_4px_13.5px_rgba(0,0,0,0.42)] transition-all duration-300 ease-in-out"
             :style="{
               zIndex: slide.zIndex,
               opacity: 1,
               transform: `translate(-50%, ${-(slides.length - 1 - slide.zIndex) * 30}px)`,
-            }"
-            :class="['left-1/2']"
-          >
+            }" :class="['left-1/2']">
             <div class="flex justify-center items-center h-full bg-white rounded-[8px]">
               <div class="w-1/2 px-[calc(2vw+1rem)] py-[calc(3vw+1rem)] sm:px-[50px] sm:py-[60px]">
                 <div class="text-[32px] font-semibold text-[#8D7662]">{{ slide.name }}</div>
                 <div class="text-[25px] leading-[200%] font-light text-justify mt-6">{{ slide.desc }}</div>
               </div>
               <div class="w-1/2">
-                <NuxtImg
-                  :src="slide.img"
-                  class="w-full h-[420px] object-cover object-center rounded-[8px]"
-                  loading="lazy"
-                  placeholder="/placeholder.jpg"
-                  @load="onImageLoad"
-                />
+                <NuxtImg :src="slide.img" class="w-full h-[420px] object-cover object-center rounded-[8px]"
+                  loading="lazy" placeholder="/placeholder.jpg" @load="onImageLoad" />
               </div>
             </div>
           </div>
           <!-- Button Next and Prev -->
-          <div
-            class="z-[10] flex flex-col justify-center items-center absolute top-1/2 -translate-y-1/2"
-            :class="{
-              'gap-[calc(0.5vw+0.5rem)]': true,
-              'md:gap-[calc(1vw+0.75rem)]': true,
-            }"
-            :style="{
+          <div class="z-[10] flex flex-col justify-center items-center absolute top-1/2 -translate-y-1/2" :class="{
+            'gap-[calc(0.5vw+0.5rem)]': true,
+            'md:gap-[calc(1vw+0.75rem)]': true,
+          }" :style="{
               left: `calc(50% - min(40vw, 600px) - 7rem)`,
-              top : 'calc(50% - 80px)'
-            }"
-          >
-            <UButton
-              @click="nextSlide"
-              variant="ghost"
+              top: 'calc(50% - 80px)'
+            }">
+            <UButton @click="nextSlide" variant="ghost"
               class="flex items-center justify-center bg-white hover:bg-white shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
-              :disabled="isAnimating"
-            >
+              :disabled="isAnimating">
               <Icon name="material-symbols:arrow-upward-rounded" class="size-5 sm:size-6 text-[#8D7662]" />
             </UButton>
-            <UButton
-              @click="prevSlide"
-              variant="ghost"
+            <UButton @click="prevSlide" variant="ghost"
               class="flex items-center justify-center bg-[#8D7662] disabled:bg-[#947b65] hover:bg-[#8D7662] shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
-              :disabled="isAnimating"
-            >
+              :disabled="isAnimating">
               <Icon name="material-symbols:arrow-downward-rounded" class="size-5 sm:size-6 text-white" />
             </UButton>
           </div>
         </div>
       </div>
+
+
+
+      <!-- Slide for Mobile -->
+
+      <div class="md:hidden block">
+        <div class="relative max-w-[1112px] pt-5 mx-auto">
+          <UCarousel :items="slides" arrows :ui="{
+            item: 'basis-full lg:basis-1/2 lg:basis-1/3 px-6 md:px-0',
+            arrows: {
+              wrapper: 'flex items-center justify-center md:mt-2 mt-8 sm:hidden gap-[15px] md:pb-10'
+            }
+          }" ref="carousel">
+            <template #default="{ item }">
+              <div class="flex justify-center w-full pb-1 bg-[#ffffff]">
+                <div class="">
+                  <div class="max-w-[360px] w-full md:mb-0 mb-[45px]">
+                    <NuxtImg :src="item.img" alt="img"
+                      class="w-[360px] h-[250px] rounded-[8px] object-cover object-center" draggable="false" />
+                  </div>
+                  <div class="mt-[30px] mx-5 flex gap-5">
+                    <div>
+                      <div class="text-[20px] font-[600] leading-[150%]">
+                        {{ item.name }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mx-5">
+                    <div
+                      class="text-justify max-w-[340px] md:text-[20px] text-[15px] md:leading-[150%] leading-[180%] font-[300] md:h-[220px] italic mt-5">
+                      {{ item.desc }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template #prev="{ onClick, disabled }">
+              <UButton
+                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
+                color="white" :disabled="disabled" @click="onClick" square>
+                <UIcon name="mingcute:arrow-left-fill" class="size-5" />
+              </UButton>
+            </template>
+            <template #next="{ onClick, disabled }">
+              <UButton
+                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
+                color="white" :disabled="disabled" @click="onClick" square>
+                <UIcon name="mingcute:arrow-right-fill" class="size-5" />
+              </UButton>
+            </template>
+          </UCarousel>
+        </div>
+      </div>
+
+
       <div class="flex justify-center items-center pt-[70px]">
         <div class="w-[calc(80vw)] max-w-[1200px] text-[25px] font-[300] leading-[200%] text-justify">
           By integrating 3D exterior visualization into their workflow, these professionals
