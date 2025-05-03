@@ -37,18 +37,15 @@
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
             side="right">
             <div class="p-8">
-              <!-- <UButton color="gray" variant="ghost" size="sm" icon="i-heroicons-x-mark-20-solid"
-                class="flex absolute end-5 top-5 z-10" square padded @click="isOpenMenu = false" /> -->
               <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
                 class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
-
               <div class="flex flex-1 flex-col gap-9 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
                   <p v-if="!item.childen" @click="$router.push(item.path)"
                     class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
-                  <div v-else class="flex flex-col items-end gap-1">
+                  <div v-else class="flex flex-col items-end gap-1"> 
                     <div @click="open = item.name === open ? null : item.name"
                       class="flex items-center justify-end cursor-pointer">
                       <div class="text-[20px] font-semibold text-[#8D7662]">
@@ -59,7 +56,7 @@
                     </div>
                     <!-- Mobile -->
                     <div v-show="open === item.name" class="mt-2 pl-4 space-y-1 flex flex-col items-end">
-                      <div v-for="child in item.childen[0]" :key="child.label"
+                      <div v-for="child in item.childen[0]" :key="child.label"  @click="child.click"
                         class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
                         {{ child.label }}
                       </div>
