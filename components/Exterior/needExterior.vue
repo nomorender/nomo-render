@@ -1,63 +1,77 @@
 <template>
     <div class="pb-20">
         <div class="bg-[#FAF8F5]">
-            <div class="max-w-7xl py-20 mx-auto flex flex-col item-center justify-center">
-                <div>
-                    <p class="text-center text-[32px] md:text-3xl">What do we need</p>
-                    <h2 class="text-center font-semibold text-3xl text-[64px] md:text-6xl mb-5 md:mb-20 text-[#8D7662]">
-                        Before Crafting?
-                    </h2>
+            <div class="md:max-w-7xl md:py-20 py-[40px] md:mx-auto flex flex-col item-center justify-center">
+                <div class="flex items-center justify-center">
+                    <div class="md:w-full w-[228px]">
+                        <p
+                            class="text-center md:text-[32px] font-[400] text-[16px] leading-[100%] md:leading-[150%] mb-[5px]">
+                            What do we need</p>
+                        <h2
+                            class="text-center font-semibold md:text-[64px] text-[30px] leading-[100%] md:leading-[150%] mb-5 md:mb-20 text-[#8D7662]">
+                            Before Crafting?
+                        </h2>
+                    </div>
                 </div>
                 <div class="flex justify-center">
-                    <div class="flex gap-4 justify-between">
-                        <div class="w-[600px] h-fit bg-[#D8C3A566] py-10 flex flex-col items-center p-10 rounded-[8px]">
-                            <div class="flex items-left w-full px-10">
-                                <div class="flex items-center justify-center gap-4">
-                                    <nuxt-img alt="" src="/Extorior/Group.svg" class="w-[62px] h-[62px]" />
-                                    <div class="text-[25px] font-[500] leading-[200%]">Architectural Design Drawings
+                    <div class="md:flex gap-[25px] justify-between md:px-0 mx-9">
+                        <div
+                            class="md:w-[600px] h-[286px] md:h-[480px] bg-[#D8C3A566] md:py-10 py-[30px] flex flex-col md:p-10 rounded-[8px] mb-10 md:mb-0 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            <div class="flex items-left md:w-full md:px-10 mb-[20px] md:mb-0">
+                                <div class="flex items-center justify-center md:gap-4 gap-[10px] pl-6 md:pl-0">
+                                    <nuxt-img alt="group" src="/Extorior/Group.svg"
+                                        class="md:w-[62px] md:h-[62px] w-[40px] h-[40px]" />
+                                    <div class="md:text-[25px] text-[15px] font-[500] leading-[180%] md:leading-[200%]">
+                                        Architectural Design Drawings
                                     </div>
                                 </div>
                             </div>
-                            <ul class="px-10 pt-5">
+                            <ul class="md:px-10 md:pt-5 mx-6 md:mx-0">
                                 <li class="flex items-center gap-5 mb-1">
-                                    <icon name="material-symbols-light:crop-square-outline" class="size-7" />
-
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Floor plans</span>
+                                    <icon name="material-symbols-light:crop-square-outline" class="md:size-7 size-4" />
+                                    <span
+                                        class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify">Floor
+                                        plans</span>
                                 </li>
                                 <li class="flex items-center gap-5 mb-1">
-                                    <icon name="material-symbols-light:crop-square-outline" class="size-7" />
-
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Elevation
+                                    <icon name="material-symbols-light:crop-square-outline" class="md:size-7 size-4" />
+                                    <span
+                                        class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify">Elevation
                                         views</span>
                                 </li>
                                 <li class="flex items-center gap-5 mb-1">
-                                    <icon name="material-symbols-light:crop-square-outline" class="size-7" />
-
-                                    <span class="text-[25px] leading-[200%] font-[300] text-justify">Section
+                                    <icon name="material-symbols-light:crop-square-outline" class="md:size-7 size-4" />
+                                    <span
+                                        class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify">Section
                                         drawings</span>
                                 </li>
                                 <li class="flex items-start gap-5 mb-1">
-                                    <icon name="material-symbols-light:crop-square-outline pt-[47px]" class="size-7" />
-
-                                    <span class="w-[90%] text-[25px] leading-[200%] font-[300]">Detailed construction
-                                        documents
+                                    <icon name="material-symbols-light:crop-square-outline "
+                                        class="md:size-7 size-4 md:pt-[47px] pt-[26px]" />
+                                    <span
+                                        class="w-[90%] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300]">Detailed construction documents
                                         (material specifications as indicated in the design plans)</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="w-[600px] h-[480px] bg-[#D8C3A566] rounded-[8px] p-10 py-10">
-                            <div class="flex items-left w-full px-10">
-                                <div class="flex items-center justify-center gap-4">
-                                    <nuxt-img alt="" src="/Extorior/Group2.svg" class="w-[62px] h-[62px]" />
-                                    <div class="text-[25px] font-[500] leading-[200%]">Surrounding Context References
+                        <div
+                            class="md:w-[600px] h-[286px] md:h-[480px] bg-[#D8C3A566] md:py-10 py-[30px] flex flex-col  md:p-10 rounded-[8px] mb-10 md:mb-0 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            <div class="flex items-left md:w-full md:px-10 mb-[20px] md:mb-0">
+                                <div class="flex items-center justify-center gap-[10px] md:pl-0 pl-6">
+                                    <nuxt-img alt="group" src="/Extorior/Group2.svg"
+                                        class="md:w-[62px] md:h-[62px] w-[40px] h-[40px]" />
+                                    <div class="md:text-[25px] text-[15px] font-[500] leading-[180%] md:leading-[200%]">
+                                        Surrounding Context References
                                     </div>
                                 </div>
                             </div>
-                            <ul class="px-10 pt-5">
+                            <ul class="md:px-10 md:pt-5 md:mx-0 mx-6">
                                 <li class="flex items-start gap-5 mb-1">
-                                    <icon name="material-symbols-light:crop-square-outline pt-[50px]" class="size-7" />
-
-                                    <span class="w-[90%] text-[25px] leading-[200%] font-[300]">Images/drawings of the
+                                    <icon name="material-symbols-light:crop-square-outline"
+                                        class="md:size-7 size-4 md:pt-[47px] pt-[26px]" />
+                                    <span
+                                        class="w-[90%] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] ">Images/drawings
+                                        of the
                                         surrounding landscape and structures (If the rendering needs to reflect the real
                                         environment)</span>
                                 </li>

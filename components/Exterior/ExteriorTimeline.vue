@@ -7,18 +7,18 @@
                     Timeline of
                 </div>
                 <div
-                    class="text-center text-[#8D7662] md:leading-[50px] font-[600] leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
+                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[50px] font-[600] leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
                     3D Exterior Rendering Project
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center my-[20px]">
                 <div
-                    class="px-9 md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
+                    class="w-[304px] md:w-full md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
                     On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-9 scrollbar-none">
+            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px] scrollbar-none">
                 <div class="w-full relative">
                     <div ref="scrollContainer"
                         class="scrollbar-none overflow-x-hidden w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
@@ -61,16 +61,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 mt-[50px]">
+                    <div class="flex items-center gap-5 md:mt-[50px] mt-[10px]">
                         <button @click="scrollLeft"
-                            class="w-[59.08px] h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
+                            class="md:w-[59.08px] md:h-[59.08px] w-[40px] h-[40px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"
-                                class="size-10 text-[#8D7662]" />
+                                class="md:size-10 size-7 text-[#8D7662]" />
                         </button>
                         <button @click="scrollRight"
-                            class="w-[59.08px] h-[59.08px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
+                            class="md:w-[59.08px] md:h-[59.08px] w-[40px] h-[40px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-right-alt-rounded"
-                                class="size-10 text-[#FFFFFF]" />
+                                class="md:size-10 size-7 text-[#FFFFFF]" />
                         </button>
                     </div>
                 </div>

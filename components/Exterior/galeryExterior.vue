@@ -3,7 +3,7 @@
     <div>
       <div class="md:columns-3 columns-2 gap-1 space-y-1">
         <div class="relative group md:w-full md:h-[706.98828125px] h-[265px] cursor-pointer" @click="openModal(1)">
-          <NuxtImg src="/HAR011.png" class="w-full h-[265px] object-cover object-center" />
+          <NuxtImg src="/HAR011.png" class="w-full md:h-[706.98828125px] h-[265px] object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
