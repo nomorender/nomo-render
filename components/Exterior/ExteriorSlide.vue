@@ -59,11 +59,11 @@
           <UCarousel :items="slides" arrows :ui="{
             item: 'basis-full px-3',
             arrows: {
-              wrapper: 'flex items-center justify-center md:mt-2 mt-8 sm:hidden gap-[15px] md:pb-10'
+              wrapper: 'flex items-center justify-center md:mt-2 sm:hidden gap-[15px] md:pb-10'
             }
           }" ref="carousel">
             <template #default="{ item }">
-              <div class="flex justify-center w-full bg-[#ffffff] rounded-[8px]">
+              <div class="flex justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
                 <div class="">
                   <div class="w-full md:mb-0 mb-[40px]">
                     <NuxtImg :src="item.img" alt="img"

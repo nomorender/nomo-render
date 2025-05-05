@@ -31,8 +31,8 @@
 
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
-            class=" hover:bg-transparent active:bg-transparent lg:hidden text-white"
-            :class="{ 'text-[#8D7662]': isScrolled }" square padded @click="isOpenMenu = true" />
+            class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
+            :class="{ 'text-[#8d7662]': isScrolled }" square padded @click="isOpenMenu = true" />
           <USlideover v-model="isOpenMenu"
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
             side="right">
