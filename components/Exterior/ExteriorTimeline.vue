@@ -85,9 +85,6 @@ const isDragging = ref(false);
 const startX = ref(0);
 const scrollLeftStart = ref(0);
 const activeStep = ref(1);
-const velocity = ref(0);
-const lastX = ref(0);
-const lastTime = ref(0);
 
 const updateActiveStep = () => {
     if (!scrollContainer.value) return;
@@ -124,13 +121,9 @@ const startDragging = (event) => {
     event.preventDefault();
     isDragging.value = true;
     startX.value = event.pageX || (event.touches && event.touches[0].pageX);
-    lastX.value = startX.value;
-    lastTime.value = performance.now();
     scrollLeftStart.value = scrollContainer.value.scrollLeft;
-    velocity.value = 0;
     scrollContainer.value.style.cursor = 'grabbing';
     scrollContainer.value.style.userSelect = 'none';
-    scrollContainer.value.style.touchAction = 'none';
     scrollContainer.value.classList.add('dragging');
 };
 
@@ -138,59 +131,20 @@ const onDrag = (event) => {
     if (!isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
-    const currentTime = performance.now();
-    const deltaX = x - lastX.value;
-    const deltaTime = (currentTime - lastTime.value) / 1000;
-
-    if (deltaTime > 0) {
-        velocity.value = deltaX / deltaTime;
-    }
-
-    const walk = (x - startX.value) * 1.2; 
+    const walk = (x - startX.value) * 1.5; // Adjust sensitivity
     scrollContainer.value.scrollLeft = scrollLeftStart.value - walk;
-
-    lastX.value = x;
-    lastTime.value = currentTime;
 };
 
 const stopDragging = () => {
-    if (!isDragging.value) return;
-    isDragging.value = false;
-    scrollContainer.value.style.cursor = 'grab';
-    scrollContainer.value.style.userSelect = 'auto';
-    scrollContainer.value.style.touchAction = 'auto';
-    scrollContainer.value.classList.remove('dragging');
-    if (Math.abs(velocity.value) > 100) {
-        const deceleration = 1200; 
-        let currentVelocity = velocity.value;
-
-        const animateInertia = () => {
-            if (Math.abs(currentVelocity) < 10 || !scrollContainer.value) {
-                snapToNearestSlide();
-                return;
-            }
-            requestAnimationFrame(() => {
-                scrollContainer.value.scrollLeft += currentVelocity / 60; 
-                currentVelocity *= (1 - deceleration / 10000); 
-                animateInertia();
-            });
-        };
-        animateInertia();
-    } else {
-        snapToNearestSlide();
+    if (isDragging.value) {
+        isDragging.value = false;
+        scrollContainer.value.style.cursor = 'grab';
+        scrollContainer.value.style.userSelect = 'auto';
+        scrollContainer.value.style.touchAction = 'auto';
+        scrollContainer.value.classList.remove('dragging');
+        updateActiveStep();
     }
 };
-
-const snapToNearestSlide = () => {
-    if (!scrollContainer.value) return;
-    const scrollLeft = scrollContainer.value.scrollLeft;
-    const slideWidth = scrollContainer.value.querySelector('.shrink-0').offsetWidth;
-    const nearestSlideIndex = Math.round(scrollLeft / slideWidth);
-    const targetScrollLeft = nearestSlideIndex * slideWidth;
-    scrollContainer.value.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
-    setTimeout(updateActiveStep, 300); 
-};
-
 
 const timeline = [
     {
