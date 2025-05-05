@@ -82,8 +82,10 @@
 const scrollContainer = ref(null);
 const isDragging = ref(false);
 const startX = ref(0);
+const startY = ref(0);
 const scrollLeftStart = ref(0);
 const activeStep = ref(1);
+const isHorizontalDrag = ref(false);
 
 const updateActiveStep = () => {
     if (!scrollContainer.value) return;
@@ -117,32 +119,39 @@ const scrollRight = () => {
 };
 
 const startDragging = (event) => {
-    event.preventDefault();
-    isDragging.value = true;
-    startX.value = event.pageX || (event.touches && event.touches[0].pageX);
-    scrollLeftStart.value = scrollContainer.value.scrollLeft;
-    scrollContainer.value.style.cursor = 'grabbing';
-    scrollContainer.value.style.userSelect = 'none';
-    scrollContainer.value.classList.add('dragging');
+  const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+  const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+  startX.value = pageX;
+  startY.value = pageY;
+  scrollLeftStart.value = scrollContainer.value.scrollLeft;
+  isDragging.value = true;
+  isHorizontalDrag.value = false;
 };
 
 const onDrag = (event) => {
-    if (!isDragging.value) return;
-    event.preventDefault();
-    const x = event.pageX || (event.touches && event.touches[0].pageX);
-    const walk = (x - startX.value) * 1.5; // Adjust sensitivity
-    scrollContainer.value.scrollLeft = scrollLeftStart.value - walk;
+  if (!isDragging.value) return;
+
+  const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+  const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+  const deltaX = pageX - startX.value;
+  const deltaY = pageY - startY.value;
+
+  // Phát hiện kéo ngang: nếu deltaX lớn hơn deltaY
+  if (!isHorizontalDrag.value && Math.abs(deltaX) > Math.abs(deltaY)) {
+    isHorizontalDrag.value = true;
+  }
+
+  if (isHorizontalDrag.value) {
+    event.preventDefault(); // Chặn cuộn dọc chỉ khi kéo ngang
+    scrollContainer.value.scrollLeft = scrollLeftStart.value - deltaX;
+  }
 };
 
 const stopDragging = () => {
-    if (isDragging.value) {
-        isDragging.value = false;
-        scrollContainer.value.style.cursor = 'grab';
-        scrollContainer.value.style.userSelect = 'auto';
-        scrollContainer.value.style.touchAction = 'auto';
-        scrollContainer.value.classList.remove('dragging');
-        updateActiveStep();
-    }
+  if (isDragging.value) {
+    isDragging.value = false;
+    updateActiveStep();
+  }
 };
 
 const timeline = [
