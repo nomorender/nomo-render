@@ -20,11 +20,10 @@
             </div>
             <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px] scrollbar-none">
                 <div class="w-full relative">
-                    <div ref="scrollContainer"
-                        class="scrollbar-none overflow-x-hidden w-full flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-[0px]"
-                        @mousedown="startDragging" @mousemove="onDrag" @mouseup="stopDragging"
-                        @mouseleave="stopDragging" @touchstart="startDragging" @touchmove="onDrag"
-                        @touchend="stopDragging">
+                    <div ref="scrollContainer" class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-0 
+         no-scrollbar cursor-grab active:cursor-grabbing select-none" @pointerdown="startDragging"
+                        @pointermove="onDrag" @pointerup="stopDragging" @pointerleave="stopDragging"
+                        @touchstart="startDragging" @touchmove="onDrag" @touchend="stopDragging">
                         <div class="flex">
                             <div v-for="step in timeline" :key="step.id"
                                 class="flex flex-col items-start gap-[35px] md:w-[655px] snap-start shrink-0">
