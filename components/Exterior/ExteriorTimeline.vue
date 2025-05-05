@@ -122,7 +122,7 @@ const onDrag = (event) => {
     if (!isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
-    const walk = (x - startX.value) * 1.5; // Adjust sensitivity
+    const walk = (x - startX.value) * 1.5; 
     scrollContainer.value.scrollLeft = scrollLeftStart.value - walk; 
 };
 
@@ -132,7 +132,7 @@ const stopDragging = () => {
         scrollContainer.value.style.cursor = 'grab';
         scrollContainer.value.style.userSelect = 'auto';
         scrollContainer.value.style.touchAction = 'auto';
-        updateActiveStep(); // Ensure active step is updated after dragging
+        updateActiveStep(); 
     }
 };
 
