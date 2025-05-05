@@ -115,14 +115,15 @@ const startDragging = (event) => {
     scrollLeftStart.value = scrollContainer.value.scrollLeft;
     scrollContainer.value.style.cursor = 'grabbing';
     scrollContainer.value.style.userSelect = 'none';
+    scrollContainer.value.style.touchAction = 'none'; 
 };
 
 const onDrag = (event) => {
     if (!isDragging.value) return;
     event.preventDefault();
     const x = event.pageX || (event.touches && event.touches[0].pageX);
-    const walk = (x - startX.value) * 1.5;
-    scrollContainer.value.scrollLeft = scrollLeftStart.value - walk;
+    const walk = (x - startX.value) * 1.5; // Adjust sensitivity
+    scrollContainer.value.scrollLeft = scrollLeftStart.value - walk; 
 };
 
 const stopDragging = () => {
@@ -130,6 +131,8 @@ const stopDragging = () => {
         isDragging.value = false;
         scrollContainer.value.style.cursor = 'grab';
         scrollContainer.value.style.userSelect = 'auto';
+        scrollContainer.value.style.touchAction = 'auto';
+        updateActiveStep(); // Ensure active step is updated after dragging
     }
 };
 
