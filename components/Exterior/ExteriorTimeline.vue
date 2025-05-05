@@ -86,6 +86,7 @@ const startY = ref(0);
 const scrollLeftStart = ref(0);
 const activeStep = ref(1);
 const isHorizontalDrag = ref(false);
+let animationFrame = null;
 
 const updateActiveStep = () => {
     if (!scrollContainer.value) return;
@@ -119,39 +120,40 @@ const scrollRight = () => {
 };
 
 const startDragging = (event) => {
-  const pageX = event.pageX || (event.touches && event.touches[0].pageX);
-  const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-  startX.value = pageX;
-  startY.value = pageY;
-  scrollLeftStart.value = scrollContainer.value.scrollLeft;
-  isDragging.value = true;
-  isHorizontalDrag.value = false;
+    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    startX.value = pageX;
+    startY.value = pageY;
+    scrollLeftStart.value = scrollContainer.value.scrollLeft;
+    isDragging.value = true;
+    isHorizontalDrag.value = false;
 };
 
 const onDrag = (event) => {
-  if (!isDragging.value) return;
+    if (!isDragging.value) return;
 
-  const pageX = event.pageX || (event.touches && event.touches[0].pageX);
-  const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-  const deltaX = pageX - startX.value;
-  const deltaY = pageY - startY.value;
+    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    const deltaX = pageX - startX.value;
+    const deltaY = pageY - startY.value;
 
-  // Phát hiện kéo ngang: nếu deltaX lớn hơn deltaY
-  if (!isHorizontalDrag.value && Math.abs(deltaX) > Math.abs(deltaY)) {
-    isHorizontalDrag.value = true;
-  }
+    if (!isHorizontalDrag.value && Math.abs(deltaX) > Math.abs(deltaY)) {
+        isHorizontalDrag.value = true;
+    }
 
-  if (isHorizontalDrag.value) {
-    event.preventDefault(); // Chặn cuộn dọc chỉ khi kéo ngang
-    scrollContainer.value.scrollLeft = scrollLeftStart.value - deltaX;
-  }
+    if (isHorizontalDrag.value) {
+        event.preventDefault();
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+        animationFrame = requestAnimationFrame(() => {
+            scrollContainer.value.scrollLeft = scrollLeftStart.value - deltaX;
+        });
+    }
 };
 
 const stopDragging = () => {
-  if (isDragging.value) {
     isDragging.value = false;
+    animationFrame && cancelAnimationFrame(animationFrame);
     updateActiveStep();
-  }
 };
 
 const timeline = [
