@@ -3,73 +3,73 @@
         <div class="w-full pt-[60px] pb-[70px] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
                 <div
-                    class="md:text-[32px] text-[16px] font-[400] md:leading-[150%] leading-[100%] md:tracking-[2%] mb-[5px]">
+                    class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] md:tracking-[2%] mb-[5px]">
                     Timeline of
                 </div>
                 <div
-                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[50px] font-[600] leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
+                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[50px] font-semibold leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
                     3D Exterior Rendering Project
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center my-[20px]">
+            <div class="flex flex-col items-center justify-center my-5">
                 <div
-                    class="w-[304px] md:w-full md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
-                    On average, adding exterior renderings requires <span class="font-[500]">7-10 days</span>, as it
+                    class="w-[304px] md:w-full md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
+                    On average, adding exterior renderings requires <span class="font-medium">7-10 days</span>, as it
                     involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px] scrollbar-none">
+            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px]">
                 <div class="w-full relative">
-                    <div ref="scrollContainer" class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory pl-[50px] mr-0 
-         no-scrollbar cursor-grab active:cursor-grabbing select-none" @pointerdown="startDragging"
-                        @pointermove="onDrag" @pointerup="stopDragging" @pointerleave="stopDragging"
-                        @touchstart="startDragging" @touchmove="onDrag" @touchend="stopDragging">
-                        <div class="flex">
-                            <div v-for="step in timeline" :key="step.id"
-                                class="flex flex-col items-start gap-[35px] md:w-[655px] snap-start shrink-0">
+                    <UCarousel ref="carousel" v-model="activeStep" :items="timeline" :ui="{
+                        wrapper: 'overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
+                        item: 'flex flex-col items-start gap-9 w-[300px] md:w-[655px] snap-start shrink-0'
+                    }" class="w-full">
+                        <template #default="{ item, index }">
+                            <div class="flex flex-col items-start gap-5 w-[300px] md:w-[655px]" :key="index"
+                                :ref="el => registerItemRef(el, index)">
                                 <div class="flex items-center w-full">
                                     <div :class="[
-                                        'flex items-center justify-center md:w-[60px] md:h-[60px] w-[28px] h-[28px] rounded-[30px]',
-                                        activeStep === step.id ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
+                                        'flex items-center justify-center w-7 h-7 md:w-[60px] md:h-[60px] rounded-full',
+                                        activeStep === index ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
                                     ]">
                                         <span :class="[
-                                            'md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] font-[500]',
-                                            activeStep === step.id ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
+                                            'text-[15px] md:text-[25px] leading-[180%] md:leading-[200%] font-medium',
+                                            activeStep === index ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
                                         ]">
-                                            {{ step.id }}
+                                            {{ item.id }}
                                         </span>
                                     </div>
                                     <div class="flex items-center flex-grow">
                                         <div class="w-[25.54px] h-px bg-black opacity-50"></div>
                                         <div
-                                            class="font-[500] mx-3 text-[#000000] md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] whitespace-nowrap">
-                                            {{ step.title }}
+                                            class="font-medium mx-3 text-black md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] whitespace-nowrap">
+                                            {{ item.title }}
                                         </div>
                                         <div class="h-px flex-grow bg-black"></div>
                                     </div>
                                 </div>
-                                <div class="md:w-[655px] w-[300px]">
-                                    <NuxtImg :src="step.image" :class="[
-                                        'md:w-[620px] md:h-[400px] w-[280px] h-[200px] object-cover rounded-[8px]',
-                                    ]" />
+                                <div class="w-[300px] md:w-[655px]">
+                                    <NuxtImg :src="item.image"
+                                        class="w-[280px] h-[200px] md:w-[620px] md:h-[400px] object-cover rounded-lg"
+                                        loading="lazy" sizes="sm:280px md:620px" />
                                     <div
-                                        class="md:w-[600px] w-[280px] font-[300] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
-                                        {{ step.description }}
+                                        class="w-[280px] md:w-[600px] font-light md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
+                                        {{ item.description }}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-5 md:mt-[50px] mt-[10px]">
+                        </template>
+                    </UCarousel>
+                    <div class="flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <button @click="scrollLeft"
-                            class="md:w-[59.08px] md:h-[59.08px] w-[40px] h-[40px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
+                            class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"
-                                class="md:size-10 size-7 text-[#8D7662]" />
+                                class="size-7 md:size-10 text-[#8D7662]" />
                         </button>
                         <button @click="scrollRight"
-                            class="md:w-[59.08px] md:h-[59.08px] w-[40px] h-[40px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] p-0 flex items-center justify-center">
+                            class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-right-alt-rounded"
-                                class="md:size-10 size-7 text-[#FFFFFF]" />
+                                class="size-7 md:size-10 text-white" />
                         </button>
                     </div>
                 </div>
@@ -78,84 +78,8 @@
     </div>
 </template>
 
+
 <script setup>
-const scrollContainer = ref(null);
-const isDragging = ref(false);
-const startX = ref(0);
-const startY = ref(0);
-const scrollLeftStart = ref(0);
-const activeStep = ref(1);
-const isHorizontalDrag = ref(false);
-let animationFrame = null;
-
-const updateActiveStep = () => {
-    if (!scrollContainer.value) return;
-    const containerWidth = scrollContainer.value.clientWidth;
-    const steps = scrollContainer.value.querySelectorAll('.shrink-0');
-    let maxVisibleWidth = 0;
-    let activeIndex = 1;
-
-    steps.forEach((step, index) => {
-        const rect = step.getBoundingClientRect();
-        const visibleWidth = Math.min(rect.right, containerWidth) - Math.max(rect.left, 0);
-        if (visibleWidth > maxVisibleWidth) {
-            maxVisibleWidth = visibleWidth;
-            activeIndex = index + 1;
-        }
-    });
-
-    activeStep.value = activeIndex;
-};
-
-const scrollLeft = () => {
-    if (!scrollContainer.value) return;
-    const slideWidth = scrollContainer.value.querySelector('.shrink-0').offsetWidth;
-    scrollContainer.value.scrollBy({ left: -slideWidth, behavior: 'smooth' });
-};
-
-const scrollRight = () => {
-    if (!scrollContainer.value) return;
-    const slideWidth = scrollContainer.value.querySelector('.shrink-0').offsetWidth;
-    scrollContainer.value.scrollBy({ left: slideWidth, behavior: 'smooth' });
-};
-
-const startDragging = (event) => {
-    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
-    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-    startX.value = pageX;
-    startY.value = pageY;
-    scrollLeftStart.value = scrollContainer.value.scrollLeft;
-    isDragging.value = true;
-    isHorizontalDrag.value = false;
-};
-
-const onDrag = (event) => {
-    if (!isDragging.value) return;
-
-    const pageX = event.pageX || (event.touches && event.touches[0].pageX);
-    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-    const deltaX = pageX - startX.value;
-    const deltaY = pageY - startY.value;
-
-    if (!isHorizontalDrag.value && Math.abs(deltaX) > Math.abs(deltaY)) {
-        isHorizontalDrag.value = true;
-    }
-
-    if (isHorizontalDrag.value) {
-        event.preventDefault();
-        if (animationFrame) cancelAnimationFrame(animationFrame);
-        animationFrame = requestAnimationFrame(() => {
-            scrollContainer.value.scrollLeft = scrollLeftStart.value - deltaX;
-        });
-    }
-};
-
-const stopDragging = () => {
-    isDragging.value = false;
-    animationFrame && cancelAnimationFrame(animationFrame);
-    updateActiveStep();
-};
-
 const timeline = [
     {
         id: 1,
@@ -208,17 +132,30 @@ const timeline = [
     },
 ];
 
-onMounted(() => {
-    if (scrollContainer.value) {
-        scrollContainer.value.addEventListener('scroll', updateActiveStep);
-        updateActiveStep();
-    }
-});
+const carousel = ref(null);
+const activeStep = ref(0);
+const itemRefs = ref([]);
+let scrollTimeout;
 
-onUnmounted(() => {
-    if (scrollContainer.value) {
-        scrollContainer.value.removeEventListener('scroll', updateActiveStep);
+function registerItemRef(el, index) {
+    if (el) itemRefs.value[index] = el;
+}
+
+const scrollLeft = () => {
+    if (carousel.value) {
+        carousel.value.prev();
+        activeStep.value = Math.max(activeStep.value - 1, 0);
     }
-});
+};
+
+const scrollRight = () => {
+    if (carousel.value) {
+        carousel.value.next();
+        activeStep.value = Math.min(activeStep.value + 1, timeline.length - 1);
+    }
+};
+
+
+
 
 </script>
