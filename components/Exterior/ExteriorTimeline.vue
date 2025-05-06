@@ -13,9 +13,12 @@
             </div>
             <div class="flex flex-col items-center justify-center my-5">
                 <div
-                    class="w-[304px] md:w-full md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light md:px-[calc(9%)] md:mt-[70px] md:mb-[18px] text-justify">
-                    On average, adding exterior renderings requires <span class="font-medium">7-10 days</span>, as it
-                    involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
+                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[70px] md:mb-[18px] text-justify">
+                    <div>
+                        On average, adding exterior renderings requires <span class="font-medium">7-10 days</span>, as
+                        it
+                        involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px]">
