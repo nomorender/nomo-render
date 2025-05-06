@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="basis-[400px]">
-                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%] uppercase">3D Interior Rendering</div>
+                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Interior Rendering</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8"><span
                                 class="font-[500]">Photorealistic and immersive spaces</span> are at the core of 3D
                             interior rendering, a vital tool in architectural visualization that transforms design
@@ -32,7 +32,7 @@
 
                 <div class="md:flex gap-[4rem] justify-end w-full mt-20">
                     <div class="basis-[400px]">
-                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%] uppercase">3D Furniture Modeling</div>
+                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Furniture Modeling</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8">Our precision-crafted CGI
                             models let manufacturers and designers showcase products flawlessly - no physical prototypes
                             or costly shoots needed - perfect for catalogs, promotions, and virtual showrooms.</div>
