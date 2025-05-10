@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
-                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Interior Rendering</div>
+                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Furniture Modeling</div>
                         <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]">Our precision-crafted CGI
                             models let manufacturers and designers showcase products flawlessly - <span class="font-[500]">no physical prototypes
                                 or costly shoots needed</span> - perfect for catalogs, promotions, and virtual showrooms.</div>
