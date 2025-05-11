@@ -8,7 +8,6 @@
     <ExteriorNeedExterior></ExteriorNeedExterior>
     <HomeContact></HomeContact>
     <ExteriorOtherService></ExteriorOtherService>
-    <HomeQuoteButton></HomeQuoteButton>
   </div>
 </template>
 

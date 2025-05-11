@@ -1,7 +1,6 @@
 <template>
     <div class="overflow-hidden relative">
         <HomeBanner/>
-        <HomeQuoteButton></HomeQuoteButton>
         <HomeSlogan></HomeSlogan>
         <HomeAbout></HomeAbout>
         <HomeProject></HomeProject>
