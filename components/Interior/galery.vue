@@ -317,48 +317,65 @@
             </div>
             <div class="bg-[#FAF8F5]">
                 <div class="md:w-[960px] h-full w-[355px]">
-                    <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
+                    <NuxtImg v-if="selectedItem?.picDes?.pic1" alt="PicHouse" :src="selectedItem?.picDes.pic1"
                         class="w-full h-auto object-cover object-center" />
                 </div>
             </div>
-            <div class="md:px-[4rem] px-[35px] py-[30px]">
+            <div class="md:px-[4rem] px-[35px] py-[30px]" v-if="selectedItem?.picDes?.pic1">
                 <div class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify"
                     v-html="selectedItem?.content2"></div>
             </div>
 
             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
                 <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-[421px] object-cover" />
                 </div>
                 <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
                 </div>
             </div>
 
-            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
+            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4 && selectedItem?.picDes.pic1"
+                class="grid grid-cols-2 gap-2">
                 <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-full object-cover" />
                 </div>
                 <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-[421px] object-cover" />
                 </div>
                 <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
+                </div>
+            </div>
+
+            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4 && !selectedItem?.picDes.pic1"
+                class="grid grid-cols-2 gap-2">
+                <div class="col-span-2">
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-full object-cover" />
+                </div>
+                <div class="col-span-1 md:h-[357px] h-[131px]">
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
+                </div>
+                <div class="col-span-1 ">
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-[421px] object-cover" />
+                </div>
+                <div class="col-span-2">
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-full object-cover" />
                 </div>
             </div>
 
             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
                 <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-[421px] object-cover" />
                 </div>
                 <div class="col-span-1 md:h-[357px] h-[131px]">
                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-full object-cover" />
                 </div>
                 <div class="col-span-1 ">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-[421px] object-cover" />
                 </div>
                 <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-[421px] object-cover" />
                 </div>
             </div>
 
@@ -371,7 +388,6 @@
                     </div>
                 </UButton>
             </div>
-
         </div>
 
 
@@ -509,9 +525,10 @@ const items: Item[] = [
       </div>
   `,
         picDes: {
-            pic1: `/Service1Pic1.png`,
-            pic2: `/HAR01.jpg`,
-            pic3: '/HAR02.jpg',
+            pic1: `/Interior/Pic17.jpg`,
+            pic2: `/Interior/Pic20.png`,
+            pic3: '/Interior/Pic21.png',
+            pic4: '/Interior/Pic22.png',
         }
     },
     {
@@ -542,16 +559,14 @@ const items: Item[] = [
       </div>
   `,
         picDes: {
-            pic1: `/HAR07.png`,
-            pic2: '/HAR08.jpg',
-            pic3: '/HAR9.jpg',
-            pic4: '/HAR10.jpg',
-            pic5: '/HAR11.jpg',
+            pic1: `/Interior/Pic11.jpg`,
+            pic2: '/Interior/Pic23.jpg',
+            pic3: '/Interior/Pic24.jpg',
         }
     },
     {
         id: 3,
-        name: 'Tranquil Haven',
+        name: 'Timber & Stone',
         content1: `
     <div>
       <div class = "font-[300]">
@@ -577,171 +592,219 @@ const items: Item[] = [
       </div>
   `,
         picDes: {
-            pic1: `/Extorior/6.png`,
-            pic2: `/Extorior/EX1.png`,
-            pic3: '/Extorior/EX2.png',
+            pic1: `/Interior/Pic12.png`,
+            pic2: `/Interior/Pic27.png`,
+            pic3: '/Interior/Pic26.jpg',
+            pic4: '/Interior/Pic26.jpg',
         }
     },
     {
         id: 4,
-        name: 'The Stonehaven',
+        name: 'Tranquil Haven',
         content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Exterior</span>
+          Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
           <br/>Location: <span class = "font-[500]">New York, USA</span>
-          <br/>Client: <span class = "font-[500]">Parlato Development Group</span>
+          <br/>Client: <span class = "font-[500]"> Blommer Design</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        Standing as a design for luxury living in New York Residence, this design is a perfect mixture of natural stone, rich wood accents and expansive glass elements.
+        Step inside Tranquil Haven - a calming, modern retreat designed by Madeleine Blommer Design, with a blend of organic warmth and modern elegance. The serene bedroom features soft muted green walls, crisp white trim, and warm amber lighting, creating a cozy retreat. Key elements include a sculptural drum pendant, a creamy upholstered bed, and natural bamboo shades that enhance the room’s calming essence
       </div>
     </div>
   `,
         content2: `
       <div class = "font-[300] my-4">
-        The residence features a balanced composition of central entrance and a gravel driveway with structured landscaping. Floor-to-ceiling windows and sliding glass doors, which blur the boundary between interior and exterior to optimize views and daylighting.
+        We at Nomo Render helped bring it all to life with photorealistic 3D visuals, dialing in the layout and materials for a space that flows beautifully. The vibe carries into the adjacent living room too - minimal, airy, and filled with soft neutrals, clean lines, and a paper lantern that keeps things feeling light and effortless.
       </div>
 
       <div class = "font-[300] my-4">
-        Designed in partnership with Parlato Development Group, this stunning 2-story estate showcases: <span class = "font-[500]">Symmetrical facade with dual chimneys, Gabled rooflines, A spacious outdoor living area with poolside and large windows</span> which connects every detail reflecting its creator and the lifestyle of those who will call it home.
+        Every piece, from the cozy rug to the curated art, works together to create a peaceful, polished space that feels just as good as it looks.
       </div>
   `,
         picDes: {
-            pic1: `/Extorior/5.png`,
-            pic2: `/Extorior/EX3.jpg`,
-            pic3: '/Extorior/EX4.jpg',
+            pic1: `/Interior/Pic13.png`,
+            pic2: `/Interior/Pic28.png`,
+            pic3: '/Interior/Pic29.png',
         }
     },
     {
         id: 5,
-        name: 'Brightnest',
+        name: 'Breezy Space',
         content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Exterior & Interior</span>
+          Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">West Sussex, UK</span>
-          <br/>Client: <span class = "font-[500]">Platform 3 Studio</span>
+          <br/>Location: <span class = "font-[500]">Florida, USA</span>
+          <br/>Client: <span class = "font-[500]">David Phoenix Interior Design</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        What an experience! BrightNest is our design project in collaboration with Platform 3. It is a vibrant and engaging elementary school classroom design, crafted to nurture young minds in a dynamic learning environment.
+        Breezy Space designed by David Phoenix Interior Design with coastal and contemporary influences, is the open-concept dining and kitchen area. It features a soft palette of light beige, cream, and aqua, creating an airy and inviting atmosphere
+      </div>
+       <div class = "font-[300] mb-4">
+        Key elements include light cabinetry, marble countertops, and aqua-tiled backsplashes in the kitchen. The dining area is anchored by a wooden table paired with rattan-back chairs and blue cushions, complemented by a striking spherical chandelier with blue accents. Large windows flood the space with natural light, enhancing its warmth and elegance.
       </div>
     </div>
   `,
         content2: `
       <div class = "font-[300] my-4">
-        This project is a perfect blend of creativity, functionality and warmth, which we use playful colours, natural light and interactive elements as the foundation. 
+        We teamed up with the design to bring this space to life through photorealistic 3D visuals: adjusting layouts, materials, and details until everything just clicked. The pendant lights, the texture of the tiles and the overall flow, it all came together with a clear vision and a thoughtful touch by our Nomo Render Team
       </div>
 
       <div class = "font-[300] my-4">
-        From cozy reading room to lively group activity spaces, each area is carefully curated to support learning experience, with: <span class = "font-[500]">Large south-facing windows, Acoustic panels, The polyurethane flooring.</span> The completed design reflects where design meets function to empower the next generation of learners
+        That easygoing, polished vibe doesn’t stop at the kitchen and dining area. The result is a timeless, serene environment that feels both modern and effortlessly inviting
       </div>
   `,
         picDes: {
-            pic1: `/Extorior/XRL01.png`,
-            pic2: `/Extorior/EX5.png`,
-            pic3: '/Extorior/EX6.png',
-            pic4: '/Extorior/EX7.png',
+            pic1: `/Interior/Pic14.png`,
+            pic2: `/Interior/Pic14.png`,
+            pic3: `/Interior/Pic30.png`,
+            pic4: '/Interior/Pic31.png',
         }
     },
     {
         id: 6,
-        name: 'Modern Haven Residences',
+        name: 'Azure Serenity',
         content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Exterior</span>
+          Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">Ulm, Germany</span>
-          <br/>Client: <span class = "font-[500]">MF</span>
+          <br/>Location: <span class = "font-[500]">Carolina, USA</span>
+          <br/>Client: <span class = "font-[500]">Lauren McKay Interiors</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        With a commitment to functional elegance and sustainable design, this collaboration of MF with us brings innovative architectural concepts to life.
+        Take a peek into Azure Serenity, a bathroom project that’s equal parts spa day and style statement, brought to life by the collaboration of Nomo Render with Lauren McKay Interiors. The space features a freestanding bathtub framed by a curved window, light blue walls, and gold-accented white cabinetry, creating a bright and airy retreat. Key elements include marble flooring, a decorative chandelier, and sconce lighting that enhances the tranquil ambiance.
       </div>
     </div>
   `,
         content2: `
       <div class = "font-[300] my-4">
-        A blend of modern minimalism and aesthetic appeal with practicality, Nomo Render worked closely with MF to bring their architectural vision through landscape <span class = "font-[500]">featuring lush greenery, soft contours creating a welcoming atmosphere</span>
+        We brought this vision to life with photorealistic 3D visuals, optimizing layouts and material selections for a seamless design process. The vanity area mirrors the same refined aesthetic, with a marble countertop, gold-framed mirror, and repeated sconce reflections adding depth.</span>
       </div>
 
       <div class = "font-[300] my-4">
-        By understanding their intent and project goals, we crafted every detail, from the strategic lighting to the realistic reflection with <span class = "font-[500]">clean geometric lines, expansive glass windows, and sleek back railings</span>, to emphasize openness and natural light.
+        Everything in here plays together beautifully, the cool tones, the warm lights, the luxe textures. The whole design just flows, making sure function never gets in the way of a little indulgence. It’s calm, curated, and ready for its close-up.
       </div>
   `,
         picDes: {
-            pic1: `/Extorior/7.png`,
-            pic2: `/Extorior/EX8.png`,
-            pic3: '/Extorior/EX9.png',
-            pic4: '/Extorior/EX10.png',
+            pic1: `/Interior/Pic15.png`,
+            pic2: `/Interior/Pic33.png`,
+            pic3: '/Interior/Pic34.png',
         }
     },
 
     {
         id: 7,
-        name: 'The Manor',
+        name: 'Serene Oasis',
         content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Exterior</span>
+          Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">Georgia, USA</span>
-          <br/>Client: <span class = "font-[500]">Jeffrey Bruce Baker</span>
+          <br/>Location: <span class = "font-[500]">Weston, USA</span>
+          <br/>Client: <span class = "font-[500]">KJ Design Collective</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        Fusion of European style and Southern charm? Why not? The Manor is a distinguished architectural vision brought to life through our teamwork with Jeffrey Bruce Baker Company. Inspired by the timeless beauty of Old-World estates, this residences shows <span class = "font-[500]">warm brick textures, sculptural rooflines, copper details</span> to create a sense of refined beauty
+        Welcome to Serene Oasis! A calming escape by KJ Design Collective focuses on interior spaces with a blend of organic luxury and modern minimalism. The bathroom exudes tranquility with its woven-textured vanity, marble countertops, and a freestanding tub framed by lush tropical views. Gold accents and a contemporary chandelier elevate the space, while herringbone flooring adds subtle texture.
       </div>
-    </div>
+
+      <div class = "font-[300] mb-4">
+        The living area continues the theme of warmth and sophistication, featuring light wood tones, built-in cabinetry, and a curated seating arrangement. An abstract painting and arched doorway enhance the refined yet inviting atmosphere.
+      </div>
+
+      <div class = "font-[300] mb-4">
+        At Nomo Render, we helped bring these spaces to life through photorealistic 3D visuals: tweaking layouts, dialing in materials, and playing with light until every detail felt just right.       </div>
+      </div>
+      <div class = "font-[300]">
+        Serene Oasis is the kind of place that whispers luxury and leaves a lasting impression, from sculptural accents to that calm, collected palette.
+      </div>
   `,
         content2: `
-      <div class = "font-[300] my-4">
-        We focus on capturing the soft, neutral complementary with rich earthy materials through precise visualization. From the curved brick parapet to the turret-style bay window, each detail is crafted to reflect the architectural narrative envisioned by the client.
-      </div>
   `,
         picDes: {
-            pic1: `/Extorior/3.png`,
-            pic2: `/Extorior/EX11.png`,
-            pic3: '/Extorior/EX12.png',
-            pic4: '/Extorior/EX13.png',
+            pic2: `/Interior/Pic16.png`,
+            pic3: '/Interior/Pic35.png',
+            pic4: '/Interior/Pic36.png',
+            pic5: '/Interior/Pic37.png',
         }
     },
 
     {
         id: 8,
-        name: 'Frame & Ridge',
+        name: 'Ember Lounge',
         content1: `
     <div>
       <div class = "font-[300]">
-          Typology: <span class = "font-[500]">Exterior</span>
+          Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">San Francisco, USA</span>
-          <br/>Client: <span class = "font-[500]">Elephant Town Studio</span>
+          <br/>Location: <span class = "font-[500]">Chicago, USA</span>
+          <br/>Client: <span class = "font-[500]">Studio MAK</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        This project explores how structural precision and environmental integration create a home that feels both grounded and creative. Elephant Town Studio designed a residence that adapts to nature while standing out, brought to life by Nomo Render’s blend of form and function.
+        Introducing Timeless Hearth, a design project focusing on interior spaces with a blend of organic warmth and modern elegance from Studio MAK. The living room features a neutral palette with beige walls, light wood flooring, and a cream sectional sofa accented by orange and brown throw pillows. A marble fireplace and tall olive tree add texture and life, while dark wood beams and a coffee table enhance the inviting atmosphere.
       </div>
     </div>
   `,
         content2: `
       <div class = "font-[300] my-4">
-        The steel-framed overhangs are an aesthetic choice for us, which optimize shading angles for seasonal efficiency. Floor-to-ceiling glazing is not only about openness, but also strategically frames the landscape, turning every window into a living portrait of San Francisco’s terrain: <span class = "font-[500]">The material (including raw stone, warm wood and industrial steel), Lighting simulation and texture mapping</span> create a touchable contrast and contribute a dynamic interplay of light and shadow. 
+            We, Nomo Render, brought this space to life with photorealistic 3D visuals, optimizing layouts and material selections. The adjacent modern kitchen and dining area continues the neutral theme with beige cabinetry, marble countertops, and a wooden dining table. Clean lines and soft lighting create a luxurious yet functional open-plan living space.
       </div>
+       <div class = "font-[300] mb-4">
+        Every detail, from the sculptural furnishings to the warm tones, reflects meticulous craftsmanship. The cohesive design extends through both spaces, offering a harmonious balance of comfort and sophistication.
+    </div>
   `,
         picDes: {
-            pic1: `/Feedback/UserFeedback/15.jpg`,
-            pic2: `/Feedback/UserFeedback/16.jpg`,
-            pic3: '/Feedback/UserFeedback/17.jpg',
+            pic1: `/Interior/Pic18.png`,
+            pic2: `/Interior/Pic38.png`,
+            pic3: '/Interior/Pic39.png',
+            pic4: '/Interior/Pic40.png',
+        }
+    },
+
+    {
+        id: 9,
+        name: 'Olive Haven',
+        content1: `
+    <div>
+      <div class = "font-[300]">
+          Typology: <span class = "font-[500]">Interior</span>
+          <br/>Status: <span class = "font-[500]">Completed</span>
+          <br/>Location: <span class = "font-[500]">Chicago, USA</span>
+          <br/>Client: <span class = "font-[500]">Studio MAK</span>
+          <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
+      </div>
+
+      <div class = "font-[300] my-4">
+        Introducing Olive Haven, a design project focusing on a home office with a blend of modern sophistication and organic warmth from Studio MAK. The space features a muted olive-green palette, natural light, and sculptural furnishings that balance aesthetics and function.
+      </div>
+
+       <div class = "font-[300] mb-4">
+        Key elements include a black marble-like desk with clear cylindrical legs, beige and black-framed chairs, and a statement gold chandelier. A textured cowhide rug and tiered white planter add layered contrast. The design reflects timeless appeal with curated craftsmanship.
+      </div>
+
+      <div class = "font-[300] mb-4">
+        We at Nomo Render provided photorealistic 3D visuals to optimize layouts and material selections. The cohesive details—like the brown velvet chair and angular desk lamp—create an inviting, polished workspace. Adjacent spaces could extend this harmony with soft textures and warm tones for a seamless transition.
+      </div>
+    </div>
+  `,
+        content2: `
+      
+  `,
+        picDes: {
+            pic1: `/Interior/Pic19.png`,
         }
     },
 ]

@@ -89,35 +89,35 @@ const timeline = [
         title: "Modeling",
         description: "The 3D structure of the interior space is built, including walls, ceilings, floors, and main architectural elements.",
         active: false,
-        image: '/slide/PHO01.png',
+        image: '/Interior/Pic45.png',
     },
     {
         id: 2,
         title: "Initial environment setup",
         description: "Natural light sources (like sunlight through windows) and artificial lighting (lamps, chandeliers, LED strips) are positioned and adjusted. The right lighting enhances realism and sets the mood of the space.",
         active: true,
-        image: '/slide/TL05.png',
+        image: '/Interior/Pic48.png',
     },
     {
         id: 3,
         title: "Lighting",
         description: "Materials and texture such as wood, marble, fabric, glass, and metal are applied to walls, floors, furniture, and decor. Realistic reflections, roughness, and transparency settings are fine-tuned.",
         active: true,
-        image: '/slide/TL06.png',
+        image: '/Interior/Pic49.png',
     },
     {
         id: 4,
         title: "Texturing & Materials",
         description: "Furniture, decor, and accessories are placed to complete the scene, ensuring a cozy and visually appealing layout.",
         active: true,
-        image: '/slide/TL07.png',
+        image: '/Interior/Pic46.png',
     },
     {
         id: 5,
         title: "Final enviroment refinements",
         description: "The scene is processed in high resolution, where rendering engines calculate light, shadows, and reflections to create a photorealistic image. This step can take several hours, depending on complexity.",
         active: true,
-        image: '/slide/TL03.png',
+        image: '/Interior/Pic47.png',
     }
 ];
 

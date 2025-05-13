@@ -1,18 +1,18 @@
 <template>
-    <div class="overflow-hidden relative">
-        <HomeBanner/>
-        <HomeSlogan></HomeSlogan>
-        <HomeAbout></HomeAbout>
-        <HomeProject></HomeProject>
-        <HomeServices></HomeServices>
-        <!-- <HomeBenefits></HomeBenefits> -->
-        <HomeTest/>
-        <HomeFeedBack/>
-        <HomeContact></HomeContact>
-        <HomeFaq/>
-        <HomeSubcribe/>
-    </div>
-    
+  <div class="overflow-hidden relative">
+    <HomeBanner />
+    <HomeSlogan></HomeSlogan>
+    <HomeAbout></HomeAbout>
+    <HomeProject></HomeProject>
+    <HomeServices></HomeServices>
+    <!-- <HomeBenefits></HomeBenefits> -->
+    <HomeTest />
+    <HomeFeedBack />
+    <HomeContact></HomeContact>
+    <HomeFaq />
+    <HomeSubcribe />
+  </div>
+
 </template>
 <script lang="ts" setup>
 import { HomeTest } from '#components';

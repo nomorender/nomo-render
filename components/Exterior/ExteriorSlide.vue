@@ -34,9 +34,9 @@
             'gap-[calc(0.5vw+0.5rem)]': true,
             'md:gap-[calc(1vw+0.75rem)]': true,
           }" :style="{
-              left: `calc(50% - min(40vw, 600px) - 7rem)`,
-              top: 'calc(50% - 80px)'
-            }">
+            left: `calc(50% - min(40vw, 600px) - 7rem)`,
+            top: 'calc(50% - 80px)'
+          }">
             <UButton @click="nextSlide" variant="ghost"
               class="flex items-center justify-center bg-white hover:bg-white shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
               :disabled="isAnimating">
@@ -63,11 +63,12 @@
             }
           }" ref="carousel">
             <template #default="{ item }">
-              <div class="flex justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
+              <div
+                class="flex justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
                 <div class="">
                   <div class="w-full md:mb-0 mb-[40px]">
-                    <NuxtImg :src="item.img" alt="img"
-                      class="w-full h-[280px] rounded-[8px] object-cover object-center" draggable="false" />
+                    <NuxtImg :src="item.img" alt="img" class="w-full h-[280px] rounded-[8px] object-cover object-center"
+                      draggable="false" />
                   </div>
                   <div class="mx-5 flex gap-5">
                     <div>
@@ -77,8 +78,7 @@
                     </div>
                   </div>
                   <div class="mx-5 mt-[15px] mb-[35px]">
-                    <div
-                      class="text-justify text-[15px] leading-[180%] font-[300]">
+                    <div class="text-justify text-[15px] leading-[180%] font-[300]">
                       {{ item.desc }}
                     </div>
                   </div>
@@ -105,7 +105,8 @@
 
 
       <div class="flex justify-center items-center md:pt-[70px] pt-[25px]">
-        <div class="md:w-[calc(80vw)] md:max-w-[1200px] md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify px-9">
+        <div
+          class="md:w-[calc(80vw)] md:max-w-[1200px] md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify px-9">
           By integrating 3D exterior visualization into their workflow, these professionals
           <span class="font-[500]">can reduce misinterpretations, accelerate decision-making</span>, and achieve more
           refined, market-ready project outcomes.
