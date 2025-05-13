@@ -13,7 +13,7 @@
             </div>
             <div class="flex flex-col items-center justify-center my-5">
                 <div
-                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[70px] md:mb-[18px] text-justify">
+                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[50px] md:mb-[18px] text-justify">
                     <div>
                         On average, adding exterior renderings requires <span class="font-medium">7-10 days</span>, as
                         it
@@ -93,28 +93,28 @@ const timeline = [
     },
     {
         id: 2,
-        title: "Initial environment setup",
+        title: "Lighting Setup",
         description: "Natural light sources (like sunlight through windows) and artificial lighting (lamps, chandeliers, LED strips) are positioned and adjusted. The right lighting enhances realism and sets the mood of the space.",
         active: true,
         image: '/Interior/Pic48.png',
     },
     {
         id: 3,
-        title: "Lighting",
+        title: "Texturing & Materials",
         description: "Materials and texture such as wood, marble, fabric, glass, and metal are applied to walls, floors, furniture, and decor. Realistic reflections, roughness, and transparency settings are fine-tuned.",
         active: true,
         image: '/Interior/Pic49.png',
     },
     {
         id: 4,
-        title: "Texturing & Materials",
+        title: "Interior Decoration & Furnishing",
         description: "Furniture, decor, and accessories are placed to complete the scene, ensuring a cozy and visually appealing layout.",
         active: true,
         image: '/Interior/Pic46.png',
     },
     {
         id: 5,
-        title: "Final enviroment refinements",
+        title: "Final Rendering",
         description: "The scene is processed in high resolution, where rendering engines calculate light, shadows, and reflections to create a photorealistic image. This step can take several hours, depending on complexity.",
         active: true,
         image: '/Interior/Pic47.png',

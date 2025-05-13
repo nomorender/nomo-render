@@ -35,7 +35,7 @@
                                             <div class="font-[300] leading-[180%]">Client: Firefinish Interiors</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
                                             <div class="font-[300] leading-[180%]">Client: Maritza Capiro Design</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                             </div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -146,7 +146,7 @@
                                             </div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -170,10 +170,10 @@
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: Carolina, USA
                                         </div>
                                         <div class="flex justify-between">
-                                            <div class="font-[300] leading-[180%]">Client: Lauren McKay Interiors</div>
+                                            <div class="font-[300] leading-[180%]">Client: L.M Interiors</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -198,7 +198,7 @@
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: Weston, USA
                                         </div>
                                         <div class="flex justify-between">
-                                            <div class="font-[300] leading-[180%]">Client: KJ Design Collective</div>
+                                            <div class="font-[300] leading-[180%]">Client: KJ Design</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 2024
@@ -216,7 +216,7 @@
                                 <div>
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
-                                            <div class="font-[600] md:leading-[200%]">Ember Lounge</div>
+                                            <div class="font-[600] md:leading-[200%]">Timeless Hearth</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -228,7 +228,7 @@
                                             <div class="font-[300] leading-[180%]">Client: Studio MAK</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -255,7 +255,7 @@
                                             <div class="font-[300] leading-[180%]">Client: Studio MAK</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
-                                                2024
+                                                2025
                                             </div>
                                         </div>
                                     </div>
@@ -265,7 +265,6 @@
                     </div>
                 </div>
             </div>
-
             <div>
                 <div class="flex w-full justify-center items-center pt-10">
                     <UButton color="gray" variant="solid"
@@ -321,7 +320,7 @@
                         class="w-full h-auto object-cover object-center" />
                 </div>
             </div>
-            <div class="md:px-[4rem] px-[35px] py-[30px]" v-if="selectedItem?.picDes?.pic1">
+            <div class="md:px-[4rem] px-[35px] py-[30px]" v-if="selectedItem?.content2">
                 <div class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify"
                     v-html="selectedItem?.content2"></div>
             </div>
@@ -492,7 +491,7 @@ interface Item {
     id: number
     name: string
     content1: any
-    content2: any
+    content2?: any
     picDes: any
 }
 
@@ -572,30 +571,29 @@ const items: Item[] = [
       <div class = "font-[300]">
           Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
-          <br/>Location: <span class = "font-[500]">New York, USA</span>
-          <br/>Client: <span class = "font-[500]">Madeleine Blommer Design</span>
+          <br/>Location: <span class = "font-[500]">Florida, USA</span>
+          <br/>Client: <span class = "font-[500]">Maritza Capiro Design</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
       <div class = "font-[300] my-4">
-        Step inside Tranquil Haven - a calming, modern retreat designed by Madeleine Blommer Design, with a blend of organic warmth and modern elegance. The serene bedroom features soft muted green walls, crisp white trim, and warm amber lighting, creating a cozy retreat. Key elements include a sculptural drum pendant, a creamy upholstered bed, and natural bamboo shades that enhance the room’s calming essence.
+        Designed by Maritza Capiro Design, this kitchen is all about contrasts that click. Tiimber & Stone is the blending organic warmth with minimalist precision. The space is defined by natural wood cabinetry, a striking gray marbled island, and a dark textured stone backsplash, creating a balance of contrast and harmony.
+      </div>
+
+      <div class = "font-[300] mb-4">
+        We from Nomo Render Team capture every detail in photorealistic 3D renders, refining layout, finishes, and lighting so that each element feels intentional. The open wooden shelves, integrated appliances, and light terrazzo flooring reflect meticulous craftsmanship and functional elegance.
+      </div>
+
+       <div class = "font-[300] mb-4">
+        The large square window frames lush greenery, enhancing the connection to nature. Every detail such as the woven bar stools and even the neutral palette, cultivates a serene, inviting atmosphere. A kitchen that feels calm, curated, and quietly luxurious. That is a proof when simplicity and sophistication can absolutely be friends.
       </div>
     </div>
   `,
-        content2: `
-      <div class = "font-[300] my-4">
-        We at Nomo Render helped bring it all to life with photorealistic 3D visuals, dialing in the layout and materials for a space that flows beautifully. The vibe carries into the adjacent living room too - minimal, airy, and filled with soft neutrals, clean lines, and a paper lantern that keeps things feeling light and effortless.
-      </div>
-
-      <div class = "font-[300] my-4">
-        Every piece, from the cozy rug to the curated art, works together to create a peaceful, polished space that feels just as good as it looks.
-      </div>
-  `,
         picDes: {
-            pic1: `/Interior/Pic12.png`,
-            pic2: `/Interior/Pic27.png`,
-            pic3: '/Interior/Pic26.jpg',
+            pic2: `/Interior/Pic12.png`,
+            pic3: `/Interior/Pic27.png`,
             pic4: '/Interior/Pic26.jpg',
+            pic5: '/Interior/Pic26.jpg',
         }
     },
     {
@@ -607,7 +605,7 @@ const items: Item[] = [
           Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
           <br/>Location: <span class = "font-[500]">New York, USA</span>
-          <br/>Client: <span class = "font-[500]"> Blommer Design</span>
+          <br/>Client: <span class = "font-[500]">Madeleine Blommer Design</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
@@ -677,7 +675,7 @@ const items: Item[] = [
           Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
           <br/>Location: <span class = "font-[500]">Carolina, USA</span>
-          <br/>Client: <span class = "font-[500]">Lauren McKay Interiors</span>
+          <br/>Client: <span class = "font-[500]">L.M Interiors</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
@@ -711,7 +709,7 @@ const items: Item[] = [
           Typology: <span class = "font-[500]">Interior</span>
           <br/>Status: <span class = "font-[500]">Completed</span>
           <br/>Location: <span class = "font-[500]">Weston, USA</span>
-          <br/>Client: <span class = "font-[500]">KJ Design Collective</span>
+          <br/>Client: <span class = "font-[500]">KJ Design</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
 
@@ -730,8 +728,7 @@ const items: Item[] = [
         Serene Oasis is the kind of place that whispers luxury and leaves a lasting impression, from sculptural accents to that calm, collected palette.
       </div>
   `,
-        content2: `
-  `,
+
         picDes: {
             pic2: `/Interior/Pic16.png`,
             pic3: '/Interior/Pic35.png',
@@ -742,7 +739,7 @@ const items: Item[] = [
 
     {
         id: 8,
-        name: 'Ember Lounge',
+        name: 'Timeless Hearth',
         content1: `
     <div>
       <div class = "font-[300]">
@@ -754,17 +751,20 @@ const items: Item[] = [
       </div>
 
       <div class = "font-[300] my-4">
-        Introducing Timeless Hearth, a design project focusing on interior spaces with a blend of organic warmth and modern elegance from Studio MAK. The living room features a neutral palette with beige walls, light wood flooring, and a cream sectional sofa accented by orange and brown throw pillows. A marble fireplace and tall olive tree add texture and life, while dark wood beams and a coffee table enhance the inviting atmosphere.
+        Back at it with Studio MAK 🤝 Our second collab, Timeless Hearth, is all about cozy luxury, beige tones, wood textures, and a marble fireplace moment you’ll want to curl up next to 🔥
       </div>
     </div>
   `,
         content2: `
       <div class = "font-[300] my-4">
-            We, Nomo Render, brought this space to life with photorealistic 3D visuals, optimizing layouts and material selections. The adjacent modern kitchen and dining area continues the neutral theme with beige cabinetry, marble countertops, and a wooden dining table. Clean lines and soft lighting create a luxurious yet functional open-plan living space.
+        Set in an open-plan layout, the living room embraces a serene neutral palette: beige walls, light wood flooring, and a plush cream sectional accented with earthy orange and brown pillows. A marble fireplace adds subtle luxury, while a tall olive tree brings in a gentle, organic touch. Overhead, dark wood beams introduce architectural rhythm and balance, complemented by a grounded coffee table that anchors the space.
       </div>
        <div class = "font-[300] mb-4">
-        Every detail, from the sculptural furnishings to the warm tones, reflects meticulous craftsmanship. The cohesive design extends through both spaces, offering a harmonious balance of comfort and sophistication.
-    </div>
+        By refining every layout, material, and finish Nomo Render could capture that luxurious-yet-livable energy. The open-plan kitchen and dining space keeps the mood going strong with beige cabinetry, marble surfaces, and clean, calming lines.
+       </div>
+       <div class = "font-[300] mb-4">
+        It’s soft, sculptural, and seriously inviting because comfort and elegance? They go hand in hand. 🤎
+       </div>
   `,
         picDes: {
             pic1: `/Interior/Pic18.png`,
@@ -788,20 +788,20 @@ const items: Item[] = [
       </div>
 
       <div class = "font-[300] my-4">
-        Introducing Olive Haven, a design project focusing on a home office with a blend of modern sophistication and organic warmth from Studio MAK. The space features a muted olive-green palette, natural light, and sculptural furnishings that balance aesthetics and function.
+        Olive Haven. All wrapped up in a chic home office designed by the amazing Studio MAK and brought to life in photorealistic glory by Nomo Render. 
       </div>
 
        <div class = "font-[300] mb-4">
-        Key elements include a black marble-like desk with clear cylindrical legs, beige and black-framed chairs, and a statement gold chandelier. A textured cowhide rug and tiered white planter add layered contrast. The design reflects timeless appeal with curated craftsmanship.
+        This space is all about balance: a muted olive-green palette, natural light streaming in, and sculptural furnishings that make you want to work and stay a little longer. Desk goals? Check. A black marble-like desk with sleek cylindrical legs and a gold chandelier that definitely has something to say.
       </div>
 
       <div class = "font-[300] mb-4">
-        We at Nomo Render provided photorealistic 3D visuals to optimize layouts and material selections. The cohesive details—like the brown velvet chair and angular desk lamp—create an inviting, polished workspace. Adjacent spaces could extend this harmony with soft textures and warm tones for a seamless transition.
+        Pair that with beige and black-framed chairs, a textured cowhide rug, and a tiered white planter for contrast, and you've got a workspace that’s sophisticated with a dash of warmth. The brown velvet chair and angular desk lamp? Pure mood 
       </div>
-    </div>
-  `,
-        content2: `
-      
+
+       <div class = "font-[300] mb-4">
+        A polished, inviting workspace that’s all about function and flair. Cohesion? We’ve got that covered. This is one office where both style and productivity flow seamlessly.      </div>
+        </div>
   `,
         picDes: {
             pic1: `/Interior/Pic19.png`,

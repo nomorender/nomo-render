@@ -75,7 +75,7 @@
                             <ul class="mt-[20px]">
                                 <li class="flex items-start gap-5">
                                     <icon name="material-symbols-light:crop-square-outline"
-                                        class="md:size-7 size-4 md:pt-[47px] pt-[26px]" />
+                                        class="md:size-7 size-4 md:pt-[36px] pt-[26px]" />
                                     <span
                                         class="w-[90%] md:text-[25px] text-justify text-[15px] md:leading-[150%] leading-[180%] font-[300] ">A
                                         collection of images or color palettes that capture the desired style, the
@@ -98,11 +98,11 @@
                             <ul class="mt-[20px]">
                                 <li class="flex items-start gap-5">
                                     <icon name="material-symbols-light:crop-square-outline"
-                                        class="md:size-7 size-4 md:pt-[47px] pt-[26px]" />
+                                        class="md:size-7 size-4 md:pt-[36px] pt-[26px]" />
                                     <span
                                         class="w-[90%] md:text-[25px] text-justify text-[15px] md:leading-[150%] leading-[180%] font-[300] ">Links
                                         or descriptions of furniture, fixtures, and materials (especially for walls,
-                                        ceilings, & flooring) to match your vision precisely..</span>
+                                        ceilings, & flooring) to match your vision precisely.</span>
                                 </li>
                             </ul>
                         </div>

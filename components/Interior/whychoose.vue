@@ -6,7 +6,8 @@
                 <div class="leading-[150%] text-[#8D7662] text-[64px] font-[600]">Your Interior Rendering?</div>
             </div>
             <div class="flex gap-[10px] items-center justify-center">
-                <div v-for="(item, index) in items" :key="index" class="bg-[#FAF8F5] p-[30px] rounded-[8px]">
+                <div v-for="(item, index) in items" :key="index"
+                    class="bg-[#FAF8F5] px-[30px] pt-[35px] pb-[70px] rounded-[8px]">
                     <div class="flex flex-col items-center justify-center w-[330px]">
                         <div class="mb-[15px]">
                             <nuxt-img :src="item.logo" class="h-[100px] w-[100px]" />

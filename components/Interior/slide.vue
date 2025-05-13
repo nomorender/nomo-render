@@ -1,7 +1,7 @@
 <template>
     <div class="my-20">
         <div class="relative h-fit w-full md:pb-[50px] md:pt-[55px] pt-[45px] pb-[40px] bg-[#FAF8F5]">
-            <div class="flex flex-col items-center justify-center md:mb-[75px] mb-0">
+            <div class="flex flex-col items-center justify-center md:mb-[30px] mb-0">
                 <div class="font-[400] md:text-[32px] text-[16px] md:leading-[150%] text-[#000000]">
                     Who can benefit from
                 </div>
@@ -132,35 +132,35 @@ const slides = ref([
         id: 1,
         name: 'Architects & Designers',
         desc: 'A great design deserves a great presentation! Interior renderings help convey concepts clearly, ensuring clients and stakeholders see the full potential of a space before construction even begins.',
-        img: '/Interior/Pic41.jpg',
+        img: '/Interior/Pic43.png',
         zIndex: 4,
     },
     {
         id: 2,
         name: 'Real Estate Developers',
         desc: 'Present properties with immersive, market-ready renderings that captivate potential buyers and investors, driving pre-sales and project funding.',
-        img: '/Interior/Pic42.jpg',
+        img: '/Interior/Pic41.jpg',
         zIndex: 3,
     },
     {
         id: 3,
         name: 'Construction & Engineering Agency',
         desc: 'Facilitate efficient project execution with technical renderings that minimize design discrepancies, optimize material selection, and streamline planning.',
-        img: '/services/4.png',
+        img: '/Interior/Pic44.png',
         zIndex: 2,
     },
     {
         id: 4,
-        name: 'Landscapers & Urban Planners',
+        name: 'Marketing & Advertising Prof',
         desc: 'Design and visualize outdoor spaces such as parks, gardens, and public areas to ensure functionality and aesthetic appeal.',
-        img: '/Interior/Pic43.png',
+        img: '/Interior/Pic42.jpg',
         zIndex: 1,
     },
     {
         id: 5,
-        name: 'Marketing & Advertising Professionals',
+        name: 'Entertainment & Hospitality Industry',
         desc: 'Leverage compelling, photorealistic visuals for real estate promotions, advertising campaigns, and digital content strategies that enhance audience engagement.',
-        img: '/Interior/Pic44.png',
+        img: '/services/4.png',
         zIndex: 0,
     },
 ]);
