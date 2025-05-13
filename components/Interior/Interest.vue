@@ -1,6 +1,6 @@
 <template>
     <div class="my-20">
-        <div class="pt-[60px] pb-[70px] bg-[#FAF8F5]">
+        <div class="pt-[60px] pb-[60px] bg-[#FAF8F5]">
             <div class="flex flex-col items-center justify-center">
                 <div
                     class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] md:tracking-[2%] mb-[5px]">
@@ -101,7 +101,8 @@
                             </div>
 
                             <div class="font-[300] text-[25px] leading-[200%] text-justify mx-[50px]">
-                                Cinematic videos guide viewers through interior space with smooth, natural movement. It highlights flow, spatial transitions and details to match the design vision.
+                                Cinematic videos guide viewers through interior space with smooth, natural movement. It
+                                highlights flow, spatial transitions and details to match the design vision.
                             </div>
                         </div>
 
@@ -123,6 +124,15 @@
                             <video controls class="rounded-[8px] h-[675px] mt-[8px]">
                                 <source src="/Interior/Video.mp4" type="video/mp4" />
                             </video>
+
+                            <div class="font-[300] text-[25px] leading-[200%] text-center  mt-[60px]">
+                                No matter the scale of your project, 3D interior visualization ensures <span
+                                    class="font-[500]">every
+                                    element is
+                                    thoughtfully presented</span>. From concept to completion, these techniques help
+                                accurately
+                                <span class="font-[500]">turn imagination into reality.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
