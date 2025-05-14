@@ -1,6 +1,6 @@
 <template>
     <div class="my-20">
-        <div class="bg-[#D9D9D9] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
+        <div class="bg-[#FAF8F5] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
             <div class="flex flex-col justify-center items-center">
                 <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">Our other</div>
                 <div class="md:text-[64px] text-[30px] font-[600] leading-[100%] md:leading-[150%] text-[#8D7662]">
@@ -11,16 +11,16 @@
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="w-[60%]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/Interior/Pic9.png" class="w-[1000px] h-[500px] object-cover" />
+                            <NuxtImg src="Interior/Pic9.png" class="w-[960px] h-[500px] object-cover" />
                         </div>
                     </div>
                     <div class="basis-[400px]">
-                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Interior Rendering</div>
+                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Exterior Rendering</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8"><span
-                                class="font-[500]">Top-notch quality</span> of 3D exterior
-                            visualization services,
-                            transforming
-                            architectural concepts into vivid, lifelike representations</div>
+                                class="font-[500]">Top-notch
+                                quality</span> of 3D
+                            exterior visualization services, transforming architectural concepts into vivid, lifelike
+                            representations</div>
                         <div class="mt-8">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[20px] py-[10px] rounded-[8px]"
@@ -35,8 +35,10 @@
                     <div class="basis-[400px]">
                         <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Furniture Modeling</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8">Our precision-crafted CGI
-                            models let manufacturers and designers showcase products flawlessly - no physical prototypes
-                            or costly shoots needed - perfect for catalogs, promotions, and virtual showrooms.</div>
+                            models let manufacturers and designers showcase products flawlessly - <span
+                                class="font-[500]">no physical prototypes
+                                or costly shoots needed</span> - perfect for catalogs, promotions, and virtual
+                            showrooms.</div>
                         <div class="mt-8">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[20px] py-[10px] rounded-[8px]"
@@ -45,10 +47,10 @@
                             </UButton>
                         </div>
                     </div>
-                    <div class="w-[50rem]">
-                        <div class="md:grid grid grid-cols-5">
-                            <NuxtImg src="/Chair.jpg" class="h-[500px] col-span-3 object-cover" />
-                            <NuxtImg src="/services/10.jpg" class=" h-[500px]  col-span-2 object-cover" />
+                    <div class="w-[60%]">
+                        <div class="md:grid grid-cols-5">
+                            <NuxtImg src="/Chair.jpg" class="col-span-3 w-full h-[500px] aspect-square object-cover" />
+                            <NuxtImg src="/services/10.jpg" class="col-span-2 w-full h-[500px] object-cover" />
                         </div>
                     </div>
                 </div>
@@ -64,13 +66,12 @@
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
                         <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Exterior
-                            Rendering
-                        </div>
+                            Rendering</div>
                         <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"><span
-                                class="font-[500]">Top-notch quality</span> of 3D exterior
-                            visualization services,
-                            transforming
-                            architectural concepts into vivid, lifelike representations</div>
+                                class="font-[500]">Top-notch
+                                quality</span> of
+                            3D exterior visualization services, transforming architectural concepts into vivid, lifelike
+                            representations.</div>
                         <div class="mt-[20px] flex justify-center">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[12px] py-[6px] rounded-[5px]"

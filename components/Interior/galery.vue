@@ -577,7 +577,7 @@ const items: Item[] = [
       </div>
 
       <div class = "font-[300] my-4">
-        Designed by Maritza Capiro Design, this kitchen is all about contrasts that click. Tiimber & Stone is the blending organic warmth with minimalist precision. The space is defined by natural wood cabinetry, a striking gray marbled island, and a dark textured stone backsplash, creating a balance of contrast and harmony.
+        Designed by Maritza Capiro Design, this kitchen is all about contrasts that click. Timber & Stone is the blending organic warmth with minimalist precision. The space is defined by natural wood cabinetry, a striking gray marbled island, and a dark textured stone backsplash, creating a balance of contrast and harmony.
       </div>
 
       <div class = "font-[300] mb-4">

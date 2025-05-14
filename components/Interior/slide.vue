@@ -146,7 +146,7 @@ const slides = ref([
         id: 3,
         name: 'Construction & Engineering Agency',
         desc: 'Facilitate efficient project execution with technical renderings that minimize design discrepancies, optimize material selection, and streamline planning.',
-        img: '/Interior/Pic44.png',
+        img: '/Interior/Pic44.jpg',
         zIndex: 2,
     },
     {
