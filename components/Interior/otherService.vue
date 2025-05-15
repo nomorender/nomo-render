@@ -11,15 +11,15 @@
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="w-[60%]">
                         <div class="flex justify-end">
-                            <NuxtImg src="Interior/Pic9.png" class="w-[960px] h-[500px] object-cover" />
+                            <NuxtImg src="/Interior/Pic9.png" class="w-[960px] h-[500px] object-cover" />
                         </div>
                     </div>
                     <div class="basis-[400px]">
                         <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Exterior Rendering</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8"><span
                                 class="font-[500]">Top-notch
-                                quality</span> of 3D
-                            exterior visualization services, transforming architectural concepts into vivid, lifelike
+                                quality</span> of
+                            3D exterior visualization services, transforming architectural concepts into vivid, lifelike
                             representations</div>
                         <div class="mt-8">
                             <UButton
@@ -35,10 +35,8 @@
                     <div class="basis-[400px]">
                         <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">3D Furniture Modeling</div>
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8">Our precision-crafted CGI
-                            models let manufacturers and designers showcase products flawlessly - <span
-                                class="font-[500]">no physical prototypes
-                                or costly shoots needed</span> - perfect for catalogs, promotions, and virtual
-                            showrooms.</div>
+                            models let manufacturers and designers showcase products flawlessly - no physical prototypes
+                            or costly shoots needed - perfect for catalogs, promotions, and virtual showrooms.</div>
                         <div class="mt-8">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[20px] py-[10px] rounded-[8px]"
@@ -48,9 +46,9 @@
                         </div>
                     </div>
                     <div class="w-[60%]">
-                        <div class="md:grid grid-cols-5">
-                            <NuxtImg src="/Chair.jpg" class="col-span-3 w-full h-[500px] aspect-square object-cover" />
-                            <NuxtImg src="/services/10.jpg" class="col-span-2 w-full h-[500px] object-cover" />
+                        <div class="md:flex ">
+                            <NuxtImg src="/Chair.jpg" class="w-[450px] h-[500px]  aspect-square object-cover" />
+                            <NuxtImg src="/services/10.jpg" class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
                         </div>
                     </div>
                 </div>
@@ -71,7 +69,7 @@
                                 class="font-[500]">Top-notch
                                 quality</span> of
                             3D exterior visualization services, transforming architectural concepts into vivid, lifelike
-                            representations.</div>
+                            representations</div>
                         <div class="mt-[20px] flex justify-center">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[12px] py-[6px] rounded-[5px]"

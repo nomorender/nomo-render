@@ -121,7 +121,8 @@
                                         class="h-[360px] w-[485px] object-cover object-center rounded-[8px]" />
                                 </div>
                             </div>
-                            <video controls class="rounded-[8px] h-[675px] mt-[8px]">
+                            <video autoplay loop muted controls playsinline
+                                class="rounded-[8px] h-[675px] mt-[8px] pointer-events-none">
                                 <source src="/Interior/Video.mp4" type="video/mp4" />
                             </video>
 

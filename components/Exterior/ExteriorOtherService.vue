@@ -62,7 +62,8 @@
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
-                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Interior Rendering</div>
+                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Interior
+                            Rendering</div>
                         <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"><span
                                 class="font-[500]">Photorealistic</span> and <span class="font-[500]">immersive
                                 spaces</span> are at the core of 3D
@@ -86,10 +87,14 @@
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
-                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Furniture Modeling</div>
-                        <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]">Our precision-crafted CGI
-                            models let manufacturers and designers showcase products flawlessly - <span class="font-[500]">no physical prototypes
-                                or costly shoots needed</span> - perfect for catalogs, promotions, and virtual showrooms.</div>
+                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">3D Furniture
+                            Modeling</div>
+                        <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]">Our precision-crafted
+                            CGI
+                            models let manufacturers and designers showcase products flawlessly - <span
+                                class="font-[500]">no physical prototypes
+                                or costly shoots needed</span> - perfect for catalogs, promotions, and virtual
+                            showrooms.</div>
                         <div class="mt-[20px] flex justify-center">
                             <UButton
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[12px] py-[6px] rounded-[5px]"
