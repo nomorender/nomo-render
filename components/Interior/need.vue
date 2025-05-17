@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-20">
+    <div class="md:pb-20 md:my-0 my-10">
         <div class="bg-[#D9D9D9]">
             <div class="md:max-w-7xl md:py-20 py-[40px] md:mx-auto flex flex-col item-center justify-center">
                 <div class="flex items-center justify-center">
@@ -13,10 +13,10 @@
                         </h2>
                     </div>
                 </div>
-                <div class="flex justify-center">
-                    <div class="md:flex gap-[7px] justify-between">
+                <div class="flex justify-center items-center">
+                    <div class="flex md:flex-row flex-col md:gap-[7px] gap-[25px] justify-between items-center">
                         <div
-                            class="px-[35px] py-[40px] md:w-[395px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="px-[35px] py-[40px] md:w-[395px] w-[304px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="flex items-left md:w-full">
                                 <div class="flex items-center justify-center md:gap-4 gap-[10px]">
                                     <nuxt-img alt="group" src="/Extorior/Group.svg"
@@ -62,7 +62,7 @@
                             </ul>
                         </div>
                         <div
-                            class="px-[35px] py-[40px] md:w-[395px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="px-[35px] py-[40px] md:w-[395px] w-[304px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="flex items-left md:w-full ">
                                 <div class="flex items-center justify-center gap-[10px] ">
                                     <nuxt-img alt="group" src="/Interior/Svg1.svg"
@@ -85,7 +85,7 @@
                         </div>
 
                         <div
-                            class="px-[35px] py-[40px] md:w-[395px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="px-[35px] py-[40px] md:w-[395px] w-[304px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="flex items-left md:w-full ">
                                 <div class="flex items-center justify-center gap-[10px] ">
                                     <nuxt-img alt="group" src="/Interior/Svg2.svg"
@@ -106,12 +106,11 @@
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
                 <div class="flex justify-center">
                     <UButton color="gray" size="xl" variant="solid"
-                        class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">
+                        class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem] mt-[30px]">
                         See our
                         workflow
                     </UButton>

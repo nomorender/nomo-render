@@ -1,21 +1,21 @@
 <template>
     <div>
-        <div class="my-20">
-            <div class="flex flex-col gap-[25px] justify-center items-center">
-                <div class="text-[64px] leading-[150%] font-[600] text-[#8D7662]">
+        <div class="md:my-20 mt-[50px] mb-[40px]">
+            <div class="flex flex-col gap-[25px] md:mb-0 mb-[35px] justify-center items-center">
+                <div class="md:text-[64px] text-[30px] leading-[130%] md:leading-[150%]  font-[600] text-[#8D7662]">
                     Some Of Our Works
                 </div>
-                <div class="text-[32px] leading-[150%] font-[300] w-[1210px] text-center">
+                <div
+                    class="md:text-[32px] text-[18px] w-[315px] leading-[180%] md:leading-[150%] font-[300] md:w-[1210px] text-center">
                     We leverage physically accurate material simulation, advanced ray tracing, and dynamic lighting
                     algorithms to produce <span class="font-[600] italic">high-resolution, precision-crafted interior
                         visualizations.</span>
                 </div>
             </div>
-
-            <div class="flex flex-col items-center justify-center mt-[70px]">
+            <div class="hidden md:flex flex-col items-center justify-center mt-[70px]">
                 <div class="flex flex-col gap-2">
                     <div class="grid grid-cols-10 gap-2 w-full">
-                        <div class="hidden md:block relative group cursor-pointer col-span-3" @click="openModal(1)">
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(1)">
                             <NuxtImg src="/Interior/Pic17.jpg"
                                 class=" w-full h-[420px] object-cover break-inside-avoid object-center" />
                             <div
@@ -43,7 +43,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-4" @click="openModal(2)">
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(2)">
                             <NuxtImg src="/Interior/Pic11.jpg" class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -70,7 +70,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-3" @click="openModal(3)">
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(3)">
                             <NuxtImg src="/Interior/Pic12.png" class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-12 gap-2 w-full">
-                        <div class="hidden md:block relative group cursor-pointer col-span-4" @click="openModal(4)">
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(4)">
                             <NuxtImg src="/Interior/Pic13.png" class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -126,7 +126,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-5" @click="openModal(5)">
+                        <div class="block relative group cursor-pointer col-span-5" @click="openModal(5)">
                             <NuxtImg src="/Interior/Pic14.png" class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -154,7 +154,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-3" @click="openModal(6)">
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(6)">
                             <NuxtImg src="/Interior/Pic15.png" class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-5 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="grid grid-cols-9 gap-2 w-full">
-                        <div class="hidden md:block relative group cursor-pointer col-span-2 " @click="openModal(7)">
+                        <div class="block relative group cursor-pointer col-span-2 " @click="openModal(7)">
                             <NuxtImg src="/Interior/Pic8.png" class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-5 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -209,7 +209,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-4 " @click="openModal(8)">
+                        <div class="block relative group cursor-pointer col-span-4 " @click="openModal(8)">
                             <NuxtImg src="/Interior/Pic18.png" class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -236,7 +236,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden md:block relative group cursor-pointer col-span-3" @click="openModal(9)">
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(9)">
                             <NuxtImg src="/Interior/Pic19.png" class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -265,6 +265,273 @@
                     </div>
                 </div>
             </div>
+
+            <div class="md:hidden flex gap-1 flex-col items-center justify-center">
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-7 gap-1 w-full">
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(2)">
+                            <NuxtImg src="/Interior/Pic11.jpg" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(1)">
+                            <NuxtImg src="/Interior/Pic17.jpg" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-7 gap-1 w-full">
+
+                        <!-- Pic 3 -->
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(3)">
+                            <NuxtImg src="/Interior/Pic12.png" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pic 4 -->
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(4)">
+                            <NuxtImg src="/Interior/Pic13.png" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-7 gap-1 w-full">
+
+                        <!-- Pic 5 -->
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(5)">
+                            <NuxtImg src="/Interior/Pic14.png" class=" w-full md:h-[420px] h-[200px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pic 7 -->
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(7)">
+                            <NuxtImg src="/Interior/Pic8.png" class=" w-full md:h-[420px] h-[200px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pic 8 -->
+                <div class="block relative cursor-pointer" @click="openModal(8)">
+                    <NuxtImg src="/Interior/Pic18.png" class="w-full h-full object-cover object-center" />
+                    <div
+                        class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                <div class="flex justify-between">
+                                    <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                    <div class="flex justify-center items-center">
+                                        <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                            class="size-5 text-[#F97316]" />
+                                    </div>
+                                </div>
+                                <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                    Massachusetts, USA</div>
+                                <div class="flex justify-between">
+                                    <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                    <div
+                                        class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                        2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-7 gap-1 w-full">
+                        <!-- Pic 6 -->
+                        <div class="block relative group cursor-pointer col-span-3" @click="openModal(6)">
+                            <NuxtImg src="/Interior/Pic15.png" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block relative group cursor-pointer col-span-4" @click="openModal(9)">
+                            <NuxtImg src="/Interior/Pic19.png" class=" w-full md:h-[420px] h-[135px] object-cover" />
+                            <div
+                                class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div>
+                                    <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
+                                        <div class="flex justify-between">
+                                            <div class="font-[600] md:leading-[200%]">Serene Study</div>
+                                            <div class="flex justify-center items-center">
+                                                <Icon name="heroicons:arrows-pointing-out-16-solid"
+                                                    class="size-5 text-[#F97316]" />
+                                            </div>
+                                        </div>
+                                        <div class="font-[300] leading-[180%] md:leading-[120%]">Location:
+                                            Massachusetts, USA</div>
+                                        <div class="flex justify-between">
+                                            <div class="font-[300] leading-[180%]">Client: Curtis Rowe Interiors</div>
+                                            <div
+                                                class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div>
                 <div class="flex w-full justify-center items-center pt-10">
                     <UButton color="gray" variant="solid"
@@ -278,7 +545,6 @@
             </div>
         </div>
     </div>
-
     <UModal v-model="isOpen"
         :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container pb-[120px]', width: '' }">
         <div class="flex md:gap-2.5 mb-8 justify-between">
@@ -327,10 +593,12 @@
 
             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
                 <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
+                        class="w-full md:h-[421px] h-[135px] object-cover" />
                 </div>
                 <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                        class="w-full md:h-[421px] h-[135px] object-cover" />
                 </div>
             </div>
 
@@ -340,10 +608,12 @@
                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-full object-cover" />
                 </div>
                 <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
+                        class="w-full md:h-[421px] h-[200px] object-cover" />
                 </div>
                 <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                        class="w-full md:h-[421px] h-[200px] object-cover" />
                 </div>
             </div>
 
@@ -353,10 +623,12 @@
                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-full object-cover" />
                 </div>
                 <div class="col-span-1 md:h-[357px] h-[131px]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                        class="w-full md:h-[421px] h-[135px] object-cover" />
                 </div>
                 <div class="col-span-1 ">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-[421px] object-cover" />
+                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
+                        class="w-full md:h-[421px] h-[135px] object-cover" />
                 </div>
                 <div class="col-span-2">
                     <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-full object-cover" />
@@ -391,7 +663,7 @@
 
 
         <!-- 2 BUTTON NEXT TO THE MODAL PC -->
-        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex">
+        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] flex">
             <!-- TWO BUTTON SOCIAL -->
             <div class="md:flex flex-col gap-7">
                 <div class="flex flex-col items-center justify-center">
@@ -463,18 +735,18 @@
         </div>
 
         <!-- Next Previous -->
-        <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[60.7rem] translate-y-[30rem] flex flex-col gap-7">
             <UButton
-                class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                class="flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                 @click="goToNextItem">
                 <div class="text-[#FFFFFF] flex justify-center">
                     <UIcon name="mdi-light:arrow-right" class="size-10" />
                 </div>
             </UButton>
         </div>
-        <div class="fixed translate-x-[-0.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[-0.7rem] translate-y-[30rem] flex flex-col gap-7">
             <UButton
-                class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                class="flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                 @click="goToPrevItem">
                 <div class="text-[#8D7662] flex justify-center">
                     <UIcon name="mdi-light:arrow-left" class="size-10" />

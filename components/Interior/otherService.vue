@@ -1,6 +1,6 @@
 <template>
-    <div class="my-20">
-        <div class="bg-[#FAF8F5] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
+    <div class="md:my-20 my-10">
+        <div class="bg-[#D9D9D9] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
             <div class="flex flex-col justify-center items-center">
                 <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">Our other</div>
                 <div class="md:text-[64px] text-[30px] font-[600] leading-[100%] md:leading-[150%] text-[#8D7662]">

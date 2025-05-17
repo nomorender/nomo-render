@@ -1,6 +1,6 @@
 <template>
-    <div class="my-20">
-        <div class="w-full pt-[60px] pb-[70px] bg-[#D9D9D9]">
+    <div class="md:my-20 my-10">
+        <div class="w-full md:pt-[60px] md:pb-[70px] pt-[40px] pb-[40px] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
                 <div
                     class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] md:tracking-[2%] mb-[5px]">
@@ -15,9 +15,10 @@
                 <div
                     class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[50px] md:mb-[18px] text-justify">
                     <div>
-                        On average, adding exterior renderings requires <span class="font-medium">7-10 days</span>, as
-                        it
-                        involves refining surroundings like landscaping, streets, lighting, and atmospheric effects.
+                        The process takes around <span class="font-[500]">5-7 days</span>, carefully shaping everything
+                        from structure to
+                        decor to
+                        create a life-like, stunning experience.
                     </div>
                 </div>
             </div>
