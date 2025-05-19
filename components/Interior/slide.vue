@@ -6,7 +6,7 @@
                     Who can benefit from
                 </div>
                 <div class="text-center font-[600] md:text-[64px] text-[30px] md:leading-[150%] text-[#8D7662]">
-                    3D Exterior Rendering Service?
+                    3D Interior Rendering Service?
                 </div>
             </div>
             <div class="md:flex hidden gap-8 items-center justify-center">
@@ -138,28 +138,28 @@ const slides = ref([
     {
         id: 2,
         name: 'Real Estate Developers',
-        desc: 'Present properties with immersive, market-ready renderings that captivate potential buyers and investors, driving pre-sales and project funding.',
+        desc: 'Showcasing an empty property with high-quality interior renderings help buyers and investors picture a fully furnished, stylish space, making properties more appealing and easier to sell.',
         img: '/Interior/Pic41.jpg',
         zIndex: 3,
     },
     {
         id: 3,
         name: 'Construction & Engineering Agency',
-        desc: 'Facilitate efficient project execution with technical renderings that minimize design discrepancies, optimize material selection, and streamline planning.',
+        desc: 'Accuracy is key when bringing a design to life. Technical renderings provide detailed visuals for material selection, layout planning, and seamless execution, reducing costly errors along the way.',
         img: '/Interior/Pic44.jpg',
         zIndex: 2,
     },
     {
         id: 4,
         name: 'Marketing & Advertising Prof',
-        desc: 'Design and visualize outdoor spaces such as parks, gardens, and public areas to ensure functionality and aesthetic appeal.',
+        desc: 'Beautiful interiors deserve stunning visuals! Whether for real estate promotions, hotel brochures, or digital campaigns, 3D renderings create eye-catching content that draws in potential buyers and guests.',
         img: '/Interior/Pic42.jpg',
         zIndex: 1,
     },
     {
         id: 5,
         name: 'Entertainment & Hospitality Industry',
-        desc: 'Leverage compelling, photorealistic visuals for real estate promotions, advertising campaigns, and digital content strategies that enhance audience engagement.',
+        desc: 'From designing breathtaking movie sets to showcasing luxury hotel interiors, 3D renderings bring creative visions to life, making them an essential tool for travel agencies, event planners, and production teams.',
         img: '/services/4.png',
         zIndex: 0,
     },

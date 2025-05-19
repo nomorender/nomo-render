@@ -8,7 +8,7 @@
                 </div>
                 <div
                     class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[50px] font-semibold leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
-                    3D Exterior Rendering Project
+                    3D Interior Rendering Project
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center my-5">

@@ -32,8 +32,8 @@ async function onError(event: FormErrorEvent) {
 
 <template>
     <div
-    class="bg-[url(/bg2.jpg)] sm:bg-[url(/bg2.jpg)] h-screen overflow-hidden w-screen justify-center flex items-center bg-cover bg-right relative">
-<!-- style="background-image: url('/bg2.jpg'); background-position: calc(100% + 120px) center;" -->
+        class="bg-[url(/bg2.jpg)] sm:bg-[url(/bg2.jpg)] h-screen overflow-hidden w-screen justify-center flex items-center bg-cover bg-right relative">
+        <!-- style="background-image: url('/bg2.jpg'); background-position: calc(100% + 120px) center;" -->
         <div class="absolute inset-0 bg-black opacity-[20%] z-0"></div>
         <div class="w-full relative text-white mx-8 z-10 md:px-[180px]">
             <h1 class="text-4xl md:text-7xl font-bold mb-8">
@@ -42,7 +42,7 @@ async function onError(event: FormErrorEvent) {
             <UButton class="hidden sm:block hover:bg-[#1e1e1e] transition-all" color="white" variant="outline" size="xl"
                 @click="isOpen = true">REQUEST A
                 QUOTE</UButton>
-            <UButton class="sm:hidden"  @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
+            <UButton class="sm:hidden" @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
         </div>
 
         <UModal v-model="isOpen" :ui="{

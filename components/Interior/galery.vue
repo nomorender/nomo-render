@@ -447,7 +447,7 @@
                 </div>
 
                 <!-- Pic 8 -->
-                <div class="block relative cursor-pointer" @click="openModal(8)">
+                <div class="block relative cursor-pointer group" @click="openModal(8)">
                     <NuxtImg src="/Interior/Pic18.png" class="w-full h-full object-cover object-center" />
                     <div
                         class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">

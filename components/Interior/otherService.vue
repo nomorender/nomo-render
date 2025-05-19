@@ -59,7 +59,7 @@
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/HAR03.png" class="w-full h-[300px] object-cover rounded-[8px]" />
+                            <NuxtImg src="/Interior/Pic9.png" class="w-full h-[300px] object-cover rounded-[8px]" />
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">

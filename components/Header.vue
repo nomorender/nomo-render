@@ -4,7 +4,9 @@
       <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-5 px-8 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
-            <NuxtImg alt="Logo" preload class="!drop-shadow-2xl md:w-10 w-[50px] lg:hidden" src="/logo.png" />
+            <nuxt-img v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/')" alt="Logo" preload
+              class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />
+            <NuxtImg v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden" src="/logo.png" />
           </NuxtLink>
         </div>
 
@@ -23,7 +25,7 @@
                   {{ item.name }}
                 </p>
                 <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"
-                :class="isScrolled ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
+                  :class="isScrolled ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
               </div>
             </UDropdown>
           </div>
@@ -32,7 +34,7 @@
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
             class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
-            :class="{ 'text-[#8d7662]': isScrolled }" square padded @click="isOpenMenu = true" />
+            :class="isScrolled ? 'text-[#8D7662]' : 'text-white'" square padded @click="isOpenMenu = true" />
           <USlideover v-model="isOpenMenu"
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
             side="right">
@@ -45,7 +47,7 @@
                     class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
-                  <div v-else class="flex flex-col items-end gap-1"> 
+                  <div v-else class="flex flex-col items-end gap-1">
                     <div @click="open = item.name === open ? null : item.name"
                       class="flex items-center justify-end cursor-pointer">
                       <div class="text-[20px] font-semibold text-[#8D7662]">
@@ -56,7 +58,7 @@
                     </div>
                     <!-- Mobile -->
                     <div v-show="open === item.name" class="mt-2 pl-4 space-y-1 flex flex-col items-end">
-                      <div v-for="child in item.childen[0]" :key="child.label"  @click="child.click"
+                      <div v-for="child in item.childen[0]" :key="child.label" @click="child.click"
                         class="text-[18px] text-[#8D7662] cursor-pointer font-[400] leading-[180%]">
                         {{ child.label }}
                       </div>

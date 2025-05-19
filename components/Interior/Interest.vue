@@ -29,7 +29,7 @@
                 <div class="md:w-[1200px] flex flex-col gap-[30px] md:gap-[50px]">
                     <div class="flex flex-col md:gap-[50px] items-center justify-center">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center md:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] md:py-0">
                                 <div
                                     class="text-[#8D7662] text-center md:w-[336px] md:py-[37px] md:px-[71px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
@@ -39,7 +39,7 @@
                             </div>
 
                             <div
-                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] my-[30px] text-justify md:mx-[50px]">
+                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] md:my-[10px] my-[30px] text-justify md:mx-[50px]">
                                 High-quality, lifelike images that showcase interior spaces with realistic lighting,
                                 textures, and materials. Perfect for presentations, marketing, and client approvals.
                             </div>
@@ -62,17 +62,22 @@
 
                     <div class="flex flex-col md:gap-[50px] items-center justify-center">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center md:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] md:py-0">
                                 <div
-                                    class="text-[#8D7662] text-center md:w-[336px] md:py-[37px] md:px-[71px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
+                                    class="text-[#8D7662] hidden md:block text-center md:w-[336px] md:py-[37px] md:px-[71px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
                                     360°
                                     <br />Interior Tour
+                                </div>
+
+                                <div
+                                    class="text-[#8D7662] md:hidden block text-center md:w-[336px] md:py-[37px] md:px-[71px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
+                                    360° Interior Tour
                                 </div>
                             </div>
 
                             <div
-                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] my-[30px] text-justify md:mx-[50px]">
+                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] md:my-[10px] my-[30px] text-justify md:mx-[50px]">
                                 A panoramic visualization to explore an interior space from every angle. This provides a
                                 true sense of depth, scale and ambiance, allowing clients to navigate through the room.
                             </div>
@@ -92,7 +97,7 @@
 
                     <div class="flex flex-col md:gap-[50px] items-center justify-center">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-full md:flex items-center md:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] md:py-0">
                                 <div
                                     class="text-[#8D7662] text-center md:w-[336px] md:py-[37px] md:px-[71px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
@@ -102,13 +107,13 @@
                             </div>
 
                             <div
-                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] my-[30px] text-justify md:mx-[50px]">
+                                class="font-[300] text-[15px] md:text-[25px] md:leading-[200%] leading-[180%] mx-[30px] md:my-[10px] my-[30px] text-justify md:mx-[50px]">
                                 Cinematic videos guide viewers through interior space with smooth, natural movement. It
                                 highlights flow, spatial transitions and details to match the design vision.
                             </div>
                         </div>
 
-                        <div class="flex md:gap-[8px]">
+                        <div class="md:gap-[8px] hidden md:flex">
                             <div class="hidden md:block">
                                 <NuxtImg src="/Interior/Pic8.png"
                                     class="w-[298px] h-[360px] object-cover object-center rounded-[8px]" />
