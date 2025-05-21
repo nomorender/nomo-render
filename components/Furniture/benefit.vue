@@ -34,7 +34,7 @@ const data = [
                             </div>
                         </div>
                         <div>
-                            <h1 class="font-[300] h-[100px] leading-[200%] text-[25px] text-justify mx-6">
+                            <h1 class="font-[300] h-[100px] leading-[200%] text-[25px] text-justify mx-10 my-4">
                                 {{ data.description }}</h1>
                         </div>
                         <div>
