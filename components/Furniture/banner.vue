@@ -30,28 +30,29 @@ async function onError(event: FormErrorEvent) {
 
 </script>
 <template>
-    <div class="relative">
-        <img src="/Furniture/BannerFurniture.jpg" alt="3D Furniture Modeling"
-            class="w-full h-[580px] object-cover object-center" />
-        <div class="absolute top-1/2 left-[10vw] transform -translate-y-1/2 text-left">
-            <div>
-                <h1 class="text-[72px] font-[700] leading-[100%] uppercase text-[#8D7662]"> 3D Furniture </h1>
-                <h1 class="text-[64px] font-[600] leading-[150%] text-black"> Rendering Service </h1>
+    <div
+        class="bg-[url(/Furniture/BannerFurniture.jpg)] flex h-[600px] overflow-hidden bg-cover bg-center items-center justify-center">
+        <div class="w-[1200px]">
+            <div class="w-[600px]">
+                <div>
+                    <h1 class="text-[72px] font-[700] leading-[100%] uppercase text-[#8D7662]">3D Furniture</h1>
+                    <h1 class="text-[64px] font-[600] leading-[150%] text-black">Rendering Service</h1>
+                </div>
+                <p class="text-[32px] italic leading-[150%] mt-[15px] font-[300] text-justify text-black">
+                    Showcase your products with stunning and precision-crafted CGI – no prototypes or costly photo
+                    shoots
+                    needed
+                </p>
+
+                <UButton class="mt-[25px] px-6 hidden sm:block hover:bg-[#fafafa] transition-all !inset-ring-[#000000]"
+                    color="black" variant="outline" size="xl" @click="isOpen = true">
+                    <div class="text-[#000000] font-[500] text-[18px]">REQUEST A QUOTE</div>
+                </UButton>
+
+                <UButton class="sm:hidden mt-[34px]" @click="isOpen = true" color="white" variant="outline">
+                    REQUEST A QUOTE
+                </UButton>
             </div>
-            <p class="text-[32px] italic leading-[150%] mt-[15px] font-[300] text-justify text-black w-[600px]">
-                Showcase your
-                products
-                with stunning and precision - crafted
-                CGI - no prototypes
-                or costly photo shoots needed </p>
-            <UButton class="mt-[25px] px-6 hidden sm:block hover:bg-[#fafafa] transition-all !inset-ring-[#000000]"
-                color="black" variant="outline" size="xl" @click="isOpen = true">
-                <div class="text-[#00000] font-[500] text-[18px]">REQUEST A QUOTE</div>
-            </UButton>
-            <UButton class="sm:hidden mt-[34px]" @click="isOpen = true" color="white" variant="outline"> REQUEST
-                A
-                QUOTE
-            </UButton>
         </div>
 
         <UModal v-model="isOpen" :ui="{
