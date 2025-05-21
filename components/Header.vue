@@ -9,7 +9,6 @@
             <NuxtImg v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden" src="/logo.png" />
           </NuxtLink>
         </div>
-
         <div class="hidden gap-[100px] justify-center lg:flex">
           <div v-for="item in navList" :key="item.path">
             <p v-if="!item.childen" @click="$router.push(item.path)"
@@ -30,7 +29,6 @@
             </UDropdown>
           </div>
         </div>
-
         <div class="h-fit">
           <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
             class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
