@@ -5,8 +5,8 @@
         <FurnitureBenefit></FurnitureBenefit>
         <FurnitureStep></FurnitureStep>
         <FurnitureNeed></FurnitureNeed>
-        <InteriorContact></InteriorContact>
-        <InteriorOtherService></InteriorOtherService>
+        <FurnitureContactForm></FurnitureContactForm>
+        <FurnitureOtherService></FurnitureOtherService>
     </div>
 </template>
 

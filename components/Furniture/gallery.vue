@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 const data = [
     { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
-    { src: '/Furniture/Chair1.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Chair2.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Chair3.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Chair4.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Shelf1.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Shelf2.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Shelf3.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/Shelf4.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/CayTreoTuong.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/ThuyenGo.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/KhungTreo.jpg', alt: 'Pic of chair' },
+    { src: '/Furniture/HacDa.jpg', alt: 'Pic of chair' },
 ]
 </script>
 <template>

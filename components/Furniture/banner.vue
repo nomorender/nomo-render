@@ -31,7 +31,7 @@ async function onError(event: FormErrorEvent) {
 </script>
 <template>
     <div
-        class="bg-[url(/Furniture/BannerFurniture.jpg)] flex h-[600px] overflow-hidden bg-cover bg-center items-center justify-center">
+        class="bg-[url(/Furniture/Banner.jpg)] flex h-[600px] overflow-hidden bg-cover bg-center items-center justify-center">
         <div class="w-[1200px]">
             <div class="w-[600px]">
                 <div>

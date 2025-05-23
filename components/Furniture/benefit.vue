@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const data = [
-    { title: 'Residential & Commercial Furniture', description: 'Realistic renders for home, office, and hospitality interiors.', image: '/Furniture/Chair2.jpg' },
-    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', image: '/Furniture/Chair2.jpg' },
+    { title: 'Residential & Commercial Furniture', description: 'Realistic renders for home, office, and hospitality interiors.', image: '/Furniture/LongChair.jpg' },
+    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', image: '/Furniture/HacDa.jpg' },
 ]
 </script>
 <template>
@@ -38,7 +38,7 @@ const data = [
                                 {{ data.description }}</h1>
                         </div>
                         <div>
-                            <NuxtImg :src="data.image" alt="Pic of chair"
+                            <NuxtImg :src="data.image" alt="Pic of HacDa"
                                 class="w-full h-[360px] object-cover rounded-b-[8px]" />
                         </div>
                     </div>

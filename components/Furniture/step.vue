@@ -90,36 +90,22 @@ const timeline = [
         title: "Modeling",
         description: "Constructing an accurate digital model based on sketches, reference images, and specified dimensions.",
         active: false,
-        image: '/Furniture/Chair3.png',
+        image: '/Furniture/ChairStep1.jpg',
     },
     {
         id: 2,
-        title: "Lighting Setup",
-        description: "Constructing an accurate digital model based on sketches, reference images, and specified dimensions.",
+        title: "Texture",
+        description: "Applying realistic materials, finishes, and textures to enhance visual authenticity.",
         active: true,
-        image: '/Furniture/Chair3.png',
+        image: '/Furniture/ChairStep2.jpg',
     },
     {
         id: 3,
-        title: "Texturing & Materials",
-        description: "Constructing an accurate digital model based on sketches, reference images, and specified dimensions.",
-        active: true,
-        image: '/Furniture/Chair3.png',
-    },
-    {
-        id: 4,
-        title: "Interior Decoration",
-        description: "Constructing an accurate digital model based on sketches, reference images, and specified dimensions.",
-        active: true,
-        image: '/Furniture/Chair3.png',
-    },
-    {
-        id: 5,
         title: "Final Rendering",
-        description: "Constructing an accurate digital model based on sketches, reference images, and specified dimensions.",
+        description: "Producing high-resolution and photorealistic images with optimized lighting and refined details.",
         active: true,
-        image: '/Furniture/Chair3.png',
-    }
+        image: '/Furniture/ChairStep3.jpg',
+    },
 ];
 
 const carousel = ref(null);

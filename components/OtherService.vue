@@ -1,0 +1,79 @@
+<template>
+    <div class="md:my-20 my-10">
+        <div class="bg-[#D9D9D9] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
+            <div class="flex flex-col justify-center items-center">
+                <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">{{ subheading }}
+                </div>
+                <div class="md:text-[64px] text-[30px] font-[600] leading-[100%] md:leading-[150%] text-[#8D7662]">
+                    {{ heading }}</div>
+            </div>
+            <!-- Picture + text -->
+            <div class="hidden mt-[70px] md:flex flex-col justify-center items-center">
+                <div v-for="(service, index) in services" :key="index"
+                    :class="['md:flex gap-[4rem] w-full', index % 2 === 0 ? 'justify-start' : 'justify-end', index > 0 ? 'mt-20' : '']">
+                    <div v-if="index % 2 === 0" class="w-[60%]">
+                        <div class="flex justify-end">
+                            <NuxtImg :src="service.image1" class="w-[960px] h-[500px] object-cover" />
+                        </div>
+                    </div>
+
+                    <div class="basis-[400px]">
+                        <div class="text-[#8D7662] font-[600] text-[32px] leading-[150%]">{{ service.title }}</div>
+                        <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8"
+                            v-html="service.description"></div>
+                        <div class="mt-8">
+                            <UButton
+                                class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[20px] py-[10px] rounded-[8px]"
+                                variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
+                                <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
+                            </UButton>
+                        </div>
+                    </div>
+
+                    <div v-if="index % 2 !== 0" class="w-[60%]">
+                        <div class="md:flex">
+                            <NuxtImg :src="service.image1" class="w-[450px] h-[500px]  aspect-square object-cover" />
+                            <NuxtImg :src="service.image2" class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="md:hidden flex flex-col mt-[20px]">
+                <div v-for="(service, index) in services" :key="'mobile-' + index" class="mt-[35px] first:mt-0">
+                    <div class="mx-[13px]">
+                        <div class="flex justify-end">
+                            <NuxtImg :src="service.image1" class="w-full h-[300px] object-cover rounded-[8px]" />
+                        </div>
+                    </div>
+                    <div class="basis-[400px] mx-[30px] mt-[20px]">
+                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">{{ service.title }}
+                        </div>
+                        <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
+                            v-html="service.description"></div>
+                        <div class="mt-[20px] flex justify-center">
+                            <UButton
+                                class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[12px] py-[6px] rounded-[5px]"
+                                variant="outline" :trailing="false" color="red">
+                                <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
+                                <div class="text-[13px] text-[#980C0C] leading-[16px] font-[400]">See more</div>
+                            </UButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+defineProps({
+    subheading: String,
+    heading: String,
+    services: {
+        type: Array,
+        required: true,
+    }
+});
+</script>
