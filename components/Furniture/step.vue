@@ -1,18 +1,18 @@
 <template>
     <div class="md:my-20 my-10">
-        <div class="w-full md:pt-[50px] md:pb-[60px] pt-[40px] pb-[40px] bg-[#FAF8F5]">
+        <div class="w-full md:pt-[50px] md:pb-[60px] pb-[45px] pt-[40px] md:bg-[#FAF8F5] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
                 <div class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
                     From Sketch Request to
                 </div>
                 <div
-                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
+                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px] md:tracking-[2%]">
                     High-quality 3D Model
                 </div>
             </div>
             <div class="flex flex-col items-center justify-center my-3">
                 <div
-                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[50px] md:mb-[18px] text-justify">
+                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[30px] my-5 md:my-0 md:mb-[18px] text-justify">
                     <div>
                         A well-structured 3D furniture modeling workflow ensures efficiency, precision, and high-quality
                         output. This streamlined workflow helps Nomo Render transform basic sketches into <span
@@ -33,7 +33,7 @@
                                 :ref="el => registerItemRef(el, index)">
                                 <div class="flex items-center w-full">
                                     <div :class="[
-                                        'border border-[#8D7662] flex items-center justify-center w-7 h-7 md:w-[60px] md:h-[60px] rounded-full',
+                                        'md:border border-[#8D7662] flex items-center justify-center w-7 h-7 md:w-[60px] md:h-[60px] rounded-full',
                                         activeStep === index ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
                                     ]">
                                         <span :class="[

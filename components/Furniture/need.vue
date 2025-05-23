@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const data = [
-    { title: 'Technical Drawings', description: 'Clear photographs of the actual product or similar designs.' },
+    { title: 'Reference Images', description: 'Clear photographs of the actual product or similar designs.' },
     { title: 'Accurate Dimensions', description: 'Detailed measurements to maintain correct proportions.' },
     { title: 'Material & Finish Specifications', description: 'Details on materials, textures, & finishes for realism.' },
     { title: 'Alternative References', description: ' If actual images are unavailable, please provide annotated sketches or references to comparable products' },
@@ -8,26 +8,28 @@ const data = [
 </script>
 
 <template>
-    <div class="mb-20">
-        <div class="bg-[#D9D9D9] md:pt-[50px] md:pb-[60px] mx-auto flex flex-col items-center justify-center">
-            <div class="w-[1200px]">
+    <div class="md:mb-20 mb-10">
+        <div
+            class="md:bg-[#D9D9D9] bg-[#FAF8F5] md:pt-[50px] md:pb-[60px] pb-[45px] pt-[40px] mx-auto flex flex-col items-center justify-center">
+            <div class="md:w-[1200px]">
                 <div class="flex flex-col items-center justify-center">
                     <div class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%]">
                         What do we need
                     </div>
                     <div
-                        class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[100%] md:text-[64px] text-[30px] md:tracking-[2%]">
+                        class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px]">
                         Before Crafting?
                     </div>
                 </div>
 
                 <div
-                    class="bg-[#FAF8F5] w-full mt-[60px] px-[75px] py-[40px] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                    class="md:bg-[#FAF8F5] bg-[#FFFFFF]  md:w-full w-[85vw] md:mt-[60px] mt-[20px] md:px-[75px] px-[24px] py-10 md:py-[40px] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                     <div v-for="(data, index) in data" :key="index">
-                        <div class="flex gap-[20px] items-start">
+                        <div class="flex md:gap-[20px] gap-[10px] items-start">
                             <icon name="material-symbols-light:crop-square-outline"
-                                class="md:size-7 size-4 flex-shrink-0 mt-[10px]" />
-                            <div class="text-[25px] leading-[200%] font-[300] text-justify">
+                                class="md:size-7 size-4 flex-shrink-0 md:mt-[10px] mt-[5px]" />
+                            <div
+                                class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify">
                                 <span class="font-[500]">{{ data.title }}:</span> {{ data.description }}
                             </div>
                         </div>

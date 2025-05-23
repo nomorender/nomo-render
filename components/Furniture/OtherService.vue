@@ -15,6 +15,6 @@ const services = [
 </script>
 
 <template>
-    <OtherService subheading="Our other" heading="Services" :services="services" backgroundClass="bg-[#F0EAD6]"
+    <OtherService subheading="Our other" heading="Services" :services="services" color_background="bg-[#FAF8F5]"
         headingColor="text-[#8D7662]" />
 </template>

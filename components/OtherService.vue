@@ -1,6 +1,7 @@
 <template>
     <div class="md:my-20 my-10">
-        <div class="bg-[#D9D9D9] w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
+        <div :class="[color_background || 'bg-[#D9D9D9]']"
+            class=" w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
             <div class="flex flex-col justify-center items-center">
                 <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">{{ subheading }}
                 </div>
@@ -9,7 +10,7 @@
             </div>
             <!-- Picture + text -->
             <div class="hidden mt-[70px] md:flex flex-col justify-center items-center">
-                <div v-for="(service, index) in services" :key="index"
+                <div v-for="(service, index) in props.services" :key="index"
                     :class="['md:flex gap-[4rem] w-full', index % 2 === 0 ? 'justify-start' : 'justify-end', index > 0 ? 'mt-20' : '']">
                     <div v-if="index % 2 === 0" class="w-[60%]">
                         <div class="flex justify-end">
@@ -41,7 +42,7 @@
 
 
             <div class="md:hidden flex flex-col mt-[20px]">
-                <div v-for="(service, index) in services" :key="'mobile-' + index" class="mt-[35px] first:mt-0">
+                <div v-for="(service, index) in props.services" :key="'mobile-' + index" class="mt-[35px] first:mt-0">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
                             <NuxtImg :src="service.image1" class="w-full h-[300px] object-cover rounded-[8px]" />
@@ -67,13 +68,16 @@
     </div>
 </template>
 
-<script setup>
-defineProps({
-    subheading: String,
-    heading: String,
+<script setup lang="ts">
+const props = defineProps<{
+    subheading?: string
+    heading?: string
     services: {
-        type: Array,
-        required: true,
-    }
-});
+        title: string
+        description: string
+        image1: string
+        image2?: string
+    }[]
+    color_background?: string
+}>()
 </script>
