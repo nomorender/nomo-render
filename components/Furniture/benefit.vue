@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const data = [
-    { title: 'Residential & Commercial Furniture', description: 'Realistic renders for home, office, and hospitality interiors.', image: '/Furniture/LongChair.jpg' },
-    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', image: '/Furniture/HacDa.jpg' },
+    { title: 'Residential & Commercial Furniture', description: 'Realistic renders for home, office, and hospitality interiors.', imagePC: '/Furniture/LongChair.jpg', imageMobile: '/Furniture/LongChair.jpg' },
+    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', imagePC: '/Furniture/HacDa.jpg', imageMobile: '/Furniture/BannerMobile.jpg' },
 ]
 </script>
 <template>
     <div class="md:mt-20 mt-10">
         <div
             class="md:bg-[#D9D9D9] bg-[#FAF8F5] md:pt-[50px] md:pb-[60px] pb-[45px] pt-[40px] mx-auto flex flex-col items-center justify-center">
-            <div class="w-[1200px]">
+            <div class="md:w-[1150px]">
                 <div class="flex flex-col items-center justify-center">
                     <div class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
                         Who can benefit from
@@ -42,12 +42,16 @@ const data = [
                         <div>
                             <h1
                                 class="font-[300] md:h-[100px] md:leading-[200%] leading-[180%] text-[15px] md:text-[25px] text-justify md:mx-10 md:my-4 mx-9 my-6">
-                                {{ data.description }}</h1>
+                                {{ data.description }}
+                            </h1>
                         </div>
                         <div>
-                            <NuxtImg :src="data.image" alt="Pic of HacDa"
-                                class="w-full md:h-[360px] h-[180px] object-cover rounded-b-[8px]" />
+                            <NuxtImg v-if="data.imagePC" :src="data.imagePC" :alt="data.title"
+                                class="w-full h-[360px] object-cover rounded-b-[8px] hidden md:block object-[25%_75%]" />
+                            <NuxtImg v-if="data.imageMobile" :src="data.imageMobile" :alt="data.title"
+                                class="w-full h-[200px] object-cover rounded-b-[8px] block md:hidden object-[100%_75%]" />
                         </div>
+
                     </div>
                 </div>
             </div>

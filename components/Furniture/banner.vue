@@ -31,8 +31,8 @@ async function onError(event: FormErrorEvent) {
 </script>
 <template>
     <div
-        class="md:bg-[url(/Furniture/Banner.jpg)] bg-[url(/Furniture/BannerMobile.jpg)] flex md:h-[600px] h-[670px] overflow-hidden bg-cover bg-center md:items-center justify-center">
-        <div class="md:w-[1200px]">
+        class="md:bg-[url(/Furniture/Banner.jpg)] bg-[url(/Furniture/BannerMobile.jpg)] flex md:h-[600px] h-[700px] overflow-hidden bg-cover bg-center md:items-center justify-center">
+        <div class="md:w-[1150px]">
             <div class="md:w-[600px] md:mt-0 mt-[90px]">
                 <div>
                     <h1
@@ -47,13 +47,15 @@ async function onError(event: FormErrorEvent) {
                     shoots
                     needed
                 </p>
-                <UButton class="mt-[25px] px-6 hidden sm:block hover:bg-[#fafafa] transition-all !inset-ring-[#000000]"
+                <UButton
+                    class="mt-[25px] px-6 hidden sm:block hover:bg-black hover:text-white transition-all !inset-ring-[#000000]"
                     color="black" variant="outline" size="xl" @click="isOpen = true">
-                    <div class="text-[#000000] font-[500] text-[18px]">REQUEST A QUOTE</div>
+                    <div class=" font-[500] text-[18px]">REQUEST A QUOTE</div>
                 </UButton>
-                <UButton class="sm:hidden mt-[15px] hover:bg-[#fafafa] transition-all !inset-ring-[#000000]"
+                <UButton
+                    class="sm:hidden mt-[15px] hover:bg-black hover:text-white transition-all !inset-ring-[#000000]"
                     @click="isOpen = true" size="xl" color="black" variant="outline">
-                    <div class="text-[#000000] font-[400] leading-[100%] text-[13px]">REQUEST A QUOTE</div>
+                    <div class=" font-[400] leading-[100%] text-[13px]">REQUEST A QUOTE</div>
                 </UButton>
             </div>
         </div>

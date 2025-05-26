@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-20px)] md:ml-0 ml-[35px]">
+            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-0px)] md:ml-0 ml-[35px]">
                 <div class="w-full relative">
                     <UCarousel ref="carousel" v-model="activeStep" :items="timeline" :ui="{
                         wrapper: 'overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
