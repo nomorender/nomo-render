@@ -111,7 +111,7 @@ const navList = [
         {
           label: "Pricing Plan",
           click: () => {
-            router.push({ path: "/Pricing-plan" });
+            router.push({ path: "/pricing" });
           },
         },
       ],
