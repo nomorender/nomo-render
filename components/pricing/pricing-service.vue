@@ -6,20 +6,20 @@ const services = [
         image1: '/HAR03.png',
     },
     {
-        title: '3D Exterior Rendering',
-        description: '<span class = "font-[500]">Top-notch quality</span> of 3D exterior visualization services, transforming architectural concepts into vivid, lifelike representations',
-        image1: '/Furniture/Nha1.png',
-        image2: '/Furniture/Nha2.png'
+        title: '3D Furniture Modeling',
+        description: 'Our precision-crafted CGI models let manufacturers and designers showcase products flawlessly - <span class = "font-[500]">no physical prototypes or costly shoots needed</span> - perfect for catalogs, promotions, and virtual showrooms.',
+        image1: '/Chair.jpg',
+        image2: '/services/10.jpg'
     },
     {
-        title: '3D Interior Rendering',
-        description: '<span class = "font-[500]">Photorealistic and immersive spaces</span> are at the core of 3D interior rendering, a vital tool in architectural visualization that transforms design concepts into highly detailed, lifelike environments.',
-        image1: '/HAR03.png',
+        title: '3D Exterior Rendering',
+        description: '<span class = "font-[500]">Top-notch quality</span> of 3D exterior visualization services, transforming architectural concepts into vivid, lifelike representations',
+        image1: '/Interior/Pic9.png',
     },
 ]
 </script>
 
 <template>
-    <OtherService subheading="Our other" heading="Services" :services="services" color_background="bg-[#FAF8F5]"
+    <OtherService subheading="Explore" heading="Our Services" :services="services" color_background="bg-[#D9D9D9]"
         headingColor="text-[#8D7662]" />
 </template>

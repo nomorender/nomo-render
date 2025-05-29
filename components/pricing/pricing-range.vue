@@ -1,96 +1,214 @@
-<script setup lang="ts">
-const items = [
-    {
-        label: 'Interior Rendering Project',
-        content: `
-    <div>
-        3D Architectural Visualization is a way to bring building designs to life before they’re even built.
-    </div>
-    <div class="flex flex-col pt-4">
-        <div>
-            1. Using advanced 3D rendering technology, architects and designers turn blueprints into realistic images, animations, or even virtual experiences. 
-        </div>
-        <div>
-            2. This lets clients and stakeholders see and explore a project in detail - checking out materials, lighting, textures, and layouts with incredible clarity. 
-        </div>
-        <div>
-            3. It helps with decision-making, fine-tuning designs, and presenting ideas in an engaging way.
-        </div>
-        <div class="pt-4">
-            Be it a cozy home, a stylish office, or a large development, 3D visualization makes it easy to turn ideas into something you can truly see and feel before construction begins.
-        </div>
-    </div>
-`
-    },
-    {
-        label: 'Exterior Rendering Project',
-        content: `
-            <div>
-                The 3D rendering workflow typically consists of several key stages, each essential for creating a realistic and visually compelling final image. While the process may vary depending on the type of project, it generally includes the following:
-            </div>
-            <div class = "flex flex-col pt-4">
-                <div><span class="font-[500]">Step 1 - Modeling:</span> Creating the 3D structure of objects, whether it's an interior space, an exterior environment, or individual furniture pieces.</div>
-                <div><span class="font-[500]">Step 2 - Scene Setup:</span> Placing elements in the scene, including the environment, background, and additional details to establish composition.</div>
-                <div><span class="font-[500]">Step 3 - Lighting:</span> Adjusting light sources to achieve realistic illumination, shadows, and depth.</div>
-                <div><span class="font-[500]">Step 4 - Texturing:</span> Applying materials and textures to surfaces to enhance realism and detail.</div>
-                <div><span class="font-[500]">Step 5 - Final Refinements:</span> Adding decorative elements, fine-tuning the scene, and ensuring all components align with the desired aesthetic.</div>
-                <div><span class="font-[500]">Step 6 - Rendering:</span> Generating the final high-quality image with all applied settings.</div>
-                <div><span class="font-[500]">Step 7 - Post-Processing (Optional):</span> Enhancing the final output using tools like Photoshop for additional adjustments, color correction, or effects.</div>
-            </div> 
-            <div class = "pt-4">
-                This structured workflow ensures that the final 3D render is both technically accurate and visually appealing.
-            </div>
-        `
-    },
-    {
-        label: 'Furniture Modeling',
-        content: 'We use a combination of powerful software to create high-quality 3D visuals. For modeling, we work with SketchUp and 3Ds Max, while Corona for 3Ds Max helps us achieve realistic lighting and textures. We also use D5 Render for quick standalone rendering and Chaos Vantage for real-time visualization, either independently or alongside 3Ds Max and SketchUp. For technical drawings, we rely on AutoCAD to ensure precision. This toolkit allows us to bring designs to life with accuracy and stunning detail.'
-    },
-    {
-        label: 'How long does a 3D rendering project usually take?',
-        content: 'The timeline for a 3D rendering project depends on the complexity and type of work involved. On average, interior renderings take about 5 - 7 days, while exterior renderings require 7 - 10 days due to the additional detailing of surroundings. Furniture modeling and rendering typically takes 3 - 5 days. These timelines include the entire process, from receiving the brief to final delivery after double-checking and client feedback. More complex projects or multiple revisions may take longer.'
-    },
-    {
-        label: 'What factors influence the pricing of a 3D rendering project?',
-        content: `
-            <div>At Nomo Render, our pricing depends on several key factors to ensure the best quality for your project. </div>
-            <div class ="flex flex-col pt-4">
-                <div><span class = "font-[500]">For interiors,</span> we consider the size of the space, the number and complexity of furniture pieces, and the design style. For example, a sleek modern look is usually simpler to render than a highly detailed classic style.</div>
-                <div><span class = "font-[500]">For exteriors,</span> pricing is influenced by the scale and complexity of the building and the surrounding environment, including terrain and greenery.</div>
-                <div><span class = "font-[500]">For furniture modeling,</span> the biggest factors are the shape complexity and, most importantly, the materials, which play a huge role in achieving a realistic finish.</div>
-            </div>
-            <div class ="pt-4">
-                The more intricate the design, the more time and effort it takes to perfect every detail, which reflects in the pricing. We always aim to provide fair quotes based on your specific needs!
-            </div>
-        `
-    },
-    {
-        label: 'What is the process for providing feedback to the project?',
-        content: `We believe that great results come from smooth collaboration, so we make the feedback process as easy and flexible as possible. For interior and exterior renderings, we typically go through 5 rounds of revisions, with the first 2–3 rounds already included in the quoted price. For furniture modeling, we offer 3 free revision rounds, unless major design or material changes are requested after the initial concept is approved. We always encourage early and detailed feedback to keep the process efficient and ensure the final render matches your vision perfectly.`
-    },
-]
-</script>
-
 <template>
-    <div class="bg-[#FAF8F5] w-full flex justify-center md:my-[5rem] mt-[45px]">
-        <div class="w-full max-w-4xl px-6">
-            <UAccordion :collapsible="false" :items="items">
-                <template #default="{ item, open }">
-                    <div class="bg-[#D9D9D9] p-4 mb-5 rounded-md">
-                        <div class="flex items-center gap-4 cursor-pointer" @click="open = !open">
-                            <UIcon name="material-symbols:add-circle-rounded"
-                                class="md:w-[48px] md:h-[48px] w-[38px] h-[38px] transform transition-transform duration-200"
-                                :class="{ 'rotate-180': open }" />
-                            <div class="font-[500] md:text-[25px] text-[15px] leading-[200%]">
-                                {{ item.label }}
+    <div class="w-full flex flex-col items-center justify-center md:my-[5rem] mt-[45px] px-4">
+        <div class="font-[600] text-[40px] leading-[100%] text-[#8D7662] mb-10 uppercase">
+            price range for each category
+        </div>
+        <div class="max-w-[1280px] w-full mx-auto space-y-5">
+            <div v-for="(item, index) in items" :key="index"
+                class="accordion-item bg-[#D9D9D9] rounded-[20px] py-[20px] px-[30px]">
+                <div class="flex items-center gap-[35px] py-2 cursor-pointer" @click="toggle(index)">
+                    <UIcon :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
+                        class="md:w-[35px] md:h-[35px] transform transition-transform duration-200" />
+                    <div class="text-[32px] leading-[150%] font-[500]">
+                        {{ item.label }}
+                    </div>
+                </div>
+                <div class="accordion-content md:text-[25px] text-[15px] font-light leading-[200%] text-justify text-[#000000]"
+                    v-show="activeIndex === index">
+                    <div v-html="item.des" v-if="item.des"></div>
+                    <div class="grid grid-cols-2 gap-[25px] mt-[20px]">
+                        <div v-for="(box) in item.boxs" v-if="item.boxs">
+                            <div class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
+                                <div v-if="box.title"
+                                    class="w-full flex item-center justify-center text-[32px] font-[600] leading-[150%] py-10">
+                                    {{ box.title }}
+                                </div>
+                                <div v-if="box.pic">
+                                    <NuxtImg :src="box.pic" class="h-[550px] w-full object-center object-cover" />
+                                </div>
+                                <div class="w-full">
+                                    <div v-if="box.price || box.time || box.including || box.plus"
+                                        class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
+                                        <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
+                                            }}
+                                        </div>
+                                        <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
+                                            }}
+                                        </div>
+                                        <div class="h-[76px]" v-if="box.including || box.plus">
+                                            <div class="font-[300] text-[25px] leading-[150%] italic text-center"
+                                                v-if="box.including">{{
+                                                    box.including }}</div>
+                                            <div class="font-[300] text-[25px] leading-[150%] italic text-center"
+                                                v-if="box.plus">{{
+                                                    box.plus }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
+                                        <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
+                                            }}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div v-if="open"
-                            class="mt-4 md:text-[20px] text-[15px] font-[300] leading-[200%] text-justify text-[#000000]"
-                            v-html="item.content"></div>
                     </div>
-                </template>
-            </UAccordion>
+                    <div v-if="item.subtitle"
+                        class="font-[600] text-[32px] leading-[150%] text-[#8D7662] mt-[70px] mb-3">
+                        {{ item.subtitle }}
+                    </div>
+                    <div v-if="item.content" class="text-[25px] leading-[200%] font-[300] flex flex-col"
+                        v-html="item.content"></div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
+
+
+
+<script setup>
+const activeIndex = ref(null)
+
+const toggle = (index) => {
+    activeIndex.value = activeIndex.value === index ? null : index
+}
+
+const items = [
+    {
+        label: 'Interior Rendering Project',
+        boxs: [
+            {
+                title: 'Small Size Interior',
+                des: '(Small Bathroom, Powder Room, Pantry)',
+                pic: '/pricing/door.jpg',
+                price: 'Price: $120 - $220 | 2-3 days',
+                including: 'Including: ($80 - $120)/Area Fee',
+                plus: '+ ($40 - $100) / Modeling Furniture Fee'
+            },
+            {
+                title: 'Medium Size Interior',
+                des: '(Living Room, Bedroom, Master Bath, Kitchen)',
+                pic: '/pricing/pic2.jpg',
+                price: 'Price: $200 - $300 | 3-5 days',
+                including: 'Including: ($150 - $200)/Area Fee',
+                plus: '+ ($50 - $100) / Modeling Furniture Fee'
+            }, {
+                title: 'Large Size Interior',
+                des: '(Living & Dining Room, Open Spaces)',
+                pic: '/pricing/pic4.jpg',
+                price: 'Price: $300 - $450 | 5-8 days',
+                including: 'Including: ($200 - $300)/Area Fee',
+                plus: '+ ($100 - $150)/Modeling Furniture Fee'
+            }, {
+                title: 'Massive Area',
+                des: '(Restaurants, Commercial space)',
+                pic: '/pricing/pic3.jpg',
+                price: 'Negotiable Price and Time',
+                including: '*Send project details to get quote',
+                plus: ''
+            }
+        ],
+        subtitle: 'Additional Price',
+        content:
+            `
+                    <div><span class = "font-[500]">Additional View:</span> $30 - $50/view within the same space</div>
+                    <div><span class = "font-[500]">Custom Furniture Modeling:</span> $10 - $30/piece for bespoke designs</div>
+                    <div><span class = "font-[500]">Video Walk-through</span> = Render Fees + $12 - $20 per second (each revision requires separate negotiation)</div>
+                    <div><span class = "font-[500]">Virtual Tour</span> = Render Fees*30% (each revision requires separate negotiation)</div>
+                    <div><span class = "font-[500]">Interior Render:</span> $30 - $50 per additional revision per image/photo. (Each image/photo includes 2-3 revisions by default at no additional cost) </div>   
+            `
+    },
+    {
+        label: 'Exterior Rendering Project',
+        boxs: [
+            {
+                title: 'Small Size Exterior',
+                pic: '/pricing/pic5.jpg',
+                price: 'Price: $200 - $300',
+                time: 'Time: 2-3 days'
+            },
+            {
+                title: 'Medium Size Exterior',
+                pic: '/pricing/pic6.png',
+                price: 'Price: $300 - $600',
+                time: 'Time: 4-7 days'
+            }, {
+                title: 'Large Size Exterior',
+                pic: '/pricing/pic7.png',
+                price: 'Price: $600 - $1000',
+                time: 'Time: 8-10 days'
+            }, {
+                title: 'Massive Area',
+                pic: '/pricing/pic8.jpg',
+                subdes: 'Negotiable Price and Time'
+            }
+        ],
+        subtitle: 'Additional Price',
+        content:
+            `
+                <div><span class = "font-[500]">Video Walk-through</span> = Render Fees + $20 - $40 per second (each revision requires separate negotiation)</div>
+                <div><span class = "font-[500]">Extorior Render:</span> $30 - $80 per additional revision per image/photo. (Each image/photo includes 2-3 revisions by default at no additional cost) </div>   
+            `
+    },
+    {
+        label: 'Furniture Modeling',
+        boxs: [
+            {
+                title: 'Low Complexity',
+                pic: '/pricing/pic9.jpg',
+                price: 'Price: $10-$12/hour',
+                time: 'Time: 2-4 hours'
+            },
+            {
+                title: 'Medium Complexity',
+                pic: '/pricing/pic10.jpg',
+                price: 'Price: $10-$12/hour',
+                time: 'Time: 5-8 hours'
+            }, {
+                title: 'High Complexity',
+                pic: '/pricing/pic11.jpg',
+                price: 'Price: $12-$15/hour',
+                time: 'Time: 9-12 hours'
+            }, {
+                title: 'Very High Complexity',
+                pic: '/pricing/pic12.jpg',
+                price: 'Price: $12-$15/hour',
+                time: 'Time: 12-24 hours'
+            }
+        ],
+        subtitle: 'Additional Price',
+        content:
+            `
+                <div><span class = "font-[500]">Furniture Render:</span> Each revision requires separate negotiation</div>
+            `
+    },
+    {
+        label: 'CAD Drawings',
+        des: `
+            <div>
+                Prices range from <span class="font-[500]">$30 - $50 per drawing</span>, depending on complexity
+            </div>
+        `,
+        boxs: [
+            {
+                pic: '/pricing/pic13.jpg',
+            },
+            {
+                pic: '/pricing/pic14.jpg',
+            },
+        ]
+    },
+    {
+        label: 'Customized Request',
+        content: `
+            <div class="italic">
+                We’re here to help bring your vision to life with precision and creativity. 
+            </div>
+            <div class="italic">
+                Contact us for a personalized consultation and a tailored pricing estimate based on your project’s needs.
+            </div>
+        `,
+    }
+]
+</script>

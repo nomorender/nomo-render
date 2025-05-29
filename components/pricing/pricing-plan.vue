@@ -78,14 +78,13 @@ const data = {
         <div class="relative w-full">
             <div class="relative mb-[45px] flex flex-col items-center justify-center">
                 <span
-                    class="absolute right-[3.5rem] top-0 text-[15px] font-[500] uppercase leading-[180%] tracking-[7px] text-[#980C0C]">
+                    class="absolute right-[3.5rem] top-2 text-[15px] font-[500] uppercase leading-[180%] tracking-[7px] text-[#980C0C]">
                     best choice
                 </span>
-                <!-- <div class="w-[24.3%] h-2 bg-[#980C0C] absolute right-1 top-[37px]" /> -->
             </div>
             <!-- shadow-[0_4px_12.2px_4px_rgba(0,0,0,0.25)] -->
             <div class="overflow-x-auto">
-                <table class="w-full border-collapse text-center">
+                <table class="w-full text-center">
                     <thead>
                         <tr>
                             <th
@@ -101,23 +100,30 @@ const data = {
                                 <span>Freelancer</span>
                             </th>
                             <th
-                                class="w-[250px] border-t-[10px] border-[#980C0C] bg-white text-center text-[32px] font-[500] leading-[150%] text-[#8d7662]">
+                                class="shadow-side-column w-[250px] border-t-[10px] border-[#980C0C] bg-white text-center text-[32px] font-[500] leading-[150%] text-[#8d7662] shadow-side-column">
                                 <span>Nomo Render</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="(criterion, index) in data.criteria" :key="index" class="border-b text-left">
-                            <td class="bg-[#d9d9d9] p-4 font-medium">{{ criterion }}</td>
-                            <td class="bg-[#faf8f5] p-4">{{ data.comparisonData[index].inHouse }}</td>
-                            <td class="bg-[#faf8f5] p-4">{{ data.comparisonData[index].freelancer }}</td>
-                            <td class="bg-white p-4">{{ data.comparisonData[index].nomoRender }}</td>
+                            <td class="bg-[#d9d9d9] p-4 font-medium text-[25px] leading-[200%]">{{ criterion }}</td>
+                            <td class="bg-[#faf8f6] p-4 text-[25px] leading-[200%] font-light">{{
+                                data.comparisonData[index].inHouse }}</td>
+                            <td class="bg-[#faf8f6] p-4 text-[25px] leading-[200%] font-light">{{
+                                data.comparisonData[index].freelancer }}</td>
+                            <td class="bg-white p-4 text-[25px] leading-[200%] font-light shadow-side-column">{{
+                                data.comparisonData[index].nomoRender
+                            }}</td>
                         </tr>
                         <tr class="text-left">
-                            <td class="bg-[#d9d9d9] p-4 font-medium"></td>
-                            <td class="bg-[#faf8f5] p-4" v-html="data.summaries.inHouse" />
-                            <td class="bg-[#faf8f5] p-4" v-html="data.summaries.freelancer" />
-                            <td class="bg-white p-4" v-html="data.summaries.nomoRender" />
+                            <td class="bg-[#d9d9d9] p-4"></td>
+                            <td class="bg-[#faf8f5] p-4 text-[25px] leading-[200%] font-light"
+                                v-html="data.summaries.inHouse" />
+                            <td class="bg-[#faf8f5] p-4 text-[25px] leading-[200%] font-light"
+                                v-html="data.summaries.freelancer" />
+                            <td class="bg-white p-4 text-[25px] leading-[200%] font-light shadow-side-column"
+                                v-html="data.summaries.nomoRender" />
                         </tr>
                     </tbody>
                 </table>
