@@ -115,7 +115,7 @@ const data = {
                             <td class="bg-[#faf8f6] border-l border-white p-4 text-[25px] leading-[200%] font-light">{{
                                 data.comparisonData[index].freelancer }}</td>
                             <td
-                                class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_6px_-2px_rgba(0,0,0,0.25)]">
+                                class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_10px_-6px_rgba(0,0,0,0.25)]">
                                 {{
                                     data.comparisonData[index].nomoRender
                                 }}</td>
@@ -129,7 +129,7 @@ const data = {
                             <td class="bg-[#faf8f5] border-l border-white p-4 text-[25px] leading-[200%] font-light align-top"
                                 v-html="data.summaries.freelancer" />
 
-                            <td class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_6px_-2px_rgba(0,0,0,0.25)] align-top"
+                            <td class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_10px_-6px_rgba(0,0,0,0.25)] align-top"
                                 v-html="data.summaries.nomoRender" />
                         </tr>
                     </tbody>
