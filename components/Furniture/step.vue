@@ -12,7 +12,7 @@
             </div>
             <div class="flex flex-col items-center justify-center my-3">
                 <div
-                    class="pl-0 md:mx-[calc(10vw-20px)] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[30px] my-5 md:my-0 md:mb-[18px] text-justify">
+                    class="pl-0 md:w-[1200px] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[30px] my-5 md:my-0 md:mb-[18px] text-justify">
                     <div>
                         A well-structured 3D furniture modeling workflow ensures efficiency, precision, and high-quality
                         output. This streamlined workflow helps Nomo Render transform basic sketches into <span
@@ -22,11 +22,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center mx-auto md:pl-[calc(10vw-0px)] md:ml-0 ml-[35px]">
-                <div class="w-full relative">
+            <div class="flex flex-col items-center mx-auto md:pl-0 md:ml-0 ml-[35px]">
+                <div class="md:w-fit w-full relative">
                     <UCarousel ref="carousel" v-model="activeStep" :items="timeline" :ui="{
-                        wrapper: 'overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
-                        item: 'flex flex-col items-start gap-9 w-[300px] md:w-[460px] snap-start shrink-0'
+                        wrapper: 'md:pointer-events-none overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
+                        item: 'flex flex-col items-start gap-9 w-[300px] md:w-[400px] snap-start shrink-0'
                     }" class="w-full">
                         <template #default="{ item, index }">
                             <div class="flex flex-col items-start gap-5 w-[300px] md:w-[460px]" :key="index"
@@ -49,22 +49,22 @@
                                             class="font-medium mx-3 text-black md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] whitespace-nowrap">
                                             {{ item.title }}
                                         </div>
-                                        <div class="h-px flex-grow bg-black"></div>
+                                        <div v-if="item.id !== timeline.length" class="h-px flex-grow bg-black"></div>
                                     </div>
                                 </div>
-                                <div class="w-[300px] md:w-[500px]">
+                                <div class="w-[300px] md:w-[350px]">
                                     <NuxtImg :src="item.image"
-                                        class="w-[280px] h-[200px] md:w-[400px] md:h-[400px] object-cover rounded-lg"
+                                        class="w-[280px] h-[200px] md:w-[3500px] md:h-[350px] object-cover rounded-lg"
                                         loading="lazy" sizes="sm:280px md:620px" />
                                     <div
-                                        class="w-[280px] md:w-[400px] font-light md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
+                                        class="w-[280px] md:w-[350px] font-light md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
                                         {{ item.description }}
                                     </div>
                                 </div>
                             </div>
                         </template>
                     </UCarousel>
-                    <div class="flex items-center gap-5 md:mt-[20px] mt-[10px]">
+                    <div class="md:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <button @click="scrollLeft"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"

@@ -47,9 +47,9 @@ const data = {
         },
     ],
     summaries: {
-        inHouse: `Best for <strong>full control and consistency</strong> but costly and less flexible`,
-        freelancer: `Best for <strong>budget-conscious</strong> projects, but quality, speed, and availability can be unpredictable`,
-        nomoRender: `Best for <strong>scalability, structured workflows, and long-term reliability</strong>`,
+        inHouse: `Best for <span class="font-[500]">full control and consistency</span> but costly and less flexible`,
+        freelancer: `Best for <span class="font-[500]">budget-conscious</span> projects, but quality, speed, and availability can be unpredictable`,
+        nomoRender: `Best for <span class="font-[500]">scalability, structured workflows, and long-term reliability</span>`,
     },
 };
 </script>
@@ -59,7 +59,7 @@ const data = {
         <div class="md:w-[1150px]">
             <div class="mt-20 flex flex-col items-center justify-center">
                 <div
-                    class="w-[306px] text-center text-[30px] font-semibold leading-[130%] text-[#8D7662] md:w-full md:text-[64px] md:leading-[150%]">
+                    class="uppercase w-[306px] text-center text-[30px] font-semibold leading-[130%] text-[#8D7662] md:w-full md:text-[64px] md:leading-[150%]">
                     Pricing Plan
                 </div>
             </div>
@@ -82,8 +82,8 @@ const data = {
                     best choice
                 </span>
             </div>
-            <!-- shadow-[0_4px_12.2px_4px_rgba(0,0,0,0.25)] -->
-            <div class="overflow-x-auto">
+            <!-- -->
+            <div class="overflow-x-auto shadow-[6px_0_6px_-2px_rgba(0,0,0,0.25)]">
                 <table class="w-full text-center">
                     <thead>
                         <tr>
@@ -92,37 +92,44 @@ const data = {
                                 <span>Criteria</span>
                             </th>
                             <th
-                                class="w-[250px] bg-black text-center text-[32px] font-[500] leading-[150%] text-[#faf8f5]">
-                                <span> In-house 3D Artist</span>
+                                class="w-[250px] border-l border-white bg-black text-center text-[32px] font-[500] leading-[150%] text-[#faf8f5]">
+                                <span>In-house 3D Artist</span>
                             </th>
                             <th
-                                class="w-[250px] bg-black text-center text-[32px] font-[500] leading-[150%] text-[#faf8f5]">
+                                class="w-[250px] border-l border-white bg-black text-center text-[32px] font-[500] leading-[150%] text-[#faf8f5]">
                                 <span>Freelancer</span>
                             </th>
                             <th
-                                class="shadow-side-column w-[250px] border-t-[10px] border-[#980C0C] bg-white text-center text-[32px] font-[500] leading-[150%] text-[#8d7662] shadow-side-column">
+                                class="shadow-[-6px_0_6px_-2px_rgba(0,0,0,0.25)] w-[250px] border-l border-white border-t-[10px] border-t-[#980C0C] bg-white text-center text-[32px] font-[500] leading-[150%] text-[#8d7662]">
                                 <span>Nomo Render</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="(criterion, index) in data.criteria" :key="index" class="border-b text-left">
-                            <td class="bg-[#d9d9d9] p-4 font-medium text-[25px] leading-[200%]">{{ criterion }}</td>
-                            <td class="bg-[#faf8f6] p-4 text-[25px] leading-[200%] font-light">{{
-                                data.comparisonData[index].inHouse }}</td>
-                            <td class="bg-[#faf8f6] p-4 text-[25px] leading-[200%] font-light">{{
+                            <td class="bg-[#d9d9d9]  p-4 font-medium text-[25px] leading-[200%]">{{ criterion }}</td>
+                            <td
+                                class="bg-[#faf8f6] border-l boder-b border-white p-4 text-[25px] leading-[200%] font-light">
+                                {{
+                                    data.comparisonData[index].inHouse }}</td>
+                            <td class="bg-[#faf8f6] border-l border-white p-4 text-[25px] leading-[200%] font-light">{{
                                 data.comparisonData[index].freelancer }}</td>
-                            <td class="bg-white p-4 text-[25px] leading-[200%] font-light shadow-side-column">{{
-                                data.comparisonData[index].nomoRender
-                            }}</td>
+                            <td
+                                class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_6px_-2px_rgba(0,0,0,0.25)]">
+                                {{
+                                    data.comparisonData[index].nomoRender
+                                }}</td>
                         </tr>
-                        <tr class="text-left">
-                            <td class="bg-[#d9d9d9] p-4"></td>
-                            <td class="bg-[#faf8f5] p-4 text-[25px] leading-[200%] font-light"
+                        <tr class="text-start">
+                            <td class="bg-[#d9d9d9] p-4 align-top"></td>
+
+                            <td class="bg-[#faf8f5] border-l border-white p-4 text-[25px] leading-[200%] font-light align-top"
                                 v-html="data.summaries.inHouse" />
-                            <td class="bg-[#faf8f5] p-4 text-[25px] leading-[200%] font-light"
+
+                            <td class="bg-[#faf8f5] border-l border-white p-4 text-[25px] leading-[200%] font-light align-top"
                                 v-html="data.summaries.freelancer" />
-                            <td class="bg-white p-4 text-[25px] leading-[200%] font-light shadow-side-column"
+
+                            <td class="bg-white p-4 border-l border-white text-[25px] leading-[200%] font-light shadow-[-6px_0_6px_-2px_rgba(0,0,0,0.25)] align-top"
                                 v-html="data.summaries.nomoRender" />
                         </tr>
                     </tbody>

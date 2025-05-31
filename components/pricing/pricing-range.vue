@@ -30,10 +30,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                            }}
+                                        }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                            }}
+                                        }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                            }}
+                                        }}
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ const items = [
                 pic: '/pricing/door.jpg',
                 price: 'Price: $120 - $220 | 2-3 days',
                 including: 'Including: ($80 - $120)/Area Fee',
-                plus: '+ ($40 - $100) / Modeling Furniture Fee'
+                plus: '+ ($40 - $100)/Modeling Furniture Fee'
             },
             {
                 title: 'Medium Size Interior',
@@ -92,7 +92,7 @@ const items = [
                 pic: '/pricing/pic2.jpg',
                 price: 'Price: $200 - $300 | 3-5 days',
                 including: 'Including: ($150 - $200)/Area Fee',
-                plus: '+ ($50 - $100) / Modeling Furniture Fee'
+                plus: '+ ($50 - $100)/Modeling Furniture Fee'
             }, {
                 title: 'Large Size Interior',
                 des: '(Living & Dining Room, Open Spaces)',
