@@ -1,7 +1,7 @@
 <template>
     <div class="w-full flex flex-col items-center justify-center px-4 md:pt-[20px] md:pb-[70px] pt-[40px] pb-[45px]">
         <div
-            class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] mb-10 uppercase">
+            class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] md:mb-10 mb-[45px] uppercase">
             price range for each category
         </div>
         <div class="max-w-[1280px] md:w-full w-[320px] mx-auto space-y-5">
