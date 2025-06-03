@@ -7,16 +7,18 @@
         <div class="max-w-[1280px] md:w-full w-[320px] mx-auto space-y-5">
             <div v-for="(item, index) in items" :key="index"
                 class="accordion-item bg-[#D9D9D9] md:rounded-[20px] rounded-[16px] md:py-[20px] md:px-[30px] px-[10px]">
-                <div class="md:hidden absolute top-[104rem] left-3 z-5">
-                    <div class="-rotate-[0.1rad]">Click here to see more</div>
-                    <nuxt-img src="/Furniture/Arrow.svg" class="size-10" />
-                </div>
                 <div class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
                     @click="toggle(index)">
                     <div class="relative">
                         <UIcon
                             :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
                             class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
+                        <div v-if="index === 0"
+                            class="md:hidden absolute -top-10 -left-[80px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
+                            <div class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-8">Click here to see more
+                            </div>
+                            <nuxt-img src="/Furniture/Arrow.svg" class="size-10" />
+                        </div>
                     </div>
                     <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                         {{ item.label }}
@@ -46,10 +48,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                            }}
+                                        }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                            }}
+                                        }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -62,7 +64,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                            }}
+                                        }}
                                         </div>
                                     </div>
                                 </div>
