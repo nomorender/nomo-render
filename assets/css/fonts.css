@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Angelface';
+  src: url('@/assets/fonts/Angelface.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

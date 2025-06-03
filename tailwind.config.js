@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Jost", "sans-serif"],
+        angelface: ['Angelface', 'cursive'],
       },
     },
   },

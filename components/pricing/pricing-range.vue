@@ -14,10 +14,13 @@
                             :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
                             class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
                         <div v-if="index === 0"
-                            class="md:hidden absolute -top-10 -left-[75px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
-                            <div class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-9">Click here to see more
+                            class="md:hidden absolute -top-10 -left-[78px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
+                            <div
+                                class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-9 font-angelface text-black font-400 text-[24px]">
+                                Click here
+                                to see more
                             </div>
-                            <nuxt-img src="/Furniture/Arrow.svg" class="size-10" />
+                            <nuxt-img src="/Furniture/Arrow.svg" class="size-9" />
                         </div>
                     </div>
                     <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
