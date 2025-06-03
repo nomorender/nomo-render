@@ -1,27 +1,36 @@
 <template>
-    <div class="w-full flex flex-col items-center justify-center md:my-[5rem] mt-[45px] px-4">
-        <div class="font-[600] text-[40px] leading-[100%] text-[#8D7662] mb-10 uppercase">
+    <div class="w-full flex flex-col items-center justify-center px-4 md:pt-[20px] md:pb-[70px] pt-[40px] pb-[45px]">
+        <div
+            class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] mb-10 uppercase">
             price range for each category
         </div>
         <div class="max-w-[1280px] w-full mx-auto space-y-5">
             <div v-for="(item, index) in items" :key="index"
-                class="accordion-item bg-[#D9D9D9] rounded-[20px] py-[20px] px-[30px]">
-                <div class="flex items-center gap-[35px] py-2 cursor-pointer" @click="toggle(index)">
+                class="accordion-item bg-[#D9D9D9] md:rounded-[20px] rounded-[16px] md:py-[20px] md:px-[30px] px-[10px]">
+                <div class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
+                    @click="toggle(index)">
                     <UIcon :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
-                        class="md:w-[35px] md:h-[35px] transform transition-transform duration-200" />
-                    <div class="text-[32px] leading-[150%] font-[500]">
+                        class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
+                    <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                         {{ item.label }}
                     </div>
                 </div>
-                <div class="accordion-content md:text-[25px] text-[15px] font-light leading-[200%] text-justify text-[#000000]"
+                <div class="md:text-[25px] text-[15px] font-light leading-[200%] text-justify text-[#000000]"
                     v-show="activeIndex === index">
-                    <div v-html="item.des" v-if="item.des"></div>
-                    <div class="grid grid-cols-2 gap-[25px] mt-[20px]">
+                    <div class="px-3" v-html="item.des" v-if="item.des"></div>
+                    <!-- PC -->
+                    <div class="md:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
                         <div v-for="(box) in item.boxs" v-if="item.boxs">
                             <div class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
-                                <div v-if="box.title"
-                                    class="w-full flex item-center justify-center text-[32px] font-[600] leading-[150%] py-10">
-                                    {{ box.title }}
+                                <div class="py-10">
+                                    <div v-if="box.title"
+                                        class="w-full flex item-center justify-center text-[32px] font-[600] leading-[150%]">
+                                        {{ box.title }}
+                                    </div>
+                                    <div v-if="box.des"
+                                        class="w-full flex item-center justify-center text-[25px] italic font-[300] leading-[150%]">
+                                        {{ box.des }}
+                                    </div>
                                 </div>
                                 <div v-if="box.pic">
                                     <NuxtImg :src="box.pic" class="h-[550px] w-full object-center object-cover" />
@@ -30,10 +39,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                        }}
+                                            }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                        }}
+                                            }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -46,19 +55,88 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                        }}
+                                            }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div v-if="item.subtitle"
-                        class="font-[600] text-[32px] leading-[150%] text-[#8D7662] mt-[70px] mb-3">
-                        {{ item.subtitle }}
+                    <!-- MOBILE -->
+                    <div class="md:hidden block" v-if="hasPic(item.boxs)">
+                        <div class="relative pt-2 mx-auto">
+                            <UCarousel :items="item.boxs" arrows :ui="{
+                                item: 'basis-full px-3',
+                                arrows: {
+                                    wrapper: 'flex items-center justify-center md:mt-2 sm:hidden gap-[15px] pb-5'
+                                }
+                            }" ref="carousel">
+                                <template #default="{ item }">
+                                    <div
+                                        class="flex flex-col justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-5">
+                                        <div v-if="item.title || item.des" class="py-5">
+                                            <div v-if="item.title"
+                                                class="w-full mb-[10px] flex item-center justify-center text-[18px] font-[600] leading-[100%]">
+                                                {{ item.title }}
+                                            </div>
+                                            <div v-if="item.des"
+                                                class="px-10 w-full flex item-center justify-center text-[12px] italic font-[300] leading-[150%]">
+                                                {{ item.des }}
+                                            </div>
+                                        </div>
+                                        <div v-if="item.pic">
+                                            <NuxtImg :src="item.pic"
+                                                class="h-[260px] w-full object-center object-cover" />
+                                        </div>
+                                        <div class="w-full">
+                                            <div v-if="item.price || item.time || item.including || item.plus"
+                                                class="flex flex-col justify-center items-center gap-[10px] h-[120px]">
+                                                <div class="font-[500] text-[15px] leading-[180%]" v-if="item.price">
+                                                    {{ item.price }}
+                                                </div>
+                                                <div class="font-[500] text-[15px] leading-[180%]" v-if="item.time">
+                                                    {{ item.time }}
+                                                </div>
+                                                <div class="h-[35px]" v-if="item.including || item.plus">
+                                                    <div class="font-[300] text-[12px] leading-[150%] italic text-center"
+                                                        v-if="item.including">{{ item.including }}</div>
+                                                    <div class="font-[300] text-[12px] leading-[150%] italic text-center"
+                                                        v-if="item.plus">{{ item.plus }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="h-[120px] flex justify-center items-center" v-if="item.subdes">
+                                                <div class="font-[500] text-[15px] leading-[180%]">{{ item.subdes }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template #prev="{ onClick, disabled }">
+                                    <UButton
+                                        class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                        color="white" :disabled="disabled" @click="onClick" square>
+                                        <UIcon name="mingcute:arrow-left-fill" class="size-5" />
+                                    </UButton>
+                                </template>
+                                <template #next="{ onClick, disabled }">
+                                    <UButton
+                                        class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                        color="white" :disabled="disabled" @click="onClick" square>
+                                        <UIcon name="mingcute:arrow-right-fill" class="size-5" />
+                                    </UButton>
+                                </template>
+                            </UCarousel>
+                        </div>
                     </div>
-                    <div v-if="item.content" class="text-[25px] leading-[200%] font-[300] flex flex-col"
-                        v-html="item.content"></div>
+                    <div class="md:mt-[70px] md:pb-0 pb-5">
+                        <div v-if="item.subtitle"
+                            class="font-[600] md:text-[32px] text-[18px] leading-[150%] text-[#8D7662] md:mb-3 mb-2">
+                            {{ item.subtitle }}
+                        </div>
+                        <div v-if="item.content"
+                            class="md:text-[25px] text-[14px] leading-[200%] font-[300] flex flex-col"
+                            v-html="item.content"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -202,7 +280,7 @@ const items = [
     {
         label: 'Customized Request',
         content: `
-            <div class="italic">
+            <div class="italic mb-[15px]">
                 We’re here to help bring your vision to life with precision and creativity. 
             </div>
             <div class="italic">
@@ -211,4 +289,8 @@ const items = [
         `,
     }
 ]
+
+const hasPic = (boxs) => {
+    return Array.isArray(boxs) && boxs.some(box => !!box.pic)
+}
 </script>

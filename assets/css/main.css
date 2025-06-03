@@ -3,6 +3,11 @@
   color: #ffffff;
 }
 
-.shadow-side-column {
-  box-shadow: -6px 0 8px -4px rgba(0, 0, 0, 0.1), 6px 0 8px -4px rgba(0, 0, 0, 0.1);
+  .no-scrollbar {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; 
 }

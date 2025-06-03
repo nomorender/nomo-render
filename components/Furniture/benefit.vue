@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const data = [
     { title: 'Residential & Commercial Furniture', description: 'Realistic renders for home, office, and hospitality interiors.', imagePC: '/Furniture/LongChair.jpg', imageMobile: '/Furniture/LongChair.jpg' },
-    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', imagePC: '/Furniture/HacDa.jpg', imageMobile: '/Furniture/BannerMobile.jpg' },
+    { title: 'Luxury & Custom Designs', description: 'Showcase bespoke pieces with craftsmanship', imagePC: '/Furniture/HacDa.jpg', imageMobile: '/Furniture/Table.jpg' },
 ]
 </script>
 <template>
