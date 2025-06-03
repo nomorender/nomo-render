@@ -4,7 +4,7 @@
             class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] md:mb-10 mb-[45px] uppercase">
             price range for each category
         </div>
-        <div class="max-w-[1280px] md:w-full w-[320px] mx-auto space-y-5">
+        <div class="max-w-[1280px] w-full mx-auto space-y-5">
             <div v-for="(item, index) in items" :key="index"
                 class="accordion-item bg-[#D9D9D9] md:rounded-[20px] rounded-[16px] md:py-[20px] md:px-[30px] px-[10px]">
                 <div class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
@@ -14,8 +14,8 @@
                             :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
                             class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
                         <div v-if="index === 0"
-                            class="md:hidden absolute -top-10 -left-[80px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
-                            <div class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-8">Click here to see more
+                            class="md:hidden absolute -top-10 -left-[75px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
+                            <div class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-9">Click here to see more
                             </div>
                             <nuxt-img src="/Furniture/Arrow.svg" class="size-10" />
                         </div>
