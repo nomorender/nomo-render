@@ -4,13 +4,20 @@
             class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] mb-10 uppercase">
             price range for each category
         </div>
-        <div class="max-w-[1280px] w-full mx-auto space-y-5">
+        <div class="max-w-[1280px] md:w-full w-[320px] mx-auto space-y-5">
             <div v-for="(item, index) in items" :key="index"
                 class="accordion-item bg-[#D9D9D9] md:rounded-[20px] rounded-[16px] md:py-[20px] md:px-[30px] px-[10px]">
+                <div class="md:hidden absolute top-[104rem] left-3 z-5">
+                    <div class="-rotate-[0.1rad]">Click here to see more</div>
+                    <nuxt-img src="/Furniture/Arrow.svg" class="size-10" />
+                </div>
                 <div class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
                     @click="toggle(index)">
-                    <UIcon :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
-                        class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
+                    <div class="relative">
+                        <UIcon
+                            :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
+                            class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
+                    </div>
                     <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                         {{ item.label }}
                     </div>
