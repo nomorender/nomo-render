@@ -16,11 +16,10 @@
                         <div v-if="index === 0"
                             class="md:hidden absolute -top-10 -left-[78px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
                             <div
-                                class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-9 font-angelface text-black font-400 text-[24px]">
-                                Click here
-                                to see more
+                                class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-12 font-angelface text-black font-400 text-[24px]">
+                                Click here to see more
                             </div>
-                            <nuxt-img src="/Furniture/Arrow.svg" class="size-9" />
+                            <nuxt-img src="/Furniture/Arrow.svg" class="size-7 rotate-3" />
                         </div>
                     </div>
                     <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
@@ -88,11 +87,11 @@
                                         class="flex flex-col justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-5">
                                         <div v-if="item.title || item.des" class="py-5">
                                             <div v-if="item.title"
-                                                class="w-full mb-[10px] flex item-center justify-center text-[18px] font-[600] leading-[100%]">
+                                                class="w-full  flex item-center justify-center text-[18px] font-[600] leading-[100%]">
                                                 {{ item.title }}
                                             </div>
                                             <div v-if="item.des"
-                                                class="px-10 w-full flex item-center justify-center text-[12px] italic font-[300] leading-[150%]">
+                                                class="mt-2 w-full flex item-center justify-center text-[12px] italic font-[300] leading-[150%]">
                                                 {{ item.des }}
                                             </div>
                                         </div>
@@ -238,7 +237,7 @@ const items = [
         content:
             `
                 <div><span class = "font-[500]">Video Walk-through</span> = Render Fees + $20 - $40 per second (each revision requires separate negotiation)</div>
-                <div><span class = "font-[500]">Extorior Render:</span> $30 - $80 per additional revision per image/photo. (Each image/photo includes 2-3 revisions by default at no additional cost) </div>   
+                <div><span class = "font-[500]">Exterior Render:</span> $30 - $80 per additional revision per image/photo. (Each image/photo includes 2-3 revisions by default at no additional cost)</div>   
             `
     },
     {

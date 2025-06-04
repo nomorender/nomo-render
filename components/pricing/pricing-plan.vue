@@ -80,6 +80,8 @@ const data = {
             </div>
         </div>
     </div>
+
+    <!-- PC -->
     <section class="md:block hidden mx-auto max-w-[1208px] mt-10 mb-20">
         <div class="w-full">
             <div class="relative shadow-[6px_0_8px_-4px_rgba(0,0,0,0.1)]">
@@ -145,47 +147,52 @@ const data = {
     </section>
 
 
+    <!-- MOBILE -->
     <section class="md:hidden block mt-5 overflow-x-auto overflow-y-visible no-scrollbar">
         <div class="w-fit">
             <div class="inline-block w-fit relative">
-                <div class="flex sticky top-2 z-30 bg-black">
+                <div class="flex sticky top-3 z-30 bg-black">
                     <div
                         class="min-w-[130px] bg-black text-[15px] md:text-[32px] font-[500] text-[#faf8f5] flex items-center justify-center px-4 py-4 sticky left-0 z-30">
-                        Criterial
+                        Criteria
                     </div>
                     <div
                         class="min-w-[130px] border-l border-white bg-black text-[15px] md:text-[32px] font-[500] text-[#faf8f5] flex items-center justify-center px-4">
                         In-house
                     </div>
                     <div
-                        class="relative min-w-[130px] border-l border-white bg-white text-[15px] md:text-[32px] font-[500] text-[#8d7662] flex items-center justify-center px-4 z-10 shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
+                        class="relative min-w-[130px] border-l border-white bg-white text-[15px] md:text-[32px] font-[500] text-[#8d7662] flex items-center justify-center px-4 z-10 shadow-[...]">
                         <div
-                            class="absolute top-[-2px] left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-10">
+                            class="absolute top-[-20px] left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-40">
+                            <span
+                                class="text-[9px] font-[500] uppercase leading-[180%] tracking-[3px] text-[#980C0C] mt-1">
+                                best choice
+                            </span>
                             <div class="h-[5px] w-full bg-[#980C0C]"></div>
                         </div>
                         Nomo Render
                     </div>
                     <div
-                        class="min-w-[130px] border-l border-white bg-black text-[15px] md:text-[32px] font-[500] text-[#faf8f5] flex items-center justify-center px-4">
+                        class="min-w-[130px] overflow-visible border-l border-white bg-black text-[15px] md:text-[32px] font-[500] text-[#faf8f5] flex items-center justify-center px-4">
                         Freelancer
                     </div>
                 </div>
 
                 <div v-for="(criterion, index) in data.criteria" :key="index" class="flex border-b text-left">
                     <div
-                        class="min-w-[130px] bg-[#d9d9d9] p-4 font-medium text-[14px] md:text-[25px] leading-[200%] sticky left-0 z-20">
+                        class="min-w-[130px] bg-[#d9d9d9] p-4 pt-6 font-medium text-[14px] md:text-[25px] leading-[200%] sticky left-0 z-20">
                         {{ criterion }}
                     </div>
                     <div
-                        class="min-w-[130px] bg-[#faf8f6] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light">
+                        class="min-w-[130px] bg-[#faf8f6] border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light">
                         {{ data.comparisonData[index].inHouse }}
                     </div>
                     <div
-                        class="min-w-[130px] bg-white border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] z-10 font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
+                        class="min-w-[130px] bg-white border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] z-10 font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]">
                         {{ data.comparisonData[index].nomoRender }}
                     </div>
                     <div
-                        class="min-w-[130px] bg-[#faf8f6] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light">
+                        class="min-w-[130px] bg-[#faf8f6] border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light">
                         {{ data.comparisonData[index].freelancer }}
                     </div>
                 </div>
@@ -193,10 +200,10 @@ const data = {
                 <div class="flex text-left">
                     <div class="min-w-[130px] bg-[#d9d9d9] p-4 sticky left-0 z-20">
                     </div>
-                    <div class="min-w-[130px] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
+                    <div class="min-w-[130px] bg-[#faf8f5] border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
                         v-html="data.summaries.inHouse">
                     </div>
-                    <div class="min-w-[130px] bg-white border-l border-white p-4 text-[14px] md:text-[25px] z-10 leading-[200%] font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]"
+                    <div class="min-w-[130px] bg-white border-l pt-6 border-white p-4 text-[14px] md:text-[25px] z-10 leading-[200%] font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]"
                         v-html="data.summaries.nomoRender">
                     </div>
                     <div class="min-w-[130px] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
