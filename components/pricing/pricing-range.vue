@@ -141,7 +141,7 @@
                     </div>
                     <div class="md:mt-0 md:pb-0 pb-5 px-3 md:px-0">
                         <div v-if="item.subtitle"
-                            class="font-[600] md:text-[32px] text-[18px] leading-[150%] text-[#8D7662] md:mb-3 mb-2">
+                            class="font-[600] md:mt-10 md:text-[32px] text-[18px] leading-[150%] text-[#8D7662] md:mb-3 mb-2">
                             {{ item.subtitle }}
                         </div>
                         <div v-if="item.content"
