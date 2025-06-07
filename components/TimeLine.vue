@@ -16,7 +16,6 @@ const props = defineProps<{
 const carousel = ref<any>(null);
 const activeStep = ref(0);
 const itemRefs = ref<HTMLElement[]>([]);
-let scrollTimeout;
 
 function registerItemRef(el: any, index: any) {
     if (el) itemRefs.value[index] = el;
