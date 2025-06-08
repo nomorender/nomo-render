@@ -124,7 +124,7 @@ const data = {
                                 {{ data.comparisonData[index].freelancer }}
                             </div>
                             <div
-                                class="w-[25%] bg-white border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light shadow-side-column">
+                                class="w-[25%] bg-white border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light shadow-[-6px_0_8px_-4px_rgba(0,0,0,0.1)]">
                                 {{ data.comparisonData[index].nomoRender }}
                             </div>
                         </div>
@@ -136,7 +136,7 @@ const data = {
                             <div class="w-[25%] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light align-top"
                                 v-html="data.summaries.freelancer">
                             </div>
-                            <div class="w-[25%] bg-white border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light align-top shadow-side-column"
+                            <div class="w-[25%] bg-white border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light align-top shadow-[-6px_0_8px_-4px_rgba(0,0,0,0.1)]"
                                 v-html="data.summaries.nomoRender">
                             </div>
                         </div>

@@ -4,5 +4,6 @@
     <slot />
     <Footer />
     <HomeQuoteButton></HomeQuoteButton>
+    <UNotifications />
   </div>
 </template>

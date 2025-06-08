@@ -1,17 +1,34 @@
 <script setup lang="ts">
 import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
+const toast = useToast()
+onMounted(() => {
+    if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
+        ; (window as any).MauticSDKLoaded = true
+        const script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
+        script.onload = function () {
+            if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
+                (window as any).MauticSDK.onLoad()
+            }
+        }
+        document.head.appendChild(script)
+            ; (window as any).MauticDomain = 'https://mail.nomorender.com'
+            ; (window as any).MauticLang = {
+                submittingMessage: 'Please wait...'
+            }
+    } else if ((window as any).MauticSDK !== 'undefined') {
+        (window as any).MauticSDK?.onLoad()
+    }
+})
 
 const props = defineProps<{
     title?: string
     subtitle?: string
     description?: string
     buttonText?: string
-    images?: string[],
-    color_background?: string,
-}>()
-
-const emit = defineEmits<{
-    (e: 'submit', data: { name: string; email: string; description: string }): void
+    images?: string[]
+    color_background?: string
 }>()
 
 const state = reactive({
@@ -22,14 +39,42 @@ const state = reactive({
 
 const validate = (state: any): FormError[] => {
     const errors = []
-    if (!state.email) errors.push({ path: 'email', message: 'Required' })
     if (!state.name) errors.push({ path: 'name', message: 'Required' })
+    if (!state.email) errors.push({ path: 'email', message: 'Required' })
     return errors
 }
 
 async function onSubmit(event: FormSubmitEvent<any>) {
-    emit('submit', event.data)
+    const form = document.createElement('form')
+    try {
+        form.method = 'POST'
+        form.action = 'https://mail.nomorender.com/form/submit?formId=3'
+        form.style.display = 'none'
+        form.target = '_blank'
+        const appendField = (name: string, value: string) => {
+            const input = document.createElement('input')
+            input.type = 'hidden'
+            input.name = name
+            input.value = value
+            form.appendChild(input)
+        }
+        appendField('mauticform[f_name]', state.name)
+        appendField('mauticform[email]', state.email)
+        appendField('mauticform[f_message]', state.description)
+        appendField('mauticform[formId]', '3')
+        appendField('mauticform[return]', '')
+        appendField('mauticform[formName]', 'contactusnomorender')
+        document.body.appendChild(form)
+        form.submit()
+    } catch (error) {
+        toast.add({
+            title: 'Error',
+            description: 'Please try again later !',
+            color: 'red'
+        })
+    }
 }
+
 
 async function onError(event: FormErrorEvent) {
     const element = document.getElementById(event.errors[0].id)

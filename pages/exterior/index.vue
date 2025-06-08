@@ -6,7 +6,7 @@
     <ExteriorSlide></ExteriorSlide>
     <ExteriorTimeline></ExteriorTimeline>
     <ExteriorNeedExterior></ExteriorNeedExterior>
-    <HomeContact></HomeContact>
+    <ExteriorContact></ExteriorContact>
     <ExteriorOtherService></ExteriorOtherService>
   </div>
 </template>

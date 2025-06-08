@@ -1,5 +1,75 @@
-<script>
-const value = ref('');
+<script setup lang="ts">
+import { reactive, onMounted, ref } from 'vue'
+import type { FormError } from '#ui/types'
+const toast = useToast()
+
+const state = reactive({
+  email: ''
+})
+const validate = (state: any): FormError[] => {
+  const errors = []
+  if (!state.name) errors.push({ path: 'name', message: 'Required' })
+  if (!state.email && !state.email.includes('@')) errors.push({ path: 'email', message: 'Invalid email' })
+  return errors
+}
+const formSubmitting = ref(false)
+const submitForm = async () => {
+  if (!state.email || !state.email.includes('@')) {
+    toast.add({
+      title: 'Invalid email',
+      description: 'Please enter a valid email address.',
+      color: 'red'
+    })
+    return
+  }
+  formSubmitting.value = true
+  try {
+    const res = await $fetch('/api/subscribe', {
+      method: 'POST',
+      body: { email: state.email },
+    })
+
+    if (res.success) {
+      state.email = ''
+      toast.add({
+        title: 'Subscribed!',
+        description: 'You have successfully subscribed to Nomo Render!',
+        color: 'green'
+      })
+    } else {
+      toast.add({
+        title: 'Send email failed!',
+        description: 'Something went wrong!',
+        color: 'red'
+      })
+    }
+  } catch (error) {
+    toast.add({
+      title: 'Send email failed!',
+      description: 'Something went wrong!',
+      color: 'red'
+    })
+  } finally {
+    formSubmitting.value = false
+  }
+}
+
+
+onMounted(() => {
+  if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
+    (window as any).MauticSDKLoaded = true
+    const script = document.createElement('script')
+    script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
+    script.onload = function () {
+      if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
+        (window as any).MauticSDK.onLoad()
+      }
+    }
+    document.head.appendChild(script)
+  } else if (typeof (window as any).MauticSDK !== 'undefined') {
+    (window as any).MauticSDK?.onLoad()
+  }
+})
 </script>
 
 <template>
@@ -20,12 +90,12 @@ const value = ref('');
           </div>
           <div class="flex md:mt-10 mt-5">
             <div class="flex items-start">
-              <UAvatar src="/Avatar/Sub1.jpg" size="4xl"
-                class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
-              <UAvatar src="/Avatar/Sub2.jpg" size="4xl"
-                class="md:-ml-8 -ml-4 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
-              <UAvatar src="/Avatar/Sub3.jpg"size="4xl"
-                class="md:-ml-8 -ml-4 bg-black border-2 border-white w-[50px] h-[50px] md:w-[100px] md:h-[100px] lg:w-[100px] lg:h-[100px] [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
+              <UAvatar src="/Avatar/Sub1.jpg" class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+           [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
+              <UAvatar src="/Avatar/Sub2.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+           [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
+              <UAvatar src="/Avatar/Sub3.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+           [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
             </div>
             <div class="md:ml-5 ml-3">
               <div class="flex">
@@ -50,10 +120,17 @@ const value = ref('');
           </div>
           <div class="flex items-center justify-center md:block">
             <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 py-2 rounded-lg shadow-lg w-full md:w-full">
-              <UInput padded required color="white" variant="none" placeholder="Your email"
-                size="xl" class="!bg-none px-2 rounded-[8px] w-full"
-                :ui="{ placeholder: 'placeholder-[#000000] font-[300] text-[15px] md:text-[25px] md:leading-[43px] leading-[180%]' }" />
-              <UButton class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
+              <Form class="w-full" :validate="validate">
+                <FormField name="email">
+                  <UFormGroup class="flex items-center justify-center md:block ">
+                    <UInput autofocus padded required color="white" variant="none" placeholder="Your email"
+                      v-model="state.email" size="xl" class="bg-none px-2 rounded-[8px] w-[380px] md:w-full"
+                      :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
+                  </UFormGroup>
+                </FormField>
+              </Form>
+              <UButton :loading="formSubmitting" @click="submitForm" :disabled="formSubmitting"
+                class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
               </UButton>
             </div>
