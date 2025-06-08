@@ -34,7 +34,8 @@ const props = defineProps<{
 const state = reactive({
     name: '',
     email: '',
-    description: ''
+    description: '',
+    agree: true
 })
 
 const validate = (state: any): FormError[] => {
@@ -66,6 +67,17 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         appendField('mauticform[formName]', 'contactusnomorender')
         document.body.appendChild(form)
         form.submit()
+
+        state.name = ''
+        state.email = ''
+        state.description = ''
+        state.agree = true
+
+        toast.add({
+            title: 'Success',
+            description: 'Thanks for sending us email!',
+            color: 'green'
+        })
     } catch (error) {
         toast.add({
             title: 'Error',
