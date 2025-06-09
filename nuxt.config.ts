@@ -7,8 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+    '@nuxtjs/supabase',
   ],
+  supabase: { redirect: false, },
   colorMode: {
     preference: 'light',
   },

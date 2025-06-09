@@ -196,7 +196,6 @@ const goToPrevItem = () => {
       </template>
     </UCarousel>
 
-
     <UModal v-model="isOpen"
       :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container pb-[120px]', width: '' }">
       <div class="flex md:gap-2.5 mb-8 justify-between">
@@ -287,9 +286,7 @@ const goToPrevItem = () => {
             </div>
           </UButton>
         </div>
-
       </div>
-
 
       <!-- 2 BUTTON NEXT TO THE MODAL PC -->
       <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex">
@@ -378,7 +375,6 @@ const goToPrevItem = () => {
           </div>
         </UButton>
       </div>
-
       <!-- 2 BUTTON NEXT TO THE MODAL MOBILE -->
     </UModal>
   </div>

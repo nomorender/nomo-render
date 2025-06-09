@@ -11,30 +11,6 @@ const state = reactive({
     agree: true
 })
 
-const validate = (state: any) => {
-    if (!state.email) {
-        toast.add({
-            title: 'Missing email !',
-            description: 'Please fill email to send request!',
-            color: 'red'
-        })
-    }
-    if (!state.name) {
-        toast.add({
-            title: 'Missing name !',
-            description: 'Please fill name to send request!',
-            color: 'red'
-        })
-    }
-    if (!state.agree) {
-        toast.add({
-            title: 'You need to agree !',
-            description: 'Please agree to send request!',
-            color: 'red'
-        })
-    }
-}
-
 async function onSubmit(event: FormSubmitEvent<any>) {
     const form = document.createElement('form')
     const { name, email, agree } = state
