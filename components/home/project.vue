@@ -174,8 +174,8 @@ const goToPrevItem = () => {
               <p class="font-[300] leading-[200%] md:text-[25px] text-[15px]">{{ item.location }}</p>
             </div>
           </div>
-          <NuxtImg :src="item.mainPic" alt="main img" class="object-cover object-center w-[472px] h-[725px] rounded-lg"
-            draggable="false" />
+          <NuxtImg loading="lazy" :src="item.mainPic" alt="main img"
+            class="object-cover object-center w-[472px] h-[725px] rounded-lg" draggable="false" />
         </div>
       </template>
 
