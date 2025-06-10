@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        ADMIN PAGE
+        <DashboardTable />
     </div>
 </template>
 

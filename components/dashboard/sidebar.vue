@@ -10,29 +10,6 @@ const links =
             label: 'Dashboard',
             icon: 'material-symbols:dashboard',
             to: '/dashboard'
-        }, {
-            label: 'Homepage',
-            icon: 'material-symbols-light:other-houses',
-            to: '/dashboard/homepage'
-        }, {
-            label: 'Exterior Rendering',
-            icon: 'i-heroicons-command-line',
-            to: '/dashboard/exterior-rendering'
-        },
-        {
-            label: 'Interior Rendering',
-            icon: 'i-heroicons-command-line',
-            to: '/dashboard/interior-rendering'
-        },
-        {
-            label: 'Furniture',
-            icon: 'i-heroicons-command-line',
-            to: '/dashboard/furniture'
-        },
-        {
-            label: 'Pricing Plan',
-            icon: 'i-heroicons-command-line',
-            to: '/components/pricing-plan'
         }
     ]
 

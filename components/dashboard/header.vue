@@ -3,9 +3,6 @@ import { useAuth } from '~/stores/auth/useAuth';
 
 const items = [
     [{
-        label: 'Setting',
-        icon: 'i-heroicons-archive-box-20-solid'
-    }, {
         label: 'Signout',
         icon: 'si:sign-out-alt-fill'
     }]

@@ -119,12 +119,13 @@ onMounted(() => {
           <div class="italic md:text-[25px] text-[15px] font-light text-justify mt-2">No fluff, just the good stuff
           </div>
           <div class="flex items-center justify-center md:block">
-            <div class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 px-2 py-2 rounded-lg shadow-lg w-full md:w-full">
+            <div
+              class="mt-10 flex items-center bg-[#D9D9D9] md:p-2 pl-2 pr-3 py-2 rounded-lg shadow-lg w-full md:w-full">
               <Form class="w-full" :validate="validate">
                 <FormField name="email">
                   <UFormGroup class="flex items-center justify-center md:block ">
                     <UInput padded required color="white" variant="none" placeholder="Your email" v-model="state.email"
-                      size="xl" class="bg-none px-2 rounded-[8px] w-[380px] md:w-full"
+                      size="xl" class="bg-none px-2 rounded-[8px] w-[150px] md:w-full"
                       :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
                   </UFormGroup>
                 </FormField>
