@@ -234,7 +234,7 @@ const goToPrevItem = () => {
                 </div>
             </UButton>
         </div>
-        <div class="fixed translate-x-[-0.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[-0.7rem] translate-y-[30.5rem] hidden md:flex flex-col gap-7">
             <UButton
                 class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                 @click="goToPrevItem">

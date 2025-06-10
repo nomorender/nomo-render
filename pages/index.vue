@@ -27,4 +27,5 @@ studio`,
       content: `Nomadic Creativity, Timeless Renders, More than just blueprints, it’s about storytelling`,
     },
   ],
-});</script>
+});
+</script>

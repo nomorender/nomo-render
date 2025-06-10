@@ -3,9 +3,8 @@ import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
 const toast = useToast()
 onMounted(() => {
     if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
-        ; (window as any).MauticSDKLoaded = true
+        (window as any).MauticSDKLoaded = true
         const script = document.createElement('script')
-        script.type = 'text/javascript'
         script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
         script.onload = function () {
             if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
@@ -13,11 +12,7 @@ onMounted(() => {
             }
         }
         document.head.appendChild(script)
-            ; (window as any).MauticDomain = 'https://mail.nomorender.com'
-            ; (window as any).MauticLang = {
-                submittingMessage: 'Please wait...'
-            }
-    } else if ((window as any).MauticSDK !== 'undefined') {
+    } else if (typeof (window as any).MauticSDK !== 'undefined') {
         (window as any).MauticSDK?.onLoad()
     }
 })
@@ -44,49 +39,47 @@ const validate = (state: any): FormError[] => {
     if (!state.email) errors.push({ path: 'email', message: 'Required' })
     return errors
 }
+const formSubmitting = ref(false)
 
 async function onSubmit(event: FormSubmitEvent<any>) {
-    const form = document.createElement('form')
-    try {
-        form.method = 'POST'
-        form.action = 'https://mail.nomorender.com/form/submit?formId=3'
-        form.style.display = 'none'
-        form.target = '_blank'
-        const appendField = (name: string, value: string) => {
-            const input = document.createElement('input')
-            input.type = 'hidden'
-            input.name = name
-            input.value = value
-            form.appendChild(input)
-        }
-        appendField('mauticform[f_name]', state.name)
-        appendField('mauticform[email]', state.email)
-        appendField('mauticform[f_message]', state.description)
-        appendField('mauticform[formId]', '3')
-        appendField('mauticform[return]', '')
-        appendField('mauticform[formName]', 'contactusnomorender')
-        document.body.appendChild(form)
-        form.submit()
-
-        state.name = ''
-        state.email = ''
-        state.description = ''
-        state.agree = true
-
+    if (!state.email || !state.email.includes('@')) {
         toast.add({
-            title: 'Success',
-            description: 'Thanks for sending us email!',
-            color: 'green'
-        })
-    } catch (error) {
-        toast.add({
-            title: 'Error',
-            description: 'Please try again later !',
+            title: 'Invalid email',
+            description: 'Please enter a valid email address.',
             color: 'red'
         })
+        return
+    }
+    formSubmitting.value = true
+    try {
+        const res = await $fetch('/api/contact', {
+            method: 'POST',
+            body: { name: state.name, email: state.email, description: state.description },
+        })
+        if (res.success) {
+            state.email = ''
+            toast.add({
+                title: 'Subscribed!',
+                description: 'You have successfully subscribed to Nomo Render!',
+                color: 'green'
+            })
+        } else {
+            toast.add({
+                title: 'Send email failed!',
+                description: 'Something went wrong!',
+                color: 'red'
+            })
+        }
+    } catch (error) {
+        toast.add({
+            title: 'Send email failed!',
+            description: 'Something went wrong!',
+            color: 'red'
+        })
+    } finally {
+        formSubmitting.value = false
     }
 }
-
 
 async function onError(event: FormErrorEvent) {
     const element = document.getElementById(event.errors[0].id)

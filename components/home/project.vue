@@ -231,7 +231,7 @@ const goToPrevItem = () => {
           </div>
         </div>
         <div class="bg-[#FAF8F5]">
-          <div class="md:w-[960px] h-full w-[355px]">
+          <div class="md:w-[960px] h-full w-full">
             <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
               class=":w-full h-auto object-cover object-center" />
           </div>

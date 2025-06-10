@@ -13,6 +13,7 @@ const validate = (state: any): FormError[] => {
   return errors
 }
 const formSubmitting = ref(false)
+
 const submitForm = async () => {
   if (!state.email || !state.email.includes('@')) {
     toast.add({
@@ -23,6 +24,7 @@ const submitForm = async () => {
     return
   }
   formSubmitting.value = true
+
   try {
     const res = await $fetch('/api/subscribe', {
       method: 'POST',
@@ -53,7 +55,6 @@ const submitForm = async () => {
     formSubmitting.value = false
   }
 }
-
 
 onMounted(() => {
   if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {

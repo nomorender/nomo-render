@@ -12,12 +12,12 @@
 
 <script lang="ts" setup>
 useHead({
-    title: `Nomo Render | 3D visualization
-    studio`,
+    title: 'Custom 3D Furniture Rendering | Nomo Render Visualization Studio',
     meta: [
         {
-            name: "description",
-            content: `Nomadic Creativity, Timeless Renders, More than just blueprints, it’s about storytelling`,
+            name: 'description',
+            content:
+                'Get custom 3D furniture renders from Nomo Render. Realistic, high-quality visualizations for designers, architects, and furniture brands.',
         },
     ],
 });

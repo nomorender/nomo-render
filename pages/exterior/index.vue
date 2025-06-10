@@ -12,14 +12,13 @@
 </template>
 
 <script lang="ts" setup>
-
 useHead({
-  title: `Nomo Render | 3D visualization
-studio`,
+  title: `Photorealistic Exterior Rendering Services | Nomo Render Studio`,
   meta: [
     {
       name: "description",
-      content: `Nomadic Creativity, Timeless Renders, More than just blueprints, it’s about storytelling`,
+      content: `Get high-quality exterior 3D rendering services by Nomo Render. Stunning visuals that tell your story.`,
     },
   ],
-});</script>
+});
+</script>
