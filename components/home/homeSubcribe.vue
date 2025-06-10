@@ -34,8 +34,8 @@ const submitForm = async () => {
     if (res.success) {
       state.email = ''
       toast.add({
-        title: 'Subscribed!',
-        description: 'You have successfully subscribed to Nomo Render!',
+        title: 'Success!',
+        description: 'Thank you for getting in touch. Our team will contact you shortly',
         color: 'green'
       })
     } else {

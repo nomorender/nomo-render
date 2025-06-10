@@ -11,7 +11,7 @@
         <div class="flex flex-col md:gap-y-20">
           <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-row"
             :class="{ 'md:flex-row-reverse': index % 2 }">
-            <div class="md:w-[720px] h-fit">
+            <div class="md:max-w-[720px] h-fit">
               <UCarousel :items="item.image" :ui="{
                 item: 'basis-full',
                 container: 'rounded-lg',
@@ -73,8 +73,6 @@
 
 <script lang="ts" setup>
 
-
-
 const services = [
   {
     name: "Exterior Rendering",
@@ -91,7 +89,7 @@ const services = [
   },
   {
     name: "Interior Rendering",
-    link: "/exterior",
+    link: "/interior",
     image: ["/services/4.png", "/services/5.webp", "/services/6.png", "/services/7.jpg"],
     content: `<p class="leading-[200%] text-justify">We enhance interior visualization by creating highly detailed, photorealistic images inside:</p>
 <ul class="list-disc pl-6 leading-[200%] text-justify">
@@ -104,7 +102,7 @@ const services = [
   },
   {
     name: "Furniture Modeling",
-    link: "/exterior",
+    link: "/furniture",
     image: ["/services/8.jpg", "/services/9.jpg", "/services/10.jpg"],
     content: `<p class = "leading-[200%] text-justify">We ensure precise proportions, realistic textures, and manufacturing accuracy through processes by transforming:</p>
 <ul class="list-disc pl-6 leading-[200%] text-justify">
@@ -116,7 +114,6 @@ const services = [
   },
   {
     name: "Customized Request",
-    link: "/exterior",
     image: ["/services/11.png", "/services/12.webp", "/services/13.png"],
     content: `<p class="leading-[200%]">At Nomo Render, every detail matters. From minor tweaks to full-scale conceptual transformations, our customized 3D rendering services ensure accuracy by adjusting scale, proportions, and real-world materiality.</p>`,
   },

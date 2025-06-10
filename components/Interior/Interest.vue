@@ -132,7 +132,7 @@
                             <source src="/Interior/Video.mp4" type="video/mp4" />
                         </video>
                         <div
-                            class="md:w-full w-[303px] font-[300] text-[15px] md:text-[25px] leading-[180%] md:leading-[200%] md:text-center text-justify mt-[40px] md:mt-[60px]">
+                            class="md:w-full w-[303px] font-[300] text-[15px] md:text-[25px] leading-[180%] md:leading-[200%] md:text-center text-justify mt-[40px] md:mt-[15px]">
                             No matter the scale of your project, 3D interior visualization ensures <span
                                 class="font-[500]">every
                                 element is

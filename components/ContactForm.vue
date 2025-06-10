@@ -44,7 +44,7 @@ const formSubmitting = ref(false)
 async function onSubmit(event: FormSubmitEvent<any>) {
     if (!state.email || !state.email.includes('@')) {
         toast.add({
-            title: 'Invalid email',
+            title: 'Invalid email!',
             description: 'Please enter a valid email address.',
             color: 'red'
         })
@@ -59,8 +59,8 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         if (res.success) {
             state.email = ''
             toast.add({
-                title: 'Subscribed!',
-                description: 'You have successfully subscribed to Nomo Render!',
+                title: 'Success!',
+                description: 'Thank you for getting in touch. Our team will contact you shortly',
                 color: 'green'
             })
         } else {

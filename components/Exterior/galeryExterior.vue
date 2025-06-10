@@ -27,7 +27,8 @@
         </div>
         <!-- Project 5 -->
         <div class="relative group md:w-full md:h-[592px] cursor-pointer" @click="openModal(5)">
-          <NuxtImg src="/Extorior/4.png" class="md:w-full md:h-[592px] w-full h-[169px] break-inside-avoid object-cover object-center" />
+          <NuxtImg src="/Extorior/4.png"
+            class="md:w-full md:h-[592px] w-full h-[169px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -104,20 +105,21 @@
 
         <!-- Project 9 -->
         <div class="relative group md:w-full md:h-[432px] h-[163.5px] w-full cursor-pointer">
-          <NuxtImg src="/Extorior/8.png" class="md:w-full md:h-[432px] h-[163.5px] w-full break-inside-avoid object-cover object-center" />
+          <NuxtImg src="/Extorior/8.png"
+            class="md:w-full md:h-[432px] h-[163.5px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
               <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                 <div class="flex justify-between">
-                  <div class="font-[600] md:leading-[200%]">Name</div>
+                  <div class="font-[600] md:leading-[200%]">Stonehaven Retreat</div>
                   <div class="flex justify-center items-center">
                     <Icon name="heroicons:arrows-pointing-out-16-solid" class="size-5 text-[#F97316]" />
                   </div>
                 </div>
-                <div class="font-[300] leading-[180%] md:leading-[120%]">Location: USA</div>
+                <div class="font-[300] leading-[180%] md:leading-[120%]">Location: UK</div>
                 <div class="flex justify-between">
-                  <div class="font-[300] leading-[180%]">Client: Luke</div>
+                  <div class="font-[300] leading-[180%]">Client: Thomas</div>
                   <div class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                     2023
                   </div>
@@ -136,14 +138,14 @@
             <div>
               <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                 <div class="flex justify-between">
-                  <div class="font-[600] md:leading-[200%]]">Elevate NY</div>
+                  <div class="font-[600] md:leading-[200%]]">Terrace Vista</div>
                   <div class="flex justify-center items-center">
                     <Icon name="heroicons:arrows-pointing-out-16-solid" class="size-5 text-[#F97316]" />
                   </div>
                 </div>
-                <div class="font-[300] leading-[180%] md:leading-[120%]">Location: USA</div>
+                <div class="font-[300] leading-[180%] md:leading-[120%]">Location: California, USA</div>
                 <div class="flex justify-between">
-                  <div class="font-[300] leading-[180%]">Client: DEMO Arch</div>
+                  <div class="font-[300] leading-[180%]">Client: Wendi Ellen Sue</div>
                   <div class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                     2023
                   </div>
@@ -154,7 +156,8 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="relative group md:w-full md:h-[588.2685546875px] h-[170px] w-full cursor-pointer" @click="openModal(6)">
+        <div class="relative group md:w-full md:h-[588.2685546875px] h-[170px] w-full cursor-pointer"
+          @click="openModal(6)">
           <NuxtImg src="/Extorior/7.png"
             class="md:w-full md:h-[588.2685546875px] h-[170px] w-full break-inside-avoid object-cover object-center" />
           <div
@@ -181,7 +184,8 @@
 
         <!-- Project 7 -->
         <div class="relative group md:w-full md:h-[353.488px] h-[186px] w-full cursor-pointer" @click="openModal(7)">
-          <NuxtImg src="/Extorior/3.png" class="md:w-full md:h-[353.488px] w-full h-[186px] break-inside-avoid object-cover object-center" />
+          <NuxtImg src="/Extorior/3.png"
+            class="md:w-full md:h-[353.488px] w-full h-[186px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
             <div>
@@ -229,7 +233,8 @@
           </div>
         </div>
 
-        <div class="md:hidden block relative group md:w-full md:h-[480px] h-[168.5px]  cursor-pointer" @click="openModal(8)">
+        <div class="md:hidden block relative group md:w-full md:h-[480px] h-[168.5px]  cursor-pointer"
+          @click="openModal(8)">
           <NuxtImg src="/Feedback/UserFeedback/15.jpg"
             class="md:w-full md:h-[480px] h-[168.5px] break-inside-avoid object-cover object-center" />
           <div
@@ -266,14 +271,14 @@
               <div>
                 <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                   <div class="flex justify-between">
-                    <div class="font-[600] md:leading-[200%]">Name</div>
+                    <div class="font-[600] md:leading-[200%]">Tranquil Haven</div>
                     <div class="flex justify-center items-center">
                       <Icon name="heroicons:arrows-pointing-out-16-solid" class="size-5 text-[#F97316]" />
                     </div>
                   </div>
                   <div class="font-[300] leading-[180%] md:leading-[120%]">Location: USA</div>
                   <div class="flex justify-between">
-                    <div class="font-[300] leading-[180%]">Client: Luke</div>
+                    <div class="font-[300] leading-[180%]">Client: Jane</div>
                     <div class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                       2023
                     </div>

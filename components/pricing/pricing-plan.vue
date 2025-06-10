@@ -129,7 +129,9 @@ const data = {
                             </div>
                         </div>
                         <div class="flex text-left">
-                            <div class="w-[25%] bg-[#d9d9d9] p-4 align-top"></div>
+                            <div
+                                class="w-[25%] bg-[#d9d9d9] p-4 align-top font-medium text-[14px] md:text-[25px] leading-[200%]">
+                                Overall</div>
                             <div class="w-[25%] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light align-top"
                                 v-html="data.summaries.inHouse">
                             </div>
@@ -198,7 +200,9 @@ const data = {
                 </div>
 
                 <div class="flex text-left">
-                    <div class="min-w-[130px] bg-[#d9d9d9] p-4 sticky left-0 z-20">
+                    <div
+                        class="min-w-[130px] bg-[#d9d9d9] p-4 sticky left-0 z-20 font-medium text-[14px] md:text-[25px] leading-[200%]">
+                        Overall
                     </div>
                     <div class="min-w-[130px] bg-[#faf8f5] border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
                         v-html="data.summaries.inHouse">
