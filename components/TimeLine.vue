@@ -16,6 +16,8 @@ const props = defineProps<{
 const carousel = ref<any>(null);
 const activeStep = ref(0);
 const itemRefs = ref<HTMLElement[]>([]);
+const totalPage = ref(0);
+const currentPage = ref(0);
 
 function registerItemRef(el: any, index: any) {
     if (el) itemRefs.value[index] = el;
@@ -34,6 +36,24 @@ const scrollRight = () => {
         activeStep.value = Math.min(activeStep.value + 1, props.timeline.length - 1);
     }
 };
+
+onMounted(() => {
+    nextTick(() => {
+        watch(
+            () => [carousel.value?.pages, carousel.value?.page],
+            ([pages, page]) => {
+                if (pages > 0) {
+                    totalPage.value = pages;
+                }
+                currentPage.value = page ?? 0;
+            },
+            { immediate: true }
+        );
+    });
+});
+const isLastItem = computed(() => {
+    return currentPage.value === totalPage.value;
+});
 </script>
 
 
@@ -101,14 +121,14 @@ const scrollRight = () => {
                     </UCarousel>
                     <div class="flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <button @click="scrollLeft"
-                            class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
+                            :class="['w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center', isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"
-                                class="size-7 md:size-10 text-[#8D7662]" />
+                                :class="['size-7 md:size-10', isLastItem ? 'text-white' : 'text-[#8D7662]']" />
                         </button>
                         <button @click="scrollRight"
-                            class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
+                            :class="['w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center', isLastItem ? 'bg-white/80 hover:bg-white' : 'bg-[#8D7662]']">
                             <UIcon name="material-symbols-light:arrow-right-alt-rounded"
-                                class="size-7 md:size-10 text-white" />
+                                :class="['size-7 md:size-10', isLastItem ? 'text-[#8D7662]' : 'text-[#FFFFFF]']" />
                         </button>
                     </div>
                 </div>

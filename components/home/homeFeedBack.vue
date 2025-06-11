@@ -254,14 +254,13 @@ const isLastItem = computed(() => {
             </div>
             <div class="relative bg-[#FAF8F5]">
                 <div class="relative max-w-[1112px] pt-5 mx-auto">
-                    <!-- BUTTON PREVIOUS PC -->
                     <UButton
                         class="hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                         :class="['hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10  rounded-full shadow-2xl',
                             isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']"
                         @click="carousel.prev()">
                         <div :class="[
-                            ' flex justify-center',
+                            'flex justify-center',
                             isLastItem ? 'text-[#FFFFFF]' : 'text-[#8D7662]']">
                             <UIcon name="mdi-light:arrow-left" class="size-10" />
                         </div>
