@@ -24,5 +24,5 @@ const services = [
 
 <template>
     <OtherService subheading="Explore" heading="Our Services" :services="services" color_background="bg-[#D9D9D9]"
-        headingColor="text-[#8D7662]" />
+        headingColor="text-[#D9D9D9]" />
 </template>

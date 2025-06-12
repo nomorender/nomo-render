@@ -6,9 +6,8 @@ const items = [
     { label: 'Pay & Delivery', sub_label: 'Wrap it up', icon: '/workflow/Paying.svg' }
 ]
 </script>
-
 <template>
-    <div>
+    <div class="mb-20">
         <div class="flex flex-col justify-center items-center">
             <div class="text-center mt-[100px]">
                 <h1 class="uppercase font-[700] text-[72px] leading-[100%] text-[#8D7662]">Workflow</h1>
@@ -16,10 +15,10 @@ const items = [
                     chat</p>
             </div>
             <UTabs :items="items" orientation="vertical" class="mt-20" :ui="{
-                wrapper: 'flex space-y-0 items-start justify-center w-[1200px] bg-[#FAF8F5] py-5',
+                wrapper: 'flex space-y-0 items-start justify-center lg:max-w-[1200px] md:max-w-[800px] bg-[#FAF8F5] py-5',
                 list: {
-                    background: 'bg-[#FAF8F5]',
-                    base: 'border border-y-0 border-l-0 border-r border-[#AFAFAF] h-[1220px] py-5',
+                    background: '',
+                    base: 'py-5',
                     width: 'w-[380px]',
                     height: 'h-fit',
                     rounded: 'rounded-none',
@@ -36,24 +35,37 @@ const items = [
                 }
             }">
                 <template #default="{ item }">
-                    <nuxt-img :src="item.icon" class="w-[81px] h-[81px]" />
+                    <nuxt-img :src="item.icon" class="w-[81px] h-[81px]" preload />
                     <div class="truncate flex flex-col items-start w-[200px]">
                         <span class="text-[28px] leading-[150%] font-[500]">{{ item.label }}</span>
                         <span class="font-angelface text-[35px] font-400 leading-[120%]">{{ item.sub_label }}</span>
                     </div>
                 </template>
                 <template #item="{ index }">
-                    <div v-if="index === 0">
+                    <div v-if="index === 0" class="border border-y-0 border-r-0 border-l border-[#AFAFAF]">
                         <WorkflowConnect />
                     </div>
-                    <div v-else-if="index === 1">
+                    <div v-else-if="index === 1" class="border border-y-0 border-r-0 border-l border-[#AFAFAF]">
                         <WorkflowBrief />
                     </div>
-                    <div v-else-if="index === 2">
+                    <div v-else-if="index === 2" class="border border-y-0 border-r-0 border-l border-[#AFAFAF]">
                         <WorkflowCrafting />
+                    </div>
+                    <div v-else-if="index === 3" class="border border-y-0 border-r-0 border-l border-[#AFAFAF]">
+                        <WorkflowPaying />
                     </div>
                 </template>
             </UTabs>
+        </div>
+        <div class="w-full flex justify-center text-center gap-10 mt-10">
+            <UButton color="gray" variant="solid"
+                class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
+                explore our projects
+            </UButton>
+            <UButton color="gray" variant="solid"
+                class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
+                check our pricing
+            </UButton>
         </div>
     </div>
 </template>

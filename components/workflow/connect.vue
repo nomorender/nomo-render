@@ -35,7 +35,7 @@ const sections = [
         </p>
         <div class="flex flex-col gap-[30px]">
             <div v-for="(section, index) in sections" :key="index" class="flex flex-col gap-[10px]">
-                <div class="font-[500] leading-[200%] text-[25px]">
+                <div class="font-[500] leading-[200%] text-[25px] text-[#980C0C]">
                     {{ section.title }}
                 </div>
                 <div class="flex gap-10 justify-center items-center">

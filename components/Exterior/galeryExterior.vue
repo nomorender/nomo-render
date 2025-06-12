@@ -454,7 +454,7 @@
         <div class="flex w-full justify-center items-center gap-10">
           <div class="flex flex-col items-center justify-center gap-1">
             <UButton class="flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
-              @click="">
+              @click="goToPrevItem">
               <div class="text-[#8D7662] flex justify-center">
                 <UIcon name="mdi-light:arrow-left" class="size-4" />
               </div>
@@ -479,11 +479,10 @@
             <div class="font-[300] text-[10px] leading-[150%] text-[#000000] items-center justify-center">Our workflow
             </div>
           </div>
-
           <div class="flex flex-col items-center justify-center gap-1">
             <UButton
               class="flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
-              @click="">
+              @click="goToNextItem">
               <div class="text-[#FFFFFF] flex justify-center">
                 <UIcon name="mdi-light:arrow-right" class="size-4" />
               </div>
@@ -680,7 +679,6 @@ const items: Item[] = [
           <br/>Client: <span class = "font-[500]">Platform 3 Studio</span>
           <br/>Visualization: <span class = "font-[500]">Nomo Render</span>
       </div>
-
       <div class = "font-[300] my-4">
         What an experience! BrightNest is our design project in collaboration with Platform 3. It is a vibrant and engaging elementary school classroom design, crafted to nurture young minds in a dynamic learning environment.
       </div>

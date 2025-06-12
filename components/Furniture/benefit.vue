@@ -49,9 +49,8 @@ const data = [
                             <NuxtImg v-if="data.imagePC" :src="data.imagePC" :alt="data.title"
                                 class="w-full h-[360px] object-cover rounded-b-[8px] hidden md:block object-[25%_75%]" />
                             <NuxtImg v-if="data.imageMobile" :src="data.imageMobile" :alt="data.title"
-                                class="w-full h-[200px] object-cover rounded-b-[8px] block md:hidden object-[100%_75%]" />
+                                class="w-full h-[250px] object-cover rounded-b-[8px] block md:hidden object-[100%_85%]" />
                         </div>
-
                     </div>
                 </div>
             </div>

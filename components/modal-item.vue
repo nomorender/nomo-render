@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, computed } from 'vue'
+import { computed } from 'vue'
 import { NuxtImg } from '#components'
 
 interface PicDes {
@@ -9,16 +9,14 @@ interface PicDes {
     pic4?: string
     pic5?: string
 }
-const isOpen = defineModel<boolean>('modelValue', { default: false })
-
-
 interface CarouselItem {
-    projectName: string
+    projectName?: string
     content1: string
     content2: string
     picDes: PicDes
 }
 
+const isOpen = defineModel<boolean>('modelValue', { default: false })
 const props = defineProps<{
     items: CarouselItem[]
     selectedIndex: number | null
@@ -40,7 +38,6 @@ const goToNextItem = () => {
         }
         emit('update:selectedIndex', nextIndex)
     }
-
 }
 
 const goToPrevItem = () => {
@@ -56,7 +53,6 @@ const goToPrevItem = () => {
     }
 }
 </script>
-
 <template>
     <UModal v-model="isOpen"
         :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container pb-[120px]', width: '' }">

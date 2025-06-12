@@ -46,15 +46,15 @@
                         </div>
                         <div class="flex md:gap-[8px]">
                             <div class="hidden md:block">
-                                <NuxtImg src="/Interior/Pic1.jpg"
+                                <NuxtImg src="/Interior/Pic1.jpg" loading="lazy"
                                     class="h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic2.jpg"
+                                <NuxtImg src="/Interior/Pic2.jpg" loading="lazy"
                                     class="md:h-[360px] h-[180px] w-[303px] md:w-full object-cover object-center rounded-[8px]" />
                             </div>
                             <div class="hidden md:block">
-                                <NuxtImg src="/Interior/Pic3.jpg"
+                                <NuxtImg src="/Interior/Pic3.jpg" loading="lazy"
                                     class="h-[360px] w-[400px] object-cover object-center rounded-[8px]" />
                             </div>
                         </div>
@@ -85,11 +85,11 @@
 
                         <div class="flex md:gap-[8px]">
                             <div class="hidden md:block">
-                                <NuxtImg src="/Interior/Pic4.png"
+                                <NuxtImg src="/Interior/Pic4.png" loading="lazy"
                                     class="h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic5.png"
+                                <NuxtImg src="/Interior/Pic5.png" loading="lazy"
                                     class="md:h-[360px] h-[180px] w-[303px] md:w-full object-cover object-center rounded-[8px]" />
                             </div>
                         </div>
@@ -115,15 +115,15 @@
 
                         <div class="md:gap-[8px] hidden md:flex">
                             <div class="hidden md:block">
-                                <NuxtImg src="/Interior/Pic8.png"
+                                <NuxtImg src="/Interior/Pic8.png" loading="lazy"
                                     class="w-[298px] h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic7.png"
+                                <NuxtImg src="/Interior/Pic7.png" loading="lazy"
                                     class="md:h-[360px] h-[180px] w-[303px] md:w-full object-cover object-center rounded-[8px]" />
                             </div>
                             <div class="hidden md:block">
-                                <NuxtImg src="/Interior/Pic6.png"
+                                <NuxtImg src="/Interior/Pic6.png" loading="lazy"
                                     class="h-[360px] w-[485px] object-cover object-center rounded-[8px]" />
                             </div>
                         </div>

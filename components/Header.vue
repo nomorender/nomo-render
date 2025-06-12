@@ -4,14 +4,15 @@
       <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-5 px-8 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
-            <nuxt-img v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/')" alt="Logo" preload
-              class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />
+            <nuxt-img
+              v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/' || currRoute === '/' || currRoute === '')"
+              alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />
             <NuxtImg v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden" src="/logo.png" />
           </NuxtLink>
         </div>
         <div class="hidden gap-[100px] justify-center lg:flex">
           <div v-for="item in navList" :key="item.path">
-            <p v-if="!item.childen" @click="$router.push(item.path)"
+            <p v-if="!item.childen" @click="() => { router.push(item.path); isOpenMenu = false; }"
               class=" md:text-[20px] cursor-pointer hover:underline font-semibold uppercase"
               :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
               {{ item.name }}
@@ -39,10 +40,11 @@
             side="right">
             <div class="p-8">
               <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
-                class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded @click="isOpenMenu = false" />
+                class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded
+                @click="() => { isOpenMenu = false; open = null; }" />
               <div class="flex flex-1 flex-col gap-9 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
-                  <p v-if="!item.childen" @click="$router.push(item.path)"
+                  <p v-if="!item.childen" @click="() => { router.push(item.path); isOpenMenu = false; }"
                     class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
                   </p>
@@ -79,7 +81,11 @@
 
 const router = useRouter();
 const currRoute = computed(() => router.currentRoute.value.fullPath);
-console.log(router.currentRoute.value.fullPath)
+const handleNavigate = (url: string) => {
+  router.push({ path: url });
+  isOpenMenu.value = false;
+  open.value = null;
+}
 const open = ref<string | null>(null);
 const navList = [
   {
@@ -93,25 +99,25 @@ const navList = [
         {
           label: "3D Exterior Rendering",
           click: () => {
-            router.push({ path: "/exterior" });
+            handleNavigate("/exterior")
           },
         },
         {
           label: "3D Interior Rendering",
           click: () => {
-            router.push({ path: "/interior" });
+            handleNavigate("/interior")
           },
         },
         {
           label: "3D Furniture Modeling",
           click: () => {
-            router.push({ path: "/furniture" });
+            handleNavigate("/furniture")
           },
         },
         {
           label: "Pricing Plan",
           click: () => {
-            router.push({ path: "/pricing" });
+            handleNavigate("/pricing")
           },
         },
       ],
@@ -124,13 +130,13 @@ const navList = [
         {
           label: "Portfolio",
           click: () => {
-            router.push({ path: "/portfolio" });
+            handleNavigate("/portfolio")
           },
         },
         {
           label: "Workflow",
           click: () => {
-            router.push({ path: "/workflow" });
+            handleNavigate("/workflow")
           },
         },
       ],
@@ -143,13 +149,13 @@ const navList = [
         {
           label: "Inspire Space",
           click: () => {
-            router.push({ path: "/inspire" });
+            handleNavigate("/inspire")
           },
         },
         {
           label: "Library",
           click: () => {
-            router.push({ path: "/library" });
+            handleNavigate("/library")
           },
         },
       ],

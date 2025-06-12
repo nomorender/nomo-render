@@ -1,9 +1,11 @@
 <template>
     <div class="overflow-hidden">
         <WorkflowTable />
+        <WorkflowContact />
+        <WorkflowOtherService />
     </div>
 </template>
 
 <script>
-import { WorkflowTable } from '#components';
+import { WorkflowContact, WorkflowOtherService, WorkflowTable } from '#components';
 </script>
