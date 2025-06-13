@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 useHead({
-    title: 'Custom 3D Furniture Rendering | Nomo Render Visualization Studio',
+    title: '3D Furniture Modeling | Nomo Render Visualization',
     meta: [
         {
             name: 'description',

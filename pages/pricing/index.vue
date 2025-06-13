@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 useHead({
-    title: `3D Rendering Pricing & Plans | Nomo Render Studio`,
+    title: `Pricing Plan | Nomo Render Visualization`,
     meta: [
         {
             name: "description",

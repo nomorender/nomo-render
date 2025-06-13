@@ -7,14 +7,17 @@ const links =
             to: '/'
         },
         {
-            label: 'Dashboard',
+            label: 'Project',
             icon: 'material-symbols:dashboard',
             to: '/dashboard'
+        },
+        {
+            label: 'Storage',
+            icon: 'material-symbols:home-storage',
+            to: '/dashboard/storage'
         }
     ]
-
 </script>
-
 <template>
     <aside class="w-50 bg-gray-200 text-white shrink-0 h-full">
         <div>

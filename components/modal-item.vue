@@ -1,26 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { NuxtImg } from '#components'
+import type { Project } from '~/types/project/project';
 
-interface PicDes {
-    pic1: string
-    pic2?: string
-    pic3?: string
-    pic4?: string
-    pic5?: string
-}
-interface CarouselItem {
-    projectName?: string
-    content1: string
-    content2: string
-    picDes: PicDes
-}
 
 const isOpen = defineModel<boolean>('modelValue', { default: false })
 const props = defineProps<{
-    items: CarouselItem[]
+    items: Project[]
     selectedIndex: number | null
 }>()
+
 
 const emit = defineEmits(['update:modelValue', 'update:selectedIndex'])
 
@@ -64,7 +52,7 @@ const goToPrevItem = () => {
                 <div>
                     <p
                         class="md:text-[25px] text-[18px] text-[#FAF8F5] md:font-[500] font-[600] md:leading-[200%] leading-[100%]">
-                        {{ selectedItem?.projectName }}</p>
+                        {{ selectedItem?.title }}</p>
                     <p class="font-[300] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] text-[#FAF8F5]">
                         Nomo Render - 3D Visualization Studio</p>
                 </div>
@@ -80,59 +68,75 @@ const goToPrevItem = () => {
         </div>
 
         <div class="bg-[#FAF8F5] rounded-[8px] md:w-[960px] w-[355px]">
-            <div class="md:px-[4rem] px-[35px] md:pt-[55px] pt-[40px] md:pb-5 pb-3">
+            <div class="px-[50px] pt-[40px]">
                 <p class="text-[#8D7662] md:text-[32px] text-[16px] font-[600] mb-5 uppercase leading-[150%]">
-                    {{ selectedItem?.projectName }}</p>
-                <div class="md:text-[25px] text-[15px] leading-[200%] font-[300] text-justify"
-                    v-html="selectedItem?.content1">
-                </div>
+                    {{ selectedItem?.title }}
+                </p>
             </div>
-            <div class="bg-[#FAF8F5]">
-                <div class="md:w-[960px] h-full w-[355px]">
-                    <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
-                        class=":w-full h-auto object-cover object-center" />
-                </div>
+            <div v-html="selectedItem?.content"
+                class="text-[25px] leading-[200%] font-[300] text-justify editor-content">
             </div>
-            <div class="md:px-[4rem] px-[35px] py-[30px]">
-                <div class="md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300] text-justify"
-                    v-html="selectedItem?.content2"></div>
-            </div>
+            <div class="pt-10">
+                <div v-if="selectedItem?.pics?.length">
+                    <template v-if="selectedItem.pics.length === 1">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-span-2">
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                        </div>
+                    </template>
 
+                    <template v-else-if="selectedItem.pics.length === 2">
+                        <div class="flex gap-1">
+                            <div class="w-[50%]">
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="w-[50%]">
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                        </div>
+                    </template>
 
-            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
-                <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-                </div>
-                <div class="w-[50%]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
-                </div>
-            </div>
+                    <template v-else-if="selectedItem.pics.length === 3">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-span-2">
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="col-span-1">
+                                <NuxtImg :src="selectedItem.pics[2]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="col-span-1">
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                        </div>
+                    </template>
 
-            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4" class="grid grid-cols-2 gap-2">
-                <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-                </div>
-                <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
-                </div>
-                <div class="col-span-1">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
-                </div>
-            </div>
-
-            <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5" class="grid grid-cols-2 gap-2">
-                <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
-                </div>
-                <div class="col-span-1 md:h-[357px] h-[131px]">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3" class="w-full h-full object-cover" />
-                </div>
-                <div class="col-span-1 ">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
-                        class="w-full h-[131px]  md:h-[357px] object-cover" />
-                </div>
-                <div class="col-span-2">
-                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
+                    <template v-else-if="selectedItem.pics.length === 4">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="col-span-2">
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="col-span-1 md:h-[357px] h-[131px]">
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full h-full object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="col-span-1">
+                                <NuxtImg :src="selectedItem.pics[2]" class="w-full h-[131px] md:h-[357px] object-cover"
+                                    alt="project image" />
+                            </div>
+                            <div class="col-span-2">
+                                <NuxtImg :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
+                                    alt="project image" />
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
 
