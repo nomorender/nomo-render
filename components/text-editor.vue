@@ -115,8 +115,6 @@ const commandMap = {
     insertBreak: () => editor?.chain().focus().setHardBreak().run(),
 }
 
-
-
 watch(() => props.modelValue, (newVal) => {
     if (editor && newVal !== editor.getHTML()) {
         editor.commands.setContent(newVal)
@@ -127,20 +125,20 @@ onBeforeUnmount(() => {
     editor?.destroy()
 })
 
-function exec(cmd: keyof typeof commandMap) {
+const exec = (cmd: keyof typeof commandMap) => {
     commandMap[cmd]?.()
 }
-function is(type: string) {
+const is = (type: string) => {
     return editor?.isActive(type)
 }
 
-function insertImage() {
+const insertImage = () => {
     const url = prompt('Image URL:')
     if (url) {
         editor?.chain().focus().setImage({ src: url }).run()
     }
 }
-function setAlign(value: 'left' | 'center' | 'right') {
+const setAlign = (value: 'left' | 'center' | 'right') => {
     editor?.chain().focus().setTextAlign(value).run()
 }
 </script>

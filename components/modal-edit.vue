@@ -35,7 +35,7 @@ const state = reactive({
 })
 const supabase = useSupabaseClient<Project>()
 type Schema = z.output<typeof schema>
-async function onSubmit(event: FormSubmitEvent<Schema>) {
+const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     const data = toRaw(event.data)
     console.log(data)
     const { error } = await supabase.from('project').insert(data)
@@ -63,12 +63,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         state.pics = ['']
     }
 }
-function addPictureInput() {
+const addPictureInput = () => {
     if (state.pics.length < 6) {
         state.pics.push('')
     }
 }
-function removePictureInput(index: number) {
+const removePictureInput = (index: number) => {
     state.pics.splice(index, 1)
 }
 
