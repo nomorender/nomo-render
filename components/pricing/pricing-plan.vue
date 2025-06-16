@@ -94,19 +94,19 @@ const data = {
                 <div class="min-h-screen">
                     <div class="flex sticky top-2 z-20 bg-black">
                         <div
-                            class="w-[25%] bg-black md:px-20 md:py-5 text-[15px] md:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
+                            class="w-[25%] bg-black md:px-20 md:py-5 text-[15px]  md:text-[20px] lg:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
                             Criteria
                         </div>
                         <div
-                            class="w-[25%] border-l border-white bg-black text-[15px] md:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
+                            class="w-[25%] border-l border-white bg-black text-[15px] md:text-[20px] lg:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
                             In-house 3D Artist
                         </div>
                         <div
-                            class="w-[25%] border-l border-white bg-black text-[15px] md:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
+                            class="w-[25%] border-l border-white bg-black text-[15px]  md:text-[20px] lg:text-[32px] font-[500] leading-[150%] text-[#faf8f5] flex items-center justify-center">
                             Freelancer
                         </div>
                         <div
-                            class="w-[25%] border-l border-white bg-white text-[15px] md:text-[32px] font-[500] leading-[150%] text-[#8d7662] flex items-center justify-center">
+                            class="w-[25%] border-l border-white bg-white text-[15px]  md:text-[20px] lg:text-[32px] font-[500] leading-[150%] text-[#8d7662] flex items-center justify-center">
                             Nomo Render
                         </div>
                     </div>

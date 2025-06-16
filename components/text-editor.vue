@@ -30,14 +30,14 @@
                 @click="setAlign('center')">Center</UButton>
             <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="setAlign('right')">Right</UButton>
-            <UButton @click="exec('insertBreak')">↵ Break</UButton>
+            <UButton @click="exec('insertBreak')">Break</UButton>
             <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="insertImage">
                 Image</UButton>
         </div>
         <div class="flex gap-2">
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('undo')">↺
+            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('undo')">
                 Undo</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('redo')">↻
+            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('redo')">
                 Redo</UButton>
             <UDivider />
         </div>

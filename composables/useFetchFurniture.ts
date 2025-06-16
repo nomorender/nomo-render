@@ -1,19 +1,19 @@
-import type { Project } from "~/types/project/project"
+import type { Furniture } from "~/types/furniture/furniture"
 
-export const useFetchProjectHome = () => {
-    const projectList = ref<Project[] | null>()
+export const useFurniture = () => {
+    const furnitureList = ref<Furniture[] | null>()
     const fetchError = ref<string | null>()
     const isLoading = ref<boolean>()
-    const supabase = useSupabaseClient()
-    const fetchProjectHome = async () => {
+    const supabase = useSupabaseClient<Furniture>()
+    const fetchFurnitureList = async () => {
         try {
             isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*').eq('page', 'project');;
+            const { data, error } = await supabase.from('furniture').select('*').order('stt', { ascending: true });;
             if (error) {
                 fetchError.value = error.message;
                 return { success: false, error: error.message };
             }
-            projectList.value = data as Project[] || null;
+            furnitureList.value = data as Furniture[] || null;
             return { success: true };
         } catch (err: unknown) {
             const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
@@ -23,11 +23,9 @@ export const useFetchProjectHome = () => {
             isLoading.value = false;
         }
     }
-
     return {
-        projectList,
+        furnitureList,
         fetchError,
-        fetchProjectHome,
-        isLoading
+        fetchFurnitureList
     }
 }

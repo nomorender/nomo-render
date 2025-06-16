@@ -9,7 +9,7 @@
                     3D Interior Rendering Service?
                 </div>
             </div>
-            <div class="md:flex hidden gap-8 items-center justify-center">
+            <div class="lg:flex hidden gap-8 items-center justify-center">
                 <div class="relative w-full h-[420px] flex justify-center items-center mt-[10rem]">
                     <div v-for="(slide, slideIndex) in orderedSlides" :key="slide.id"
                         class="absolute w-[calc(82.5vw)] max-w-[1200px] rounded-[8px] h-full shadow-[0_4px_13.5px_rgba(0,0,0,0.42)] transition-all duration-300 ease-in-out"
@@ -58,7 +58,7 @@
 
 
             <!-- Slide for Mobile -->
-            <div class="md:hidden block">
+            <div class="lg:hidden md:block block">
                 <div class="relative pt-5 mx-auto">
                     <UCarousel :items="slides" arrows :ui="{
                         item: 'basis-full px-3',
@@ -68,22 +68,24 @@
                     }" ref="carousel">
                         <template #default="{ item }">
                             <div
-                                class="flex justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
+                                class="flex justify-center w-full md:mx-20 lg:mx-0 mx-0  bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
                                 <div class="">
                                     <div class="w-full md:mb-0 mb-[40px]">
                                         <NuxtImg :src="item.img" alt="img"
-                                            class="w-full h-[280px] rounded-[8px] object-cover object-center"
+                                            class="w-full md:h-[380px] lg:h-[280px] h-[280px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>
-                                    <div class="mx-5 flex gap-5">
+                                    <div class="md:mx-10 lg:mx-5 mx-5 md:mt-10 lg:mt-0 mt-0 flex gap-5">
                                         <div>
-                                            <div class="text-[18px] text-[#8D7662] font-[600]">
+                                            <div
+                                                class="md:text-[30px] lg:text-[18px] text-[18px] text-[#8D7662] font-[600]">
                                                 {{ item.name }}
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mx-5 mt-[15px] mb-[35px]">
-                                        <div class="text-justify text-[15px] leading-[180%] font-[300]">
+                                    <div class="md:mx-10 lg:mx-5 mx-5 mt-[15px] mb-[35px]">
+                                        <div
+                                            class="text-justify md:text-[25px] lg:text-[15px] text-[15px] leading-[180%] font-[300]">
                                             {{ item.desc }}
                                         </div>
                                     </div>
@@ -91,16 +93,16 @@
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton
+                            <UButton :disabled="disabled"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
-                                color="white" :disabled="disabled" @click="onClick" square>
+                                color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
-                            <UButton
+                            <UButton :disabled="disabled"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
-                                color="white" :disabled="disabled" @click="onClick" square>
+                                color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
                         </template>

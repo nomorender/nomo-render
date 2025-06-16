@@ -10,6 +10,10 @@ const links =
             label: 'Project',
             icon: 'material-symbols:dashboard',
             to: '/dashboard'
+        }, {
+            label: 'Furniture',
+            icon: 'material-symbols:dashboard',
+            to: '/dashboard/furniture'
         },
         {
             label: 'Storage',

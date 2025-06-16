@@ -2,19 +2,18 @@
 import { NuxtImg } from '#components'
 import type { Project } from '~/types/project/project';
 
-
 const isOpen = defineModel<boolean>('modelValue', { default: false })
 const props = defineProps<{
     items: Project[]
     selectedIndex: number | null
 }>()
 
-
 const emit = defineEmits(['update:modelValue', 'update:selectedIndex'])
 
 const selectedItem = computed(() =>
     props.selectedIndex !== null ? props.items[props.selectedIndex] : null
 )
+
 const goToNextItem = () => {
     if (props.selectedIndex !== null) {
         const modal = document.querySelector('.modal-container');
@@ -43,7 +42,7 @@ const goToPrevItem = () => {
 </script>
 <template>
     <UModal v-model="isOpen"
-        :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container pb-[120px]', width: '' }">
+        :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container md:pb-[200px] pb-[120px]', width: '' }">
         <div class="flex md:gap-2.5 mb-8 justify-between">
             <div class="flex items-center justify-center md:gap-12 gap-3">
                 <div class="md:p-5 p-2 bg-[#FAF8F5] rounded-full">
@@ -58,7 +57,7 @@ const goToPrevItem = () => {
                 </div>
             </div>
 
-            <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
+            <div class="fixed lg:translate-x-[64.1rem] lg:-translate-y-[-30px] -translate-x-[-37.5rem] md:hidden">
                 <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
                     base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
                 }">
@@ -67,16 +66,16 @@ const goToPrevItem = () => {
             </div>
         </div>
 
-        <div class="bg-[#FAF8F5] rounded-[8px] md:w-[960px] w-[355px]">
-            <div class="px-[50px] pt-[40px]">
-                <p class="text-[#8D7662] md:text-[32px] text-[16px] font-[600] mb-5 uppercase leading-[150%]">
+        <div class="bg-[#FAF8F5] rounded-[8px] lg:w-[960px] md:w-[600px] w-[355px]">
+            <div class="md:px-[50px] md:py-[40px] md:pb-2 px-[25px] pt-[28px] pb-[10px]">
+                <p class="text-[#8D7662] md:text-[32px] text-[16px] font-[600] uppercase leading-[150%]">
                     {{ selectedItem?.title }}
                 </p>
             </div>
             <div v-html="selectedItem?.content"
-                class="text-[25px] leading-[200%] font-[300] text-justify editor-content">
+                class="md:text-[25px] leading-[200%] font-[300] text-justify editor-content">
             </div>
-            <div class="pt-10">
+            <div class="md:pt-10 pt-5">
                 <div v-if="selectedItem?.pics?.length">
                     <template v-if="selectedItem.pics.length === 1">
                         <div class="grid grid-cols-2 gap-2">
@@ -90,12 +89,12 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 2">
                         <div class="flex gap-1">
                             <div class="w-[50%]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
-                                    alt="project image" />
+                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="w-[50%]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]" class="w-full h-auto object-cover"
-                                    alt="project image" />
+                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -107,12 +106,12 @@ const goToPrevItem = () => {
                                     alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[2]" class="w-full h-auto object-cover"
-                                    alt="project image" />
+                                <NuxtImg loading="lazy" :src="selectedItem.pics[2]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]" class="w-full h-auto object-cover"
-                                    alt="project image" />
+                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -124,12 +123,12 @@ const goToPrevItem = () => {
                                     alt="project image" />
                             </div>
                             <div class="col-span-1 md:h-[357px] h-[131px]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]" class="w-full h-full object-cover"
-                                    alt="project image" />
+                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="col-span-1">
                                 <NuxtImg loading="lazy" :src="selectedItem.pics[2]"
-                                    class="w-full h-[131px] md:h-[357px] object-cover" alt="project image" />
+                                    class="w-full md:h-[500px] h-[200px]  object-cover" alt="project image" />
                             </div>
                             <div class="col-span-2">
                                 <NuxtImg loading="lazy" :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
@@ -152,8 +151,8 @@ const goToPrevItem = () => {
 
         </div>
 
-        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden md:flex">
-            <div class="md:flex flex-col gap-7">
+        <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden lg:flex">
+            <div class="lg:flex flex-col gap-7">
                 <div class="flex flex-col items-center justify-center">
                     <NuxtLink to="https://wa.me/84967563407" target="_blank">
                         <UButton
@@ -177,35 +176,39 @@ const goToPrevItem = () => {
         </div>
 
         <!-- BAR FOR MODAL MOBILE  -->
-        <div class="w-full fixed bottom-0 left-0 py-3 md:hidden bg-[#D9D9D9]">
+        <div class="w-full fixed bottom-0 left-0 py-3 lg:hidden bg-[#D9D9D9]">
             <!-- TWO BUTTON SOCIAL -->
             <div class="flex w-full justify-center items-center gap-10">
                 <div class="flex flex-col items-center justify-center gap-1">
                     <UButton
-                        class="flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
+                        class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                         @click="goToPrevItem">
                         <div class="text-[#8D7662] flex justify-center">
-                            <UIcon name="mdi-light:arrow-left" class="size-4" />
+                            <UIcon name="mdi-light:arrow-left" class="md:size-11 lg:size-4 size-4" />
                         </div>
                     </UButton>
-                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Back</div>
+                    <div class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">Back
+                    </div>
                 </div>
 
                 <div class="flex flex-col items-center justify-center gap-1">
                     <NuxtLink to="https://wa.me/84967563407" target="_blank">
                         <UButton
-                            class="bg-[#FFFFFF] md:p-[20px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                            <UIcon name="material-symbols:mail" class="md:size-12 size-5 text-[#8D7662]" />
+                            class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                            <UIcon name="material-symbols:mail" class="lg:size-11 md:size-12 size-5 text-[#8D7662]" />
                         </UButton>
                     </NuxtLink>
-                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Message</div>
+                    <div class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">
+                        Message
+                    </div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-1">
                     <UButton
-                        class="bg-[#FFFFFF] md:p-[20px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                        <UIcon name="hugeicons:flowchart-02" class="md:size-12 size-5 text-[#8D7662]" />
+                        class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
+                        <UIcon name="hugeicons:flowchart-02" class="lg:size-12 md:size-11 size-5 text-[#8D7662]" />
                     </UButton>
-                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000] items-center justify-center">
+                    <div
+                        class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000] items-center justify-center">
                         Our
                         workflow
                     </div>
@@ -213,19 +216,19 @@ const goToPrevItem = () => {
 
                 <div class="flex flex-col items-center justify-center gap-1">
                     <UButton
-                        class="flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
+                        class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                         @click="goToNextItem">
                         <div class="text-[#FFFFFF] flex justify-center">
-                            <UIcon name="mdi-light:arrow-right" class="size-4" />
+                            <UIcon name="mdi-light:arrow-right" class="md:size-11 lg:size-4 size-4" />
                         </div>
                     </UButton>
-                    <div class="font-[300] text-[10px] leading-[150%] text-[#000000]">Next</div>
+                    <div class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">Next
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Next Previous -->
-        <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden lg:flex flex-col gap-7">
             <UButton
                 class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                 @click="goToNextItem">
@@ -234,7 +237,7 @@ const goToPrevItem = () => {
                 </div>
             </UButton>
         </div>
-        <div class="fixed translate-x-[-0.7rem] translate-y-[30.5rem] hidden md:flex flex-col gap-7">
+        <div class="fixed translate-x-[-0.7rem] translate-y-[30.5rem] hidden lg:flex flex-col gap-7">
             <UButton
                 class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                 @click="goToPrevItem">

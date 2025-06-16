@@ -23,7 +23,7 @@ const data = [
                 </div>
 
                 <div
-                    class="md:bg-[#FAF8F5] bg-[#FFFFFF]  md:w-full w-[85vw] md:mt-[60px] mt-[20px] md:px-[75px] px-[24px] py-10 md:py-[40px] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                    class="md:bg-[#FAF8F5] bg-[#FFFFFF] lg:w-full lg:mx-0 mx-auto md:mx-auto md:w-[85vw] w-[85vw] md:mt-[60px] mt-[20px] md:px-[75px] px-[24px] py-10 md:py-[40px] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                     <div v-for="(data, index) in data" :key="index">
                         <div class="flex md:gap-[20px] gap-[10px] items-start">
                             <icon name="material-symbols-light:crop-square-outline"
@@ -38,7 +38,7 @@ const data = [
 
                 <div class="flex justify-center">
                     <UButton color="gray" variant="solid"
-                        class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem] mt-[30px]">
+                        class="bg-[#8D7662] uppercase text-[#F5F5F5] lg:text-[20px] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem] mt-[30px]">
                         See our
                         workflow
                     </UButton>

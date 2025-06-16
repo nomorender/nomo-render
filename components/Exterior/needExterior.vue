@@ -14,9 +14,9 @@
                     </div>
                 </div>
                 <div class="flex justify-center">
-                    <div class="md:flex gap-[25px] justify-between md:px-0 mx-9">
+                    <div class="lg:flex gap-[25px] justify-between md:px-0 mx-9">
                         <div
-                            class="md:w-[600px] h-[286px] md:h-[480px] bg-[#D8C3A566] md:py-10 py-[30px] flex flex-col md:p-10 rounded-[8px] mb-10 md:mb-0 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="md:w-[600px] h-[286px] md:h-[480px] bg-[#D8C3A566] md:py-10 py-[30px] flex flex-col md:p-10 rounded-[8px] mb-10 md:mb-10 lg:mb-0 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="flex items-left md:w-full md:px-10 mb-[20px] md:mb-0">
                                 <div class="flex items-center justify-center md:gap-4 gap-[10px] pl-6 md:pl-0">
                                     <nuxt-img alt="group" src="/Extorior/Group.svg"
@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <ul class="md:px-10 md:pt-5 mx-6 md:mx-0">
+                            <ul class="md:px-10 md:pt-5 mx-6 md:mx-6 lg:mx-0">
                                 <li class="flex items-center gap-5 mb-1">
                                     <icon name="material-symbols-light:crop-square-outline" class="md:size-7 size-4" />
                                     <span
@@ -49,7 +49,8 @@
                                     <icon name="material-symbols-light:crop-square-outline "
                                         class="md:size-7 size-4 md:pt-[47px] pt-[26px]" />
                                     <span
-                                        class="w-[90%] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300]">Detailed construction documents
+                                        class="w-[90%] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-[300]">Detailed
+                                        construction documents
                                         (material specifications as indicated in the design plans)</span>
                                 </li>
                             </ul>

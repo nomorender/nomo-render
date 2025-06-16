@@ -5,10 +5,10 @@
         class="px-10 md:px-0 md:flex items-center justify-center gap-[30px] md:w-[81vw] md:max-w-[1200px] transition-all">
         <div class="flex flex-col md:w-[50%]">
           <div class="">
-            <div class="font-[700] md:text-[72px] text-[34px] w-fit text-[#8D7662] uppercase">
+            <div class="font-[700] lg:text-[72px] md:text-[40px] text-[34px] w-fit text-[#8D7662] uppercase">
               3d exterior
             </div>
-            <div class="font-[600] md:text-[60px] text-[30px] w-fit leading-[150%] text-[#000000]">
+            <div class="font-[600] lg:text-[60px] md:text-[30px] text-[30px] w-fit leading-[150%] text-[#000000]">
               Rendering Service
             </div>
           </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="">
           <p
-            class="md:pt-0 mt-7 md:text-[25px] text-[15px] md:w-[480px] font-[300] md:leading-[200%] leading-[180%] text-justify">
+            class="md:pt-0 mt-7 lg:text-[25px] md:text-[17px] text-[15px] lg:w-[480px] md:w-[300px] font-[300] md:leading-[200%] leading-[180%] text-justify">
             <span class="font-[500]">Top-notch
               quality</span>
             3D exterior visualizations bring architectural concepts to life with photorealistic
@@ -32,7 +32,7 @@
       </div>
     </div>
     <NuxtImg preload alt="heroPic" src="Extorior/HTL01.png"
-      class="w-full md:h-[700px] h-[266px] object-cover object-center" draggable="false" />
+      class="w-full lg:h-[700px] md:h-[400px] h-[266px] object-cover object-center" draggable="false" />
   </div>
   <ModalQuote v-model="isOpen" />
 </template>

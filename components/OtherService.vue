@@ -9,7 +9,7 @@
                     {{ heading }}</div>
             </div>
             <!-- Picture + text -->
-            <div class="hidden mt-[70px] md:flex flex-col justify-center items-center">
+            <div class="hidden mt-[70px] lg:flex flex-col justify-center items-center">
                 <div v-for="(service, index) in props.services" :key="index"
                     :class="['md:flex gap-[4rem] w-full', index % 2 === 0 ? 'justify-start' : 'justify-end', index > 0 ? 'mt-20' : '']">
                     <div v-if="index % 2 === 0" class="w-[60%]">
@@ -41,24 +41,30 @@
             </div>
 
 
-            <div class="md:hidden flex flex-col mt-[20px]">
+            <div class="lg:hidden flex flex-col mt-[20px]">
                 <div v-for="(service, index) in props.services" :key="'mobile-' + index" class="mt-[35px] first:mt-0">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
-                            <NuxtImg :src="service.image1" class="w-full h-[300px] object-cover rounded-[8px]" />
+                            <NuxtImg :src="service.image1"
+                                class="w-full md:h-[600px] lg:h-[300px] h-[300px] object-cover rounded-[8px]" />
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
-                        <div class="text-[#8D7662] font-[600] text-[18px] leading-[100%] uppercase">{{ service.title }}
+                        <div
+                            class="text-[#8D7662] font-[600] md:text-[27px] lg:text-[18px] text-[18px] leading-[100%] uppercase">
+                            {{ service.title
+                            }}
                         </div>
-                        <div class="text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
+                        <div class="md:text-[20px] lg:text-[15px] text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
                             v-html="service.description"></div>
                         <div class="mt-[20px] flex justify-center">
                             <UButton :to="service.link"
-                                class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[12px] py-[6px] rounded-[5px]"
+                                class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[20px] lg:px-[12px] px-[12px] py-[6px] md:py-[12px] lg:py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
                                 <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
-                                <div class="text-[13px] text-[#980C0C] leading-[16px] font-[400]">See more</div>
+                                <div
+                                    class="md:text-[20px] lg:text-[13px] text-[13px] text-[#980C0C] leading-[16px] font-[400]">
+                                    See more</div>
                             </UButton>
                         </div>
                     </div>

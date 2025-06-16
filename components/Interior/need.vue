@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center items-center">
-                    <div class="flex md:flex-row flex-col md:gap-[7px] gap-[25px] justify-between items-center">
+                    <div class="flex lg:flex-row flex-col md:gap-[7px] gap-[25px] justify-between items-center">
                         <div
                             class="px-[35px] py-[40px] md:w-[395px] w-[304px] h-[286px] md:h-[480px] bg-[#FFFFFF] flex flex-col rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="flex items-left md:w-full">

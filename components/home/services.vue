@@ -9,9 +9,9 @@
           </h2>
         </div>
         <div class="flex flex-col md:gap-y-20">
-          <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-row"
-            :class="{ 'md:flex-row-reverse': index % 2 }">
-            <div class="md:max-w-[720px] h-fit">
+          <div v-for="(item, index) in services" :key="item.name" class="flex flex-col md:flex-col lg:flex-row"
+            :class="{ 'lg:flex-row-reverse': index % 2 }">
+            <div class="lg:max-w-[720px] h-fit lg:mb-0 mb-0 md:mb-10">
               <UCarousel :items="item.image" :ui="{
                 item: 'basis-full',
                 container: 'rounded-lg',
@@ -28,10 +28,10 @@
                     icon: '!material-symbols:arrow-left-alt-rounded'
                   }
                 }
-              }" indicators arrows class="w-full max-w-[720px] mx-auto">
+              }" indicators arrows class="w-full md:max-w-[800px] lg:max-w-[720px] max-w-[720px] mx-auto">
                 <template #default="{ item }">
                   <NuxtImg :src="item" alt="item pic"
-                    class="w-full lg:max-w-[720px] md:h-[617px] h-[322px] max-h-[600px] object-cover object-center"
+                    class="w-full lg:max-w-[720px] md:max-w-[800px] md:w-[800px] md:h-[617px] h-[322px] max-h-[600px] object-cover object-center"
                     draggable="false" />
                 </template>
 
@@ -59,6 +59,9 @@
             </div>
           </div>
         </div>
+
+
+
         <div class="flex justify-center md:pb-[75px]">
           <UButton color="gray" size="xl" variant="solid"
             class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">

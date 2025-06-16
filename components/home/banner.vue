@@ -11,7 +11,7 @@ const isOpen = ref(false)
             class="md:hidden block absolute bg-cover inset-0 w-full h-full object-cover object-right z-0"
             alt="Interior Rendering Banner" preload />
         <div class="absolute inset-0 bg-black opacity-[20%] z-0"></div>
-        <div class="w-full relative text-white mx-8 z-10 md:px-[180px]">
+        <div class="w-full relative text-white mx-8 z-10 lg:px-[180px] md:px-[20px]">
             <h1 class="text-4xl md:text-7xl font-bold mb-8">
                 3D Visualization <br> Studio
             </h1>

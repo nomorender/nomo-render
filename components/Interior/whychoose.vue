@@ -10,7 +10,7 @@
                     Interior
                     Rendering Service?</div>
             </div>
-            <div class="hidden md:flex gap-[10px] items-center justify-center">
+            <div class="hidden lg:flex gap-[10px] items-center justify-center">
                 <div v-for="(item, index) in items" :key="index"
                     class="bg-[#FAF8F5] px-[30px] pt-[35px] pb-[70px] rounded-[8px]">
                     <div class="flex flex-col items-center justify-center w-[330px]">
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="md:hidden block">
+            <div class="lg:hidden block">
                 <div class="relative pt-5">
                     <UCarousel :items="items" arrows :ui="{
                         item: 'basis-full flex justify-center items-center',
@@ -37,31 +37,34 @@
                     }" ref="carousel">
                         <template #default="{ item, index }">
                             <div :key="index"
-                                class="bg-[#FAF8F5] py-9 px-6 rounded-[8px] flex justify-center items-center">
+                                class="bg-[#FAF8F5] py-9 px-6 md:py-20 md:px-[100px] lg:py-0 lg:px-0 rounded-[8px] flex justify-center items-center">
                                 <div class="flex flex-col items-center justify-center ">
                                     <div class="mb-[15px]">
-                                        <nuxt-img :src="item.logo" class="h-[80px] w-[80px]" />
+                                        <nuxt-img :src="item.logo"
+                                            class="h-[80px] w-[80px] md:h-[150px] md:w-[150px] lg:h-0 lg:w-0" />
                                     </div>
-                                    <div class="font-[600] text-[18px] leading-[100%] text-[#8D7662] mb-[20px]">
+                                    <div
+                                        class="font-[600] text-[18px] md:text-[30px] lg:text-0 leading-[100%] text-[#8D7662] mb-[20px]">
                                         {{ item.title }}
                                     </div>
-                                    <div class="w-[250px] font-[300] text-[15px] leading-[180%] text-center">
+                                    <div
+                                        class="w-[250px] font-[300] text-[15px] md:text-[20px] lg:text-0 leading-[180%] text-center">
                                         {{ item.desc }}
                                     </div>
                                 </div>
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton
+                            <UButton :disabled="disabled"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
-                                color="white" :disabled="disabled" @click="onClick" square>
+                                color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
-                            <UButton
+                            <UButton :disabled="disabled"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
-                                color="white" :disabled="disabled" @click="onClick" square>
+                                color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
                         </template>

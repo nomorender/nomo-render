@@ -11,11 +11,11 @@ const isOpen = ref(false)
             alt="Interior Rendering Mobile Banner" preload />
         <div class="text-[#FAF8F5] w-full relative z-10 flex flex-col items-center justify-center">
             <div
-                class="text-[30px] md:text-[72px] font-[600] mb-[15px] md:leading-[100%] leading-[130%] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+                class="text-[30px] md:text-[50px] lg:text-[72px] font-[600] mb-[15px] md:leading-[100%] leading-[130%] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
                 3D INTERIOR RENDERING
             </div>
             <div
-                class="text-[15px] font-[400] md:text-[32px] leading-[150%] italic md:font-[300] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+                class="text-[15px] md:text-[25px] font-[400] lg:text-[32px] leading-[150%] italic md:font-[300] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
                 Bringing design concepts to life with stunning realism
             </div>
 

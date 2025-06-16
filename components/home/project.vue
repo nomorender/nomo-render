@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import type { Project } from '~/types/project/project'
 
-
-const { projectList, fetchProjectHome, isLoading, fetchError } = useFetchProjectHome()
+const { projectList, fetchProjectHome } = useProject()
 const items = ref<Project[]>([])
 const isOpen = ref<boolean>(false)
 const selectedItem = ref<Project | null>(null)
 const selectedIndex = ref<number | null>(null)
+
+const toast = useToast()
 onMounted(async () => {
   const { success } = await fetchProjectHome()
   if (success) {
     items.value = projectList.value ?? []
   } else {
-    console.error(fetchError.value)
+    toast.add({
+      title: 'Failed to load Project',
+      description: 'Something went wrong!',
+      color: 'red'
+    })
   }
 })
 const openModal = (item: Project) => {
@@ -38,7 +43,8 @@ const openModal = (item: Project) => {
             </div>
           </div>
           <NuxtImg loading="lazy" :src="item.cover_url" alt="main img"
-            class="object-cover object-center w-[472px] h-[725px] rounded-lg" draggable="false" />
+            class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg"
+            draggable="false" />
         </div>
       </template>
 

@@ -30,7 +30,7 @@
                     v-show="activeIndex === index">
                     <div class="px-3" v-html="item.des" v-if="item.des"></div>
                     <!-- PC -->
-                    <div class="md:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
+                    <div class="lg:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
                         <div v-for="(box) in item.boxs" v-if="item.boxs">
                             <div class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
                                 <div class="py-10">
@@ -50,10 +50,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                            }}
+                                        }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                            }}
+                                        }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                            }}
+                                        }}
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <!-- MOBILE -->
-                    <div class="md:hidden block" v-if="hasPic(item.boxs)">
+                    <div class="lg:hidden md:block block" v-if="hasPic(item.boxs)">
                         <div class="relative pt-2 mx-auto">
                             <UCarousel :items="item.boxs" arrows :ui="{
                                 item: 'basis-full px-3',
@@ -87,36 +87,40 @@
                                         class="flex flex-col justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-5">
                                         <div v-if="item.title || item.des" class="py-5">
                                             <div v-if="item.title"
-                                                class="w-full  flex item-center justify-center text-[18px] font-[600] leading-[100%]">
+                                                class="w-full flex item-center justify-center md:text-[30px] text-[18px] font-[600] leading-[100%]">
                                                 {{ item.title }}
                                             </div>
                                             <div v-if="item.des"
-                                                class="mt-2 w-full flex item-center justify-center text-[12px] italic font-[300] leading-[150%]">
+                                                class="mt-2 w-full flex item-center justify-center md:text-[22px] text-[12px] italic font-[300] leading-[150%]">
                                                 {{ item.des }}
                                             </div>
                                         </div>
                                         <div v-if="item.pic">
                                             <NuxtImg :src="item.pic"
-                                                class="h-[260px] w-full object-center object-cover" />
+                                                class="h-[260px] md:h-[500px] w-full object-center object-cover" />
                                         </div>
                                         <div class="w-full">
                                             <div v-if="item.price || item.time || item.including || item.plus"
-                                                class="flex flex-col justify-center items-center gap-[10px] h-[120px]">
-                                                <div class="font-[500] text-[15px] leading-[180%]" v-if="item.price">
+                                                class="flex flex-col justify-center items-center gap-[10px] h-[120px] md:h-[200px]">
+                                                <div class="font-[500] text-[15px] md:text-[25px] leading-[180%]"
+                                                    v-if="item.price">
                                                     {{ item.price }}
                                                 </div>
-                                                <div class="font-[500] text-[15px] leading-[180%]" v-if="item.time">
+                                                <div class="font-[500] text-[15px] md:text-[25px] leading-[180%]"
+                                                    v-if="item.time">
                                                     {{ item.time }}
                                                 </div>
-                                                <div class="h-[35px]" v-if="item.including || item.plus">
-                                                    <div class="font-[300] text-[12px] leading-[150%] italic text-center"
+                                                <div class="h-[35px] md:h-[60px]" v-if="item.including || item.plus">
+                                                    <div class="font-[300] text-[12px] md:text-[22px] leading-[150%] italic text-center"
                                                         v-if="item.including">{{ item.including }}</div>
-                                                    <div class="font-[300] text-[12px] leading-[150%] italic text-center"
+                                                    <div class="font-[300] text-[12px] md:text-[22px] leading-[150%] italic text-center"
                                                         v-if="item.plus">{{ item.plus }}</div>
                                                 </div>
                                             </div>
-                                            <div class="h-[120px] flex justify-center items-center" v-if="item.subdes">
-                                                <div class="font-[500] text-[15px] leading-[180%]">{{ item.subdes }}
+                                            <div class="h-[120px] md:h-[200px] flex justify-center items-center"
+                                                v-if="item.subdes">
+                                                <div class="font-[500] text-[15px] md:text-[25px] leading-[180%]">{{
+                                                    item.subdes }}
                                                 </div>
                                             </div>
                                         </div>

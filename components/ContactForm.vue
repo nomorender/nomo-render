@@ -58,6 +58,9 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         })
         if (res.success) {
             state.email = ''
+            state.name = ''
+            state.description = ''
+            state.agree = false
             toast.add({
                 title: 'Success!',
                 description: 'Thank you for getting in touch. Our team will contact you shortly',
@@ -144,7 +147,7 @@ async function onError(event: FormErrorEvent) {
 
                             <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
                                 <UButton color="gray" variant="solid" type="submit" form="contactForm"
-                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-0 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
+                                    class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
                                     <div
                                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                                         {{ buttonText || "let’s work together!" }}

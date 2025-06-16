@@ -3,82 +3,70 @@ import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
 
 const toast = useToast()
 const isOpen = defineModel<boolean>('modelValue', { default: false })
-
+const formSubmitting = ref(false)
 const state = reactive({
     name: '',
     email: '',
     description: '',
     agree: true
 })
+onMounted(() => {
+    if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
+        (window as any).MauticSDKLoaded = true
+        const script = document.createElement('script')
+        script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
+        script.onload = function () {
+            if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
+                (window as any).MauticSDK.onLoad()
+            }
+        }
+        document.head.appendChild(script)
+    } else if (typeof (window as any).MauticSDK !== 'undefined') {
+        (window as any).MauticSDK?.onLoad()
+    }
+})
 
 async function onSubmit(event: FormSubmitEvent<any>) {
-    const form = document.createElement('form')
-    const { name, email, agree } = state
-    if (!email) {
+    if (!state.email || !state.email.includes('@')) {
         toast.add({
-            title: 'Missing email!',
-            description: 'Please fill in your email to send the request.',
+            title: 'Invalid email!',
+            description: 'Please enter a valid email address.',
             color: 'red'
         })
         return
     }
-
-    if (!name) {
-        toast.add({
-            title: 'Missing name!',
-            description: 'Please fill in your name to send the request.',
-            color: 'red'
-        })
-        return
-    }
-
-    if (!agree) {
-        toast.add({
-            title: 'Agreement required!',
-            description: 'Please agree before sending the request.',
-            color: 'red'
-        })
-        return
-    }
-
+    formSubmitting.value = true
     try {
-        form.method = 'POST'
-        form.action = 'https://mail.nomorender.com/form/submit?formId=4'
-        form.style.display = 'none'
-        form.target = '_blank'
-        const appendField = (name: string, value: string) => {
-            const input = document.createElement('input')
-            input.type = 'hidden'
-            input.name = name
-            input.value = value
-            form.appendChild(input)
-        }
-        appendField('mauticform[f_name]', state.name)
-        appendField('mauticform[email]', state.email)
-        appendField('mauticform[f_message]', state.description)
-        appendField('mauticform[formId]', '3')
-        appendField('mauticform[return]', '')
-        appendField('mauticform[formName]', 'contactusnomorender')
-        document.body.appendChild(form)
-        form.submit()
-
-        state.name = ''
-        state.email = ''
-        state.description = ''
-        state.agree = true
-
-        toast.add({
-            title: 'Success',
-            description: 'Thanks for sending us email!',
-            color: 'green'
+        const res = await $fetch('/api/contact', {
+            method: 'POST',
+            body: { name: state.name, email: state.email, description: state.description },
         })
-        isOpen.value = false
+        if (res.success) {
+            state.email = ''
+            state.name = ''
+            state.description = ''
+            state.agree = false
+            isOpen.value = false
+            toast.add({
+                title: 'Success!',
+                description: 'Thank you for getting in touch. Our team will contact you shortly',
+                color: 'green'
+            })
+        } else {
+            toast.add({
+                title: 'Failed!',
+                description: 'Please try another method!',
+                color: 'red'
+            })
+        }
     } catch (error) {
         toast.add({
-            title: 'Error',
-            description: 'Please try again later!',
+            title: 'Failed!',
+            description: 'Please try another method!',
             color: 'red'
         })
+    } finally {
+        formSubmitting.value = false
     }
 }
 

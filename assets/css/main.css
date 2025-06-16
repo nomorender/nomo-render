@@ -19,6 +19,20 @@
   padding-right: 50px;
 }
 
+@media (max-width: 768px) {
+  .editor-content p {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .editor-content p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 .editor-content h1 {
   margin-top: 0.25rem;  
   margin-bottom: 0.25rem;  

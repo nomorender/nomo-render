@@ -4,12 +4,12 @@ import { z } from 'zod'
 import type { Project } from '~/types/project/project';
 
 const isOpen = defineModel<boolean>('modelValue', { default: false })
-const toast = useToast()
-
 const props = defineProps<{
-    id: string | null
+    id: string | null,
+    project?: Project | null
 }>()
 const emit = defineEmits(['saved'])
+const toast = useToast();
 
 const schema = z.object({
     stt: z.number().optional(),
@@ -33,36 +33,56 @@ const state = reactive({
     content: '',
     pics: ['']
 })
+
+const resetState = () => {
+    Object.assign(state, {
+        stt: 0,
+        title: '',
+        client: '',
+        cover_url: '',
+        location: '',
+        founded: '',
+        page: '',
+        content: '',
+        pics: ['']
+    })
+}
 const supabase = useSupabaseClient<Project>()
 type Schema = z.output<typeof schema>
+watch(
+    () => [props.id, isOpen.value],
+    async ([id, open]) => {
+        if (id && open) {
+            resetState()
+            const { data, error } = await supabase
+                .from('project')
+                .select('*')
+                .eq('id', id)
+                .single()
+            if (!error && data) {
+                Object.assign(state, data)
+            }
+        }
+    },
+    { immediate: true }
+)
+
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     const data = toRaw(event.data)
-    console.log(data)
-    const { error } = await supabase.from('project').insert(data)
-    if (error) {
+    // const { error } = await supabase.from('project').update(data).eq('id', props.id).select().single()
+    const { error } = await supabase.from('project').insert(data).select().single()
+    if (!error) {
         toast.add({
-            title: 'Add error',
-            color: 'red'
-        })
-        console.log(error)
-    } else {
-        toast.add({
-            title: 'Added',
+            title: 'Updated successfull!',
+            description: 'Your data has been updated!',
             color: 'green'
         })
-        emit('saved')
         isOpen.value = false
-        state.stt = 0
-        state.title = ''
-        state.client = ''
-        state.cover_url = ''
-        state.location = ''
-        state.founded = ''
-        state.page = ''
-        state.content = ''
-        state.pics = ['']
+        emit('saved')
+        resetState()
     }
 }
+
 const addPictureInput = () => {
     if (state.pics.length < 6) {
         state.pics.push('')

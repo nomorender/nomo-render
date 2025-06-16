@@ -12,7 +12,7 @@
             </div>
             <div class="flex flex-col items-center justify-center my-3">
                 <div
-                    class="pl-0 md:w-[1200px] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[30px] my-5 md:my-0 md:mb-[18px] text-justify">
+                    class="pl-0 lg:w-[1200px] md:w-[700px] md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] font-light mx-[35px] md:mt-[30px] my-5 md:my-0 md:mb-[18px] text-justify">
                     <div>
                         A well-structured 3D furniture modeling workflow ensures efficiency, precision, and high-quality
                         output. This streamlined workflow helps Nomo Render transform basic sketches into <span
@@ -79,9 +79,9 @@
                 </div>
 
                 <!-- Mobile -->
-                <div class="block lg:hidden md:w-fit w-full relative">
+                <div class="block md:block lg:hidden lg:w-fit w-full relative md:ml-20 mt-0 lg:mt-0">
                     <UCarousel ref="carousel" v-model="activeStep" :items="timeline" :ui="{
-                        wrapper: 'md:pointer-events-none overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
+                        wrapper: 'overflow-x-scroll snap-x snap-mandatory pl-0 md:pl-0 no-scrollbar',
                         item: 'flex flex-col items-start gap-9 w-[300px] md:w-[400px] snap-start shrink-0'
                     }" class="w-full">
                         <template #default="{ item, index }">
@@ -105,7 +105,7 @@
                                             class="font-medium mx-3 text-black md:text-[25px] text-[15px] leading-[180%] md:leading-[200%] whitespace-nowrap">
                                             {{ item.title }}
                                         </div>
-                                        <div v-if="item.id !== timeline.length" class="h-px flex-grow bg-black"></div>
+                                        <div class="h-px flex-grow bg-black"></div>
                                     </div>
                                 </div>
                                 <div class="w-[300px] md:w-[350px]">
@@ -120,7 +120,7 @@
                             </div>
                         </template>
                     </UCarousel>
-                    <div class="md:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
+                    <div class="lg:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <button @click="scrollLeft"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"

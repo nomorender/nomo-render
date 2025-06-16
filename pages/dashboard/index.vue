@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <DashboardTable />
+        <DashboardTableProject />
     </div>
 </template>
 

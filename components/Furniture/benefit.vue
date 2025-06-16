@@ -14,14 +14,14 @@ const data = [
                         Who can benefit from
                     </div>
                     <div
-                        class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px]">
+                        class="lg:w-full md:w-[600px] w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px]">
                         3D Furniture Rendering Service?
                     </div>
                 </div>
 
                 <div class="py-[20px] flex justify-center items-center">
                     <p
-                        class="md:w-full w-[310px] md:text-[25px] text-[18px] font-[300] md:leading-[200%] leading-[180%] md:text-justify text-center">
+                        class="lg:w-full md:w-[600px] w-[310px] md:text-[25px] text-[18px] font-[300] md:leading-[200%] leading-[180%] md:text-justify text-center">
                         Our
                         3D
                         Furniture
@@ -30,7 +30,8 @@ const data = [
                         to a wide range of industries, including:</p>
                 </div>
 
-                <div class="flex md:flex-row flex-col md:gap-[20px] gap-[30px] items-center justify-center">
+                <div
+                    class="flex lg:flex-row flex-col lg:gap-[20px] md:gap-[60px] gap-[30px] items-center justify-center">
                     <div v-for="(data, index) in data" :key="index"
                         class="bg-[#FFFFFF] md:w-[590px] w-[85vw] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="border-[1.5px] rounded-[8px] border-[#D8C3A5] py-[16px] md:py-0">

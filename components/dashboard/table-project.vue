@@ -26,7 +26,7 @@ const columns = [
 const {
     projectList,
     fetchProjectList,
-} = useFetchProject()
+} = useProject()
 
 onMounted(() => {
     fetchProjectList()
@@ -45,7 +45,6 @@ function handleSaved() {
     fetchProjectList()
     isOpen.value = false
 }
-
 
 const filteredRows = computed(() => {
     if (!q.value) return projectList.value || []
@@ -90,5 +89,5 @@ const items = (row: Project) => [
         <UPagination show-last show-first size="md" :active-button="{ color: 'black' }"
             :inactive-button="{ color: 'gray' }" v-model="page" :page-count="pageCount" :total="filteredRows.length" />
     </div>
-    <ModalEdit v-model="isOpen" :id="openId" @saved="handleSaved" />
+    <ModalEditProject v-model="isOpen" :id="openId" @saved="handleSaved" />
 </template>

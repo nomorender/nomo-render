@@ -4,7 +4,7 @@
             <div class="flex flex-col justify-center items-center">
                 <div class="mb-8 md:mt-0 mt-[20px]">
                     <div
-                        class="text-[16px] md:text-[32px] leading-[150%] font-[400] text-[#000000] text-center md:text-left">
+                        class="text-[16px] md:text-[32px] leading-[150%] font-[400] text-[#000000] text-center md:text-center lg:text-left">
                         What is the benefits of
                     </div>
                     <div
