@@ -23,7 +23,6 @@ const schema = z.object({
     pics: z.array(z.string()).max(6)
 })
 const state = reactive({
-    stt: 0,
     title: '',
     client: '',
     cover_url: '',
@@ -36,7 +35,6 @@ const state = reactive({
 
 const resetState = () => {
     Object.assign(state, {
-        stt: 0,
         title: '',
         client: '',
         cover_url: '',
@@ -104,9 +102,6 @@ const removePictureInput = (index: number) => {
                         { label: 'Interior', value: 'interior' },
                         { label: 'Project', value: 'project' }
                     ]" placeholder="Select page" />
-                </UFormGroup>
-                <UFormGroup label="Stt" name="stt">
-                    <UInput v-model="state.stt" type="number" />
                 </UFormGroup>
                 <UFormGroup label="Title" name="title">
                     <UInput v-model="state.title" />
