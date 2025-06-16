@@ -42,7 +42,7 @@ const goToPrevItem = () => {
 </script>
 <template>
     <UModal v-model="isOpen"
-        :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container md:pb-[200px] pb-[120px]', width: '' }">
+        :ui="{ overlay: { background: 'bg-black/80' }, background: '!shadow-none bg-transparent', container: 'border-none flex items-center justify-center !shadow-none modal-container lg:pb-[120px] md:pb-[200px] pb-[120px]', width: '' }">
         <div class="flex md:gap-2.5 mb-8 justify-between">
             <div class="flex items-center justify-center md:gap-12 gap-3">
                 <div class="md:p-5 p-2 bg-[#FAF8F5] rounded-full">
@@ -57,7 +57,7 @@ const goToPrevItem = () => {
                 </div>
             </div>
 
-            <div class="fixed lg:translate-x-[64.1rem] lg:-translate-y-[-30px] -translate-x-[-37.5rem] md:hidden">
+            <div class="lg:fixed lg:translate-x-[64.1rem] lg:-translate-y-[-30px] -translate-x-[-37.5rem] md:hidden">
                 <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
                     base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
                 }">
