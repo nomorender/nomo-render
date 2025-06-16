@@ -57,7 +57,7 @@ const goToPrevItem = () => {
                 </div>
             </div>
 
-            <div class="lg:fixed lg:translate-x-[64.1rem] lg:-translate-y-[-30px] -translate-x-[-37.5rem] md:hidden">
+            <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
                 <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
                     base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
                 }">
