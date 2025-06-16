@@ -413,9 +413,9 @@ const isLastItem = computed(() => {
                                 </div>
                             </div>
                             <div class="bg-[#FAF8F5]">
-                                <div class="lg:w-[960px] h-full md:w-[600px] w-[355px]">
+                                <div class="lg:w-[960px] md:w-[600px] w-[355px] h-full">
                                     <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
-                                        class=":w-full h-auto object-cover object-center" />
+                                        class="w-full h-auto object-cover object-center" />
                                 </div>
                             </div>
                             <div class="md:px-[4rem] px-[35px] py-[30px]">

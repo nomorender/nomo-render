@@ -69,8 +69,8 @@ watch(
 
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     const data = toRaw(event.data)
-    // const { error } = await supabase.from('project').update(data).eq('id', props.id).select().single()
-    const { error } = await supabase.from('project').insert(data).select().single()
+    const { error } = await supabase.from('project').update(data).eq('id', props.id).select().single()
+    // const { error } = await supabase.from('project').insert(data).select().single()
     if (!error) {
         toast.add({
             title: 'Updated successfull!',
