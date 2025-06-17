@@ -20,7 +20,7 @@ onMounted(async () => {
                 'block md:hidden': item.mode === 'mobile',
                 'hidden md:block': item.mode === 'desktop',
             }">
-                <NuxtImg :src="item.src" :alt="item.alt"
+                <NuxtImg :src="item.src" :alt="item.alt" loading="lazy"
                     class="lg:w-full w-full md:w-full h-[123px] md:h-[370px] lg:h-[300px] object-cover object-center" />
             </div>
         </div>
