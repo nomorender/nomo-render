@@ -37,7 +37,7 @@ const timeline = [
     },
     {
         id: 5,
-        title: "Final enviroment refinements",
+        title: "Final environment refinements",
         description: "Refine landscaping, water features, urban furniture, and additional elements like people, vehicles, and weather effects for a complete scene.",
         active: true,
         image: '/slide/Ex05.jpg',

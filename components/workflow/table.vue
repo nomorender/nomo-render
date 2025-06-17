@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const items = [
-    { label: 'Connect', sub_label: `Let's get started`, icon: '/workflow/Connect.svg' },
-    { label: 'Brief', sub_label: 'Understanding is key!', icon: '/workflow/Brief.svg' },
-    { label: 'Crafting', sub_label: 'From vision to visuals', icon: '/workflow/Crafting.svg' },
-    { label: 'Pay & Delivery', sub_label: 'Wrap it up', icon: '/workflow/Paying.svg' }
+    { label: 'Connect', sub_label: `Let's get started`, icon: '/workflow/Connect.svg', activeIcon: '/workflow/Connect-active.svg' },
+    { label: 'Brief', sub_label: 'Understanding is key!', icon: '/workflow/Brief.svg', activeIcon: '/workflow/Brief-active.svg' },
+    { label: 'Crafting', sub_label: 'From vision to visuals', icon: '/workflow/Crafting.svg', activeIcon: '/workflow/Crafting-active.svg' },
+    { label: 'Pay & Delivery', sub_label: 'Wrap it up', icon: '/workflow/Payment.svg', activeIcon: '/workflow/Payment-active.svg' }
 ]
+
+const selected = ref(0)
 </script>
 <template>
     <div class="mb-20">
@@ -14,7 +16,7 @@ const items = [
                 <p class="text-[48px] leading-[150%] font-[600] italic">At Nomo Render: Great ideas start with a simple
                     chat</p>
             </div>
-            <UTabs :items="items" orientation="vertical" class="mt-20" :ui="{
+            <UTabs v-model="selected" :items="items" orientation="vertical" class="mt-20" :ui="{
                 wrapper: 'flex space-y-0 items-start justify-center lg:max-w-[1200px] md:max-w-[800px] bg-[#FAF8F5] py-5',
                 list: {
                     background: '',
@@ -34,8 +36,11 @@ const items = [
                     }
                 }
             }">
-                <template #default="{ item }">
-                    <nuxt-img :src="item.icon" class="w-[81px] h-[81px]" />
+                <template #default="{ item, index }">
+                    <nuxt-img v-if="selected == index" :src="item.activeIcon"
+                        class="w-[78px] h-[78px] border-2 rounded-full border-[#980b0d] p-1" />
+                    <nuxt-img v-else :src="item.icon"
+                        class="w-[78px] h-[78px] border-2 rounded-full border-black p-1" />
                     <div class="truncate flex flex-col items-start w-[200px]">
                         <span class="text-[28px] leading-[150%] font-[500]">{{ item.label }}</span>
                         <span class="font-angelface text-[35px] font-400 leading-[120%]">{{ item.sub_label }}</span>

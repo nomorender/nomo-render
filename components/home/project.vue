@@ -20,6 +20,12 @@ onMounted(async () => {
     })
   }
 })
+const loadedMap = ref<Record<string, boolean>>({})
+const mark = (url: string | undefined) => {
+  if (typeof url === 'string') {
+    loadedMap.value[url] = true
+  }
+}
 const openModal = (item: Project) => {
   selectedIndex.value = items.value.findIndex((i) => i.title === item.title)
   selectedItem.value = item
@@ -42,9 +48,11 @@ const openModal = (item: Project) => {
               <p class="font-[300] leading-[200%] md:text-[25px] text-[15px]">{{ item.location }}</p>
             </div>
           </div>
-          <NuxtImg loading="lazy" :src="item.cover_url" alt="main img"
-            class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg"
-            draggable="false" />
+          <USkeleton v-if="!loadedMap[item.cover_url || '']"
+            class="absolute inset-0 w-[472px] lg:h-[725px] md:h-[600px] h-[550px] rounded-lg" />
+          <NuxtImg :src="item.cover_url" alt="main img" loading="lazy" class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg
+             transition-opacity duration-300" :class="loadedMap[item.cover_url || ''] ? 'opacity-100' : 'opacity-0'"
+            draggable="false" @load="mark(item.cover_url)" />
         </div>
       </template>
 

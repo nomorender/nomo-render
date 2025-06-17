@@ -7,7 +7,6 @@ const props = defineProps<{
     items: Project[]
     selectedIndex: number | null
 }>()
-
 const emit = defineEmits(['update:modelValue', 'update:selectedIndex'])
 
 const selectedItem = computed(() =>
@@ -80,7 +79,8 @@ const goToPrevItem = () => {
                     <template v-if="selectedItem.pics.length === 1">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg :src="selectedItem.pics[0]"
+                                    class="w-full h-auto object-cover transition-opacity duration-500"
                                     alt="project image" />
                             </div>
                         </div>

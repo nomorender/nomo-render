@@ -41,7 +41,7 @@ const sections = [
 
         <div class="flex flex-col gap-[20px]">
             <div v-for="(section, index) in sections" :key="index"
-                class="bg-[#D9D9D9] p-[25px] flex flex-col gap-[10px] rounded-[8px]">
+                class="bg-[#D9D9D9] px-[35px] py-[25px] flex flex-col gap-[10px] rounded-[8px]">
                 <span class="font-[600] text-[25px] leading-[150%] text-[#980C0C]">
                     {{ section.title }}
                 </span>
@@ -49,7 +49,7 @@ const sections = [
                 <div class="flex flex-col gap-3 items-start justify-start">
                     <UCheckbox v-for="(question, index) in section.items" :key="index" :ui="{
                         wrapper: 'flex items-center w-[595px]',
-                        base: 'h-[25px] w-[25px] mr-5',
+                        base: 'h-[25px] w-[25px] mr-2',
                         background: 'bg-[#D9D9D9]',
                         border: 'border border-[#000000]',
                         rounded: 'rounded-none'
