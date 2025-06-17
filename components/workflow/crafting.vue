@@ -20,7 +20,7 @@
                 </p>
             </div>
             <div class="flex flex-col gap-[20px]">
-                <div class="bg-[#D9D9D9] p-[25px] flex flex-col gap-[10px] rounded-[8px]">
+                <div class="bg-[#D9D9D9] p-[25px] flex flex-col gap-[10px] rounded-[8px] pl-[30px]">
                     <div>
                         <div class="font-[600] text-[25px] leading-[150%] text-[#980C0C]">
                             Interior & Exterior Design – Up to 5 Rounds
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="bg-[#D9D9D9] p-[25px] flex flex-col gap-[10px] rounded-[8px]">
+                <div class="bg-[#D9D9D9] p-[25px] flex flex-col gap-[10px] rounded-[8px] pl-[30px]">
                     <div>
                         <div class="font-[600] text-[25px] leading-[150%] text-[#980C0C]">
                             Furniture Modeling – Up to 3 Rounds
