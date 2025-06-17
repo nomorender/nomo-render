@@ -8,7 +8,7 @@ export const useFurniture = () => {
     const fetchFurnitureList = async () => {
         try {
             isLoading.value = true;
-            const { data, error } = await supabase.from('furniture').select('*').order('stt', { ascending: true });;
+            const { data, error } = await supabase.from('furniture').select('*').order('stt', { ascending: true });
             if (error) {
                 fetchError.value = error.message;
                 return { success: false, error: error.message };

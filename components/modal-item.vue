@@ -163,7 +163,7 @@ const goToPrevItem = () => {
                     <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <UButton
+                    <UButton to="/workflow"
                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                         <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                     </UButton>

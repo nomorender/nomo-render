@@ -204,10 +204,10 @@ const data = {
                         class="min-w-[130px] bg-[#d9d9d9] p-4 sticky left-0 z-20 font-medium text-[14px] md:text-[25px] leading-[200%]">
                         Overall
                     </div>
-                    <div class="min-w-[130px] bg-[#faf8f5] border-l pt-6 border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
+                    <div class="min-w-[130px] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"
                         v-html="data.summaries.inHouse">
                     </div>
-                    <div class="min-w-[130px] bg-white border-l pt-6 border-white p-4 text-[14px] md:text-[25px] z-10 leading-[200%] font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]"
+                    <div class="min-w-[130px] bg-white border-l border-white p-4 text-[14px] md:text-[25px] z-10 leading-[200%] font-light shadow-[4px_0_6px_-2px_rgba(0,0,0,0.06),_-4px_0_6px_-2px_rgba(0,0,0,0.06)]"
                         v-html="data.summaries.nomoRender">
                     </div>
                     <div class="min-w-[130px] bg-[#faf8f5] border-l border-white p-4 text-[14px] md:text-[25px] leading-[200%] font-light"

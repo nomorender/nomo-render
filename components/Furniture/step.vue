@@ -123,13 +123,11 @@
                     <div class="lg:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <button @click="scrollLeft"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
-                            <UIcon name="material-symbols-light:arrow-left-alt-rounded"
-                                class="size-7 md:size-10 text-[#8D7662]" />
+                            <UIcon name="mingcute:arrow-left-fill" class="size-5 md:size-10 text-[#8D7662]" />
                         </button>
                         <button @click="scrollRight"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
-                            <UIcon name="material-symbols-light:arrow-right-alt-rounded"
-                                class="size-7 md:size-10 text-white" />
+                            <UIcon name="mingcute:arrow-right-fill" class="size-5 md:size-10 text-white" />
                         </button>
                     </div>
                 </div>

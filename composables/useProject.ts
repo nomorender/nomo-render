@@ -31,7 +31,7 @@ export const useProject = () => {
     const fetchProjectHome = async () => {
         try {
             isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*').eq('page', 'project');;
+            const { data, error } = await supabase.from('project').select('*').eq('page', 'project').order('stt', { ascending: true });
             if (error) {
                 fetchError.value = error.message;
                 return { success: false, error: error.message };
