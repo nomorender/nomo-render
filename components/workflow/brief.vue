@@ -46,16 +46,16 @@ const sections = [
                     {{ section.title }}
                 </span>
 
-                <div class="flex flex-col items-start justify-start">
+                <div class="flex flex-col gap-3 items-start justify-start">
                     <UCheckbox v-for="(question, index) in section.items" :key="index" :ui="{
                         wrapper: 'flex items-center w-[595px]',
-                        base: 'h-[25px] w-[25px]',
+                        base: 'h-[25px] w-[25px] mr-5',
                         background: 'bg-[#D9D9D9]',
                         border: 'border border-[#000000]',
                         rounded: 'rounded-none'
                     }">
                         <template #label>
-                            <span class="font-[300] text-[25px] leading-[200%] text-justify">
+                            <span class="text-black font-[300] text-[25px] leading-[200%] text-justify">
                                 {{ question }}
                             </span>
                         </template>

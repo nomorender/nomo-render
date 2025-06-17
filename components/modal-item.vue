@@ -80,7 +80,7 @@ const goToPrevItem = () => {
                     <template v-if="selectedItem.pics.length === 1">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                         </div>
@@ -89,12 +89,12 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 2">
                         <div class="flex gap-1">
                             <div class="w-[50%]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]"
-                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full md:h-[500px] h-[200px] object-cover"
+                                    alt="project image" />
                             </div>
                             <div class="w-[50%]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
-                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
+                                    alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -102,16 +102,16 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 3">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[2]"
-                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[2]" class="w-full md:h-[500px] h-[200px] object-cover"
+                                    alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
-                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
+                                    alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -119,19 +119,19 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 4">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                             <div class="col-span-1 md:h-[357px] h-[131px]">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[1]"
-                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
+                                    alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[2]"
-                                    class="w-full md:h-[500px] h-[200px]  object-cover" alt="project image" />
+                                <NuxtImg :src="selectedItem.pics[2]" class="w-full md:h-[500px] h-[200px]  object-cover"
+                                    alt="project image" />
                             </div>
                             <div class="col-span-2">
-                                <NuxtImg loading="lazy" :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
+                                <NuxtImg :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                         </div>

@@ -42,11 +42,14 @@
                     </div>
                     <div class="text-[25px] font-[300] leading-[200%]">
                         <span class="font-[500]">Project Timeline for Interior Render:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">See more</span>
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
+                            @click="navigateTo('/interior')">See
+                            more</span>
                     </div>
                     <div class="text-[25px] font-[300] leading-[200%]">
                         <span class="font-[500]">Project Timeline for Exterior Render:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">See more</span>
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
+                            @click="navigateTo('/exterior')">See more</span>
                     </div>
                 </div>
 
@@ -64,8 +67,9 @@
                             after approval.</p>
                     </div>
                     <div class="text-[25px] font-[300] leading-[200%]">
-                        <span class="font-[500]">Project Timeline for Exterior Render:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">See more</span>
+                        <span class="font-[500]">Project Timeline for Furniture Modeling:</span> <span
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
+                            @click="navigateTo('/furniture')">See more</span>
                     </div>
                 </div>
             </div>

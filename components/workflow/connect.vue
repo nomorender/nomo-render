@@ -6,7 +6,7 @@ const sections = [
       <span class='font-[500] italic'>Email, WhatsApp</span>, or even a 
       <span class='font-[500] italic'>Video meeting</span>, we’ll make sure everything flows smoothly.
       Just let us know your preferred way to stay in touch.`,
-        image: "workflow/communication.svg"
+        image: "workflow/Communication.svg"
     },
     {
         title: "📝 Idea Form",

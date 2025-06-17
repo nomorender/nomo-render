@@ -23,7 +23,7 @@
 
                         <div>
                             <div class="font-[300] leading-[200%] text-[25px] mb-[15px]">2. You can complete the
-                                transaction easily using your preferred payment method within Payoneer..</div>
+                                transaction easily using your preferred payment method within Payoneer.</div>
                             <div class="flex flex-col items-center justify-center gap-[20px]">
                                 <div class="flex gap-[70px]">
                                     <div class="flex flex-col justify-center items-center">

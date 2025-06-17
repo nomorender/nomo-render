@@ -35,7 +35,7 @@ const items = [
                 }
             }">
                 <template #default="{ item }">
-                    <nuxt-img :src="item.icon" class="w-[81px] h-[81px]" preload />
+                    <nuxt-img :src="item.icon" class="w-[81px] h-[81px]" />
                     <div class="truncate flex flex-col items-start w-[200px]">
                         <span class="text-[28px] leading-[150%] font-[500]">{{ item.label }}</span>
                         <span class="font-angelface text-[35px] font-400 leading-[120%]">{{ item.sub_label }}</span>
@@ -58,12 +58,12 @@ const items = [
             </UTabs>
         </div>
         <div class="w-full flex justify-center text-center gap-10 mt-10">
-            <UButton color="gray" variant="solid"
+            <UButton color="gray" variant="solid" to="/portfolio"
                 class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
                 explore our projects
             </UButton>
-            <UButton color="gray" variant="solid"
-                class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
+            <UButton color="gray" variant="solid" to="/pricing" class=" bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2
+                hover:bg-[#90755e]">
                 check our pricing
             </UButton>
         </div>
