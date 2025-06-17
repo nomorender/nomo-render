@@ -40,7 +40,7 @@ const selected = ref(0)
                     <nuxt-img v-if="selected == index" :src="item.activeIcon"
                         class="w-[78px] h-[78px] border-2 rounded-full border-[#980b0d] p-1" />
                     <nuxt-img v-else :src="item.icon"
-                        class="w-[78px] h-[78px] border-2 rounded-full border-black p-1" />
+                        class="w-[78px] h-[78px] border-2 rounded-full border-[#6b7280] p-1" />
                     <div class="truncate flex flex-col items-start w-[200px]">
                         <span class="text-[28px] leading-[150%] font-[500]">{{ item.label }}</span>
                         <span class="font-angelface text-[35px] font-400 leading-[120%]">{{ item.sub_label }}</span>
