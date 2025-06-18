@@ -14,7 +14,7 @@ const selectedItem = computed(() =>
     <div>
         <div class="w-full flex flex-col gap-[25px] hover:cursor-pointer"
             @click="() => { isOpen = true; selectedIndex = props.items.findIndex(i => i.id === props.id) }">
-            <NuxtImg format="webp" :src="props.cover_url"
+            <NuxtImg format="webp" :src="props.cover_url" loading="lazy"
                 class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[420px] object-cover object-center" />
             <div class="flex flex-col items-center">
                 <div class="font-[300] lg:text-[16px] md:text-[16px] leading-[150%]">{{ props.founded }} | {{
