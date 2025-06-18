@@ -44,16 +44,17 @@
                                     </div>
                                 </div>
                                 <div v-if="box.pic">
-                                    <NuxtImg :src="box.pic" class="h-[550px] w-full object-center object-cover" />
+                                    <NuxtImg format="webp" :src="box.pic"
+                                        class="h-[550px] w-full object-center object-cover" />
                                 </div>
                                 <div class="w-full">
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                        }}
+                                            }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                        }}
+                                            }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -66,7 +67,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                        }}
+                                            }}
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +97,7 @@
                                             </div>
                                         </div>
                                         <div v-if="item.pic">
-                                            <NuxtImg :src="item.pic"
+                                            <NuxtImg format="webp" :src="item.pic"
                                                 class="h-[260px] md:h-[500px] w-full object-center object-cover" />
                                         </div>
                                         <div class="w-full">

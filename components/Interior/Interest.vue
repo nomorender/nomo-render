@@ -46,15 +46,15 @@
                         </div>
                         <div class="flex lg:gap-[8px]">
                             <div class="hidden lg:block">
-                                <NuxtImg src="/Interior/Pic1.jpg" alt="pic1" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic1.jpg" alt="pic1" loading="lazy"
                                     class="h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic2.jpg" alt="pic2" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic2.jpg" alt="pic2" loading="lazy"
                                     class="lg:h-[360px] md:h-[360px] h-[180px] w-[303px] lg:w-full md:w-[500px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div class="hidden lg:block">
-                                <NuxtImg src="/Interior/Pic3.jpg" alt="pic3" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic3.jpg" alt="pic3" loading="lazy"
                                     class="h-[360px] w-[400px] object-cover object-center rounded-[8px]" />
                             </div>
                         </div>
@@ -85,11 +85,11 @@
 
                         <div class="flex lg:gap-[8px]">
                             <div class="hidden lg:block">
-                                <NuxtImg src="/Interior/Pic4.png" alt="pic4" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic4.png" alt="pic4" loading="lazy"
                                     class="h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic5.png" alt="pic5" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic5.png" alt="pic5" loading="lazy"
                                     class="lg:h-[360px] md:h-[360px] h-[180px] w-[303px] md:w-[500px] lg:w-full object-cover object-center rounded-[8px]" />
                             </div>
                         </div>
@@ -113,15 +113,15 @@
                         </div>
                         <div class="lg:gap-[8px] hidden lg:flex">
                             <div class="hidden lg:block">
-                                <NuxtImg src="/Interior/Pic8.png" alt="pic8" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic8.png" alt="pic8" loading="lazy"
                                     class="w-[298px] h-[360px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div>
-                                <NuxtImg src="/Interior/Pic7.png" alt="pic7" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic7.png" alt="pic7" loading="lazy"
                                     class="lg:h-[360px] h-[180px] w-[303px] lg:w-full object-cover object-center rounded-[8px]" />
                             </div>
                             <div class="hidden lg:block">
-                                <NuxtImg src="/Interior/Pic6.png" alt="pic6" loading="lazy"
+                                <NuxtImg format="webp" src="/Interior/Pic6.png" alt="pic6" loading="lazy"
                                     class="h-[360px] w-[485px] object-cover object-center rounded-[8px]" />
                             </div>
                         </div>

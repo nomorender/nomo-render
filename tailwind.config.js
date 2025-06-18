@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         sans: ["Jost", "sans-serif"],
         angelface: ['Angelface', 'cursive'],
+        qochy: ['Qochy', 'cursive'],
       },
     },
   },

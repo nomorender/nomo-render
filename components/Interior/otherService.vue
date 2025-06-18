@@ -11,7 +11,7 @@
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="w-[60%]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/Interior/Pic9.png" class="w-[960px] h-[500px] object-cover" />
+                            <NuxtImg format="webp" src="/Interior/Pic9.png" class="w-[960px] h-[500px] object-cover" />
                         </div>
                     </div>
                     <div class="basis-[400px]">
@@ -47,8 +47,10 @@
                     </div>
                     <div class="w-[60%]">
                         <div class="md:flex ">
-                            <NuxtImg src="/Chair.jpg" class="w-[450px] h-[500px]  aspect-square object-cover" />
-                            <NuxtImg src="/services/10.jpg" class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
+                            <NuxtImg format="webp" src="/Chair.jpg"
+                                class="w-[450px] h-[500px]  aspect-square object-cover" />
+                            <NuxtImg format="webp" src="/services/10.jpg"
+                                class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
                         </div>
                     </div>
                 </div>
@@ -59,7 +61,8 @@
                 <div class="md:flex gap-[4rem] w-full justify-start">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/Interior/Pic9.png" class="w-full h-[300px] object-cover rounded-[8px]" />
+                            <NuxtImg format="webp" src="/Interior/Pic9.png"
+                                class="w-full h-[300px] object-cover rounded-[8px]" />
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
@@ -84,7 +87,8 @@
                 <div class="md:flex gap-[4rem] w-full justify-start mt-[35px]">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
-                            <NuxtImg src="/Chair.jpg" class="w-full h-[350px] object-cover rounded-[8px]" />
+                            <NuxtImg format="webp" src="/Chair.jpg"
+                                class="w-full h-[350px] object-cover rounded-[8px]" />
                         </div>
                     </div>
                     <div class="basis-[400px] mx-[30px] mt-[20px]">

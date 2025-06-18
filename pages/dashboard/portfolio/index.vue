@@ -1,5 +1,5 @@
 <template>
-    <DashboardTableFurniture />
+    <DashboardTablePortfolio />
 </template>
 
 <script>

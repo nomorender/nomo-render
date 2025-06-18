@@ -3,7 +3,8 @@
     <div>
       <div class="lg:columns-3 md:columns-2 columns-2 gap-1 space-y-1">
         <div class="relative group md:w-full md:h-[706.98828125px] h-[265px] cursor-pointer" @click="openModal(1)">
-          <NuxtImg v-if="getProjectByStt(1)?.cover_url" :src="getProjectByStt(1)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(1)?.cover_url"
+            :src="getProjectByStt(1)?.cover_url"
             class="w-full md:h-[706.98828125px] h-[265px] object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -29,7 +30,8 @@
         </div>
         <!-- Project 5 -->
         <div class="relative group md:w-full md:h-[592px] cursor-pointer" @click="openModal(5)">
-          <NuxtImg v-if="getProjectByStt(5)?.cover_url" :src="getProjectByStt(5)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(5)?.cover_url"
+            :src="getProjectByStt(5)?.cover_url"
             class="md:w-full md:h-[592px] w-full h-[169px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -55,7 +57,8 @@
         </div>
         <!-- Project 2 -->
         <div class="relative group md:w-full md:h-[467px] w-full h-[152px] cursor-pointer" @click="openModal(2)">
-          <NuxtImg v-if="getProjectByStt(2)?.cover_url" :src="getProjectByStt(2)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(2)?.cover_url"
+            :src="getProjectByStt(2)?.cover_url"
             class="md:w-full md:h-[467px] w-full h-[152px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -82,7 +85,8 @@
 
         <!-- Project 4 -->
         <div class="relative group md:w-full md:h-[396px] w-full h-[110px] cursor-pointer" @click="openModal(4)">
-          <NuxtImg v-if="getProjectByStt(4)?.cover_url" :src="getProjectByStt(3)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(4)?.cover_url"
+            :src="getProjectByStt(3)?.cover_url"
             class="md:w-full md:h-[396px] w-full h-[110px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -109,7 +113,8 @@
 
         <!-- Project 9 -->
         <div class="relative group md:w-full md:h-[432px] h-[163.5px] w-full cursor-pointer">
-          <NuxtImg v-if="getProjectByStt(9)?.cover_url" :src="getProjectByStt(9)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(9)?.cover_url"
+            :src="getProjectByStt(9)?.cover_url"
             class="md:w-full md:h-[432px] h-[163.5px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -136,7 +141,8 @@
 
         <!-- Project 3 -->
         <div class="relative group md:w-full md:h-[353px] h-[155px] w-full cursor-pointer" @click="openModal(3)">
-          <NuxtImg v-if="getProjectByStt(3)?.cover_url" :src="getProjectByStt(3)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(3)?.cover_url"
+            :src="getProjectByStt(3)?.cover_url"
             class="md:w-full md:h-[353px] h-[155px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -164,7 +170,8 @@
         <!-- Project 6 -->
         <div class="relative group md:w-full md:h-[588.2685546875px] h-[170px] w-full cursor-pointer"
           @click="openModal(6)">
-          <NuxtImg v-if="getProjectByStt(6)?.cover_url" :src="getProjectByStt(6)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(6)?.cover_url"
+            :src="getProjectByStt(6)?.cover_url"
             class="md:w-full md:h-[588.2685546875px] h-[170px] w-full break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -191,7 +198,8 @@
 
         <!-- Project 7 -->
         <div class="relative group md:w-full md:h-[353.488px] h-[186px] w-full cursor-pointer" @click="openModal(7)">
-          <NuxtImg v-if="getProjectByStt(7)?.cover_url" :src="getProjectByStt(7)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(7)?.cover_url"
+            :src="getProjectByStt(7)?.cover_url"
             class="md:w-full md:h-[353.488px] w-full h-[186px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -220,7 +228,8 @@
         <div
           class="lg:hidden md:block block relative group md:w-full lg:h-[480px] md:h-[430px] h-[180px] cursor-pointer"
           @click="openModal(9)">
-          <NuxtImg v-if="getProjectByStt(9)?.cover_url" :src="getProjectByStt(9)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(9)?.cover_url"
+            :src="getProjectByStt(9)?.cover_url"
             class="md:w-full lg:h-[480px] md:h-[430px] h-[180px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -247,7 +256,8 @@
 
         <div class="md:hidden block relative group md:w-full md:h-[480px] h-[168.5px]  cursor-pointer"
           @click="openModal(8)">
-          <NuxtImg v-if="getProjectByStt(8)?.cover_url" :src="getProjectByStt(8)?.cover_url"
+          <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(8)?.cover_url"
+            :src="getProjectByStt(8)?.cover_url"
             class="md:w-full md:h-[480px] h-[168.5px] break-inside-avoid object-cover object-center" />
           <div
             class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -277,7 +287,8 @@
         <!-- Project 10 -->
         <div class="w-[60%]">
           <div class="hidden md:block relative group md:w-full md:h-[480px] h-[180px] cursor-pointer">
-            <NuxtImg v-if="getProjectByStt(10)?.cover_url" :src="getProjectByStt(10)?.cover_url"
+            <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(10)?.cover_url"
+              :src="getProjectByStt(10)?.cover_url"
               class="md:w-full md:h-[480px] h-[180px] break-inside-avoid object-cover object-center" />
             <div
               class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -305,7 +316,8 @@
         <div class="w-[40%]">
           <!-- Project 8 -->
           <div class="hidden md:block relative group md:w-full md:h-[480px] cursor-pointer" @click="openModal(8)">
-            <NuxtImg v-if="getProjectByStt(8)?.cover_url" :src="getProjectByStt(8)?.cover_url"
+            <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(8)?.cover_url"
+              :src="getProjectByStt(8)?.cover_url"
               class="w-full h-[480px] break-inside-avoid object-cover object-center" />
             <div
               class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -352,20 +364,23 @@
 
 
 <script setup lang="ts">
+import { useProjectExterior } from '~/stores/project/useProjectExterior'
 import type { Project } from '~/types/project/project'
 
 const isOpen = ref(false)
-const items = ref<Project[]>([])
 const selectedItem = ref<Project | undefined>(undefined)
 const selectedIndex = ref<number | null>(null)
-const { projectList, fetchProjectExterior } = useProject()
+const store = useProjectExterior();
 
-onMounted(async () => {
-  const { success } = await fetchProjectExterior()
-  if (success) {
-    items.value = projectList.value ?? []
-  }
+const fetchData = () => {
+  store.load();
+};
+
+onMounted(() => {
+  fetchData()
 })
+
+const items = computed(() => store.res)
 const openModal = (stt: number): void => {
   const item = items.value.find(i => i.stt === stt)
   selectedItem.value = item

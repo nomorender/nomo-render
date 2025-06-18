@@ -90,7 +90,7 @@ function onError(event: FormErrorEvent) {
         <div class="flex flex-wrap">
             <div class="w-full md:p-10 py-6 px-5 lg:w-3/5">
                 <div class="mb-5 flex flex-col items-center lg:block">
-                    <NuxtImg alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-2" />
+                    <NuxtImg format="webp" alt="logo" src="/logo.png" class="mb-4 h-[45px] w-[65px] lg:mb-2" />
                     <div class="text-[18px] font-semibold uppercase text-[#8D7662] lg:text-[25px]">
                         Send the request
                     </div>
@@ -128,8 +128,8 @@ function onError(event: FormErrorEvent) {
                 </UForm>
             </div>
             <div class="hidden lg:block lg:w-2/5">
-                <NuxtImg src="/mobile-background.png" class="w-full h-[580px] rounded-xl object-cover object-bottom"
-                    alt="Form Pic" />
+                <NuxtImg format="webp" src="/mobile-background.png"
+                    class="w-full h-[580px] rounded-xl object-cover object-bottom" alt="Form Pic" />
             </div>
         </div>
     </UModal>

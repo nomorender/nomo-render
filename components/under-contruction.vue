@@ -1,6 +1,7 @@
 <template>
     <div class="min-h-screen w-full flex flex-col items-center my-auto">
-        <NuxtImg alt="PicHouse" src="/under-construction.jpg" class="w-[500px] object-cover object-center" />
+        <NuxtImg format="webp" alt="PicHouse" src="/under-construction.jpg"
+            class="w-[500px] object-cover object-center" />
         <div class="md:text-3xl text-xl font-bold tracking-wide mb-2">
             Oops! site is under construction
         </div>

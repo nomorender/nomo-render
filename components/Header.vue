@@ -5,9 +5,10 @@
         <div class="flex gap-4 items-center">
           <NuxtLink to="/">
             <nuxt-img
-              v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/' || currRoute === '/' || currRoute === '')"
+              v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/' || currRoute === '/portfolio' || currRoute === '/portfolio/' || currRoute === '/' || currRoute === '')"
               alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />
-            <NuxtImg v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden" src="/logo.png" />
+            <NuxtImg format="webp" v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden"
+              src="/logo.png" />
           </NuxtLink>
         </div>
         <div class="hidden gap-[100px] justify-center lg:flex">

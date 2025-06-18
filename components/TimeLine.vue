@@ -108,7 +108,7 @@ const isLastItem = computed(() => {
                                     </div>
                                 </div>
                                 <div class="w-[300px] md:w-[655px]">
-                                    <NuxtImg :src="item.image"
+                                    <NuxtImg format="webp" :src="item.image"
                                         class="w-[280px] h-[200px] md:w-[620px] md:h-[400px] object-cover rounded-lg"
                                         loading="lazy" sizes="sm:280px md:620px" />
                                     <div

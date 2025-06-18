@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="w-1/2">
-                                <NuxtImg :src="slide.img"
+                                <NuxtImg format="webp" :src="slide.img"
                                     class="w-full h-[420px] object-cover object-center rounded-[8px]" loading="lazy"
                                     placeholder="/placeholder.jpg" @load="onImageLoad" />
                             </div>
@@ -71,7 +71,7 @@
                                 class="flex justify-center w-full md:mx-20 lg:mx-0 mx-0  bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-10">
                                 <div class="">
                                     <div class="w-full md:mb-0 mb-[40px]">
-                                        <NuxtImg :src="item.img" alt="img"
+                                        <NuxtImg format="webp" :src="item.img" alt="img"
                                             class="w-full md:h-[380px] lg:h-[280px] h-[280px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>

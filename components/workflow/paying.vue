@@ -18,7 +18,7 @@
                                 request with
                                 the final
                                 invoice.</div>
-                            <NuxtImg src="/workflow/paying.png" class="w-full h-auto" />
+                            <NuxtImg format="webp" src="/workflow/paying.png" class="w-full h-auto" />
                         </div>
 
                         <div>
@@ -43,7 +43,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full">
-                                    <NuxtImg src="/workflow/visa.png" class="w-full h-auto" />
+                                    <NuxtImg format="webp" src="/workflow/visa.png" class="w-full h-auto" />
                                 </div>
                             </div>
                         </div>

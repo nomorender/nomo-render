@@ -319,7 +319,7 @@ const isLastItem = computed(() => {
                             <div class="flex justify-center w-full pb-1">
                                 <div>
                                     <div class="max-w-[360px] w-full md:mb-0 mb-[45px]">
-                                        <NuxtImg :src="item.img" alt="img"
+                                        <NuxtImg format="webp" :src="item.img" alt="img"
                                             class="w-[360px] h-[250px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>
@@ -414,7 +414,7 @@ const isLastItem = computed(() => {
                             </div>
                             <div class="bg-[#FAF8F5]">
                                 <div class="lg:w-[960px] md:w-[600px] w-[355px] h-full">
-                                    <NuxtImg alt="PicHouse" :src="selectedItem?.picDes.pic1"
+                                    <NuxtImg format="webp" alt="PicHouse" :src="selectedItem?.picDes.pic1"
                                         class="w-full h-auto object-cover object-center" />
                                 </div>
                             </div>
@@ -426,11 +426,11 @@ const isLastItem = computed(() => {
 
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
                                 <div class="w-[50%]">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="w-[50%]">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
                                         class="w-full h-auto object-cover" />
                                 </div>
                             </div>
@@ -438,15 +438,15 @@ const isLastItem = computed(() => {
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic4"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
                                         class="w-full h-auto object-cover" />
                                 </div>
                             </div>
@@ -454,19 +454,19 @@ const isLastItem = computed(() => {
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic2"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
                                         class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1 md:h-[357px] h-[131px]">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic3"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
                                         class="w-full h-full object-cover" />
                                 </div>
                                 <div class="col-span-1 ">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic4"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic4"
                                         class="w-full h-[131px]  md:h-[357px] object-cover" />
                                 </div>
                                 <div class="col-span-2">
-                                    <NuxtImg alt="picDes" :src="selectedItem?.picDes.pic5"
+                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic5"
                                         class="w-full h-auto object-cover" />
                                 </div>
                             </div>

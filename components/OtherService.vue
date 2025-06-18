@@ -14,7 +14,8 @@
                     :class="['md:flex gap-[4rem] w-full', index % 2 === 0 ? 'justify-start' : 'justify-end', index > 0 ? 'mt-20' : '']">
                     <div v-if="index % 2 === 0" class="w-[60%]">
                         <div class="flex justify-end">
-                            <NuxtImg :src="service.image1" class="w-[960px] h-[500px] object-cover" />
+                            <NuxtImg loading="lazy" format="webp" :src="service.image1"
+                                class="w-[960px] h-[500px] object-cover" />
                         </div>
                     </div>
 
@@ -33,8 +34,10 @@
 
                     <div v-if="index % 2 !== 0" class="w-[60%]">
                         <div class="md:flex">
-                            <NuxtImg :src="service.image1" class="w-[450px] h-[500px]  aspect-square object-cover" />
-                            <NuxtImg :src="service.image2" class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
+                            <NuxtImg loading="lazy" format="webp" :src="service.image1"
+                                class="w-[450px] h-[500px]  aspect-square object-cover" />
+                            <NuxtImg loading="lazy" format="webp" :src="service.image2"
+                                class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
                         </div>
                     </div>
                 </div>
@@ -45,7 +48,7 @@
                 <div v-for="(service, index) in props.services" :key="'mobile-' + index" class="mt-[35px] first:mt-0">
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
-                            <NuxtImg :src="service.image1"
+                            <NuxtImg loading="lazy" format="webp" :src="service.image1"
                                 class="w-full md:h-[600px] lg:h-[300px] h-[300px] object-cover rounded-[8px]" />
                         </div>
                     </div>

@@ -4,10 +4,11 @@ const isOpen = ref(false)
 
 <template>
     <div class="relative h-screen w-screen overflow-hidden flex justify-center items-center">
-        <NuxtImg src="/banner-interior.png"
+        <NuxtImg format="webp" src="/banner-interior.png"
             class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
             alt="Interior Rendering Banner" preload />
-        <NuxtImg src="/HAR03.png" class="md:hidden absolute inset-0 w-full h-full object-cover object-center z-0"
+        <NuxtImg format="webp" src="/HAR03.png"
+            class="md:hidden absolute inset-0 w-full h-full object-cover object-center z-0"
             alt="Interior Rendering Mobile Banner" preload />
         <div class="text-[#FAF8F5] w-full relative z-10 flex flex-col items-center justify-center">
             <div

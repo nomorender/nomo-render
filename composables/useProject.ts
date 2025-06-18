@@ -9,63 +9,6 @@ export const useProject = () => {
     const supabase = useSupabaseClient<Project>()
     const toast = useToast()
 
-    const fetchProjectList = async () => {
-        try {
-            isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*');
-            if (error) {
-                fetchError.value = error.message;
-                return { success: false, error: error.message };
-            }
-            projectList.value = data as Project[] || null;
-            return { success: true };
-        } catch (err: unknown) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
-            fetchError.value = errorMessage;
-            return { success: false, error: errorMessage };
-        } finally {
-            isLoading.value = false;
-        }
-    }
-
-    const fetchProjectHome = async () => {
-        try {
-            isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*').eq('page', 'project').order('stt', { ascending: true });
-            if (error) {
-                fetchError.value = error.message;
-                return { success: false, error: error.message };
-            }
-            projectList.value = data as Project[] || null;
-            return { success: true };
-        } catch (err: unknown) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
-            fetchError.value = errorMessage;
-            return { success: false, error: errorMessage };
-        } finally {
-            isLoading.value = false;
-        }
-    }
-
-    const fetchProjectExterior = async () => {
-        try {
-            isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*').eq('page', 'exterior');
-            if (error) {
-                fetchError.value = error.message;
-                return { success: false, error: error.message };
-            }
-            projectList.value = data as Project[] || null;
-            return { success: true };
-        } catch (err: unknown) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
-            fetchError.value = errorMessage;
-            return { success: false, error: errorMessage };
-        } finally {
-            isLoading.value = false;
-        }
-    }
-
     const fetchProjectDetail = async (id: string) => {
         try {
             isLoading.value = true
@@ -111,33 +54,10 @@ export const useProject = () => {
         }
     }
 
-    const fetchProjectInterior = async () => {
-        try {
-            isLoading.value = true;
-            const { data, error } = await supabase.from('project').select('*').eq('page', 'interior');
-            if (error) {
-                fetchError.value = error.message;
-                return { success: false, error: error.message };
-            }
-            projectList.value = data as Project[] || null;
-            return { success: true };
-        } catch (err: unknown) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
-            fetchError.value = errorMessage;
-            return { success: false, error: errorMessage };
-        } finally {
-            isLoading.value = false;
-        }
-    }
-
     return {
         projectList,
         fetchError,
-        fetchProjectList,
-        fetchProjectHome,
         isLoading,
-        fetchProjectExterior,
-        fetchProjectInterior,
         updateProject,
         fetchProjectDetail
     }

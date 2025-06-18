@@ -1,11 +1,12 @@
 <template>
-    <UnderContruction />
+    <PortfolioBanner />
+    <PortfolioShowcase />
+    <PortfolioContact />
+    <PortfolioOtherService />
 </template>
 
 <script>
-definePageMeta({
-    layout: false
-})
+import { PortfolioOtherService } from '#components';
 
 useHead({
     title: `Nomo Render's Portfolio | Nomo Render Visualization`,

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { NuxtImg } from '#components'
+import type { Portfolio } from '~/types/portfolio/portfolio';
 import type { Project } from '~/types/project/project';
 
 const isOpen = defineModel<boolean>('modelValue', { default: false })
 const props = defineProps<{
-    items: Project[]
+    items: Project[] | Portfolio[]
     selectedIndex: number | null
 }>()
 const emit = defineEmits(['update:modelValue', 'update:selectedIndex'])
@@ -79,7 +80,7 @@ const goToPrevItem = () => {
                     <template v-if="selectedItem.pics.length === 1">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg :src="selectedItem.pics[0]"
+                                <NuxtImg format="webp" :src="selectedItem.pics[0]"
                                     class="w-full h-auto object-cover transition-opacity duration-500"
                                     alt="project image" />
                             </div>
@@ -89,12 +90,12 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 2">
                         <div class="flex gap-1">
                             <div class="w-[50%]">
-                                <NuxtImg :src="selectedItem.pics[0]" class="w-full md:h-[500px] h-[200px] object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[0]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="w-[50%]">
-                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -102,16 +103,16 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 3">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg format="webp" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg :src="selectedItem.pics[2]" class="w-full md:h-[500px] h-[200px] object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[2]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                         </div>
                     </template>
@@ -119,19 +120,19 @@ const goToPrevItem = () => {
                     <template v-else-if="selectedItem.pics.length === 4">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="col-span-2">
-                                <NuxtImg :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
+                                <NuxtImg format="webp" :src="selectedItem.pics[0]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                             <div class="col-span-1 md:h-[357px] h-[131px]">
-                                <NuxtImg :src="selectedItem.pics[1]" class="w-full md:h-[500px] h-[200px] object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[1]"
+                                    class="w-full md:h-[500px] h-[200px] object-cover" alt="project image" />
                             </div>
                             <div class="col-span-1">
-                                <NuxtImg :src="selectedItem.pics[2]" class="w-full md:h-[500px] h-[200px]  object-cover"
-                                    alt="project image" />
+                                <NuxtImg format="webp" :src="selectedItem.pics[2]"
+                                    class="w-full md:h-[500px] h-[200px]  object-cover" alt="project image" />
                             </div>
                             <div class="col-span-2">
-                                <NuxtImg :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
+                                <NuxtImg format="webp" :src="selectedItem.pics[3]" class="w-full h-auto object-cover"
                                     alt="project image" />
                             </div>
                         </div>

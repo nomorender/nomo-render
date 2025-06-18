@@ -16,6 +16,11 @@ const links =
             to: '/dashboard/furniture'
         },
         {
+            label: 'Portfolio',
+            icon: 'material-symbols:dashboard',
+            to: '/dashboard/portfolio'
+        },
+        {
             label: 'Storage',
             icon: 'material-symbols:home-storage',
             to: '/dashboard/storage'

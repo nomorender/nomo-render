@@ -1,25 +1,21 @@
 <script setup lang="ts">
+import { useProjectStoreHome } from '~/stores/project/useProjectHome'
 import type { Project } from '~/types/project/project'
 
-const { projectList, fetchProjectHome } = useProject()
-const items = ref<Project[]>([])
 const isOpen = ref<boolean>(false)
 const selectedItem = ref<Project | null>(null)
 const selectedIndex = ref<number | null>(null)
+const store = useProjectStoreHome();
 
-const toast = useToast()
-onMounted(async () => {
-  const { success } = await fetchProjectHome()
-  if (success) {
-    items.value = projectList.value ?? []
-  } else {
-    toast.add({
-      title: 'Failed to load Project',
-      description: 'Something went wrong!',
-      color: 'red'
-    })
-  }
+const fetchData = () => {
+  store.load();
+};
+
+onMounted(() => {
+  fetchData()
 })
+
+const items = computed(() => store.res)
 const loadedMap = ref<Record<string, boolean>>({})
 const mark = (url: string | undefined) => {
   if (typeof url === 'string') {
@@ -50,7 +46,7 @@ const openModal = (item: Project) => {
           </div>
           <USkeleton v-if="!loadedMap[item.cover_url || '']"
             class="absolute inset-0 w-[472px] lg:h-[725px] md:h-[600px] h-[550px] rounded-lg" />
-          <NuxtImg :src="item.cover_url" alt="main img" loading="lazy" class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg
+          <NuxtImg format="webp" :src="item.cover_url" alt="main img" loading="lazy" class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg
              transition-opacity duration-300" :class="loadedMap[item.cover_url || ''] ? 'opacity-100' : 'opacity-0'"
             draggable="false" @load="mark(item.cover_url)" />
         </div>

@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <NuxtImg preload alt="heroPic" src="Extorior/HTL01.png"
+    <NuxtImg format="webp" preload alt="heroPic" src="Extorior/HTL01.png"
       class="w-full lg:h-[700px] md:h-[400px] h-[266px] object-cover object-center" draggable="false" />
   </div>
   <ModalQuote v-model="isOpen" />
