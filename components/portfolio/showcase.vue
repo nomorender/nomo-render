@@ -46,7 +46,7 @@ const items = computed(() => store.res)
 
 <template>
     <div class="flex flex-col items-center justify-center lg:max-w-screen-xl mx-auto lg:mb-20 md:mb-20 mb-10">
-        <div class="flex flex-col">
+        <div class="flex flex-col px-5">
             <div
                 class="sticky top-20 z-20 lg:w-full md:w-full w-screen bg-white py-2 mb-4 flex flex-row flex-wrap gap-2 md:gap-20 lg:gap-[120px] md:static md:py-0 md:mb-10 lg:my-10 -mx-4 px-4 sm:mx-0 sm:px-0">
                 <div v-for="item in category" :key="item.value">

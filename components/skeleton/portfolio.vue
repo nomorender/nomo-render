@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="lg:max-w-screen-xl md:w-full flex flex-col gap-[25px]">
-            <div class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[420px] object-cover object-center">
+        <div class="lg:max-w-screen-xl md:w-full w-full flex flex-col gap-[25px]">
+            <div class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[520px] object-cover object-center">
                 <USkeleton class="h-full" />
             </div>
             <div class="flex flex-col items-center">
