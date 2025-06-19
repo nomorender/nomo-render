@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 const isOpen = ref(false)
 </script>
-
 <template>
-    <div class="relative h-screen w-screen overflow-hidden flex justify-center items-center">
+    <div class="relative h-screen overflow-hidden flex justify-center items-center">
         <NuxtImg format="webp" src="/Interior/Pic17.jpg"
             class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
             alt="Interior Rendering Banner" preload />
@@ -16,7 +15,7 @@ const isOpen = ref(false)
                 nomo render portfolio
             </div>
             <div
-                class="font-qochy lg:max-w-[1270px] max-w-[330px] text-center text-[24px] md:text-[25px] font-[400] lg:text-[64px] leading-[150%] md:font-[300] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+                class="font-qochy lg:max-w-[1000px] md:max-w-[1000px] max-w-[330px] text-center text-[24px] md:text-[25px] font-[400] lg:text-[48px] leading-[150%] md:font-[300] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
                 We believe great design is more than just visuals - It’s a story waiting to be told
             </div>
             <UButton

@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import type { FormError } from '#ui/types'
+import z from 'zod';
 const toast = useToast()
 
 const state = reactive({
   email: ''
 })
-const validate = (state: any): FormError[] => {
-  const errors = []
-  if (!state.name) errors.push({ path: 'name', message: 'Required' })
-  if (!state.email && !state.email.includes('@')) errors.push({ path: 'email', message: 'Invalid email' })
-  return errors
-}
+const schema = z.object({
+  email: z.string().email()
+});
+
 const formSubmitting = ref(false)
 
 const submitForm = async () => {
@@ -121,7 +120,7 @@ onMounted(() => {
           <div class="flex items-center justify-center md:block">
             <div
               class="mt-10 flex items-center bg-[#D9D9D9] md:py-3 py-2 pr-2 md:pr-3 rounded-lg shadow-lg w-full md:w-full">
-              <Form class="w-full" :validate="validate">
+              <UForm class="w-full" :schema="schema" :state="state">
                 <FormField name="email">
                   <UFormGroup class="flex items-center justify-center md:block ">
                     <UInput padded required color="white" variant="none" placeholder="Your email" v-model="state.email"
@@ -129,7 +128,7 @@ onMounted(() => {
                       :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
                   </UFormGroup>
                 </FormField>
-              </Form>
+              </UForm>
               <UButton :loading="formSubmitting" @click="submitForm" :disabled="formSubmitting"
                 class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>

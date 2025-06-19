@@ -1,13 +1,9 @@
 @font-face {
   font-family: 'Angelface';
-  src: url('@/assets/fonts/Angelface.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('../fonts/Angelface.otf');
 }
 
 @font-face {
   font-family: 'Qochy';
-  src: url('/assets/fonts/Quochy.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('../fonts/Qochy.ttf');
 }

@@ -3,7 +3,7 @@
     <div class="mx-auto w-full xl:max-w-7xl relative">
       <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-5 px-8 w-full">
         <div class="flex gap-4 items-center">
-          <NuxtLink to="/">
+          <NuxtLink to="/" aria-label="Go to homepage">
             <nuxt-img
               v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/' || currRoute === '/portfolio' || currRoute === '/portfolio/' || currRoute === '/' || currRoute === '')"
               alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />

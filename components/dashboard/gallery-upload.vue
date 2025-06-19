@@ -8,7 +8,7 @@
         </UButton>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             <div v-for="img in images" :key="img.name" class="relative group">
-                <NuxtImg format="webp" loading="lazy" :src="img.url"
+                <NuxtImg quality="10" format="webp" loading="lazy" :src="img.url"
                     class="rounded shadow w-full object-cover object-center" />
                 <div class="absolute bottom-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <UButton size="sm" @click="copyToClipboard(img.url)"

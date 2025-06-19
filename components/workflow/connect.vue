@@ -27,20 +27,23 @@ const sections = [
 </script>
 
 <template>
-    <div class="h-fit bg-[#FAF8F5] px-10">
-        <p class="text-[25px] font-[300] leading-[200%] text-justify mb-[30px]">
+    <div class="h-fit lg:bg-[#FAF8F5] md:bg-[#D9D9D9] bg-[#D9D9D9] lg:px-10 md:px-5 px-5 lg:mt-0 md:mt-5 mt-5">
+        <p
+            class="lg:text-[25px] md:text-[25px] text-[15px] font-[300] leading-[200%] text-justify lg:mb-[30px] md:mb-[20px] mb-[20px]">
             Before we dive into creating stunning 3D visuals for your project, let’s make sure we're on the same page.
             This first step is all about setting up clear communication, understanding your ideas, & aligning
             expectations on budget.
         </p>
-        <div class="flex flex-col gap-[30px]">
-            <div v-for="(section, index) in sections" :key="index" class="flex flex-col gap-[10px]">
-                <div class="font-[500] leading-[200%] text-[25px] text-[#980C0C]">
+        <div class="flex flex-col lg:gap-[30px] md:gap-[30px] gap-[20px]">
+            <div v-for="(section, index) in sections" :key="index"
+                class="flex flex-col lg:gap-[10px] md:gap-[5px] gap-[5px]">
+                <div class="font-[500] leading-[200%] lg:text-[25px] md:text-[25px] text-[15px] text-[#980C0C]">
                     {{ section.title }}
                 </div>
                 <div class="flex gap-10 justify-center items-center">
-                    <p class="font-[300] text-[25px] leading-[200%] text-justify" v-html="section.content" />
-                    <nuxt-img :src="section.image" class="w-[140px] h-[120px]" />
+                    <p class="font-[300] lg:text-[25px] md:text-[25px] text-[15px] leading-[200%] text-justify"
+                        v-html="section.content" />
+                    <nuxt-img :src="section.image" class="w-[140px] h-[120px] lg:block md:hidden hidden" />
                 </div>
             </div>
         </div>

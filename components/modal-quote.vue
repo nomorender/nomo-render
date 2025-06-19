@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
+import z from 'zod'
 
 const toast = useToast()
 const isOpen = defineModel<boolean>('modelValue', { default: false })
@@ -10,6 +11,12 @@ const state = reactive({
     description: '',
     agree: true
 })
+const schema = z.object({
+    name: z.string(),
+    email: z.string().email(),
+    description: z.string(),
+    agree: z.boolean()
+});
 onMounted(() => {
     if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
         (window as any).MauticSDKLoaded = true
@@ -95,7 +102,8 @@ function onError(event: FormErrorEvent) {
                         Send the request
                     </div>
                 </div>
-                <UForm id="requestForm" :state="state" class="space-y-4" @submit="onSubmit" @error="onError">
+                <UForm id="requestForm" :schema="schema" :state="state" class="space-y-4" @submit="onSubmit"
+                    @error="onError">
                     <UFormGroup name="name">
                         <UInput name="name" v-model="state.name" required variant="none" placeholder="Your name"
                             size="xl"
