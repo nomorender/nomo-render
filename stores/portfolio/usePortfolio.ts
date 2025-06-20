@@ -38,6 +38,7 @@ export const usePortfolio = defineStore('portfolio', () => {
             loading.value = false
         }
     };
+
     return {
         res,
         err,

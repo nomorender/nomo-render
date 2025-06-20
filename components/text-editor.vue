@@ -1,43 +1,59 @@
 <template>
     <div class="rounded-lg border bg-white p-4 shadow-sm space-y-2">
         <div class="flex flex-wrap gap-2">
-            <UButton class="text-black" @click="exec('toggleBold')" :variant="is('bold') ? 'solid' : 'ghost'">Bold
+            <UButton aria-label="Click here to font Bold" class="text-black" @click="exec('toggleBold')"
+                :variant="is('bold') ? 'solid' : 'ghost'">Bold
             </UButton>
-            <UButton class="text-black" @click="exec('toggleItalic')" :variant="is('italic') ? 'solid' : 'ghost'">Italic
+            <UButton aria-label="Click here to font Italic" class="text-black" @click="exec('toggleItalic')"
+                :variant="is('italic') ? 'solid' : 'ghost'">Italic
             </UButton>
-            <UButton class="text-black" @click="exec('toggleUnderline')" :variant="is('underline') ? 'solid' : 'ghost'">
+            <UButton aria-label="Click here to font Underline" class="text-black" @click="exec('toggleUnderline')"
+                :variant="is('underline') ? 'solid' : 'ghost'">
                 Underline</UButton>
             <UDivider orientation="vertical" />
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font Bullet"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleBulletList')">
                 Bullet</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font Numbered"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleOrderedList')">Numbered</UButton>
             <UDivider orientation="vertical" />
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to Paragraph"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('setParagraph')">P</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font H1"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleHeading1')">H1</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font H2"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleHeading2')">H2</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font Code"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleCodeBlock')">Code</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
+            <UButton aria-label="Click here to font Quote"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleBlockquote')">Quote</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
-                @click="setAlign('left')">Align Left</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
-                @click="setAlign('center')">Center</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all"
-                @click="setAlign('right')">Right</UButton>
-            <UButton @click="exec('insertBreak')">Break</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="insertImage">
+            <UButton aria-label="Click here to font Align Left"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('left')">
+                Align Left</UButton>
+            <UButton aria-label="Click here to font Align Center"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('center')">
+                Center</UButton>
+            <UButton aria-label="Click here to font Align Right"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('right')">
+                Right</UButton>
+            <UButton aria-label="Click here to font Hard Break" @click="exec('insertBreak')">Break</UButton>
+            <UButton aria-label="Click here to font Input Image"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="insertImage">
                 Image</UButton>
         </div>
         <div class="flex gap-2">
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('undo')">
+            <UButton aria-label="Click here to font Undo"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('undo')">
                 Undo</UButton>
-            <UButton class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('redo')">
+            <UButton aria-label="Click here to font Redo"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="exec('redo')">
                 Redo</UButton>
             <UDivider />
         </div>

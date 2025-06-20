@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { FormError } from '#ui/types'
+import { useReCaptcha } from 'vue-recaptcha-v3';
 import z from 'zod';
 const toast = useToast()
+const recaptchaInstance = useReCaptcha()
 
 const state = reactive({
   email: ''
@@ -9,6 +10,22 @@ const state = reactive({
 const schema = z.object({
   email: z.string().email()
 });
+
+onMounted(() => {
+  if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
+    (window as any).MauticSDKLoaded = true
+    const script = document.createElement('script')
+    script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
+    script.onload = function () {
+      if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
+        (window as any).MauticSDK.onLoad()
+      }
+    }
+    document.head.appendChild(script)
+  } else if (typeof (window as any).MauticSDK !== 'undefined') {
+    (window as any).MauticSDK?.onLoad()
+  }
+})
 
 const formSubmitting = ref(false)
 
@@ -21,12 +38,18 @@ const submitForm = async () => {
     })
     return
   }
+
   formSubmitting.value = true
 
   try {
+
+    await recaptchaInstance?.recaptchaLoaded()
+    const token = await recaptchaInstance?.executeRecaptcha('subscribe_form')
+    if (!token) throw new Error('Failed to generate reCAPTCHA token')
+
     const res = await $fetch('/api/subscribe', {
       method: 'POST',
-      body: { email: state.email },
+      body: { email: state.email, recaptchaToken: token },
     })
 
     if (res.success) {
@@ -54,21 +77,7 @@ const submitForm = async () => {
   }
 }
 
-onMounted(() => {
-  if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
-    (window as any).MauticSDKLoaded = true
-    const script = document.createElement('script')
-    script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
-    script.onload = function () {
-      if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
-        (window as any).MauticSDK.onLoad()
-      }
-    }
-    document.head.appendChild(script)
-  } else if (typeof (window as any).MauticSDK !== 'undefined') {
-    (window as any).MauticSDK?.onLoad()
-  }
-})
+
 </script>
 
 <template>
@@ -89,11 +98,11 @@ onMounted(() => {
           </div>
           <div class="flex md:mt-10 mt-5">
             <div class="flex items-start">
-              <UAvatar src="/Avatar/Sub1.jpg" class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+              <UAvatar alt="picture of user a" src="/Avatar/Sub1.jpg" class="bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
            [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
-              <UAvatar src="/Avatar/Sub2.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+              <UAvatar alt="picture of user b" src="/Avatar/Sub2.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
            [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
-              <UAvatar src="/Avatar/Sub3.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
+              <UAvatar alt="picture of user c" src="/Avatar/Sub3.jpg" class="-ml-3 md:-ml-8 bg-black border-2 border-white md:w-[100px] md:h-[100px] w-[64px] h-[64px]
            [&>img]:!w-full [&>img]:!h-full [&>img]:object-cover [&>img]:object-center" />
             </div>
             <div class="md:ml-5 ml-3">
@@ -129,7 +138,8 @@ onMounted(() => {
                   </UFormGroup>
                 </FormField>
               </UForm>
-              <UButton :loading="formSubmitting" @click="submitForm" :disabled="formSubmitting"
+              <UButton aria-label="Click here to send an email to Nomorender" :loading="formSubmitting"
+                @click="submitForm" :disabled="formSubmitting"
                 class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
                 <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
               </UButton>

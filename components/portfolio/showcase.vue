@@ -76,14 +76,11 @@ const items = computed(() => store.res)
                     </div>
                 </div>
             </div>
-
-            <div class="mx-auto" v-if="store.res.length < store.countTotal">
-                <UButton color="gray" variant="solid"
-                    class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]"
-                    @click="loadMore" :loading="store.loading">
-                    See more
-                </UButton>
-            </div>
+            <UButton color="gray" variant="ghost" v-if="store.res.length < store.countTotal"
+                class="mx-auto bg-[#8D7662] mt-5 uppercase hover:text-white transition-all text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e] border-none"
+                @click="loadMore" :loading="store.loading">
+                See more
+            </UButton>
         </div>
     </div>
 </template>

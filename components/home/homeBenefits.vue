@@ -16,7 +16,7 @@
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <nuxt-img alt="object" src="/benefits/Object.svg"
+                                <nuxt-img alt="icon of benefit" src="/benefits/Object.svg"
                                     class="md:h-[103px] md:w-[75px] h-[75px] w-[55px]" />
                             </div>
                             <div class="">
@@ -44,7 +44,7 @@
                     <div class="md:w-[350px] w-[220px]">
                         <div class="flex gap-7 items-center">
                             <div class="">
-                                <nuxt-img alt="Time icon" src="/benefits/TimeIcon.svg"
+                                <nuxt-img alt="icon of time" src="/benefits/TimeIcon.svg"
                                     class="md:h-[100px] md:w-[91px] h-[70px] w-[70px]" />
                             </div>
                             <div class="">
@@ -71,14 +71,12 @@
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex gap-6 items-center">
                             <div class="">
-                                <nuxt-img alt="Price icon" src="/benefits/price.svg"
+                                <nuxt-img alt="icon of pricing" src="/benefits/price.svg"
                                     class="md:h-[75px] md:w-[105px] h-[70px] w-[80px]" />
                             </div>
-                            <div class="">
-                                <p class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
-                                    cost</p>
-                                <p class="italic font-[300] md:text-[32px] text-[15px]">Efficiency</p>
-                            </div>
+                            <p class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">
+                                cost</p>
+                            <p class="italic font-[300] md:text-[32px] text-[15px]">Efficiency</p>
                         </div>
                         <div
                             class="md:text-[25px] text-[15px] font-[300] mt-[30px] text-justify md:leading-[200%] leading-[150%]">
@@ -98,10 +96,8 @@
                     <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                         <div class="flex">
                             <div class="flex gap-6 items-center">
-                                <div class="">
-                                    <nuxt-img alt="Time icon" src="/benefits/Graphic.svg"
-                                        class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
-                                </div>
+                                <nuxt-img alt="icon of time" src="/benefits/Graphic.svg"
+                                    class="md:h-[100px] md:w-[100px] h-[70px] w-[70px]" />
                                 <div class="">
                                     <p
                                         class="uppercase md:text-[25px] md:font-[900] font-[800] text-[#8D7662] text-[16px]">

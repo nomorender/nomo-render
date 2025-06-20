@@ -92,8 +92,9 @@ function onError(event: FormErrorEvent) {
         container: 'border-none flex items-center justify-center shadow-none',
         base: 'bg-[#FAF8F5] rounded-xl'
     }">
-        <UButton square size="xl" icon="i-heroicons-x-mark-20-solid" variant="ghost"
-            class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent" @click="isOpen = false" />
+        <UButton aria-label="Click here open quote form" square size="xl" icon="i-heroicons-x-mark-20-solid"
+            variant="ghost" class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent"
+            @click="isOpen = false" />
         <div class="flex flex-wrap">
             <div class="w-full md:p-10 py-6 px-5 lg:w-3/5">
                 <div class="mb-5 flex flex-col items-center lg:block">
@@ -125,7 +126,8 @@ function onError(event: FormErrorEvent) {
                     </UFormGroup>
 
                     <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
-                        <UButton color="gray" size="xl" variant="solid" type="submit" form="requestForm"
+                        <UButton aria-label="Click here submit quote form to Nomorender" color="gray" size="xl"
+                            variant="solid" type="submit" form="requestForm"
                             class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-3 hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px] px-10 py-3 md:w-auto max-w-xs">
                             <div
                                 class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
@@ -137,7 +139,8 @@ function onError(event: FormErrorEvent) {
             </div>
             <div class="hidden lg:block lg:w-2/5">
                 <NuxtImg format="webp" src="/mobile-background.png"
-                    class="w-full h-[580px] rounded-xl object-cover object-bottom" alt="Form Pic" />
+                    class="w-full h-[580px] rounded-xl object-cover object-bottom"
+                    alt="Nomorender form quote picture" />
             </div>
         </div>
     </UModal>

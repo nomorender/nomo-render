@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from '#ui/types'
 import { z } from 'zod'
+import { usePortfolio } from '~/composables/usePortfolio';
 import type { Portfolio } from '~/types/portfolio/portfolio';
 
 const isOpen = defineModel<boolean>('modelValue', { default: false })
@@ -64,13 +65,13 @@ watch(
     { immediate: true }
 )
 
-
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     if (props.mode === "edit") {
         const data = toRaw(event.data)
         try {
-            const { error } = await supabase.from('portfolio').update(data).eq('id', props.id!).select().single()
-            if (!error) {
+            const { update } = usePortfolio()
+            const res = await update(data, props.id!)
+            if (res) {
                 toast.add({
                     title: 'Updated successfull!',
                     description: 'Your data has been updated!',
@@ -85,6 +86,8 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                     description: 'Update again later!',
                     color: 'red'
                 })
+                isOpen.value = false
+                resetState()
             }
         } catch (error) {
             toast.add({
@@ -92,6 +95,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 description: 'Please try again later!',
                 color: 'red'
             })
+            isOpen.value = false
         }
     } else if (props.mode === "add" && props.project == null) {
         const data = toRaw(event.data)
@@ -101,10 +105,12 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 description: 'Please fill full data before add!',
                 color: 'red'
             })
+            isOpen.value = false
         } else {
             try {
-                const { error } = await supabase.from('portfolio').insert(data).select().single()
-                if (!error) {
+                const { addError, add } = usePortfolio()
+                add(data);
+                if (!addError) {
                     toast.add({
                         title: 'Added successfull!',
                         description: 'Your data has been added!',
@@ -116,9 +122,11 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 } else {
                     toast.add({
                         title: 'Added Failed!',
-                        description: 'Update again later!',
+                        description: 'Add again later!',
                         color: 'red'
                     })
+                    isOpen.value = false
+                    resetState()
                 }
             } catch (error) {
                 toast.add({
@@ -126,6 +134,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                     description: 'Please try again later!',
                     color: 'red'
                 })
+                isOpen.value = false
             }
         }
     }
@@ -180,7 +189,8 @@ const removePictureInput = (index: number) => {
                         </UButton>
                     </div>
                 </UFormGroup>
-                <UButton type="submit" class="bg-black text-white hover:bg-white hover:text-black transition-all">
+                <UButton aria-label="Submit the edit content" type="submit"
+                    class="bg-black text-white hover:bg-white hover:text-black transition-all">
                     Submit
                 </UButton>
             </UForm>

@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useReCaptcha } from 'vue-recaptcha-v3'
 import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
 const toast = useToast()
+const recaptchaInstance = useReCaptcha()
+
 onMounted(() => {
     if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
         (window as any).MauticSDKLoaded = true
@@ -52,9 +55,13 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     }
     formSubmitting.value = true
     try {
+        await recaptchaInstance?.recaptchaLoaded()
+        const token = await recaptchaInstance?.executeRecaptcha('contact_form')
+        if (!token) throw new Error('Failed to generate reCAPTCHA token')
+
         const res = await $fetch('/api/contact', {
             method: 'POST',
-            body: { name: state.name, email: state.email, description: state.description },
+            body: { name: state.name, email: state.email, description: state.description, recaptchaToken: token },
         })
         if (res.success) {
             state.email = ''
@@ -69,9 +76,12 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         } else {
             toast.add({
                 title: 'Send email failed!',
-                description: 'Something went wrong!',
+                description: 'message' in res && res.message
+                    ? res.message
+                    : 'Something went wrong!',
                 color: 'red'
             })
+            return
         }
     } catch (error) {
         toast.add({
@@ -147,11 +157,12 @@ async function onError(event: FormErrorEvent) {
 
                             <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
                                 <UButton color="gray" variant="solid" type="submit" form="contactForm"
+                                    aria-label="Submit contact form"
                                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
-                                    <div
+                                    <span
                                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                                         {{ buttonText || "let’s work together!" }}
-                                    </div>
+                                    </span>
                                 </UButton>
                             </div>
                         </UForm>

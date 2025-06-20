@@ -134,7 +134,8 @@ const removePictureInput = (index: number) => {
                         </UButton>
                     </div>
                 </UFormGroup>
-                <UButton type="submit" class="bg-black text-white hover:bg-white hover:text-black transition-all">
+                <UButton aria-label="Submit the edit content" type="submit"
+                    class="bg-black text-white hover:bg-white hover:text-black transition-all">
                     Submit
                 </UButton>
             </UForm>

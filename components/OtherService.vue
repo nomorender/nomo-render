@@ -3,10 +3,10 @@
         <div :class="[color_background || 'bg-[#D9D9D9]']"
             class=" w-full flex flex-col justify-center items-center py-[40px] md:pb-[66px] md:pt-[55px]">
             <div class="flex flex-col justify-center items-center">
-                <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">{{ subheading }}
-                </div>
-                <div class="md:text-[64px] text-[30px] font-[600] leading-[100%] md:leading-[150%] text-[#8D7662]">
-                    {{ heading }}</div>
+                <span class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400]">{{ subheading }}
+                </span>
+                <span class="md:text-[64px] text-[30px] font-[600] leading-[100%] md:leading-[150%] text-[#8D7662]">
+                    {{ heading }}</span>
             </div>
             <!-- Picture + text -->
             <div class="hidden mt-[70px] lg:flex flex-col justify-center items-center">
@@ -15,7 +15,7 @@
                     <div v-if="index % 2 === 0" class="w-[60%]">
                         <div class="flex justify-end">
                             <NuxtImg loading="lazy" format="webp" :src="service.image1"
-                                class="w-[960px] h-[500px] object-cover" />
+                                class="w-[960px] h-[500px] object-cover" :alt="service.title" />
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@
                         <div class="text-[20px] font-[300] leading-[180%] text-justify mt-8"
                             v-html="service.description"></div>
                         <div class="mt-8">
-                            <UButton :to="service.link"
+                            <UButton :to="service.link" aria-label="Click here to see more our service"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[20px] py-[10px] rounded-[8px]"
                                 variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
                                 <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
@@ -35,9 +35,11 @@
                     <div v-if="index % 2 !== 0" class="w-[60%]">
                         <div class="md:flex">
                             <NuxtImg loading="lazy" format="webp" :src="service.image1"
-                                class="w-[450px] h-[500px]  aspect-square object-cover" />
+                                class="w-[450px] h-[500px]  aspect-square object-cover"
+                                alt="service picture too see more" />
                             <NuxtImg loading="lazy" format="webp" :src="service.image2"
-                                class="w-[500px] h-[500px]  aspect-[3/4] object-cover" />
+                                class="w-[500px] h-[500px]  aspect-[3/4] object-cover"
+                                alt="service picture too see more" />
                         </div>
                     </div>
                 </div>
@@ -49,6 +51,7 @@
                     <div class="mx-[13px]">
                         <div class="flex justify-end">
                             <NuxtImg loading="lazy" format="webp" :src="service.image1"
+                                alt="service picture too see more"
                                 class="w-full md:h-[600px] lg:h-[300px] h-[300px] object-cover rounded-[8px]" />
                         </div>
                     </div>
@@ -61,13 +64,13 @@
                         <div class="md:text-[20px] lg:text-[15px] text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
                             v-html="service.description"></div>
                         <div class="mt-[20px] flex justify-center">
-                            <UButton :to="service.link"
+                            <UButton :to="service.link" aria-label="Click here to see more service of Nomorender"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[20px] lg:px-[12px] px-[12px] py-[6px] md:py-[12px] lg:py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
                                 <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
-                                <div
+                                <span
                                     class="md:text-[20px] lg:text-[13px] text-[13px] text-[#980C0C] leading-[16px] font-[400]">
-                                    See more</div>
+                                    See more</span>
                             </UButton>
                         </div>
                     </div>

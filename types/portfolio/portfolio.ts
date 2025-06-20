@@ -1,6 +1,6 @@
 export type Portfolio = {
     id?: string,
-    title: string,
+    title?: string,
     category: string,
     cover_url: string,
     founded: string,

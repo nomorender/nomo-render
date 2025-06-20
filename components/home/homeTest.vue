@@ -19,7 +19,7 @@
                         <div class="md:w-[350px] md:h-fit w-[220px] h-auto">
                             <div class="flex md:gap-6 gap-5 items-center">
                                 <div class="">
-                                    <nuxt-img alt="Object" src="/benefits/Object.svg"
+                                    <nuxt-img alt="picture of benefits" src="/benefits/Object.svg"
                                         class="md:h-[103px] md:w-[75px] w-[46.7px] h-[64.1px]" />
                                 </div>
                                 <div class="">

@@ -108,35 +108,36 @@ const isLastItem = computed(() => {
                                     </div>
                                 </div>
                                 <div class="w-[300px] md:w-[655px]">
-                                    <NuxtImg format="webp" :src="item.image"
+                                    <NuxtImg format="webp" :src="item.image" :alt="item.title"
                                         class="w-[280px] h-[200px] md:w-[620px] md:h-[400px] object-cover rounded-lg"
                                         loading="lazy" sizes="sm:280px md:620px" />
-                                    <div
+                                    <span
                                         class="w-[280px] md:w-[600px] font-light md:text-[25px] text-[15px] md:leading-[200%] leading-[180%] mt-10 text-justify">
                                         {{ item.description }}
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </template>
                     </UCarousel>
                     <div class="md:flex hidden items-center gap-5 md:mt-[20px] mt-[10px]">
-                        <button @click="scrollLeft"
+                        <button @click="scrollLeft" aria-label="Click here to go to previous step of timeline"
                             :class="['w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center', isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"
                                 :class="['size-7 md:size-10', isLastItem ? 'text-white' : 'text-[#8D7662]']" />
                         </button>
-                        <button @click="scrollRight"
+                        <button @click="scrollRight" aria-label="Click here to go to next step of timeline"
                             :class="['w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center', isLastItem ? 'bg-white/80 hover:bg-white' : 'bg-[#8D7662]']">
                             <UIcon name="material-symbols-light:arrow-right-alt-rounded"
                                 :class="['size-7 md:size-10', isLastItem ? 'text-[#8D7662]' : 'text-[#FFFFFF]']" />
                         </button>
                     </div>
                     <div class="md:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
-                        <UButton @click="scrollLeft"
+                        <UButton @click="scrollLeft" aria-label="Click here to go to previous step of timeline"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center  bg-white active:bg-white focus:bg-white">
                             <UIcon name="mingcute:arrow-left-fill" class="size-5 text-[#8D7662]" />
                         </UButton>
                         <UButton @click="scrollRight" :disabled="isLastItem"
+                            ria-label="Click here to go to next step of timeline"
                             class="hover:text disabled:text-[#8D7662] w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center disabled:bg-white/80 bg-[#8D7662] hover:bg-[#8D7662] focus:bg-[#8D7662]">
                             <UIcon name="mingcute:arrow-right-fill" class="size-5" />
                         </UButton>

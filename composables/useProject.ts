@@ -39,7 +39,7 @@ export const useProject = () => {
             isLoading.value = true
             const { data, error } = await supabase.from('project').update(payload).eq('id', id).select().single()
             if (error) {
-                updateError.value = error.message
+                updateError.value = error.message ?? 'Unknown error'
                 return { success: false, error: error.message }
             }
             project.value = data

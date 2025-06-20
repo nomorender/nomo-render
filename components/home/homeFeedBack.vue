@@ -281,7 +281,7 @@ const isLastItem = computed(() => {
             <div class="relative bg-[#FAF8F5]">
                 <div class="relative max-w-[1112px] pt-5 mx-auto">
                     <!-- BUTTON PREVIOUS PC -->
-                    <UButton
+                    <UButton aria-label="Click here to see previous project"
                         class="hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                         :class="['hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10  rounded-full shadow-2xl',
                             isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']"
@@ -294,7 +294,7 @@ const isLastItem = computed(() => {
                     </UButton>
 
                     <!-- BUTTON NEXT PC -->
-                    <UButton :class="[
+                    <UButton aria-label="Click here to see next project" :class="[
                         'hidden md:flex items-center justify-center p-2 absolute right-[-5rem] top-1/2 -translate-y-1/2 z-10 rounded-full shadow-2xl',
                         isLastItem ? 'bg-[#FFFFFF] hover:bg-[#FFFFFF]' : 'bg-[#8D7662] hover:bg-[#8D7662]'
                     ]" @click="carousel.next()">
@@ -319,13 +319,13 @@ const isLastItem = computed(() => {
                             <div class="flex justify-center w-full pb-1">
                                 <div>
                                     <div class="max-w-[360px] w-full md:mb-0 mb-[45px]">
-                                        <NuxtImg format="webp" :src="item.img" alt="img"
+                                        <NuxtImg format="webp" :src="item.img" :alt="item.projectName"
                                             class="w-[360px] h-[250px] rounded-[8px] object-cover object-center"
                                             draggable="false" />
                                     </div>
                                     <div class="mt-[30px] flex gap-5">
                                         <div class="flex items-center justify-center">
-                                            <UAvatar :src="item.ava" alt="Avatar"
+                                            <UAvatar :src="item.ava" :alt="item.name || 'avatar of customer'"
                                                 class="!w-fit !h-fit [&>img]:!w-[70px] [&>img]:!h-[70px] [&>img]:object-cover [&>img]:object-center" />
                                         </div>
                                         <div>
@@ -349,6 +349,7 @@ const isLastItem = computed(() => {
                                     </div>
                                     <div class="mt-5">
                                         <UButton variant="ghost"
+                                            aria-label="Click here to see detail project of customer"
                                             class="outline outline-1 outline-[#980C0C] hover:bg-[#D9D9D9] py-2"
                                             @click="openModal(item)">
                                             <div class="text-[#980C0C] flex justify-center">
@@ -360,14 +361,14 @@ const isLastItem = computed(() => {
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton
+                            <UButton aria-label="Click here to go previous project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
-                            <UButton
+                            <UButton aria-label="Click here to go next project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />
@@ -381,7 +382,8 @@ const isLastItem = computed(() => {
                         <div class="flex md:gap-2.5 mb-8 justify-between">
                             <div class="flex items-center justify-center md:gap-12 gap-3">
                                 <div class="md:p-5 p-2 bg-[#FAF8F5] rounded-full">
-                                    <nuxt-img class="md:size-[81px] size-[33px]" src="/Logo3.svg" alt="Logo" />
+                                    <nuxt-img class="md:size-[81px] size-[33px]" src="/Logo3.svg"
+                                        alt="logo of nomorender" />
                                 </div>
                                 <div>
                                     <p
@@ -394,9 +396,10 @@ const isLastItem = computed(() => {
                             </div>
 
                             <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
-                                <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
-                                    base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
-                                }">
+                                <UButton aria-label="Click here to close modal of project" variant="ghost" size="xl"
+                                    class=" " @click="isOpen = false" :ui="{
+                                        base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
+                                    }">
                                     <UIcon name="i-heroicons-x-mark-20-solid"
                                         class="size-7 md:text-white text-[#1D1B20]" />
                                 </UButton>
@@ -414,7 +417,8 @@ const isLastItem = computed(() => {
                             </div>
                             <div class="bg-[#FAF8F5]">
                                 <div class="lg:w-[960px] md:w-[600px] w-[355px] h-full">
-                                    <NuxtImg format="webp" alt="PicHouse" :src="selectedItem?.picDes.pic1"
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic1"
                                         class="w-full h-auto object-cover object-center" />
                                 </div>
                             </div>
@@ -426,58 +430,60 @@ const isLastItem = computed(() => {
 
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 3" class="flex gap-1">
                                 <div class="w-[50%]">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="w-[50%]">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
                                 </div>
                             </div>
 
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 4"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic4"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic4" class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic3" class="w-full h-auto object-cover" />
                                 </div>
                             </div>
 
                             <div v-if="Object.keys(selectedItem?.picDes || {}).length === 5"
                                 class="grid grid-cols-2 gap-2">
                                 <div class="col-span-2">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic2"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic2" class="w-full h-auto object-cover" />
                                 </div>
                                 <div class="col-span-1 md:h-[357px] h-[131px]">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic3"
-                                        class="w-full h-full object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic3" class="w-full h-full object-cover" />
                                 </div>
                                 <div class="col-span-1 ">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic4"
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic4"
                                         class="w-full h-[131px]  md:h-[357px] object-cover" />
                                 </div>
                                 <div class="col-span-2">
-                                    <NuxtImg format="webp" alt="picDes" :src="selectedItem?.picDes.pic5"
-                                        class="w-full h-auto object-cover" />
+                                    <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
+                                        :src="selectedItem?.picDes.pic5" class="w-full h-auto object-cover" />
                                 </div>
                             </div>
 
                             <div class="flex w-full justify-center items-center py-10">
                                 <UButton color="gray" variant="solid" type="submit" form="contactForm"
+                                    aria-label="Click here to see more Nomorender's project"
                                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
-                                    <div
+                                    <span
                                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">
                                         see more our projects
-                                    </div>
+                                    </span>
                                 </UButton>
                             </div>
 
@@ -489,8 +495,9 @@ const isLastItem = computed(() => {
                             <!-- TWO BUTTON SOCIAL -->
                             <div class="md:flex flex-col gap-7">
                                 <div class="flex flex-col items-center justify-center">
-                                    <NuxtLink to="https://wa.me/84967563407" target="_blank">
-                                        <UButton
+                                    <NuxtLink to="https://wa.me/84967563407" target="_blank"
+                                        aria-label="Click here to send message to nomorender via Whatsapp">
+                                        <UButton aria-label="Click here to send message to nomorender via Whatsapp"
                                             class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                                             <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
                                         </UButton>
@@ -498,15 +505,15 @@ const isLastItem = computed(() => {
                                     <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
                                 </div>
                                 <div class="flex flex-col items-center justify-center">
-                                    <UButton to="/workflow"
+                                    <UButton to="/workflow" aria-label="Click here to see Nomorender's workflow"
                                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                                         <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                                     </UButton>
-                                    <div
+                                    <span
                                         class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">
                                         Our
                                         workflow
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -516,52 +523,53 @@ const isLastItem = computed(() => {
                             <!-- TWO BUTTON SOCIAL -->
                             <div class="flex w-full justify-center items-center gap-10">
                                 <div class="flex flex-col items-center justify-center gap-1">
-                                    <UButton
+                                    <UButton aria-label="Click here to got to previous project"
                                         class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                                         @click="goToPrevItem">
                                         <div class="text-[#8D7662] flex justify-center">
                                             <UIcon name="mdi-light:arrow-left" class="md:size-11 lg:size-4 size-4" />
                                         </div>
                                     </UButton>
-                                    <div
+                                    <span
                                         class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">
                                         Back
-                                    </div>
+                                    </span>
                                 </div>
 
                                 <div class="flex flex-col items-center justify-center gap-1">
-                                    <NuxtLink to="https://wa.me/84967563407" target="_blank">
-                                        <UButton
+                                    <NuxtLink to="https://wa.me/84967563407" target="_blank"
+                                        aria-label="Click here send message to Nomorender via Whatsapp">
+                                        <UButton aria-label="Click here send message to Nomorender via Whatsapp"
                                             class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                                             <UIcon name="material-symbols:mail"
                                                 class="lg:size-11 md:size-12 size-5 text-[#8D7662]" />
                                         </UButton>
                                     </NuxtLink>
-                                    <div
+                                    <span
                                         class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">
                                         Message
-                                    </div>
+                                    </span>
                                 </div>
                                 <div class="flex flex-col items-center justify-center gap-1">
-                                    <UButton
+                                    <UButton aria-label="Click here to see Nomorender's Workflow"
                                         class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                                         <UIcon name="hugeicons:flowchart-02"
                                             class="lg:size-12 md:size-11 size-5 text-[#8D7662]" />
                                     </UButton>
-                                    <div
+                                    <span
                                         class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000] items-center justify-center">
                                         Our
                                         workflow
-                                    </div>
+                                    </span>
                                 </div>
 
                                 <div class="flex flex-col items-center justify-center gap-1">
-                                    <UButton
+                                    <UButton aria-label="Click here to see next project"
                                         class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                                         @click="goToNextItem">
-                                        <div class="text-[#FFFFFF] flex justify-center">
+                                        <span class="text-[#FFFFFF] flex justify-center">
                                             <UIcon name="mdi-light:arrow-right" class="md:size-11 lg:size-4 size-4" />
-                                        </div>
+                                        </span>
                                     </UButton>
                                     <div
                                         class="font-[300] lg:text-[10px] md:text-[20px] text-[10px] leading-[150%] text-[#000000]">
@@ -573,7 +581,7 @@ const isLastItem = computed(() => {
 
                         <!-- Next Previous -->
                         <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden lg:flex flex-col gap-7">
-                            <UButton
+                            <UButton aria-label="Click here to see next project"
                                 class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                                 @click="goToNextItem">
                                 <div class="text-[#FFFFFF] flex justify-center">
@@ -582,7 +590,7 @@ const isLastItem = computed(() => {
                             </UButton>
                         </div>
                         <div class="fixed translate-x-[-0.7rem] translate-y-[30.5rem] hidden lg:flex flex-col gap-7">
-                            <UButton
+                            <UButton aria-label="Click here to see previous project"
                                 class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                                 @click="goToPrevItem">
                                 <div class="text-[#8D7662] flex justify-center">
