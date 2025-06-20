@@ -25,7 +25,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(1)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -33,7 +33,7 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(1)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{
@@ -57,7 +57,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(2)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -87,7 +87,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(3)?.title
-                                                }}</div>
+                                            }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -95,11 +95,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(3)?.location
-                                            }}
+                                        }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(3)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(3)?.founded
@@ -121,7 +121,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(4)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -129,11 +129,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(4)?.location
-                                            }}
+                                        }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(4)?.client
-                                            }}
+                                                }}
                                             </div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
@@ -155,7 +155,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(5)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -163,11 +163,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(5)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(5)?.client
-                                            }}
+                                                }}
                                             </div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
@@ -189,7 +189,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(6)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -197,11 +197,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(6)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(6)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(6)?.founded
@@ -223,7 +223,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(7)?.title
-                                                }}</div>
+                                            }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -231,11 +231,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(7)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(7)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(7)?.founded
@@ -256,7 +256,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(8)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -264,11 +264,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(8)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(8)?.client
-                                                }}</div>
+                                            }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(8)?.founded
@@ -289,7 +289,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(9)?.title
-                                                }}</div>
+                                            }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -297,11 +297,11 @@
                                         </div>
                                         <div class="font-[300] leading-[180%] md:leading-[120%]">Location: {{
                                             getProjectByStt(9)?.location
-                                        }}
+                                            }}
                                         </div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(9)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(9)?.founded
@@ -339,7 +339,7 @@
                                             {{ getProjectByStt(2)?.location }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(2)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(2)?.founded }}
@@ -359,7 +359,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(1)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -370,7 +370,7 @@
                                             }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(1)?.client
-                                                }}</div>
+                                            }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(1)?.founded
@@ -398,7 +398,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(3)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -409,7 +409,7 @@
                                             }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(3)?.client
-                                                }}</div>
+                                            }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(3)?.founded
@@ -432,7 +432,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(4)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -442,7 +442,7 @@
                                             {{ getProjectByStt(4)?.location }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(4)?.client
-                                            }}</div>
+                                                }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(4)?.founded }}
@@ -469,7 +469,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(5)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -480,7 +480,7 @@
                                             }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(5)?.client
-                                                }}</div>
+                                            }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(5)?.founded
@@ -503,7 +503,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(7)?.title
-                                                }}</div>
+                                            }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -514,7 +514,7 @@
                                             }}</div>
                                         <div class="flex justify-between">
                                             <div class="font-[300] leading-[180%]">Client: {{ getProjectByStt(7)?.client
-                                                }}</div>
+                                            }}</div>
                                             <div
                                                 class="flex items-center justify-center font-[300] leading-[180%] text-[#D9D9D9]">
                                                 {{ getProjectByStt(7)?.founded
@@ -570,7 +570,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(6)?.title
-                                                }}</div>
+                                            }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -600,7 +600,7 @@
                                     <div class="text-[#FFFFFF] text-justify md:text-[20px] text-[10px]">
                                         <div class="flex justify-between">
                                             <div class="font-[600] md:leading-[200%]">{{ getProjectByStt(9)?.title
-                                            }}</div>
+                                                }}</div>
                                             <div class="flex justify-center items-center">
                                                 <Icon name="heroicons:arrows-pointing-out-16-solid"
                                                     class="size-5 text-[#F97316]" />
@@ -626,7 +626,7 @@
 
             <div>
                 <div class="flex w-full justify-center items-center pt-10">
-                    <UButton color="gray" variant="solid"
+                    <UButton color="gray" variant="solid" to="/portfolio" id="see-more-project"
                         class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
                         <div
                             class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">

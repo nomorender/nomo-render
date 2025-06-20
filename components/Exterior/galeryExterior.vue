@@ -346,7 +346,7 @@
 
       <div>
         <div class="flex w-full justify-center items-center pt-10">
-          <UButton color="gray" variant="solid"
+          <UButton color="gray" variant="solid" id="see-more-project" to="/portfolio"
             class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
             <div
               class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">

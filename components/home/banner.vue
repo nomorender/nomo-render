@@ -15,12 +15,12 @@ const isOpen = ref(false)
             <h1 class="text-4xl md:text-7xl font-bold mb-8">
                 3D Visualization <br> Studio
             </h1>
-            <UButton aria-label="Click here to send quote to Nomorender desktop"
+            <UButton id="open-quote-modal" aria-label="Click here to send quote to Nomorender desktop"
                 class="hidden sm:block hover:bg-[#1e1e1e] transition-all" color="white" variant="outline" size="xl"
                 @click="isOpen = true">REQUEST A
                 QUOTE</UButton>
-            <UButton aria-label="Click here to send quote to Nomorender mobile" class="sm:hidden" @click="isOpen = true"
-                color="white" variant="outline">REQUEST A QUOTE</UButton>
+            <UButton id="open-quote-modal" aria-label="Click here to send quote to Nomorender mobile" class="sm:hidden"
+                @click="isOpen = true" color="white" variant="outline">REQUEST A QUOTE</UButton>
         </div>
         <ModalQuote v-model="isOpen" />
     </div>

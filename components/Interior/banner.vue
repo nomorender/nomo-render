@@ -20,12 +20,14 @@ const isOpen = ref(false)
                 Bringing design concepts to life with stunning realism
             </div>
 
-            <UButton class="mt-[34px] px-7 hidden sm:block hover:bg-[#1e1e1e] transition-all !inset-ring-[#FAF8F5]"
+            <UButton id="open-quote-modal"
+                class="mt-[34px] px-7 hidden sm:block hover:bg-[#1e1e1e] transition-all !inset-ring-[#FAF8F5]"
                 color="white" variant="outline" size="xl" @click="isOpen = true">
                 <div class="text-[#FAF8F5]">REQUEST A QUOTE</div>
             </UButton>
 
-            <UButton class="sm:hidden mt-[34px]" @click="isOpen = true" color="white" variant="outline">
+            <UButton id="open-quote-modal" class="sm:hidden mt-[34px]" @click="isOpen = true" color="white"
+                variant="outline">
                 REQUEST A QUOTE
             </UButton>
         </div>

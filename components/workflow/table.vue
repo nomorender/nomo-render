@@ -129,18 +129,18 @@ const selected = ref(0)
             </div>
         </div>
         <div class="w-full lg:flex md:block hidden justify-center text-center gap-10 mt-10">
-            <UButton color="gray" variant="solid" to="/portfolio"
+            <UButton id="explore-more-projects" color="gray" variant="solid" to="/portfolio"
                 class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
                 explore our projects
             </UButton>
-            <UButton color="gray" variant="solid" to="/pricing" class=" bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2
+            <UButton id="check-pricing" color="gray" variant="solid" to="/pricing" class=" bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2
                 hover:bg-[#90755e]">
                 check our pricing
             </UButton>
         </div>
 
         <div class="lg:hidden md:hidden flex w-full items-center justify-center mt-9">
-            <UButton color="gray" variant="solid" to="/portfolio"
+            <UButton id="explore-more-projects" color="gray" variant="solid" to="/portfolio"
                 class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 px-6 py-2 hover:bg-[#90755e]">
                 explore our projects
             </UButton>

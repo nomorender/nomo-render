@@ -65,12 +65,12 @@
                         </template>
                     </UCarousel>
                     <div class="md:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
-                        <button @click="scrollLeft"
+                        <button @click="scrollLeft" id="watch-previous-project"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#FFFFFF] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-left-alt-rounded"
                                 class="size-7 md:size-10 text-[#8D7662]" />
                         </button>
-                        <button @click="scrollRight"
+                        <button @click="scrollRight" id="watch-next-project"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full bg-[#8D7662] shadow-[0px_4px_4px_#00000040] flex items-center justify-center">
                             <UIcon name="material-symbols-light:arrow-right-alt-rounded"
                                 class="size-7 md:size-10 text-white" />

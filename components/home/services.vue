@@ -36,7 +36,7 @@
                 </template>
 
                 <template #indicator="{ onClick, page, active }">
-                  <UButton color="white" :label="String(page)" variant="ghost"
+                  <UButton id="change-picture-service-homepage" color="white" :label="String(page)" variant="ghost"
                     :class="active ? 'text-[#8D7662CC] bg-white rounded-full min-w-8 justify-center hidden md:block shadow-lg hover:bg-white' : 'bg-[#8D7662CC] hover:bg-[#8D7662CC] text-[#FFFFFF] rounded-full min-w-8 justify-center hidden md:block shadow-lg'"
                     @click="onClick(page)" />
                 </template>
@@ -46,12 +46,12 @@
               <p class="mb-5 md:text-[40px] text-[18px] font-[600] mt-[25px] md:mt-0 md:w-[480px]">{{ item.name }}</p>
               <div class="md:text-[25px] text-[15px] font-light mb-6" v-html="item.content"></div>
               <div class="hidden md:block">
-                <UButton
+                <UButton id="see-more-service-homepage"
                   class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                   :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
                   variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
               </div>
-              <UButton
+              <UButton id="see-more-service-homepage"
                 class="md:hidden mb-[45px] md:mb-0 text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                 v-if="item.link" :to="item.link" variant="outline" :trailing="false"
                 :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right">See more
@@ -63,7 +63,7 @@
 
 
         <div class="flex justify-center md:pb-[75px]">
-          <UButton color="gray" size="xl" variant="solid" to="/workflow"
+          <UButton color="gray" size="xl" variant="solid" to="/workflow" id="go-to-workflow-page"
             class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">
             See our
             workflow
@@ -73,7 +73,6 @@
     </div>
   </div>
 </template>
-
 <script lang="ts" setup>
 
 const services = [

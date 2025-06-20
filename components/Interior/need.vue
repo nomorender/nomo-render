@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center">
-                    <UButton color="gray" size="xl" variant="solid" to="/workflow"
+                    <UButton color="gray" size="xl" variant="solid" to="/workflow" id="go-to-workflow-page"
                         class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem] mt-[30px]">
                         See our
                         workflow

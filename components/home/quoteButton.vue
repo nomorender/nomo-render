@@ -14,7 +14,8 @@ onUnmounted(() => {
 
 <template>
     <div>
-        <UButton v-if="isScrolled" @click="isOpen = true" aria-label="Click here to open modal quote"
+        <UButton id="open-quote-button" v-if="isScrolled" @click="isOpen = true"
+            aria-label="Click here to open modal quote"
             class="block fixed md:bottom-10 md:right-10 bottom-6 right-6 bg-[#980C0C] text-[#F5F5F5] md:px-2 md:py-2 rounded-[10px] shadow-lg hover:bg-[#980C0C] transition z-50">
             <div
                 class="uppercase text-[#F5F5F5] md:font-[500] font-[400] md:text-[18px] text-[13px] leading-[16px] px-[10px] py-[5px]">

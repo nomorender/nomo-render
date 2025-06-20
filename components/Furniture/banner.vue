@@ -25,12 +25,12 @@ const isOpen = ref(false)
                     shoots
                     needed
                 </p>
-                <UButton
+                <UButton id="open-quote-modal"
                     class="mt-[25px] px-6 hidden sm:block hover:bg-black hover:text-white transition-all !inset-ring-[#000000]"
                     color="black" variant="outline" size="xl" @click="isOpen = true">
                     <div class=" font-[500] text-[18px]">REQUEST A QUOTE</div>
                 </UButton>
-                <UButton
+                <UButton id="open-quote-modal"
                     class="sm:hidden mt-[15px] hover:bg-black hover:text-white transition-all !inset-ring-[#000000]"
                     @click="isOpen = true" size="xl" color="black" variant="outline">
                     <div class=" font-[400] leading-[100%] text-[13px]">REQUEST A QUOTE</div>

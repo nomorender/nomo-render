@@ -13,11 +13,12 @@
             </div>
           </div>
           <div class="md:mt-7 mt-5">
-            <UButton class="hidden sm:block hover:bg-[#1e1e1e] hover:text-white transition-all" color="white"
-              variant="outline" size="xl" @click="isOpen = true">REQUEST A
+            <UButton id="open-quote-modal" class="hidden sm:block hover:bg-[#1e1e1e] hover:text-white transition-all"
+              color="white" variant="outline" size="xl" @click="isOpen = true">REQUEST A
               QUOTE</UButton>
-            <UButton class="sm:hidden" @click="isOpen = true" color="white" variant="outline"><span
-                class="text-[13px] font-[400]">REQUEST A QUOTE</span></UButton>
+            <UButton id="open-quote-modal" class="sm:hidden" @click="isOpen = true" color="white" variant="outline">
+              <span class="text-[13px] font-[400]">REQUEST A QUOTE</span>
+            </UButton>
           </div>
         </div>
         <div class="">

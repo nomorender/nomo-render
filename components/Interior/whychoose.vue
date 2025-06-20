@@ -55,14 +55,14 @@
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton :disabled="disabled"
+                            <UButton :disabled="disabled" id="watch-previous-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
-                            <UButton :disabled="disabled"
+                            <UButton :disabled="disabled" id="watch-next-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />

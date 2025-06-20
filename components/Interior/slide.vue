@@ -40,13 +40,13 @@
                             left: `calc(50% - min(40vw, 600px) - 7rem)`,
                             top: 'calc(50% - 80px)'
                         }">
-                        <UButton @click="nextSlide" variant="ghost"
+                        <UButton @click="nextSlide" variant="ghost" id="watch-next-project"
                             class="flex items-center justify-center bg-white hover:bg-white shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
                             :disabled="isAnimating">
                             <Icon name="material-symbols:arrow-upward-rounded"
                                 class="size-5 sm:size-6 text-[#8D7662]" />
                         </UButton>
-                        <UButton @click="prevSlide" variant="ghost"
+                        <UButton @click="prevSlide" variant="ghost" id="watch-previous-project"
                             class="flex items-center justify-center bg-[#8D7662] disabled:bg-[#947b65] hover:bg-[#8D7662] shadow-2xl rounded-full p-[calc(0.75rem+0.5vw)] sm:p-[18px]"
                             :disabled="isAnimating">
                             <Icon name="material-symbols:arrow-downward-rounded" class="size-5 sm:size-6 text-white" />
@@ -93,14 +93,14 @@
                             </div>
                         </template>
                         <template #prev="{ onClick, disabled }">
-                            <UButton :disabled="disabled"
+                            <UButton :disabled="disabled" id="watch-previous-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
-                            <UButton :disabled="disabled"
+                            <UButton :disabled="disabled" id="watch-next-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
                                 <UIcon name="mingcute:arrow-right-fill" class="size-5" />

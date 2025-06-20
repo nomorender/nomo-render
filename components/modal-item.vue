@@ -58,7 +58,7 @@ const goToPrevItem = () => {
             </div>
 
             <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
-                <UButton variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
+                <UButton id="close-modal-project" variant="ghost" size="xl" class=" " @click="isOpen = false" :ui="{
                     base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
                 }">
                     <UIcon name="i-heroicons-x-mark-20-solid" class="size-7 md:text-white text-[#1D1B20]" />
@@ -141,8 +141,8 @@ const goToPrevItem = () => {
             </div>
 
             <div class="flex w-full justify-center items-center py-10">
-                <UButton aria-label="Click to see more our projects" color="gray" variant="solid" type="submit"
-                    form="contactForm" to="/portfolio"
+                <UButton id="see-more-project" aria-label="Click to see more our projects" color="gray" variant="solid"
+                    type="submit" form="contactForm" to="/portfolio"
                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
                     <span
                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">
@@ -159,6 +159,7 @@ const goToPrevItem = () => {
                     <NuxtLink aria-label="Click here to send message to Nomorender via WhatsApp"
                         to="https://wa.me/84967563407" target="_blank">
                         <UButton aria-label="Click here to send message to Nomorender via WhatsApp"
+                            id="open-chatting-whatsapp"
                             class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                             <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
                         </UButton>
@@ -167,6 +168,7 @@ const goToPrevItem = () => {
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <UButton to="/workflow" aria-label="Click here to see Nomorender's workflow"
+                        id="go-to-workflow-page"
                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                         <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                     </UButton>
@@ -183,7 +185,7 @@ const goToPrevItem = () => {
             <!-- TWO BUTTON SOCIAL -->
             <div class="flex w-full justify-center items-center gap-10">
                 <div class="flex flex-col items-center justify-center gap-1">
-                    <UButton aria-label="Click here to see previous project"
+                    <UButton aria-label="Click here to see previous project" id="watch-previous-project"
                         class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                         @click="goToPrevItem">
                         <div class="text-[#8D7662] flex justify-center">
@@ -197,7 +199,8 @@ const goToPrevItem = () => {
                 <div class="flex flex-col items-center justify-center gap-1">
                     <NuxtLink to="https://wa.me/84967563407" target="_blank"
                         aria-label="Click here to send message to Nomorender via WhatsApp">
-                        <UButton aria-label="Click here to send message to Nomorender via WhatsApp"
+                        <UButton id="open-chatting-whatsapp"
+                            aria-label="Click here to send message to Nomorender via WhatsApp"
                             class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                             <UIcon name="material-symbols:mail" class="lg:size-11 md:size-12 size-5 text-[#8D7662]" />
                         </UButton>
@@ -207,7 +210,7 @@ const goToPrevItem = () => {
                     </div>
                 </div>
                 <div class="flex flex-col items-center justify-center gap-1">
-                    <UButton aria-label="Click here to see Nomorender's workflow"
+                    <UButton aria-label="Click here to see Nomorender's workflow" id="go-to-workflow-page"
                         class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                         <UIcon name="hugeicons:flowchart-02" class="lg:size-12 md:size-11 size-5 text-[#8D7662]" />
                     </UButton>
@@ -219,7 +222,7 @@ const goToPrevItem = () => {
                 </div>
 
                 <div class="flex flex-col items-center justify-center gap-1">
-                    <UButton aria-label="Click here to see next project"
+                    <UButton aria-label="Click here to see next project" id="watch-next-project"
                         class="lg:p-[20px] md:p-[18px] flex items-center justify-center p-3 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                         @click="goToNextItem">
                         <div class="text-[#FFFFFF] flex justify-center">
@@ -233,7 +236,7 @@ const goToPrevItem = () => {
         </div>
         <!-- Next Previous -->
         <div class="fixed translate-x-[60.7rem] translate-y-[30rem] hidden lg:flex flex-col gap-7">
-            <UButton aria-label="Click here to see next project"
+            <UButton id="watch-next-project" aria-label="Click here to see next project"
                 class="hidden md:flex items-center justify-center p-2 absolute right-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-[#8D7662] hover:bg-[#8D7662] rounded-full shadow-2xl"
                 @click="goToNextItem">
                 <div class="text-[#FFFFFF] flex justify-center">
@@ -242,7 +245,7 @@ const goToPrevItem = () => {
             </UButton>
         </div>
         <div class="fixed translate-x-[-0.7rem] translate-y-[30.5rem] hidden lg:flex flex-col gap-7">
-            <UButton aria-label="Click here to see previous project"
+            <UButton id="watch-previous-project" aria-label="Click here to see previous project"
                 class="hidden md:flex items-center justify-center p-2 absolute left-[-7rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"
                 @click="goToPrevItem">
                 <div class="text-[#8D7662] flex justify-center">
