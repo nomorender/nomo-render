@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.27.12",
+    "@microsoft/clarity": "^1.0.0",
     "@nuxt/image": "1.9.0",
     "@nuxt/ui": "^2.21.1",
     "@nuxtjs/google-fonts": "^3.2.0",

@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
-      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY
+      recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY,
+      clarityId: process.env.CLARITY_ID
     }
   },
   modules: [
@@ -34,5 +35,5 @@ export default defineNuxtConfig({
   gtm: {
     id: 'GTM-MBWC5Q6X'
   },
-  plugins: [{ src: '~/plugins/google-recaptcha.ts' }],
+  plugins: [{ src: '~/plugins/google-recaptcha.ts' }, { src: '~/plugins/clarity.client.ts', mode: 'client' }],
 })
