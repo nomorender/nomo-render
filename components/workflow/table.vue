@@ -96,7 +96,7 @@ const selected = ref(0)
                     chat</p>
             </div>
             <div class="">
-                <NuxtImg src="./workflow/workflow_mobile.png" class="w-full mb-[60px] object-contain object-center" />
+                <NuxtImg src="./contact/Contact.jpg" class="w-full mb-[60px] object-contain object-center" />
             </div>
             <div class="md:max-w-[700px] max-w-[320px] mx-auto">
                 <div v-for="(item, index) in items_mobile" :key="index"
