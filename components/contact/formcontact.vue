@@ -139,7 +139,7 @@ async function onError(event: FormErrorEvent) {
                 </UForm>
             </div>
             <div class="w-1/2 h-[405px] lg:block md:hidden hidden">
-                <NuxtImg src="/contact/Contact.jpg" class="w-full h-full object-cover rounded-[8px]" />
+                <NuxtImg src="/contact/contact_form.jpg" class="w-full h-full object-cover rounded-[8px]" />
             </div>
         </div>
 

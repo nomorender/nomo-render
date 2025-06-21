@@ -43,7 +43,7 @@ const social = [
         </div>
 
         <div class="max-w-[315px] lg:hidden md:hidden block">
-            <NuxtImg src="/contact/Contact.jpg" class="w-full h-full object-cover rounded-[8px]" />
+            <NuxtImg src="/contact/contact_form.jpg" class="w-full h-full object-cover rounded-[8px]" />
         </div>
         <div>
             <div class="flex flex-col space-y-6">
