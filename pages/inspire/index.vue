@@ -7,8 +7,9 @@
         </div>
         <div class="text-xl text-[#c8c7c7]">We're woring hard to improve your experience</div>
         <div class="text-xl text-[#c8c7c7]">Check back soon for updates!</div>
-        <UButton icon="i-heroicons-arrow-right-solid" size="sm" class="mt-5 rounded-2xl px-4 py-3 max-w-[180px]"
-            color="black" variant="solid" label="Back to Homepage" trailing @click="$router.push('/')" />
+        <UButton id="go-homepage" icon="i-heroicons-arrow-right-solid" size="sm"
+            class="mt-5 rounded-2xl px-4 py-3 max-w-[180px]" color="black" variant="solid" label="Back to Homepage"
+            trailing @click="$router.push('/')" />
     </div>
 </template>
 

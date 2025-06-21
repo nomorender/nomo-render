@@ -4,8 +4,7 @@ export default defineEventHandler(async (event) => {
     try {
         const body = await readBody(event)
         const recaptchaToken = body.recaptchaToken
-        const recaptchaSecretToken = process.env.CAPCHA_SECRET_KEY
-
+        const recaptchaSecretToken = process.env.RECAPCHA_SECRET_KEY
         if (!recaptchaToken || !recaptchaSecretToken) {
             throw new Error('Missing reCAPTCHA token or secret key')
         }

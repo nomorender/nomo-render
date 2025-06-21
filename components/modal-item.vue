@@ -158,8 +158,8 @@ const goToPrevItem = () => {
                 <div class="flex flex-col items-center justify-center">
                     <NuxtLink aria-label="Click here to send message to Nomorender via WhatsApp"
                         to="https://wa.me/84967563407" target="_blank">
-                        <UButton aria-label="Click here to send message to Nomorender via WhatsApp"
-                            id="open-chatting-whatsapp"
+                        <UButton id="open-chatting-whatsapp"
+                            aria-label="Click here to send message to Nomorender via WhatsApp"
                             class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                             <UIcon name="material-symbols:mail" class="size-12 text-[#8D7662]" />
                         </UButton>
@@ -167,8 +167,8 @@ const goToPrevItem = () => {
                     <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5]">Message</div>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <UButton to="/workflow" aria-label="Click here to see Nomorender's workflow"
-                        id="go-to-workflow-page"
+                    <UButton id="go-to-workflow-page" to="/workflow"
+                        aria-label="Click here to see Nomorender's workflow"
                         class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                         <UIcon name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                     </UButton>

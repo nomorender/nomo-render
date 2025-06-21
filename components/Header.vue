@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="h-fit">
-          <UButton variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
+          <UButton id="open-sub-menu-header" variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
             aria-label="Click here to go to choose page"
             class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
             :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')"
@@ -43,7 +43,7 @@
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
             side="right">
             <div class="p-8">
-              <UButton color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
+              <UButton id="open-sub-menu-header" color="gray" variant="ghost" size="xl" icon="i-heroicons-bars-3-solid"
                 class="flex absolute end-6 top-6 z-10 text-[#8D7662]" square padded
                 aria-label="Click here to go to choose page" @click="() => { isOpenMenu = false; open = null; }" />
               <div class="flex flex-1 flex-col gap-9 mt-[5rem]">

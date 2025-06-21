@@ -18,12 +18,13 @@ const isOpen = ref(false)
                 class="font-qochy lg:max-w-[1000px] md:max-w-[1000px] max-w-[330px] text-center text-[24px] md:text-[25px] font-[400] lg:text-[48px] leading-[150%] md:font-[300] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
                 We believe great design is more than just visuals - It’s a story waiting to be told
             </div>
-            <UButton
+            <UButton id="open-quote-modal"
                 class="mt-[34px] px-7 hidden sm:block bg-[#00000040] hover:bg-[#1e1e1e] transition-all !inset-ring-[#FAF8F5]"
                 color="white" variant="outline" size="xl" @click="isOpen = true">
                 <div class="text-[#FAF8F5]">REQUEST A QUOTE</div>
             </UButton>
-            <UButton class="sm:hidden mt-[34px] bg-[#00000040]" @click="isOpen = true" color="white" variant="outline">
+            <UButton id="open-quote-modal" class="sm:hidden mt-[34px] bg-[#00000040]" @click="isOpen = true"
+                color="white" variant="outline">
                 REQUEST A QUOTE
             </UButton>
         </div>

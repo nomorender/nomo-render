@@ -133,10 +133,11 @@ const isLastItem = computed(() => {
                     </div>
                     <div class="md:hidden flex items-center gap-5 md:mt-[20px] mt-[10px]">
                         <UButton @click="scrollLeft" aria-label="Click here to go to previous step of timeline"
+                            id="watch-previous-step"
                             class="w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center  bg-white active:bg-white focus:bg-white">
                             <UIcon name="mingcute:arrow-left-fill" class="size-5 text-[#8D7662]" />
                         </UButton>
-                        <UButton @click="scrollRight" :disabled="isLastItem"
+                        <UButton @click="scrollRight" :disabled="isLastItem" id="watch-next-step"
                             ria-label="Click here to go to next step of timeline"
                             class="hover:text disabled:text-[#8D7662] w-10 h-10 md:w-[59.08px] md:h-[59.08px] rounded-full shadow-[0px_4px_4px_#00000040] flex items-center justify-center disabled:bg-white/80 bg-[#8D7662] hover:bg-[#8D7662] focus:bg-[#8D7662]">
                             <UIcon name="mingcute:arrow-right-fill" class="size-5" />

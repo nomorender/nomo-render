@@ -30,10 +30,10 @@ export default defineNuxtConfig({
     display: "swap",
   },
   gtag: {
-    id: 'G-MCVXL28GQP'
+    id: process.env.GTAG_ID || ''
   },
   gtm: {
-    id: 'GTM-MBWC5Q6X'
+    id: process.env.GTM_ID || '',
   },
   plugins: [{ src: '~/plugins/google-recaptcha.ts' }, { src: '~/plugins/clarity.client.ts', mode: 'client' }],
 })

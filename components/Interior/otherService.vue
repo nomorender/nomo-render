@@ -22,7 +22,7 @@
                             3D exterior visualization services, transforming architectural concepts into vivid, lifelike
                             representations</div>
                         <div class="mt-8">
-                            <UButton to="/exterior"
+                            <UButton to="/exterior" id="see-more-service"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[20px] py-[10px] rounded-[8px]"
                                 variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
                                 <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
@@ -38,7 +38,7 @@
                             models let manufacturers and designers showcase products flawlessly - no physical prototypes
                             or costly shoots needed - perfect for catalogs, promotions, and virtual showrooms.</div>
                         <div class="mt-8">
-                            <UButton to="/furniture"
+                            <UButton to="/furniture" id="see-more-furniture"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[20px] py-[10px] rounded-[8px]"
                                 variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
                                 <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
@@ -74,7 +74,7 @@
                             3D exterior visualization services, transforming architectural concepts into vivid, lifelike
                             representations</div>
                         <div class="mt-[20px] flex justify-center">
-                            <UButton to="/exterior"
+                            <UButton to="/exterior" id="see-more-service"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[12px] py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
                                 <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
@@ -101,7 +101,7 @@
                                 or costly shoots needed</span> - perfect for catalogs, promotions, and virtual
                             showrooms.</div>
                         <div class="mt-[20px] flex justify-center">
-                            <UButton to="/furniture"
+                            <UButton to="/furniture" id="see-more-furniture"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all px-[12px] py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
                                 <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
