@@ -130,12 +130,11 @@ async function onError(event: FormErrorEvent) {
                             :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }"
                             :rows="10" md:rows="20" />
                     </UFormGroup>
-
-                    <UFormGroup name="agree">
+                    <!-- <UFormGroup name="agree">
                         <UCheckbox
                             :ui="{ border: 'border border-black', background: 'bg-[#D9D9D9]', wrapper: 'flex items-center', label: 'lg:text-[20px] md:text-[20px] text-[13px] italic leading-[150%] font-[300]' }"
                             v-model="state.agree" label="I agree to the Terms of Use and the Privacy Policy*" />
-                    </UFormGroup>
+                    </UFormGroup> -->
                 </UForm>
             </div>
             <div class="w-1/2 h-[405px] lg:block md:hidden hidden">
