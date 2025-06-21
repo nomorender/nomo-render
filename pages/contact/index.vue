@@ -1,11 +1,8 @@
 <template>
-    <UnderContruction />
+    <Contact />
 </template>
 
 <script>
-definePageMeta({
-    layout: false
-})
 
 useHead({
     title: `Contact  | Nomo Render Visualization`,
