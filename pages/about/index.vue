@@ -1,9 +1,9 @@
 <template>
-    <UnderContruction />
+    <AboutusAbout />
+    <AboutusWhyus />
+    <AboutusContact />
+    <AboutusOtherService />
 </template>
 
 <script>
-definePageMeta({
-    layout: false
-})
 </script>

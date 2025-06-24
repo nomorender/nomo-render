@@ -123,9 +123,9 @@ async function onError(event: FormErrorEvent) {
                         </p>
 
                         <div
-                            class="flex items-center justify-center md:grid grid-cols-2 gap-2 mt-5 place-items-center md:place-items-start w-full px-0 mx-0 max-w-[470px] md:max-w-none">
+                            class="flex items-center justify-center gap-2 md:grid grid-cols-2 mt-5 place-items-center md:place-items-start w-full px-0 mx-0 md:max-w-none">
                             <NuxtImg v-for="(img, i) in props.images || []" :key="i" :src="img"
-                                class="md:rounded-[8px] lg:h-[325px] lg:w-[235px] w-[50%] h-[252px] md:w-full md:h-full object-cover"
+                                class="md:rounded-[8px] lg:h-[325px] lg:w-[235px] w-[48%] h-[252px] md:w-full md:h-full object-cover"
                                 :alt="`Contact Image ${i + 1}`" loading="lazy" />
                         </div>
                     </div>

@@ -17,4 +17,15 @@
 definePageMeta({
     layout: false
 })
+
+useHead({
+    title: `Inspire | Nomo Render Visualization`,
+    meta: [
+        {
+            name: "description",
+            content: `Get high-quality interior 3D rendering services by Nomo Render. Stunning visuals that tell your story.`,
+        },
+        { name: 'robots', content: 'index, follow' }
+    ],
+});
 </script>

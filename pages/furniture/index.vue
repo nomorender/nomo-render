@@ -19,6 +19,7 @@ useHead({
             content:
                 'Get custom 3D furniture renders from Nomo Render. Realistic, high-quality visualizations for designers, architects, and furniture brands.',
         },
+        { name: 'robots', content: 'index, follow' }
     ],
 });
 </script>

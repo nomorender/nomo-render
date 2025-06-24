@@ -6,5 +6,5 @@ export type Portfolio = {
     founded: string,
     content?: string,
     location: string,
-    pics: string[]
+    pics: string[],
 }

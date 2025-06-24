@@ -55,15 +55,13 @@
                 </div>
             </div>
 
-
-
             <!-- Slide for Mobile -->
             <div class="lg:hidden md:block block">
                 <div class="relative pt-5 mx-auto">
                     <UCarousel :items="slides" arrows :ui="{
                         item: 'basis-full px-3',
                         arrows: {
-                            wrapper: 'flex items-center justify-center md:mt-2 sm:hidden gap-[15px] md:pb-10'
+                            wrapper: 'flex items-center justify-center md:mt-2 md:gap-[40px] gap-[15px] md:pb-0'
                         }
                     }" ref="carousel">
                         <template #default="{ item }">
@@ -94,16 +92,16 @@
                         </template>
                         <template #prev="{ onClick, disabled }">
                             <UButton :disabled="disabled" id="watch-previous-project"
-                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 md:h-[80px] md:w-[80px] h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
-                                <UIcon name="mingcute:arrow-left-fill" class="size-5" />
+                                <UIcon name="mingcute:arrow-left-fill" class="md:size-10 size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
                             <UButton :disabled="disabled" id="watch-next-project"
-                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
+                                class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 md:h-[80px] md:w-[80px] h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" @click="onClick" square>
-                                <UIcon name="mingcute:arrow-right-fill" class="size-5" />
+                                <UIcon name="mingcute:arrow-right-fill" class="md:size-10 size-5" />
                             </UButton>
                         </template>
                     </UCarousel>

@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import { PortfolioOtherService } from '#components';
-
 useHead({
     title: `Nomo Render's Portfolio | Nomo Render Visualization`,
     meta: [
@@ -15,6 +13,7 @@ useHead({
             name: "description",
             content: `Stunning visuals that tell your story.`,
         },
+        { name: 'robots', content: 'index, follow' }
     ],
 });
 </script>

@@ -17,8 +17,32 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/supabase',
     'nuxt-gtag',
-    '@zadigetvoltaire/nuxt-gtm'
+    '@zadigetvoltaire/nuxt-gtm',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+  site: {
+    url: 'https://www.nomorender.com',
+    name: 'Nomo Render - 3D Visualization Studio'
+  },
+  robots: {
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/dashboard/', '/login']
+      }
+    ],
+    sitemap: 'https://www.nomorender.com/sitemap.xml'
+  },
+  sitemap: {
+    minify: true,
+    exclude: ['/dashboard/', '/dashboard', '/login'],
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.8
+    }
+  },
   supabase: { redirect: false, },
   colorMode: {
     preference: 'light',
@@ -34,6 +58,11 @@ export default defineNuxtConfig({
   },
   gtm: {
     id: process.env.GTM_ID || '',
+  },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml', '/robots.txt']
+    }
   },
   plugins: [{ src: '~/plugins/google-recaptcha.ts' }, { src: '~/plugins/clarity.client.ts', mode: 'client' }],
 })

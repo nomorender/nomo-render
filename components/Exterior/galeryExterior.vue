@@ -286,7 +286,8 @@
       <div class="flex mt-[1.2px] gap-1">
         <!-- Project 10 -->
         <div class="w-[60%]">
-          <div class="hidden md:block relative group md:w-full md:h-[480px] h-[180px] cursor-pointer">
+          <div class="hidden md:block relative group md:w-full md:h-[480px] h-[180px] cursor-pointer"
+            @click="openModal(10)">
             <NuxtImg loading="lazy" format="webp" v-if="getProjectByStt(10)?.cover_url"
               :src="getProjectByStt(10)?.cover_url"
               class="md:w-full md:h-[480px] h-[180px] break-inside-avoid object-cover object-center" />

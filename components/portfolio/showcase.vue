@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { usePortfolio } from '~/stores/portfolio/usePortfolio'
-
+import { useRouter, useRoute } from 'vue-router'
 
 const category = [
     { name: 'Interior', value: 'interior' },
@@ -42,7 +42,6 @@ const loadMore = async () => {
         limit: LIMIT,
     }, true)
 }
-
 const items = computed(() => store.res)
 </script>
 

@@ -58,7 +58,7 @@
           <UCarousel :items="slides" arrows :ui="{
             item: 'basis-full px-3',
             arrows: {
-              wrapper: 'flex items-center justify-center md:mt-2 sm:hidden gap-[15px] md:pb-10'
+              wrapper: 'flex items-center justify-center md:mt-2 gap-[15px] md:pb-10'
             }
           }" ref="carousel">
             <template #default="{ item }">

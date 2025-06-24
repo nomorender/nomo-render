@@ -14,7 +14,6 @@
 
 </template>
 <script lang="ts" setup>
-import { HomeTest } from '#components';
 
 useHead({
   title: `Nomo Render | 3D visualization
@@ -24,6 +23,7 @@ studio`,
       name: "description",
       content: `Nomadic Creativity, Timeless Renders, More than just blueprints, it’s about storytelling`,
     },
+    { name: 'robots', content: 'index, follow' }
   ],
 });
 </script>

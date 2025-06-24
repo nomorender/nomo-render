@@ -15,7 +15,7 @@
           <div v-for="item in navList" :key="item.path">
             <p v-if="!item.childen" @click="router.push(item.path); isOpenMenu = false"
               aria-label="Click here to go to choose page"
-              class="md:text-[20px] cursor-pointer hover:underline font-semibold uppercase" :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact'
+              class="md:text-[20px] cursor-pointer hover:underline font-semibold uppercase" :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/'
                 ? 'text-[#8D7662]'
                 : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
               {{ item.name }}
@@ -24,11 +24,11 @@
               v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
                 <p class="text-xl hover:underline font-semibold uppercase" aria-label="Click here to go to choose page"
-                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
+                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
                   {{ item.name }}
                 </p>
                 <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"
-                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
+                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
               </div>
             </UDropdown>
           </div>
@@ -37,7 +37,7 @@
           <UButton id="open-sub-menu-header" variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
             aria-label="Click here to go to choose page"
             class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
-            :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')"
+            :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')"
             square padded @click="isOpenMenu = true" />
           <USlideover v-model="isOpenMenu"
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
