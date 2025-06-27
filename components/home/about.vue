@@ -15,14 +15,23 @@
         <div class="hidden lg:block mb-2">
           <UButton id="see-more-aboutus" aria-label="Click here to see more information about Nomorender"
             class="text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
-            to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">See
-            more</UButton>
+            to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">
+            <span>See more</span>
+            <span>
+              See more<span class="sr-only"> about our team Nomo Render</span>
+            </span>
+          </UButton>
         </div>
       </div>
       <div class="">
         <UButton id="see-more-aboutus" aria-label="Click here to see more information about Nomorender"
           class=" text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all lg:hidden"
-          to="/about" variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+          to="/about" variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span>See
+            more</span>
+          <span>
+            See more<span class="sr-only"> about our team Nomo Render</span>
+          </span>
+        </UButton>
       </div>
     </div>
   </div>
