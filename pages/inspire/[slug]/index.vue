@@ -54,7 +54,7 @@ if (store.res) {
             v-html="store?.res?.content">
         </div>
     </div>
-    <div class="flex flex-col lg:gap-[90px] md:gap-[50px] gap-[30px] items-center justify-center lg:mb-20 mb-10">
+    <div class="flex flex-col lg:gap-[70px] md:gap-[50px] gap-[30px] items-center justify-center lg:mb-20 mb-10">
         <div
             class="rounded-[40px] lg:w-[248px] lg:h-[80px] md:w-[200px] md:h-[60px] w-[117px] h-[37px] bg-[#D8C3A5] flex items-center justify-center">
             <span class="lg:text-[25px] md:text-[19px] text-[15px] lg:leading-[200%] leading-[180%] font-[500]">Other
