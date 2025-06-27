@@ -3,6 +3,7 @@ export type BlogDetail = {
     content: string
     created_at: Date
     slug: string
+    tag: string
     title: string
     description: string
 }

@@ -93,7 +93,6 @@ const onSubmit = async (event: FormSubmitEvent<any>) => {
         formSubmitting.value = false
     }
 }
-
 const onError = async (event: FormErrorEvent) => {
     const element = document.getElementById(event.errors[0].id)
     element?.focus()

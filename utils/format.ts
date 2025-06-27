@@ -8,3 +8,6 @@ export const slugify = (title: string): string => {
         .replace(/-+/g, "-")
         .replace(/^-+|-+$/g, "")
 }
+export const formatDate = (d: string | Date) => {
+    return new Date(d).toLocaleDateString('vi-VN').replace(/\//g, '.')
+}

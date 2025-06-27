@@ -19,7 +19,7 @@ export const useBlogStore = defineStore('blog', () => {
         let baseQuery = supabase
             .from('blog')
             .select('*', { count: 'exact', head: true })
-            .order('created_at', { ascending: true })
+            .order('created_at', { ascending: false })
 
         if (filter.tag) {
             baseQuery = baseQuery.eq('tag', filter.tag);
@@ -31,7 +31,7 @@ export const useBlogStore = defineStore('blog', () => {
         let dataQuery = supabase
             .from('blog')
             .select('*')
-            .order('created_at', { ascending: true })
+            .order('created_at', { ascending: false })
 
         if (filter.tag) {
             dataQuery = dataQuery.eq('tag', filter.tag);

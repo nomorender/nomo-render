@@ -2,10 +2,7 @@
 import type { Blog } from '~/types/inspire/blog';
 
 const props = defineProps<Blog>()
-
-const formatDate = (d: string | Date) => {
-    return new Date(d).toLocaleDateString('vi-VN').replace(/\//g, '.')
-}
+const date = formatDate(props.created_at)
 </script>
 
 <template>
@@ -22,7 +19,7 @@ const formatDate = (d: string | Date) => {
                     <div
                         class="lg:text-[20px] text-[13px] lg:leading-[150%] leading-[100%] font-[400] flex items-center">
                         <span>
-                            {{ formatDate(props.created_at) }} | <span class="uppercase">{{ props.tag }}</span>
+                            {{ date }} | <span class="uppercase">{{ props.tag }}</span>
                         </span>
                     </div>
                     <h1 class="font-[500] lg:text-[25px] lg:leading-[200%] leading-[180%] text-[15px]">{{ props.title }}
