@@ -47,6 +47,7 @@ export const usePortfolio = () => {
         isLoading,
         update,
         add,
-        addError
+        addError,
+        portfolio
     }
 }

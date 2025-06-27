@@ -108,9 +108,9 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
             isOpen.value = false
         } else {
             try {
-                const { addError, add } = usePortfolio()
+                const { portfolio, add } = usePortfolio()
                 add(data);
-                if (!addError) {
+                if (portfolio) {
                     toast.add({
                         title: 'Added successfull!',
                         description: 'Your data has been added!',

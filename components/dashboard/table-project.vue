@@ -55,11 +55,11 @@ const filteredRows = computed(() => {
     );
 });
 
-function openModal(id: string) {
+const openModal = (id: string) => {
     isOpen.value = true
     openId.value = id
 }
-function handleSaved() {
+const handleSaved = () => {
     fetchData()
     isOpen.value = false
 }

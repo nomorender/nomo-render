@@ -3,7 +3,7 @@
     <LibraryShowcase />
 </template>
 
-<script>
+<script setup>
 useSeoMeta({
     title: 'Library | Nomo Render Visualization',
     ogTitle: 'Library | Nomo Render Visualization',

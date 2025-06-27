@@ -15,7 +15,7 @@ const validate = (state: any): FormError[] => {
     return errors
 }
 
-async function onSubmit(event: FormSubmitEvent<any>) {
+const onSubmit = async (event: FormSubmitEvent<any>) => {
     const toast = useToast();
     const auth = useAuth();
     const { email, password } = event.data;
@@ -34,7 +34,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     }
 }
 
-async function onError(event: FormErrorEvent) {
+const onError = async (event: FormErrorEvent) => {
     const element = document.getElementById(event.errors[0].id)
     element?.focus()
     element?.scrollIntoView({ behavior: 'smooth', block: 'center' })

@@ -18,7 +18,7 @@ onMounted(() => {
     (window as any).MauticSDKLoaded = true
     const script = document.createElement('script')
     script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
-    script.onload = function () {
+    script.onload = () => {
       if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
         (window as any).MauticSDK.onLoad()
       }

@@ -4,7 +4,7 @@
     <InspireContact />
     <InspireOtherService />
 </template>
-<script>
+<script setup>
 useSeoMeta({
     title: 'Nomo Render inspire | Nomo Render Visualization',
     ogTitle: 'Nomo Render inspire | Nomo Render Visualization',

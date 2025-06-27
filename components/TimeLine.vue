@@ -19,7 +19,7 @@ const itemRefs = ref<HTMLElement[]>([]);
 const totalPage = ref(0);
 const currentPage = ref(0);
 
-function registerItemRef(el: any, index: any) {
+const registerItemRef = (el: any, index: any) => {
     if (el) itemRefs.value[index] = el;
 }
 

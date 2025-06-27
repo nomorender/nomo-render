@@ -5,7 +5,7 @@
     <PortfolioOtherService />
 </template>
 
-<script>
+<script setup>
 useSeoMeta({
     title: "Nomo Render 's Portfolio | Nomo Render Visualization",
     ogTitle: "Nomo Render 's Portfolio | Nomo Render Visualization",

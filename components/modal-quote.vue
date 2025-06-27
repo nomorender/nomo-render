@@ -22,7 +22,7 @@ onMounted(() => {
         (window as any).MauticSDKLoaded = true
         const script = document.createElement('script')
         script.src = 'https://mail.nomorender.com/media/js/mautic-form.js?v59acfc6c'
-        script.onload = function () {
+        script.onload = () => {
             if ((window as any).MauticSDK && typeof (window as any).MauticSDK.onLoad === 'function') {
                 (window as any).MauticSDK.onLoad()
             }
@@ -33,7 +33,7 @@ onMounted(() => {
     }
 })
 
-async function onSubmit(event: FormSubmitEvent<any>) {
+const onSubmit = async (event: FormSubmitEvent<any>) => {
     if (!state.email || !state.email.includes('@')) {
         toast.add({
             title: 'Invalid email!',
@@ -77,7 +77,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     }
 }
 
-function onError(event: FormErrorEvent) {
+const onError = async (event: FormErrorEvent) => {
     const firstError = event.errors[0]
     const element = document.querySelector(`[name="${firstError.id}"]`) as HTMLElement
     element?.focus()

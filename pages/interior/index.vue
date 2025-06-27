@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<script>
+<script setup>
 useSeoMeta({
     title: '3D Interior Rendering | Nomo Render Visualization',
     ogTitle: '3D Interior Rendering | Nomo Render Visualization',

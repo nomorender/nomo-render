@@ -166,7 +166,7 @@ const carousel = ref(null);
 const activeStep = ref(0);
 const itemRefs = ref([]);
 
-function registerItemRef(el, index) {
+const registerItemRef = (el, index) => {
     if (el) itemRefs.value[index] = el;
 }
 

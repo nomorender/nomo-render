@@ -167,24 +167,24 @@ onBeforeUnmount(() => {
     editor?.destroy()
 })
 
-function exec(cmd: keyof typeof commandMap) {
+const exec = (cmd: keyof typeof commandMap) => {
     commandMap[cmd]?.()
 }
-function is(type: string) {
+const is = (type: string) => {
     return editor?.isActive(type)
 }
-function setFontFamily(family: string) {
+const setFontFamily = (family: string) => {
     editor?.chain().focus().setFontFamily(family).run()
 }
-function insertImage() {
+const insertImage = () => {
     const url = prompt('Image URL:')
     if (url) setTimeout(() => editor?.chain().focus().setImage({ src: url }).run())
 }
-function setAlign(value: 'left' | 'center' | 'right' | 'justify') {
+const setAlign = (value: 'left' | 'center' | 'right' | 'justify') => {
     editor?.chain().focus().setTextAlign(value).run()
 }
 const pickedColor = ref('#000000')
-function setColor(col: string) {
+const setColor = (col: string) => {
     editor?.chain().focus().setColor(col).run()
 }
 watch(pickedColor, col => setColor(col))

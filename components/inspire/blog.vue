@@ -3,7 +3,7 @@ import type { Blog } from '~/types/inspire/blog';
 
 const props = defineProps<Blog>()
 
-function formatDate(d: string | Date) {
+const formatDate = (d: string | Date) => {
     return new Date(d).toLocaleDateString('vi-VN').replace(/\//g, '.')
 }
 </script>

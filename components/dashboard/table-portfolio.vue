@@ -34,6 +34,8 @@ const openId = ref<string | null>(null)
 const mode = ref<string>('');
 const toast = useToast()
 const supabase = useSupabaseClient()
+const confirmOpen = ref(false)
+const deletingId = ref<string | null>(null)
 const fetchData = () => {
     store.load({
         page: page.value,
@@ -58,33 +60,29 @@ const filteredRows = computed(() => {
     );
 });
 
-function openModal(id: string) {
+const openModal = (id: string) => {
     mode.value = 'edit'
     openId.value = id
     isOpen.value = true
 }
-function handleSaved() {
+const handleSaved = () => {
     fetchData()
     isOpen.value = false
 }
 
-const handleDelete = async (id: string) => {
-    const confirmDelete = confirm('Are you sure you want to delete this project?');
-    if (!confirmDelete) return;
-    const { error } = await supabase.from('portfolio').delete().eq('id', id);
+const reallyDelete = async (id: string) => {
+    const { error } = await supabase.from('portfolio').delete().eq('id', id)
     if (!error) {
-        toast.add({
-            title: 'Deleted successfully!',
-            color: 'green',
-        });
-        fetchData();
+        toast.add({ title: 'Deleted successfully!', color: 'green' })
+        fetchData()
     } else {
-        toast.add({
-            title: 'Delete failed!',
-            description: error.message,
-            color: 'red',
-        });
+        toast.add({ title: 'Delete failed!', description: error.message, color: 'red' })
     }
+}
+
+const handleDelete = (id: string) => {
+    deletingId.value = id
+    confirmOpen.value = true
 }
 
 const items = (row: Portfolio) => [
@@ -130,10 +128,10 @@ const handleAddMode = () => {
             </UDropdown>
         </template>
     </UTable>
-
     <div class="flex justify-end px-3 py-3.5 border-t border-gray-200 dark:border-gray-700">
         <UPagination v-model="page" size="lg" :max="5" :page-count="LIMIT" :total="store.countTotal" />
     </div>
-
     <ModalEditPortfolio v-if="isOpen" :mode="mode" v-model="isOpen" :id="openId" @saved="handleSaved" />
+    <ConfirmModal v-model="confirmOpen" title="Delete this library?" message="This action cannot be undone."
+        @confirm="reallyDelete(deletingId!)" />
 </template>

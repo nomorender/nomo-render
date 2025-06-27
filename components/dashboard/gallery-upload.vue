@@ -49,7 +49,7 @@ const supabase = useSupabaseClient();
 
 const store = useStorageStore();
 
-async function fetchData() {
+const fetchData = async () => {
     isLoading.value = true;
     await store.load({ page: page.value, limit: LIMIT });
 
@@ -77,11 +77,11 @@ watch(page, () => {
     fetchData();
 });
 
-async function loadImages() {
+const loadImages = async () => {
     page.value += 1;
 }
 
-async function uploadImage() {
+const uploadImage = async () => {
     if (!selectedFile.value) return;
     const fileName = `${Date.now()}-${selectedFile.value.name}`;
     const { error } = await supabase.storage.from('project').upload(fileName, selectedFile.value);
@@ -97,13 +97,13 @@ async function uploadImage() {
     if (inputEl) inputEl.value = '';
 }
 
-async function handleFileChange() {
+const handleFileChange = async () => {
     await nextTick();
     const inputEl = fileInputRef.value?.input;
     selectedFile.value = inputEl?.files?.[0] || null;
 }
 
-async function deleteImage(fileName: string) {
+const deleteImage = async (fileName: string) => {
     const { error } = await supabase.storage.from('project').remove([fileName]);
     if (error) {
         toast.add({ title: 'Failed to delete!', description: error.message, color: 'red' });
@@ -113,9 +113,8 @@ async function deleteImage(fileName: string) {
     toast.add({ title: 'Deleted!', description: 'Removed from storage.', color: 'green' });
 }
 
-function copyToClipboard(url: string) {
+const copyToClipboard = async (url: string) => {
     navigator.clipboard.writeText(url);
     toast.add({ title: 'Copied!', description: 'URL copied to clipboard.', color: 'green' });
 }
-
 </script>

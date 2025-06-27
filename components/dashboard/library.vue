@@ -58,16 +58,16 @@ const filteredRows = computed(() => {
     );
 });
 
-function openModal(id: string) {
+const openModal = (id: string) => {
     mode.value = 'edit'
     openId.value = id
     isOpen.value = true
 }
-function handleSaved() {
+const handleSaved = () => {
     fetchData()
     isOpen.value = false
 }
-async function reallyDelete(id: string) {
+const reallyDelete = async (id: string) => {
     const { error } = await supabase.from('library').delete().eq('id', id)
     if (!error) {
         toast.add({ title: 'Deleted successfully!', color: 'green' })
@@ -77,7 +77,7 @@ async function reallyDelete(id: string) {
     }
 }
 
-function handleDelete(id: string) {
+const handleDelete = (id: string) => {
     deletingId.value = id
     confirmOpen.value = true
 }

@@ -25,7 +25,7 @@ const LIMIT = 6;
 const page = ref(1);
 const isOpen = ref<boolean>(false);
 const openId = ref<string | null>(null)
-function openModal(id: string) {
+const openModal = (id: string) => {
     isOpen.value = true
     openId.value = id
 }
@@ -52,7 +52,7 @@ const filteredRows = computed(() => {
         )
     );
 });
-function handleSaved() {
+const handleSaved = () => {
     fetchData()
     isOpen.value = false
 }
