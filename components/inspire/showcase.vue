@@ -76,7 +76,8 @@ watch(page, () => {
                 <div v-else class="col-span-2">
                     <div class="flex flex-col items-center justify-center">
                         <h1 class="text-[25px]">There's nothing to display</h1>
-                        <p class="md:text-xl text-md text-[#c8c7c7]">Currently, we are preparing more content to
+                        <p class="md:text-xl text-center text-md text-[#c8c7c7]">Currently, we are preparing more
+                            content to
                             display.
                             Please
                             check it later !
