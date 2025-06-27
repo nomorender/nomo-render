@@ -18,4 +18,18 @@ useHead({
         { name: 'robots', content: 'index, follow' }
     ],
 });
+
+useSeoMeta({
+    title: 'Pricing | Nomo Render Visualization',
+    ogTitle: 'Pricing | Nomo Render Visualization',
+    description: 'Get high-quality 3D rendering services by Nomo Render. Stunning visuals that tell your story.',
+    ogDescription: 'Get high-quality 3D rendering services by Nomo Render. Stunning visuals that tell your story.',
+    ogImage: 'https://www.nomorender.com/banner-interior.png',
+    twitterTitle: 'Pricing | Nomo Render Visualization',
+    twitterCard: 'summary_large_image',
+    twitterDescription: "Get high-quality 3D rendering services by Nomo Render. Stunning visuals that tell your story.",
+    twitterImage: 'https://www.nomorender.com/banner-interior.png',
+    ogSiteName: 'Nomo Render',
+    robots: 'index, follow',
+})
 </script>

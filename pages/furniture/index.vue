@@ -11,15 +11,18 @@
 </template>
 
 <script lang="ts" setup>
-useHead({
+
+useSeoMeta({
     title: '3D Furniture Modeling | Nomo Render Visualization',
-    meta: [
-        {
-            name: 'description',
-            content:
-                'Get custom 3D furniture renders from Nomo Render. Realistic, high-quality visualizations for designers, architects, and furniture brands.',
-        },
-        { name: 'robots', content: 'index, follow' }
-    ],
-});
+    ogTitle: '3D Furniture Modeling | Nomo Render Visualization',
+    description: 'Get high-quality furniture 3D rendering services by Nomo Render. Stunning visuals that tell your story',
+    ogDescription: 'Get high-quality furniture 3D rendering services by Nomo Render. Stunning visuals that tell your story',
+    ogImage: 'https://www.nomorender.com/Furniture/Banner.jpg',
+    twitterTitle: '3D Furniture Modeling | Nomo Render Visualization',
+    twitterCard: 'summary_large_image',
+    twitterDescription: "Get high-quality furniture 3D rendering services by Nomo Render. Stunning visuals that tell your story",
+    twitterImage: 'https://www.nomorender.com/Furniture/Banner.jpg',
+    ogSiteName: 'Nomo Render',
+    robots: 'index, follow',
+})
 </script>
