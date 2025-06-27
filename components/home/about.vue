@@ -18,7 +18,7 @@
             to="/about" variant="outline" size="xl" :trailing="false" color="red" icon="i-heroicons-arrow-right">
             <span>See more</span>
             <span>
-              See more<span class="sr-only"> about our team Nomo Render</span>
+              <span class="sr-only">See more about our team Nomo Render</span>
             </span>
           </UButton>
         </div>
@@ -29,7 +29,7 @@
           to="/about" variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span>See
             more</span>
           <span>
-            See more<span class="sr-only"> about our team Nomo Render</span>
+            <span class="sr-only">See more about our team Nomo Render</span>
           </span>
         </UButton>
       </div>
