@@ -96,17 +96,17 @@
                         3D Rendering Services</div>
                     <div class="md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify">
                         <div>
-                            <NuxtLink to="/exterior">
+                            <NuxtLink to="/exterior" title="Explore our 3D exterior rendering services">
                                 3D Exterior Rendering
                             </NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink to="/interior">
+                            <NuxtLink to="/interior" title="Explore our 3D interior rendering services">
                                 3D Interior Rendering
                             </NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink to="/furniture">
+                            <NuxtLink to="/furniture" title="Explore our 3D furnitre rendering services">
                                 3D Furniture Modeling Rendering
                             </NuxtLink>
                         </div>
@@ -119,12 +119,12 @@
                         Our Work</div>
                     <div class="md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify">
                         <div>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/portfolio" title="Explore our portfolio">
                                 Portfolio
                             </NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink to="">
+                            <NuxtLink to="/workflow" title="Explore our workflow">
                                 Workflow
                             </NuxtLink>
                         </div>
@@ -137,12 +137,12 @@
                         Explore</div>
                     <div class="md:text-[25px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify">
                         <div>
-                            <NuxtLink to="/">
+                            <NuxtLink to="/inspire" title="Explore our inspire">
                                 Inspire Space
                             </NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink to="">
+                            <NuxtLink to="/library" title="Explore our library">
                                 Library
                             </NuxtLink>
                         </div>

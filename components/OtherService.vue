@@ -73,6 +73,7 @@
                                 <span aria-label="Click here to see more service of Nomorender"
                                     class="md:text-[20px] lg:text-[13px] text-[13px] text-[#980C0C] leading-[16px] font-[400]">
                                     See more</span>
+                                <span class="sr-only"> See more about {{ service.title }}</span>
                             </UButton>
                         </div>
                     </div>
