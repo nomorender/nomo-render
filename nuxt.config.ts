@@ -52,7 +52,7 @@ export default defineNuxtConfig({
       if (error) throw error
       return data.map(p => ({
         loc: `/inspire/${p.slug}`,
-        lastmod: p.updated_at
+        lastmod: new Date(p.updated_at).toISOString()
       }))
     }
   },
