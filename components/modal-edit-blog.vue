@@ -64,9 +64,13 @@ watch(
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     if (props.mode === "edit") {
         const data = toRaw(event.data)
+        const payload = {
+            ...data,
+            slug: slugify(data.slug || '')
+        }
         try {
             const { update } = useBlog()
-            const res = await update(data, props.id!)
+            const res = await update(payload, props.id!)
             if (res) {
                 toast.add({
                     title: 'Updated successfull!',
@@ -95,6 +99,10 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
         }
     } else if (props.mode === "add" && props.blog == null) {
         const data = toRaw(event.data)
+        const payload = {
+            ...data,
+            slug: slugify(data.slug || '')
+        }
         if (data === null) {
             toast.add({
                 title: 'Added failed!',
@@ -105,7 +113,7 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
         } else {
             try {
                 const { add, blog } = useBlog()
-                add(data);
+                add(payload);
                 if (blog) {
                     toast.add({
                         title: 'Added successfull!',
