@@ -43,7 +43,8 @@ const sections = [
                 <div class="flex gap-10 justify-center items-center">
                     <p class="font-[300] lg:text-[25px] md:text-[25px] text-[15px] leading-[200%] text-justify"
                         v-html="section.content" />
-                    <nuxt-img :src="section.image" class="w-[140px] h-[120px] lg:block md:hidden hidden" />
+                    <nuxt-img :src="section.image" :alt="section.title"
+                        class="w-[140px] h-[120px] lg:block md:hidden hidden" />
                 </div>
             </div>
         </div>
