@@ -5,10 +5,12 @@ const toast = useToast()
 const recaptchaInstance = useReCaptcha()
 
 const state = reactive({
-  email: ''
+  email: '',
+  agree: true
 })
 const schema = z.object({
-  email: z.string().email()
+  email: z.string().email(),
+  agree: z.boolean()
 });
 
 onMounted(() => {
@@ -136,6 +138,11 @@ const submitForm = async () => {
                       size="xl" class="bg-none md:pr-2 rounded-[8px] w-[150px] md:w-full"
                       :ui="{ placeholder: 'placeholder-black font-[300] text-[20px] md:text-[25px] leading-[200%]' }" />
                   </UFormGroup>
+                  <!-- <UFormGroup name="agree">
+                    <UCheckbox
+                      :ui="{ border: 'border border-black', background: 'bg-[#D9D9D9]', wrapper: 'flex items-center', label: 'lg:text-[20px] md:text-[20px] text-[13px] italic leading-[150%] font-[300]' }"
+                      v-model="state.agree" label="I agree to the Terms of Use and the Privacy Policy*" />
+                  </UFormGroup> -->
                 </FormField>
               </UForm>
               <UButton id="send-email-subscribe" aria-label="Click here to send an email to Nomorender"

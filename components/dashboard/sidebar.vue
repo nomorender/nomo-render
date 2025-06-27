@@ -21,6 +21,16 @@ const links =
             to: '/dashboard/portfolio'
         },
         {
+            label: 'Blog',
+            icon: 'material-symbols:dashboard',
+            to: '/dashboard/blog'
+        },
+        {
+            label: 'Library',
+            icon: 'material-symbols:dashboard',
+            to: '/dashboard/library'
+        },
+        {
             label: 'Storage',
             icon: 'material-symbols:home-storage',
             to: '/dashboard/storage'

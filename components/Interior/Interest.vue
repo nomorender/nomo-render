@@ -111,6 +111,7 @@
                                 highlights flow, spatial transitions and details to match the design vision.
                             </div>
                         </div>
+
                         <div class="lg:gap-[8px] hidden lg:flex">
                             <div class="hidden lg:block">
                                 <NuxtImg format="webp" src="/Interior/Pic8.png" alt="pic8" loading="lazy"

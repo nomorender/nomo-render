@@ -2008,6 +2008,11 @@
   resolved "https://registry.npmjs.org/@tiptap/extension-code/-/extension-code-2.14.0.tgz"
   integrity sha512-kyo02mnzqgwXayMcyRA/fHQgb+nMmQQpIt1irZwjtEoFZshA7NnY/6b5SJmRcxQ4/X4r2Y2Ha2sWmOcEkLmt4A==
 
+"@tiptap/extension-color@^2.22.3":
+  version "2.22.3"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-color/-/extension-color-2.22.3.tgz#3b91a4b39346e4d7e848c12f313047b356f1ef84"
+  integrity sha512-4GewNUnDE16cte85kG0qhMGS1NQUQ1HRObVRGP47RlrSc/6x++DOfkqYbSJ0btyfWHGBahC3QQfyQ3eCdryUxg==
+
 "@tiptap/extension-document@^2.14.0":
   version "2.14.0"
   resolved "https://registry.npmjs.org/@tiptap/extension-document/-/extension-document-2.14.0.tgz"
@@ -2025,10 +2030,10 @@
   dependencies:
     tippy.js "^6.3.7"
 
-"@tiptap/extension-font-family@^2.14.0":
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/@tiptap/extension-font-family/-/extension-font-family-2.14.0.tgz#7423275d5329e63f64c1447665c86c271dfe8391"
-  integrity sha512-jS9QepIc+kk+EfD6V5prPR3pylXSt+4VtJwE96CwqY+qWSUHAFONr5zPNyoweG0glZZ4tVlR6k6ShEGwZ7Zggg==
+"@tiptap/extension-font-family@^2.22.3":
+  version "2.22.3"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-font-family/-/extension-font-family-2.22.3.tgz#12bd3b67a18017c96d9ba4d09575bd7bbb7a0c85"
+  integrity sha512-e+hSJAFettYx0tB9s56HRlLgFWsXt6XlF4krPaMeRDy0EG+7g0ofxjgPLkMlBvp52v3IGb/dEKkrRWzKzsKa9w==
 
 "@tiptap/extension-gapcursor@^2.14.0":
   version "2.14.0"
@@ -2131,6 +2136,11 @@
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-text-style/-/extension-text-style-2.14.0.tgz#cee11ba530a30a4775830dc62a8040daac59478a"
   integrity sha512-dl0oi2i0rjLpBqTf4wGy6SLidvPpjxLcmX727pwJlCklkFJVDf8wSFeD4ddxJXiD2Rwef0D/lkcwXSY73CoDcA==
+
+"@tiptap/extension-text-style@^2.22.3":
+  version "2.22.3"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-text-style/-/extension-text-style-2.22.3.tgz#b945dae81a4d7d100bd2c6d0a715d68a9fdbcc1e"
+  integrity sha512-M3FLOUPcO8fR+rM97mR2gQ54KFkdlAUQtEPKQpO1f312gtcVdBNxgq0WgqTnBY7thWLyqQSKiAsL6y88+JddSA==
 
 "@tiptap/extension-text@^2.14.0":
   version "2.14.0"
@@ -6758,6 +6768,11 @@ slash@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/slash/-/slash-5.1.0.tgz"
   integrity sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==
+
+slugify@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.6.tgz#2d4ac0eacb47add6af9e04d3be79319cbcc7924b"
+  integrity sha512-h+z7HKHYXj6wJU+AnS/+IH8Uh9fdcX1Lrhg1/VMdf9PwoBQXFcXiAdsy2tSK0P6gKwJLXp02r90ahUCqHk9rrw==
 
 smob@^1.0.0:
   version "1.5.0"

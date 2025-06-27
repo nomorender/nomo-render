@@ -8,21 +8,12 @@ const selectedIndex = ref<number | null>(null)
 const selectedItem = computed(() =>
     props.items.find((item) => item.id === props.id)
 )
-
-const router = useRouter();
-
-const openModal = () => {
-    const project = props.items.find(i => i.id === props.id)
-}
 </script>
 
 <template>
     <div>
-        <div class="w-full flex flex-col gap-[25px] hover:cursor-pointer group relative overflow-hidden" @click="() => {
-            isOpen = true
-            selectedIndex = props.items.findIndex(i => i.id === props.id)
-            openModal();
-        }">
+        <div class="w-full flex flex-col gap-[25px] hover:cursor-pointer group relative overflow-hidden"
+            @click="() => { isOpen = true; selectedIndex = props.items.findIndex(i => i.id === props.id) }">
             <div class="relative">
                 <div
                     class="absolute bg-black/40 inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex items-center justify-center">
@@ -43,6 +34,7 @@ const openModal = () => {
                 class="absolute inset-0 bg-white/10 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 pointer-events-none">
             </div>
         </div>
+
 
         <ModalItem v-model="isOpen" :items="props.items" :selectedIndex="selectedIndex" :project="selectedItem"
             :id="selectedItem?.id" @update:modelValue="isOpen = $event"

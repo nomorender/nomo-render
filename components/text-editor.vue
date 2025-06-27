@@ -28,6 +28,9 @@
             <UButton aria-label="Click here to font H2"
                 class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleHeading2')">H2</UButton>
+            <UButton aria-label="Click here to font H2"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all"
+                @click="exec('toggleHeading3')">H3</UButton>
             <UButton aria-label="Click here to font Code"
                 class="bg-black hover:bg-white text-white hover:text-black transition-all"
                 @click="exec('toggleCodeBlock')">Code</UButton>
@@ -37,6 +40,9 @@
             <UButton aria-label="Click here to font Align Left"
                 class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('left')">
                 Align Left</UButton>
+            <UButton aria-label="Click here to font Align Left"
+                class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('justify')">
+                Align justify</UButton>
             <UButton aria-label="Click here to font Align Center"
                 class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="setAlign('center')">
                 Center</UButton>
@@ -47,6 +53,9 @@
             <UButton aria-label="Click here to font Input Image"
                 class="bg-black hover:bg-white text-white hover:text-black transition-all" @click="insertImage">
                 Image</UButton>
+            <USelectMenu v-model="currentFont" :options="fonts" option-attribute="label" size="xs"
+                class="min-w-[110px]" />
+            <UDivider orientation="vertical" />
         </div>
         <div class="flex gap-2">
             <UButton aria-label="Click here to font Undo"
@@ -57,6 +66,10 @@
                 Redo</UButton>
             <UDivider />
         </div>
+        <UInput v-model="pickedColor" type="color" size="xs" class="h-7 w-8 p-0 cursor-pointer border rounded" />
+        <UButton icon="i-heroicons-x-mark-20-solid" size="xs" color="gray" variant="ghost" title="Remove colour"
+            @click="setColor('inherit')" />
+        <UDivider orientation="vertical" />
         <editor-content :editor="editor"
             class="focus:ring-0 focus:outline-none border border-gray-200 rounded-md px-3 prose editor-content" />
     </div>
@@ -77,13 +90,25 @@ import Typography from '@tiptap/extension-typography'
 import History from '@tiptap/extension-history'
 import FloatingMenu from '@tiptap/extension-floating-menu'
 import HardBreak from '@tiptap/extension-hard-break'
+import Color from '@tiptap/extension-color'
 
 const props = defineProps<{ modelValue: string }>()
 const emit = defineEmits(['update:modelValue'])
 
+const fonts = [
+    { label: 'Default', value: '' },
+    { label: 'Angelface', value: 'Angelface, cursive' },
+    { label: 'Qochy', value: 'Qochy, serif' },
+]
+const currentFont = ref(fonts[0])
+
+
 const editor = new Editor({
     content: props.modelValue,
     extensions: [
+        TextStyle,
+        Color.configure({ types: ['textStyle'] }),
+        FontFamily.configure({ types: ['textStyle'] }),
         StarterKit.configure({
             history: false,
         }),
@@ -124,6 +149,7 @@ const commandMap = {
     setParagraph: () => editor?.chain().focus().setParagraph().run(),
     toggleHeading1: () => editor?.chain().focus().toggleHeading({ level: 1 }).run(),
     toggleHeading2: () => editor?.chain().focus().toggleHeading({ level: 2 }).run(),
+    toggleHeading3: () => editor?.chain().focus().toggleHeading({ level: 3 }).run(),
     toggleBlockquote: () => editor?.chain().focus().toggleBlockquote().run(),
     toggleCodeBlock: () => editor?.chain().focus().toggleCodeBlock().run(),
     undo: () => editor?.chain().focus().undo().run(),
@@ -141,20 +167,30 @@ onBeforeUnmount(() => {
     editor?.destroy()
 })
 
-const exec = (cmd: keyof typeof commandMap) => {
+function exec(cmd: keyof typeof commandMap) {
     commandMap[cmd]?.()
 }
-const is = (type: string) => {
+function is(type: string) {
     return editor?.isActive(type)
 }
-
-const insertImage = () => {
-    const url = prompt('Image URL:')
-    if (url) {
-        editor?.chain().focus().setImage({ src: url }).run()
-    }
+function setFontFamily(family: string) {
+    editor?.chain().focus().setFontFamily(family).run()
 }
-const setAlign = (value: 'left' | 'center' | 'right') => {
+function insertImage() {
+    const url = prompt('Image URL:')
+    if (url) setTimeout(() => editor?.chain().focus().setImage({ src: url }).run())
+}
+function setAlign(value: 'left' | 'center' | 'right' | 'justify') {
     editor?.chain().focus().setTextAlign(value).run()
 }
+const pickedColor = ref('#000000')
+function setColor(col: string) {
+    editor?.chain().focus().setColor(col).run()
+}
+watch(pickedColor, col => setColor(col))
+watchEffect(() => {
+    const c = editor?.getAttributes('textStyle').color
+    if (c) pickedColor.value = c
+})
+watch(currentFont, f => setFontFamily(f.value))
 </script>

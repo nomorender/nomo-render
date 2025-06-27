@@ -1,13 +1,10 @@
 <template>
-    <UnderContruction />
+    <LibraryBanner />
+    <LibraryShowcase />
 </template>
 
 <script>
-import { UnderContruction } from '#components';
-
-definePageMeta({
-    layout: false
-})
+import { LibraryBanner, LibraryShowcase } from '#components';
 
 useHead({
     title: `Library | Nomo Render Visualization`,

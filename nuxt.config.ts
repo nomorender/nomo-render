@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { createClient } from '@supabase/supabase-js'
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css', '~/assets/css/fonts.css'],
   compatibilityDate: '2024-11-01',
@@ -30,17 +31,29 @@ export default defineNuxtConfig({
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/dashboard/', '/login']
+        disallow: ['/dashboard/**', '/login']
       }
     ],
     sitemap: 'https://www.nomorender.com/sitemap.xml'
   },
   sitemap: {
     minify: true,
-    exclude: ['/dashboard/', '/dashboard', '/login'],
+    exclude: ['/dashboard/**', '/dashboard', '/login'],
     defaults: {
-      changefreq: 'monthly',
+      changefreq: 'weekly',
       priority: 0.8
+    },
+
+    async urls() {
+      const supabase = createClient(process.env.SUPABASE_URL || '', process.env.SUPABASE_KEY || '', { auth: { persistSession: false } })
+      const { data, error } = await supabase
+        .from('blog')
+        .select('slug, updated_at')
+      if (error) throw error
+      return data.map(p => ({
+        loc: `/inspire/${p.slug}`,
+        lastmod: p.updated_at
+      }))
     }
   },
   supabase: { redirect: false, },
@@ -54,10 +67,10 @@ export default defineNuxtConfig({
     display: "swap",
   },
   gtag: {
-    id: process.env.GTAG_ID || ''
+    id: process.env.GTAG_ID || 'G-MCVXL28GQP'
   },
   gtm: {
-    id: process.env.GTM_ID || '',
+    id: process.env.GTM_ID || 'GTM-MBWC5Q6X',
   },
   nitro: {
     prerender: {
