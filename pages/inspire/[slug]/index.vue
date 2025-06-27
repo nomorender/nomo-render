@@ -4,34 +4,32 @@ import { useBlogDetail } from '~/stores/blog/useBlogDetail';
 const router = useRoute();
 const { slug } = router.params;
 const store = useBlogDetail();
-
-onMounted(async () => {
-    if (store.res?.slug !== slug || !store.res) {
-        await store.load(slug as string);
-    }
-    if (store.res) {
-        useSeoMeta({
-            title: () =>
-                store.res?.title
-                    ? `${store.res.title} | Nomo Render Visualization`
-                    : 'Inspire of Nomo Render | Nomo Render Visualization',
-            ogTitle: () =>
-                store.res?.title
-                    ? `${store.res.title} | Nomo Render Visualization`
-                    : 'Inspire of Nomo Render | Nomo Render Visualization',
-            description: () => store.res?.description ?? 'Nomo Render – 3D visualization studio',
-            ogDescription: () => store.res?.description ?? 'Nomo Render – 3D visualization studio',
-            ogUrl: () => `https://www.nomorender.com/inspire/${slug}`,
-            ogImage: () => store.res?.cover_url,
-            ogType: 'article',
-            ogSiteName: 'Nomo Render',
-            robots: 'index, follow',
-        })
-    } else {
-        notFound.value = true;
-    }
-});
 const notFound = ref(false);
+
+if (store.res?.slug !== slug || !store.res) {
+    await store.load(slug as string);
+}
+if (store.res) {
+    useSeoMeta({
+        title: () =>
+            store.res?.title
+                ? `${store.res.title} | Nomo Render Visualization`
+                : 'Inspire of Nomo Render | Nomo Render Visualization',
+        ogTitle: () =>
+            store.res?.title
+                ? `${store.res.title} | Nomo Render Visualization`
+                : 'Inspire of Nomo Render | Nomo Render Visualization',
+        description: () => store.res?.description ?? 'Nomo Render – 3D visualization studio',
+        ogDescription: () => store.res?.description ?? 'Nomo Render – 3D visualization studio',
+        ogUrl: () => `https://www.nomorender.com/inspire/${slug}`,
+        ogImage: () => store.res?.cover_url,
+        ogType: 'article',
+        ogSiteName: 'Nomo Render',
+        robots: 'index, follow',
+    })
+} else {
+    notFound.value = true;
+}
 </script>
 
 <template>
@@ -44,7 +42,6 @@ const notFound = ref(false);
             v-html="store?.res?.content">
         </div>
     </div>
-
     <InspireContact />
     <InspireOtherService />
 </template>
