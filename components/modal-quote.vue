@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+import { useReCaptcha } from 'vue-recaptcha-v3'
 import type { FormError, FormErrorEvent, FormSubmitEvent } from '#ui/types'
+const recaptchaInstance = useReCaptcha()
 import z from 'zod'
 
 const toast = useToast()
@@ -17,6 +19,7 @@ const schema = z.object({
     description: z.string(),
     agree: z.boolean()
 });
+
 onMounted(() => {
     if (typeof window !== 'undefined' && typeof (window as any).MauticSDKLoaded === 'undefined') {
         (window as any).MauticSDKLoaded = true
@@ -44,16 +47,19 @@ const onSubmit = async (event: FormSubmitEvent<any>) => {
     }
     formSubmitting.value = true
     try {
+        await recaptchaInstance?.recaptchaLoaded()
+        const token = await recaptchaInstance?.executeRecaptcha('contact_form')
+        if (!token) throw new Error('Failed to generate reCAPTCHA token')
+
         const res = await $fetch('/api/contact', {
             method: 'POST',
-            body: { name: state.name, email: state.email, description: state.description },
+            body: { name: state.name, email: state.email, description: state.description, recaptchaToken: token },
         })
         if (res.success) {
             state.email = ''
             state.name = ''
             state.description = ''
             state.agree = false
-            isOpen.value = false
             toast.add({
                 title: 'Success!',
                 description: 'Thank you for getting in touch. Our team will contact you shortly',
@@ -61,22 +67,24 @@ const onSubmit = async (event: FormSubmitEvent<any>) => {
             })
         } else {
             toast.add({
-                title: 'Failed!',
-                description: 'Please try another method!',
+                title: 'Send email failed!',
+                description: 'message' in res && res.message
+                    ? res.message
+                    : 'Something went wrong!',
                 color: 'red'
             })
+            return
         }
     } catch (error) {
         toast.add({
-            title: 'Failed!',
-            description: 'Please try another method!',
+            title: 'Send email failed!',
+            description: 'Something went wrong!',
             color: 'red'
         })
     } finally {
         formSubmitting.value = false
     }
 }
-
 const onError = async (event: FormErrorEvent) => {
     const firstError = event.errors[0]
     const element = document.querySelector(`[name="${firstError.id}"]`) as HTMLElement
@@ -126,8 +134,9 @@ const onError = async (event: FormErrorEvent) => {
                     </UFormGroup>
 
                     <div class="px-4 md:px-0 mx-auto flex justify-center lg:block">
-                        <UButton id="submit-form-quote" aria-label="Click here submit quote form to Nomorender"
-                            color="gray" size="xl" variant="solid" type="submit" form="requestForm"
+                        <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-form-quote"
+                            aria-label="Click here submit quote form to Nomorender" color="gray" size="xl"
+                            variant="solid" type="submit" form="requestForm"
                             class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-3 hover:bg-[#90755e] mt-6 md:mt-10 lg:rounded-[12px] rounded-[8px] px-10 py-3 md:w-auto max-w-xs">
                             <div
                                 class="w-full flex justify-center items-center uppercase text-[#F5F5F5] text-[16px] md:text-[20px]">
