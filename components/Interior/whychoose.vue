@@ -16,7 +16,7 @@
                     class="bg-[#FAF8F5] px-[30px] pt-[35px] pb-[70px] rounded-[8px]">
                     <div class="flex flex-col items-center justify-center w-[330px]">
                         <div class="mb-[15px]">
-                            <nuxt-img :src="item.logo" class="h-[100px] w-[100px]" />
+                            <nuxt-img :src="item.logo" class="h-[100px] w-[100px]" :alt="item.title" />
                         </div>
                         <div class="font-[600] text-[25px] leading-[150%] text-[#8D7662] mb-[20px]">
                             {{ item.title }}
@@ -41,7 +41,7 @@
                                 class="bg-[#FAF8F5] py-9 px-6 md:py-20 md:w-[500px] lg:py-0 lg:px-0 rounded-[8px] flex justify-center items-center">
                                 <div class="flex flex-col items-center justify-center ">
                                     <div class="md:mb-[35px] mb-[25px]">
-                                        <nuxt-img :src="item.logo"
+                                        <nuxt-img :src="item.logo" :alt="item.title"
                                             class="h-[80px] w-[80px] md:h-[150px] md:w-[150px] lg:h-0 lg:w-0" />
                                     </div>
                                     <div
