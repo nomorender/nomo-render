@@ -1,6 +1,8 @@
 <template>
     <LibraryBanner />
     <LibraryShowcase />
+    <InspireContact />
+    <InspireOtherService />
 </template>
 
 <script setup>
