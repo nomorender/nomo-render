@@ -13,13 +13,13 @@
         </div>
         <div class="hidden gap-[100px] justify-center lg:flex">
           <div v-for="item in navList" :key="item.path">
-            <p v-if="!item.childen" @click="router.push(item.path); isOpenMenu = false"
+            <NuxtLink v-if="!item.childen" :to="item.path" @click="isOpenMenu = false"
               aria-label="Click here to go to choose page"
               class="md:text-[20px] cursor-pointer hover:underline font-semibold uppercase" :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' || isInspireDetail
                 ? 'text-[#8D7662]'
                 : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
               {{ item.name }}
-            </p>
+            </NuxtLink>
             <UDropdown :ui="{ width: 'w-fit', item: { padding: 'py-4 px-4', label: 'text-[#000000] text-[18px]' } }"
               v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
@@ -48,10 +48,10 @@
                 aria-label="Click here to go to choose page" @click="() => { isOpenMenu = false; open = null; }" />
               <div class="flex flex-1 flex-col gap-9 mt-[5rem]">
                 <div v-for="item in navList" :key="item.path" class="relative flex flex-col items-end">
-                  <p v-if="!item.childen" @click="() => { router.push(item.path); isOpenMenu = false; }"
-                    class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
+                  <NuxtLink aria-label="Click here to go to choose page" v-if="!item.childen" :to="item.path"
+                    @click.native="isOpenMenu = false" class="text-[20px] cursor-pointer font-semibold text-[#8D7662]">
                     {{ item.name }}
-                  </p>
+                  </NuxtLink>
                   <div v-else class="flex flex-col items-end gap-1">
                     <div @click="open = item.name === open ? null : item.name"
                       class="flex items-center justify-end cursor-pointer">
