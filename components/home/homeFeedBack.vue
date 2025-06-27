@@ -286,10 +286,10 @@ const isLastItem = computed(() => {
                         :class="['hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10  rounded-full shadow-2xl',
                             isLastItem ? 'bg-[#8D7662] hover:bg-[#8D7662]' : 'bg-white/80 hover:bg-white']"
                         @click="carousel.prev()">
-                        <div :class="[
+                        <div id="watch-previous-step" :class="[
                             ' flex justify-center',
                             isLastItem ? 'text-[#FFFFFF]' : 'text-[#8D7662]']">
-                            <UIcon name="mdi-light:arrow-left" class="size-10" />
+                            <UIcon id="watch-previous-step" name="mdi-light:arrow-left" class="size-10" />
                         </div>
                     </UButton>
 
@@ -304,8 +304,8 @@ const isLastItem = computed(() => {
                         <div :class="[
                             ' flex justify-center',
                             isLastItem ? 'text-[#8D7662]' : 'text-[#FFFFFF]'
-                        ]">
-                            <UIcon name="mdi-light:arrow-right" class="size-10" />
+                        ]" id="watch-next-step">
+                            <UIcon id="watch-next-step" name="mdi-light:arrow-right" class="size-10" />
                         </div>
                     </UButton>
 
@@ -348,12 +348,14 @@ const isLastItem = computed(() => {
                                         </div>
                                     </div>
                                     <div class="mt-5">
-                                        <UButton variant="ghost" id="see-detail-project"
+                                        <UButton variant="ghost" id="see-detail-project-feedback"
                                             aria-label="Click here to see detail project of customer"
                                             class="outline outline-1 outline-[#980C0C] hover:bg-[#D9D9D9] py-2"
                                             @click="openModal(item)">
-                                            <div class="text-[#980C0C] flex justify-center">
-                                                <UIcon name="cuida:arrow-right-outline" class="size-5" />See more
+                                            <div id="see-detail-project-feedback"
+                                                class="text-[#980C0C] flex justify-center">
+                                                <UIcon id="see-detail-project-feedback" name="cuida:arrow-right-outline"
+                                                    class="size-5" />See more
                                             </div>
                                         </UButton>
                                     </div>
@@ -364,14 +366,14 @@ const isLastItem = computed(() => {
                             <UButton aria-label="Click here to go previous project" id="watch-previous-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
-                                <UIcon name="mingcute:arrow-left-fill" class="size-5" />
+                                <UIcon id="watch-previous-project" name="mingcute:arrow-left-fill" class="size-5" />
                             </UButton>
                         </template>
                         <template #next="{ onClick, disabled }">
                             <UButton aria-label="Click here to go next project" id="watch-next-project"
                                 class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                 color="white" :disabled="disabled" @click="onClick" square>
-                                <UIcon name="mingcute:arrow-right-fill" class="size-5" />
+                                <UIcon id="watch-next-project" name="mingcute:arrow-right-fill" class="size-5" />
                             </UButton>
                         </template>
                     </UCarousel>

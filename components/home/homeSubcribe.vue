@@ -148,7 +148,8 @@ const submitForm = async () => {
               <UButton id="send-email-subscribe" aria-label="Click here to send an email to Nomorender"
                 :loading="formSubmitting" @click="submitForm" :disabled="formSubmitting"
                 class="md:px-5 md:py-6 bg-[#8D7662] text-white uppercase rounded-[8px] px-4 py-3 hover:bg-[#000000] transition-all">
-                <div class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe</div>
+                <div id="send-email-subscribe" class="text-[#F5F5F5] font-semibold md:text-[28px] text-[16px]">Subscribe
+                </div>
               </UButton>
             </div>
           </div>

@@ -28,8 +28,9 @@
                                 aria-label="Click here to see more our service"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[20px] py-[10px] rounded-[8px]"
                                 variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
-                                <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
-                                <span class="sr-only"> See more about {{ service.title }}</span>
+                                <div id="go-to-other-page" class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">
+                                    See more</div>
+                                <span id="go-to-other-page" class="sr-only"> See more about {{ service.title }}</span>
                             </UButton>
                         </div>
                     </div>
@@ -64,16 +65,17 @@
                         </div>
                         <div class="md:text-[20px] lg:text-[15px] text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
                             v-html="service.description"></div>
-                        <div class="mt-[20px] flex justify-center">
+                        <div id="go-to-other-page" class="mt-[20px] flex justify-center">
                             <UButton id="go-to-other-page" :to="service.link" prefetch
                                 aria-label="Click here to see more service of Nomorender"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[20px] lg:px-[12px] px-[12px] py-[6px] md:py-[12px] lg:py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
-                                <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" aria-hidden="true" />
-                                <span aria-label="Click here to see more service of Nomorender"
+                                <Icon id="go-to-other-page" name="i-heroicons-arrow-right" class="text-[#980C0C]"
+                                    aria-hidden="true" />
+                                <span id="go-to-other-page" aria-label="Click here to see more service of Nomorender"
                                     class="md:text-[20px] lg:text-[13px] text-[13px] text-[#980C0C] leading-[16px] font-[400]">
                                     See more</span>
-                                <span class="sr-only"> See more about {{ service.title }}</span>
+                                <span id="go-to-other-page" class="sr-only"> See more about {{ service.title }}</span>
                             </UButton>
                         </div>
                     </div>

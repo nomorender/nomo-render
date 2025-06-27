@@ -15,12 +15,14 @@ const selectedItem = computed(() =>
         <div id="see-detail-portfolio-project"
             class="w-full flex flex-col gap-[25px] hover:cursor-pointer group relative overflow-hidden"
             @click="() => { isOpen = true; selectedIndex = props.items.findIndex(i => i.id === props.id) }">
-            <div class="relative">
-                <div
+            <div id="see-detail-portfolio-project" class="relative">
+                <div id="see-detail-portfolio-project"
                     class="absolute bg-black/40 inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex items-center justify-center">
-                    <span class="text-white text-[25px] italic leading-[150%]">See more</span>
+                    <span id="see-detail-portfolio-project" class="text-white text-[25px] italic leading-[150%]">See
+                        more</span>
                 </div>
-                <NuxtImg format="webp" :src="props.cover_url" loading="lazy" :alt="props.title"
+                <NuxtImg id="see-detail-portfolio-project" format="webp" :src="props.cover_url" loading="lazy"
+                    :alt="props.title"
                     class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[520px] object-cover object-center z-0" />
             </div>
             <div class="flex flex-col items-center z-10 relative">

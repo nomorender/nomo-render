@@ -143,11 +143,11 @@ const onError = async (event: FormErrorEvent) => {
             </div>
         </div>
 
-        <div class="flex items-center justify-center lg:mt-5 mt-2 lg:mb-20 mb-10">
+        <div id="submit-contact-form" class="flex items-center justify-center lg:mt-5 mt-2 lg:mb-20 mb-10 ">
             <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-contact-form" color="gray"
                 variant="solid" type="submit" form="contactForm" aria-label="Submit contact form"
                 class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
-                <span aria-label="Submit contact form"
+                <span id="submit-contact-form" aria-label="Submit contact form"
                     class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                     let’s work together!
                 </span>

@@ -16,7 +16,7 @@
                 <div class="flex flex-col gap-2">
                     <div class="grid grid-cols-10 gap-2 w-full">
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(1)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(1)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(1)?.cover_url"
                                 :src="getProjectByStt(1)?.cover_url" :alt="getProjectByStt(1)?.title"
                                 class=" w-full h-[420px] object-cover break-inside-avoid object-center" />
                             <div
@@ -49,8 +49,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(2)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(2)?.cover_url" :alt="getProjectByStt(2)?.title"
-                                :src="getProjectByStt(2)?.cover_url" class=" w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(2)?.cover_url"
+                                :alt="getProjectByStt(2)?.title" :src="getProjectByStt(2)?.cover_url"
+                                class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -79,8 +80,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(3)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(3)?.cover_url" :alt="getProjectByStt(3)?.title"
-                                :src="getProjectByStt(3)?.cover_url" class=" w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(3)?.cover_url"
+                                :alt="getProjectByStt(3)?.title" :src="getProjectByStt(3)?.cover_url"
+                                class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -113,8 +115,9 @@
                     </div>
                     <div class="grid grid-cols-12 gap-2 w-full">
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(4)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(4)?.cover_url" :alt="getProjectByStt(4)?.title"
-                                :src="getProjectByStt(4)?.cover_url" class=" w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(4)?.cover_url"
+                                :alt="getProjectByStt(4)?.title" :src="getProjectByStt(4)?.cover_url"
+                                class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -147,8 +150,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-5" @click="openModal(5)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(5)?.cover_url" :alt="getProjectByStt(5)?.title"
-                                :src="getProjectByStt(5)?.cover_url" class="w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(5)?.cover_url"
+                                :alt="getProjectByStt(5)?.title" :src="getProjectByStt(5)?.cover_url"
+                                class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -181,8 +185,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(6)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(6)?.cover_url" :alt="getProjectByStt(6)?.title"
-                                :src="getProjectByStt(6)?.cover_url" class="w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(6)?.cover_url"
+                                :alt="getProjectByStt(6)?.title" :src="getProjectByStt(6)?.cover_url"
+                                class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-5 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -215,8 +220,9 @@
                     </div>
                     <div class="grid grid-cols-9 gap-2 w-full">
                         <div class="block relative group cursor-pointer col-span-2 " @click="openModal(7)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(7)?.cover_url" :alt="getProjectByStt(7)?.title"
-                                :src="getProjectByStt(7)?.cover_url" class="w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(7)?.cover_url"
+                                :alt="getProjectByStt(7)?.title" :src="getProjectByStt(7)?.cover_url"
+                                class="w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-5 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -248,8 +254,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-4 " @click="openModal(8)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(8)?.cover_url" :alt="getProjectByStt(8)?.title"
-                                :src="getProjectByStt(8)?.cover_url" class=" w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(8)?.cover_url"
+                                :alt="getProjectByStt(8)?.title" :src="getProjectByStt(8)?.cover_url"
+                                class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -281,8 +288,9 @@
                         </div>
 
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(9)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(9)?.cover_url" :alt="getProjectByStt(9)?.title"
-                                :src="getProjectByStt(9)?.cover_url" class=" w-full h-[420px] object-cover" />
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(9)?.cover_url"
+                                :alt="getProjectByStt(9)?.title" :src="getProjectByStt(9)?.cover_url"
+                                class=" w-full h-[420px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                                 <div>
@@ -320,8 +328,8 @@
                 <div class="flex flex-col">
                     <div class="grid grid-cols-7 gap-1 w-full">
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(2)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(2)?.cover_url" :alt="getProjectByStt(2)?.title"
-                                :src="getProjectByStt(2)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(2)?.cover_url"
+                                :alt="getProjectByStt(2)?.title" :src="getProjectByStt(2)?.cover_url"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -350,7 +358,7 @@
                             </div>
                         </div>
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(1)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(1)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(1)?.cover_url"
                                 :src="getProjectByStt(1)?.cover_url" :alt="getProjectByStt(1)?.title"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div
@@ -389,7 +397,7 @@
 
                         <!-- Pic 3 -->
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(3)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(3)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(3)?.cover_url"
                                 :src="getProjectByStt(3)?.cover_url" :alt="getProjectByStt(3)?.title"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div
@@ -423,7 +431,7 @@
 
                         <!-- Pic 4 -->
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(4)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(4)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(4)?.cover_url"
                                 :src="getProjectByStt(4)?.cover_url" :alt="getProjectByStt(4)?.title"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div
@@ -460,7 +468,7 @@
 
                         <!-- Pic 5 -->
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(5)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(5)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(5)?.cover_url"
                                 :src="getProjectByStt(5)?.cover_url" :alt="getProjectByStt(5)?.title"
                                 class=" w-full md:h-[420px] h-[200px] object-cover" />
                             <div
@@ -494,7 +502,7 @@
 
                         <!-- Pic 7 -->
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(7)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(7)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(7)?.cover_url"
                                 :src="getProjectByStt(7)?.cover_url" :alt="getProjectByStt(7)?.title"
                                 class=" w-full md:h-[420px] h-[200px] object-cover" />
                             <div
@@ -530,8 +538,9 @@
 
                 <!-- Pic 8 -->
                 <div class="block relative cursor-pointer group" @click="openModal(8)">
-                    <NuxtImg format="webp" v-if="getProjectByStt(8)?.cover_url" :src="getProjectByStt(8)?.cover_url"
-                        class="w-full h-full object-cover object-center" :alt="getProjectByStt(8)?.title" />
+                    <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(8)?.cover_url"
+                        :src="getProjectByStt(8)?.cover_url" class="w-full h-full object-cover object-center"
+                        :alt="getProjectByStt(8)?.title" />
                     <div
                         class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
                         <div>
@@ -561,8 +570,8 @@
                     <div class="grid grid-cols-7 gap-1 w-full">
                         <!-- Pic 6 -->
                         <div class="block relative group cursor-pointer col-span-3" @click="openModal(6)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(6)?.cover_url" :alt="getProjectByStt(6)?.title"
-                                :src="getProjectByStt(6)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(6)?.cover_url"
+                                :alt="getProjectByStt(6)?.title" :src="getProjectByStt(6)?.cover_url"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div
                                 class="md:pt-8 md:px-10 px-[15px] md:pb-5 pt-[9px] pb-[9px] absolute bottom-0 left-0 w-full h-fit bg-black bg-opacity-[50%] opacity-0 group-hover:opacity-100 transition-opacity">
@@ -591,7 +600,7 @@
                             </div>
                         </div>
                         <div class="block relative group cursor-pointer col-span-4" @click="openModal(9)">
-                            <NuxtImg format="webp" v-if="getProjectByStt(9)?.cover_url"
+                            <NuxtImg id="watch-interior-project" format="webp" v-if="getProjectByStt(9)?.cover_url"
                                 :src="getProjectByStt(9)?.cover_url" :alt="getProjectByStt(9)?.title"
                                 class=" w-full md:h-[420px] h-[135px] object-cover" />
                             <div

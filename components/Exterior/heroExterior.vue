@@ -17,7 +17,7 @@
               color="white" variant="outline" size="xl" @click="isOpen = true">REQUEST A
               QUOTE</UButton>
             <UButton id="open-quote-modal" class="sm:hidden" @click="isOpen = true" color="white" variant="outline">
-              <span class="text-[13px] font-[400]">REQUEST A QUOTE</span>
+              <span id="open-quote-modal" class="text-[13px] font-[400]">REQUEST A QUOTE</span>
             </UButton>
           </div>
         </div>

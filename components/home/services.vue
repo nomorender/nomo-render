@@ -49,24 +49,23 @@
                 <UButton id="see-more-service-homepage"
                   class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                   :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
-                  variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span>See more</span>
-                  <span class="sr-only"> See more about {{ item.name }}</span>
+                  variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span
+                    id="see-more-service-homepage">See more</span>
+                  <span class="sr-only" id="see-more-service-homepage"> See more about {{ item.name }}</span>
                 </UButton>
               </div>
               <UButton id="see-more-service-homepage"
                 class="md:hidden mb-[45px] md:mb-0 text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                 v-if="item.link" :to="item.link" variant="outline" :trailing="false"
-                :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right"><span>
+                :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right"><span
+                  id="see-more-service-homepage">
                   See more
                 </span>
-                <span class="sr-only"> See more about {{ item.name }}</span>
+                <span class="sr-only" id="see-more-service-homepage"> See more about {{ item.name }}</span>
               </UButton>
             </div>
           </div>
         </div>
-
-
-
         <div class="flex justify-center md:pb-[75px]">
           <UButton color="gray" size="xl" variant="solid" to="/workflow" id="go-to-workflow-page"
             class="bg-[#8D7662] uppercase text-[#F5F5F5] md:text-[20px] text-[16px] font-[600] md:px-6 md:py-3 px-6 py-2 hover:bg-[#90755e] md:mt-[3rem]">

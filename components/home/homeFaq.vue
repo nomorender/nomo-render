@@ -78,12 +78,12 @@ const items = [
                 <UAccordion :collapsible="false" :items="items">
                     <template #default="{ item, index, open }">
                         <div class="relative">
-                            <div class="flex items-center justify-between py-2">
-                                <div
+                            <div class="flex items-center justify-between py-2" id="watch-faq">
+                                <div id="watch-faq"
                                     class="hover:cursor-pointer font-[500] md:text-[25px] text-[15px] h-fit md:w-full w-[270px] leading-[200%] whitespace-normal break-words">
                                     {{ item.label }}
                                 </div>
-                                <UIcon name="iconamoon:arrow-down-2-light"
+                                <UIcon name="iconamoon:arrow-down-2-light" id="watch-faq"
                                     class="hover:cursor-pointer md:w-[48px] md:h-[48px] w-[38px] h-[38px] transform transition-transform duration-200"
                                     :class="{ 'rotate-180': open }" />
                             </div>

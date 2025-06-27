@@ -26,10 +26,11 @@
       <div class="">
         <UButton id="see-more-aboutus" aria-label="Click here to see more information about Nomorender"
           class=" text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all lg:hidden"
-          to="/about" variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span>See
+          to="/about" variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span
+            id="see-more-aboutus">See
             more</span>
           <span>
-            <span class="sr-only">See more about our team Nomo Render</span>
+            <span id="see-more-aboutus" class="sr-only">See more about our team Nomo Render</span>
           </span>
         </UButton>
       </div>

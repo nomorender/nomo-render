@@ -159,7 +159,7 @@ const onError = async (event: FormErrorEvent) => {
                                     color="gray" variant="solid" type="submit" form="contactForm"
                                     aria-label="Submit contact form"
                                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
-                                    <span
+                                    <span id="submit-contact-form"
                                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                                         {{ buttonText || "let’s work together!" }}
                                     </span>

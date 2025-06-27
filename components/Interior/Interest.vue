@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { ViewArround } from '#components';
+
+</script>
+
 <template>
     <div class="lg:my-20">
         <div class="lg:pt-[60px] lg:pb-[60px] pb-[45px] pt-[40px] bg-[#FAF8F5]">
@@ -69,33 +74,26 @@
                                     360°
                                     <br />Interior Tour
                                 </div>
-
                                 <div
                                     class="text-[#8D7662] lg:hidden block text-center lg:w-[336px] md:w-full lg:py-[37px] lg:px-[71px] lg:text-[32px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
                                     360° Interior Tour
                                 </div>
                             </div>
-
                             <div
                                 class="font-[300] text-[15px] lg:text-[25px] md:text-[25px] lg:leading-[200%] leading-[180%] mx-[30px] lg:my-[10px] my-[30px] text-justify lg:mx-[50px]">
-                                A panoramic visualization to explore an interior space from every angle. This provides a
-                                true sense of depth, scale and ambiance, allowing clients to navigate through the room.
+                                A panoramic visualization to explore an interior space from every angle. This
+                                provides a
+                                true sense of depth, scale and ambiance, allowing clients to navigate through
+                                the room.
                             </div>
                         </div>
 
                         <div class="flex lg:gap-[8px]">
-                            <div class="hidden lg:block">
-                                <NuxtImg format="webp" src="/Interior/Pic4.png" alt="pic4" loading="lazy"
-                                    class="h-[360px] object-cover object-center rounded-[8px]" />
-                            </div>
-                            <div>
-                                <NuxtImg format="webp" src="/Interior/Pic5.png" alt="pic5" loading="lazy"
-                                    class="lg:h-[360px] md:h-[360px] h-[180px] w-[303px] md:w-[500px] lg:w-full object-cover object-center rounded-[8px]" />
-                            </div>
+                            <ViewArround />
                         </div>
                     </div>
 
-                    <div class="flex flex-col lg:gap-[50px] items-center justify-center">
+                    <div class="flex flex-col lg:gap-[50px] items-center justify-center lg:mt-0 md:mt-0 ">
                         <div
                             class="bg-[#FFFFFF] w-[303px] md:w-[500px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] lg:py-0">
@@ -107,7 +105,8 @@
                             </div>
                             <div
                                 class="font-[300] text-[15px] lg:text-[25px] md:text-[25px] lg:leading-[200%] leading-[180%] mx-[30px] lg:my-[10px] my-[30px] text-justify lg:mx-[50px]">
-                                Cinematic videos guide viewers through interior space with smooth, natural movement. It
+                                Cinematic videos guide viewers through interior space with smooth, natural movement.
+                                It
                                 highlights flow, spatial transitions and details to match the design vision.
                             </div>
                         </div>

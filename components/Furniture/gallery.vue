@@ -26,9 +26,9 @@ const items = computed(() => store.res)
         </div>
 
         <div class="w-full flex justify-center items-center md:mt-[50px] mt-[30px]">
-            <UButton id="see-more-project" color="gray" variant="solid"
+            <UButton id="see-more-project" color="gray" variant="solid" to="/portfolio"
                 class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 md:px-10 md:py-7 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
-                <div
+                <div id="see-more-project"
                     class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">
                     see more our projects
                 </div>

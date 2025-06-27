@@ -8,8 +8,8 @@ const date = formatDate(props.created_at)
 <template>
     <div>
         <div class="lg:w-[530px] lg:max-w-[530px] max-w-[350px] w-[350px] flex flex-col">
-            <div>
-                <NuxtImg :src="props.cover_url" :alt="props.title"
+            <div id="see-detail-inspire-project">
+                <NuxtImg id="see-detail-inspire-project" :src="props.cover_url" :alt="props.title"
                     class="rounded-tl-[5px] rounded-tr-[5px] w-full lg:h-[360px] h-[200px] object-center object-cover" />
             </div>
             <div
@@ -32,10 +32,10 @@ const date = formatDate(props.created_at)
                         lg:px-[20px] px-[12px] py-[6px] md:py-[12px] lg:py-[13px] rounded-[8px]" variant="outline"
                         :trailing="false" color="red">
                         <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" aria-hidden="true" />
-                        <span aria-label="Click to see detail blog inspire"
+                        <span id="read-blog-inspire" aria-label="Click to see detail blog inspire"
                             class="md:text-[15px] lg:text-[18px] text-[13px] text-[#980C0C] leading-[16px] font-[500]">
                             See more</span>
-                        <span class="sr-only">Read more: {{ props.title }}</span>
+                        <span id="read-blog-inspire" class="sr-only">Read more: {{ props.title }}</span>
                     </UButton>
                 </div>
             </div>

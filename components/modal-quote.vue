@@ -100,7 +100,7 @@ const onError = async (event: FormErrorEvent) => {
         container: 'border-none flex items-center justify-center shadow-none',
         base: 'bg-[#FAF8F5] rounded-xl'
     }">
-        <UButton id="open-modal-quote" aria-label="Click here open quote form" square size="xl"
+        <UButton id="close-modal-quote" aria-label="Click here open quote form" square size="xl"
             icon="i-heroicons-x-mark-20-solid" variant="ghost"
             class="absolute right-4 top-4 rounded-full text-black hover:bg-transparent" @click="isOpen = false" />
         <div class="flex flex-wrap">

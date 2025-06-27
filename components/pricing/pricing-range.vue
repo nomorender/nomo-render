@@ -5,15 +5,16 @@
             price range for each category
         </div>
         <div class="max-w-[1280px] w-full mx-auto space-y-5">
-            <div v-for="(item, index) in items" :key="index"
+            <div v-for="(item, index) in items" :key="index" id="watch-price-range"
                 class="accordion-item bg-[#D9D9D9] md:rounded-[20px] rounded-[16px] md:py-[20px] md:px-[30px] px-[10px]">
-                <div class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
+                <div id="watch-price-range"
+                    class="flex items-center md:gap-[35px] gap-[15px] md:py-2 md:px-0 px-[15px] py-[20px] cursor-pointer"
                     @click="toggle(index)">
-                    <div class="flex relative tems-center">
-                        <UIcon
+                    <div id="watch-price-range" class="flex relative tems-center">
+                        <UIcon id="watch-price-range"
                             :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
                             class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
-                        <div v-if="index === 0"
+                        <div id="watch-price-range" v-if="index === 0"
                             class="md:hidden absolute -top-10 -left-[78px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
                             <div
                                 class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-12 font-angelface text-black font-400 text-[24px]">
@@ -22,7 +23,8 @@
                             <nuxt-img src="/Furniture/Arrow.svg" class="size-7 rotate-3" />
                         </div>
                     </div>
-                    <div class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
+                    <div id="watch-price-range"
+                        class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                         {{ item.label }}
                     </div>
                 </div>
@@ -32,9 +34,9 @@
                     <!-- PC -->
                     <div class="lg:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
                         <div v-for="(box) in item.boxs" v-if="item.boxs" :key="box.title">
-                            <div class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
-                                <div class="py-10">
-                                    <div v-if="box.title"
+                            <div id="watch-price-range" class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
+                                <div id="watch-price-range" class="py-10">
+                                    <div v-if="box.title" id="watch-price-range"
                                         class="w-full flex item-center justify-center text-[32px] font-[600] leading-[150%]">
                                         {{ box.title }}
                                     </div>
@@ -51,10 +53,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                        }}
+                                            }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                        }}
+                                            }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -67,7 +69,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                        }}
+                                            }}
                                         </div>
                                     </div>
                                 </div>
@@ -131,14 +133,16 @@
                                     <UButton id="watch-previous-project"
                                         class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#FFFFFF] hover:bg-white text-[#8D7662] text-2xl p-2 h-[41px] w-[41px] flex items-center justify-center"
                                         color="white" :disabled="disabled" @click="onClick" square>
-                                        <UIcon name="mingcute:arrow-left-fill" class="size-5" />
+                                        <UIcon id="watch-previous-project" name="mingcute:arrow-left-fill"
+                                            class="size-5" />
                                     </UButton>
                                 </template>
                                 <template #next="{ onClick, disabled }">
                                     <UButton id="watch-next-project"
                                         class="shadow-[0_4px_4px_rgba(0,0,0,0.25)] !ring-0 !focus:ring-0 !focus-visible:ring-0 rounded-full outline-none border-0 bg-[#8D7662] disabled:text-[#8D7662] hover:bg-[#8D7662] text-[#FFFFFF] p-2 h-[41px] w-[41px] flex items-center justify-center"
                                         color="white" :disabled="disabled" @click="onClick" square>
-                                        <UIcon name="mingcute:arrow-right-fill" class="size-5" />
+                                        <UIcon id="watch-next-project" name="mingcute:arrow-right-fill"
+                                            class="size-5" />
                                     </UButton>
                                 </template>
                             </UCarousel>

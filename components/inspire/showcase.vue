@@ -54,13 +54,13 @@ watch(page, () => {
 
 <template>
     <div class="lg:mb-20 mb-10" ref="filterRef">
-        <div class="lg:static sticky top-[100px] z-30 w-full flex items-center justify-center lg:my-20 my-10">
-            <USelectMenu v-model="tag" :options="category" placeholder="Filter" value-attribute="value"
-                option-attribute="name" size="xl" color="white"
+        <div id="filter-inspire"
+            class="lg:static sticky top-[100px] z-30 w-full flex items-center justify-center lg:my-20 my-10">
+            <USelectMenu id="filter-inspire" v-model="tag" :options="category" placeholder="Filter"
+                value-attribute="value" option-attribute="name" size="xl" color="white"
                 :ui="{ color: { white: { outline: 'bg-[#faf8f6] border border-[#D8C3A5] ring-0' } }, icon: { base: 'lg:mr-4  text-black' }, placeholder: 'text-black', base: 'lg:w-[400px] w-[160px]', rounded: 'rounded-[40px]', padding: { xl: 'lg:px-[40px] px-5 lg:py-4 py-1 lg:text-[25px] text-[15px] leading-[200%] font-[300]' }, }"
                 :ui-menu="{ background: 'bg-[#FAF8F5]', width: 'lg:w-[400px] w-[160px]', rounded: 'rounded-[8px]', padding: 'p-0', option: { size: 'lg:text-[25px] text-[15px]', rounded: 'rounded-[8px]', selected: 'bg-[#D9D9D9] hover:bg-[#D9D9D9] transition-all', base: 'gap-0 py-3', active: 'bg-[#D9D9D9]', padding: 'px-6 py-2' } }" />
         </div>
-
         <div class="flex flex-col items-center justify-center">
             <div v-if="store.loading" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2">
                 <div v-for="n in 6" :key="n">

@@ -132,7 +132,7 @@ const submitForm = async () => {
                     <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-contact-form" color="gray"
                         @click="submitForm" variant="solid" type="submit" aria-label="Submit contact form"
                         class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-[140px] lg:py-4 px-10 hover:bg-[#90755e] mt-7 md:rounded-[8px] rounded-[10px] md:w-auto">
-                        <span
+                        <span id="subcribe-for-download"
                             class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] lg:text-[18px]">
                             subscribe
                         </span>
@@ -140,10 +140,10 @@ const submitForm = async () => {
                 </div>
 
                 <div class="max-w-[300px] md:max-w-[373px] px-4 md:px-0 mx-auto flex justify-center lg:hidden md:flex">
-                    <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-contact-form" color="gray"
+                    <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-download-form" color="gray"
                         @click="submitForm" variant="solid" type="submit" aria-label="Submit contact form"
                         class="bg-gradient-to-r flex items-center justify-center w-[300px] md:w-[373px] py-4 from-[#8D7662] to-[#27211B]  hover:bg-[#90755e] mt-7 md:rounded-[8px] rounded-[10px]">
-                        <span
+                        <span id="submit-download-form"
                             class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] lg:text-[18px]">
                             submit
                         </span>
