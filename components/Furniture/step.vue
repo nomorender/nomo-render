@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                                 <div class="w-[300px] md:w-[350px]">
-                                    <NuxtImg format="webp" :src="item.image"
+                                    <NuxtImg format="webp" :src="item.image" :alt="item.title"
                                         class="w-[280px] h-[200px] md:w-[3500px] md:h-[350px] object-cover rounded-lg"
                                         loading="lazy" sizes="sm:280px md:620px" />
                                     <div
@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="w-[300px] md:w-[350px]">
-                                    <NuxtImg format="webp" :src="item.image"
+                                    <NuxtImg format="webp" :src="item.image" :alt="item.title"
                                         class="w-[280px] h-[200px] md:w-[3500px] md:h-[350px] object-cover rounded-lg"
                                         loading="lazy" sizes="sm:280px md:620px" />
                                     <div

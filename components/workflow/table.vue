@@ -61,9 +61,9 @@ const selected = ref(0)
                 }
             }">
                 <template #default="{ item, index }">
-                    <nuxt-img v-if="selected == index" :src="item.activeIcon"
+                    <nuxt-img :alt="item.label" v-if="selected == index" :src="item.activeIcon"
                         class="w-[78px] h-[78px] border-2 rounded-full border-[#980b0d] p-1" />
-                    <nuxt-img v-else :src="item.icon"
+                    <nuxt-img :alt="item.label" v-else :src="item.icon"
                         class="w-[78px] h-[78px] border-2 rounded-full border-[#6b7280] p-1" />
                     <div class="truncate flex flex-col items-start w-[200px]">
                         <span class="text-[28px] leading-[150%] font-[500]">{{ item.label }}</span>
@@ -96,7 +96,8 @@ const selected = ref(0)
                     chat</p>
             </div>
             <div class="">
-                <NuxtImg src="./contact/Contact.jpg" class="w-full mb-[60px] object-contain object-center" />
+                <NuxtImg src="./contact/Contact.jpg" alt="Picture of a 3D room"
+                    class="w-full mb-[60px] object-contain object-center" />
             </div>
             <div class="md:max-w-[700px] max-w-[320px] mx-auto">
                 <div v-for="(item, index) in items_mobile" :key="index"
@@ -104,7 +105,7 @@ const selected = ref(0)
                     <div class="flex items-center md:gap-[35px] gap-[15px] px-[15px] py-0 cursor-pointer"
                         @click="toggle(index)">
                         <div class="flex relative tems-center">
-                            <UIcon
+                            <UIcon :alt="item.label"
                                 :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
                                 class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
                             <div v-if="index === 0"
@@ -113,7 +114,7 @@ const selected = ref(0)
                                     class="-rotate-[0.1rad] mb-1 whitespace-nowrap translate-x-12 font-angelface text-black font-400 text-[24px]">
                                     Click here to see more
                                 </div>
-                                <nuxt-img src="/Furniture/Arrow.svg" class="size-7 rotate-3" />
+                                <nuxt-img src="/Furniture/Arrow.svg" alt="arrow this" class="size-7 rotate-3" />
                             </div>
                         </div>
                         <div

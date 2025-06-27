@@ -49,12 +49,17 @@
                 <UButton id="see-more-service-homepage"
                   class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                   :class="{ 'md:hidden': index == services.length - 1 }" v-if="item.link" :to="item.link" size="xl"
-                  variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">See more</UButton>
+                  variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right"><span>See more</span>
+                  <span class="sr-only"> See more about {{ item.name }}</span>
+                </UButton>
               </div>
               <UButton id="see-more-service-homepage"
                 class="md:hidden mb-[45px] md:mb-0 text-[#980C0C] hover:bg-[#FAF8F5] ring-1 ring-[#980C0C] focus:ring-[#980C0C] active:ring-[#980C0C] focus:outline-none transition-all"
                 v-if="item.link" :to="item.link" variant="outline" :trailing="false"
-                :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right">See more
+                :class="{ 'hidden': index == services.length - 1 }" color="red" icon="i-heroicons-arrow-right"><span>
+                  See more
+                </span>
+                <span class="sr-only"> See more about {{ item.name }}</span>
               </UButton>
             </div>
           </div>

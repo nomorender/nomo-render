@@ -29,6 +29,7 @@
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all px-[20px] py-[10px] rounded-[8px]"
                                 variant="outline" :trailing="false" color="red" icon="i-heroicons-arrow-right">
                                 <div class="text-[18px] text-[#980C0C] leading-[16px] font-[500]">See more</div>
+                                <span class="sr-only"> See more about {{ service.title }}</span>
                             </UButton>
                         </div>
                     </div>
@@ -59,8 +60,7 @@
                     <div class="basis-[400px] mx-[30px] mt-[20px]">
                         <div
                             class="text-[#8D7662] font-[600] md:text-[27px] lg:text-[18px] text-[18px] leading-[100%] uppercase">
-                            {{ service.title
-                            }}
+                            {{ service.title }}
                         </div>
                         <div class="md:text-[20px] lg:text-[15px] text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
                             v-html="service.description"></div>
