@@ -19,7 +19,7 @@ const reallyDownload = (url: string) => {
         <div
             class="lg:w-[1000px] md:w-[500px] md:max-w-[500px] lg:max-w-[1000px] max-w-[350px] w-[350px] flex flex-col">
             <div>
-                <NuxtImg :src="props.cover_url"
+                <NuxtImg :src="props.cover_url" :alt="props.title"
                     class="rounded-tl-[5px] rounded-tr-[5px] w-full lg:h-[360px] h-[200px] object-center object-cover" />
             </div>
             <div
@@ -32,12 +32,12 @@ const reallyDownload = (url: string) => {
                         props.description }}</p>
                 </div>
                 <div>
-                    <UButton @click="handleDownload" id="read-blog-inspire"
-                        aria-label="Click here to see more service of Nomorender" class=" hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[18px]
+                    <UButton @click="handleDownload" id="open-modal-download-library"
+                        aria-label="Click here to download library content" class=" hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[18px]
                         lg:px-[20px] px-[12px] py-[6px] md:py-[12px] lg:py-[13px] rounded-[8px]" variant="outline"
                         :trailing="false" color="red">
                         <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
-                        <span
+                        <span aria-label="Click here to download library content"
                             class="md:text-[15px] lg:text-[18px] text-[13px] text-[#980C0C] leading-[16px] lg:font-[500] font-[400]">
                             Download now</span>
                     </UButton>

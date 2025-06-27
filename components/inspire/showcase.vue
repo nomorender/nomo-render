@@ -82,16 +82,16 @@ watch(page, () => {
                             check it later !
                         </p>
                         <div>
-                            <NuxtImg src="/inspire/no-data.jpg" class="w-[300px] h-[300px]" />
+                            <NuxtImg src="/inspire/no-data.jpg" alt="no data picture" class="w-[300px] h-[300px]" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div v-if="store.res.length" class="flex justify-center mt-8">
-            <UPagination :active-button="{ variant: 'outline' }" :inactive-button="{ color: 'gray' }"
-                :ui="{ default: { activeButton: { color: 'black' } } }" v-model="page" size="lg" :max="5"
-                :page-count="LIMIT" :total="store.countTotal">
+            <UPagination id="move-to-next-page-in-inspire" :active-button="{ variant: 'outline' }"
+                :inactive-button="{ color: 'gray' }" :ui="{ default: { activeButton: { color: 'black' } } }"
+                v-model="page" size="lg" :max="5" :page-count="LIMIT" :total="store.countTotal">
             </UPagination>
         </div>
     </div>

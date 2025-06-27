@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const pics = [
-    { src: '/Interior/Pic27.png' },
-    { src: '/Interior/Pic27.png' },
-    { src: '/Interior/Pic27.png' }
+    { id: 1, src: '/aboutus/pic2.jpg', alt: 'picture of chair and table' },
+    { id: 2, src: '/aboutus/pic3.jpg', alt: 'picture of long chair and picture' },
+    { id: 3, src: '/aboutus/pic4.jpg', alt: 'picture of long chair and picture' }
 ]
 </script>
 
@@ -30,10 +30,10 @@ const pics = [
 
             <div
                 class="lg:grid lg:grid-cols-3 md:flex flex flex-col gap-2 lg:max-w-[1440px] md:max-w-[600px] max-w-[300px]">
-                <div v-for="(pic, index) in pics">
-                    <NuxtImg :src="pic.src" class="lg:w-[480px] lg:h-[390px] w-full h-auto" :class="[
-                        index === 0 ? 'rounded-tl-[5px] rounded-tr-[5px]' : '',
-                        index === pics.length - 1 ? 'rounded-bl-[5px] rounded-br-[5px]' : ''
+                <div v-for="(pic, index) in pics" :key="pic.id">
+                    <NuxtImg :src="pic.src" :alt="pic.alt" class="lg:w-[480px] lg:h-[390px] w-full h-auto" :class="[
+                        index === 0 ? 'lg:rounded-none rounded-tl-[5px] rounded-tr-[5px]' : '',
+                        index === pics.length - 1 ? 'lg:rounded-none rounded-bl-[5px] rounded-br-[5px]' : ''
                     ]" />
                 </div>
             </div>
@@ -47,7 +47,8 @@ const pics = [
             </div>
 
             <div class="lg:flex md:hidden hidden gap-10 h-fit">
-                <NuxtImg src="/aboutus/pic1.png" class="w-[670px] h-auto" />
+                <NuxtImg src="/aboutus/pic1.jpg" alt="picture about some chair and light on chair"
+                    class="w-[670px] h-auto rounded-[8px]" />
                 <div class="max-w-[480px] flex flex-col gap-3 font-[300] text-[25px] leading-[200%] text-justify">
                     <p>
                         With a passion for minimalist elegance, high-end aesthetics, and global adaptability, we work
@@ -77,7 +78,8 @@ const pics = [
                     <p>
                         At Nomo Render, creativity knows no boundaries, and great design lasts forever.
                     </p>
-                    <NuxtImg src="/aboutus/pic1.png" class="w-full h-auto rounded-[5px]" />
+                    <NuxtImg src="/aboutus/pic1.png" alt="picture of some chair and light on chair"
+                        class="w-full h-auto rounded-[5px]" />
                 </div>
             </div>
         </div>

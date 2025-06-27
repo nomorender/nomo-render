@@ -1,18 +1,22 @@
 <script setup lang="ts">
 const social = [
     {
+        id: 1,
         icon: '/contact/email.svg',
         content: `<span class="font-[500]">Email: </span>team@nomorender.com`
     },
     {
+        id: 2,
         icon: '/contact/whatsapp.svg',
         content: `<span class="font-[500]">WhatsApp: </span>+84967563407`
     },
     {
+        id: 3,
         icon: '/contact/instagram.svg',
         content: `<span class="font-[500]">Instagram: </span>@team.nomorender`
     },
     {
+        id: 4,
         icon: '/contact/benance.svg',
         content: `<span class="font-[500]">Behance: </span>behance.net/nomorender`
     }
@@ -47,10 +51,10 @@ const social = [
         </div>
         <div>
             <div class="flex flex-col space-y-6">
-                <div v-for="(item) in social" class="lg:gap-[20px] md:gap-[20px] ">
+                <div v-for="(item) in social" :key="item.id" class="lg:gap-[20px] md:gap-[20px] ">
                     <div
                         class="flex gap-[20px] lg:text-[25px] md:text-[25px] text-[15px] leading-[180%] font-[300] lg:leading-[200%]">
-                        <nuxt-img :src="item.icon"
+                        <nuxt-img :src="item.icon" alt="icon-social"
                             class="lg:w-[50px] lg:h-[50px] md:w-[50px] md:h-[50px] w-[30px] h-[30px]" />
                         <div v-html="item.content"></div>
                     </div>

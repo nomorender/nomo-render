@@ -65,12 +65,12 @@
                         <div class="md:text-[20px] lg:text-[15px] text-[15px] font-[300] leading-[180%] text-justify mt-[15px]"
                             v-html="service.description"></div>
                         <div class="mt-[20px] flex justify-center">
-                            <UButton id="go-to-other-page" :to="service.link"
+                            <UButton id="go-to-other-page" :to="service.link" prefetch
                                 aria-label="Click here to see more service of Nomorender"
                                 class="hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[20px] lg:px-[12px] px-[12px] py-[6px] md:py-[12px] lg:py-[6px] rounded-[5px]"
                                 variant="outline" :trailing="false" color="red">
-                                <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" />
-                                <span
+                                <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" aria-hidden="true" />
+                                <span aria-label="Click here to see more service of Nomorender"
                                     class="md:text-[20px] lg:text-[13px] text-[13px] text-[#980C0C] leading-[16px] font-[400]">
                                     See more</span>
                             </UButton>

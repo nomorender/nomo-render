@@ -138,15 +138,16 @@ async function onError(event: FormErrorEvent) {
                 </UForm>
             </div>
             <div class="w-1/2 h-[405px] lg:block md:hidden hidden">
-                <NuxtImg src="/contact/contact_form.jpg" class="w-full h-full object-cover rounded-[8px]" />
+                <NuxtImg src="/contact/contact_form.jpg" alt="contact form picture"
+                    class="w-full h-full object-cover rounded-[8px]" />
             </div>
         </div>
 
         <div class="flex items-center justify-center lg:mt-5 mt-2 lg:mb-20 mb-10">
-            <UButton id="submit-contact-form" color="gray" variant="solid" type="submit" form="contactForm"
-                aria-label="Submit contact form"
+            <UButton :loading="formSubmitting" :disabled="formSubmitting" id="submit-contact-form" color="gray"
+                variant="solid" type="submit" form="contactForm" aria-label="Submit contact form"
                 class="bg-gradient-to-r from-[#8D7662] to-[#27211B] md:py-5 py-4 lg:px-8 lg:py-5 px-10 hover:bg-[#90755e] mt-6 lg:mt-8 md:rounded-[8px] rounded-[10px] md:w-auto">
-                <span
+                <span aria-label="Submit contact form"
                     class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] text-[16px] md:text-[28px]">
                     let’s work together!
                 </span>

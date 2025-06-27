@@ -54,7 +54,7 @@ const items = computed(() => store.res)
                 <div v-for="item in category" :key="item.value">
                     <div class="font-[300] lg:leading-[200%] md:leading-[200%] leading-[180%] lg:text-[25px] md:text-[20px] text-[15px] hover:cursor-pointer text-black bg-transparent hover:bg-transparent px-2 py-3 rounded-none"
                         :class="activeCategoryFilter === item.value ? 'border-b border-black' : 'border-b border-transparent'"
-                        @click="setFilter(item.value)">
+                        @click="setFilter(item.value)" id="filter-project-portfolio">
                         {{ item.name }}
                     </div>
                 </div>

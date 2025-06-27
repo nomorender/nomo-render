@@ -31,7 +31,7 @@
                     <div class="px-3" v-html="item.des" v-if="item.des"></div>
                     <!-- PC -->
                     <div class="lg:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
-                        <div v-for="(box) in item.boxs" v-if="item.boxs">
+                        <div v-for="(box) in item.boxs" v-if="item.boxs" :key="box.title">
                             <div class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
                                 <div class="py-10">
                                     <div v-if="box.title"
@@ -51,10 +51,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                            }}
+                                        }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                            }}
+                                        }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                            }}
+                                        }}
                                         </div>
                                     </div>
                                 </div>
