@@ -27,12 +27,12 @@ const date = formatDate(props.created_at)
                     <p class="lg:text-[20px] text-[13px] leading-[150%] italic font-[300]">{{ props.description }}</p>
                 </div>
                 <div>
-                    <UButton id="read-blog-inspire" aria-label="Click to see detail blog inspire"
+                    <UButton :id="'read-blog-inspire-' + props.id" aria-label="Click to see detail blog inspire"
                         :to="`/inspire/${props.slug}`" class=" hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[18px]
                         lg:px-[20px] px-[12px] py-[6px] md:py-[12px] lg:py-[13px] rounded-[8px]" variant="outline"
                         :trailing="false" color="red">
                         <Icon name="i-heroicons-arrow-right" class="text-[#980C0C]" aria-hidden="true" />
-                        <span id="read-blog-inspire" aria-label="Click to see detail blog inspire"
+                        <span :id="'read-blog-inspire-' + props.id" aria-label="Click to see detail blog inspire"
                             class="md:text-[15px] lg:text-[18px] text-[13px] text-[#980C0C] leading-[16px] font-[500]">
                             See more</span>
                         <span id="read-blog-inspire" class="sr-only">Read more: {{ props.title }}</span>

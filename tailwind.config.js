@@ -15,7 +15,13 @@ export default {
         qochy: ['Qochy', 'cursive'],
       },
     },
+    screens: {
+      sm: '640px',
+      md: '744px',
+      lg: '1280px',
+      xl: '1290px',
+      '2xl': '1536px',
+    },
   },
   plugins: [],
 }
-

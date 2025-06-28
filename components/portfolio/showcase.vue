@@ -49,12 +49,12 @@ const items = computed(() => store.res)
     <div ref="wrapperRef"
         class="flex flex-col items-center justify-center lg:max-w-screen-xl mx-auto lg:mb-20 md:mb-20 mb-10">
         <div class="flex flex-col">
-            <div
+            <div id="filter portfolio"
                 class="sticky top-20 z-30 lg:w-full md:w-full w-screen bg-white py-2 mb-4 flex flex-row flex-wrap gap-2 md:gap-20 lg:gap-[120px] md:static md:py-0 md:mb-10 lg:my-10 -mx-4 px-4 sm:mx-0 sm:px-0">
-                <div v-for="item in category" :key="item.value">
+                <div id="filter-project-portfolio" v-for="item in category" :key="item.value">
                     <div class="font-[300] lg:leading-[200%] md:leading-[200%] leading-[180%] lg:text-[25px] md:text-[20px] text-[15px] hover:cursor-pointer text-black bg-transparent hover:bg-transparent px-2 py-3 rounded-none"
                         :class="activeCategoryFilter === item.value ? 'border-b border-black' : 'border-b border-transparent'"
-                        @click="setFilter(item.value)" id="filter-project-portfolio">
+                        @click="setFilter(item.value)" :id="'filter-portfolio -' + item.name">
                         {{ item.name }}
                     </div>
                 </div>
