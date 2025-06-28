@@ -159,6 +159,9 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 </UFormGroup>
                 <UFormGroup label="Cover Image" name="cover_url">
                     <UInput v-model="state.cover_url" />
+                    <UTooltip text="This will display in blog page and preview picture">
+                        <Icon name="mingcute:information-line" class="w-[20px] h-[20px] mt-2" style="color: gray" />
+                    </UTooltip>
                 </UFormGroup>
                 <UFormGroup label="Title" name="title">
                     <UInput v-model="state.title" />
@@ -168,6 +171,9 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 </UFormGroup>
                 <UFormGroup label="Slug" name="slug">
                     <UInput v-model="state.slug" />
+                    <UTooltip text="This is a link to SEO">
+                        <Icon name="mingcute:information-line" class="w-[20px] h-[20px] mt-2" style="color: gray" />
+                    </UTooltip>
                 </UFormGroup>
                 <UFormGroup label="Content" name="content">
                     <TextEditor v-model="state.content" />

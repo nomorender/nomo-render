@@ -157,6 +157,9 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
                 </UFormGroup>
                 <UFormGroup label="Link download" name="link-download">
                     <UInput v-model="state.link_download" />
+                    <UTooltip text="Make sure that your link is alive">
+                        <Icon name="mingcute:information-line" class="w-[20px] h-[20px] mt-2" style="color: gray" />
+                    </UTooltip>
                 </UFormGroup>
                 <UButton aria-label="Submit the edit content" type="submit"
                     class="bg-black text-white hover:bg-white hover:text-black transition-all">

@@ -15,7 +15,7 @@ const signOut = async () => {
 </script>
 
 <template>
-    <div class="bg-gray-200 shrink-0 border-b flex items-center justify-end py-3">
+    <div class="bg-white shrink-0 border-b flex items-center justify-end py-3">
         <div class="mx-10">
             <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
                 <UAvatar src="/default.png" alt="Avatar" class="size-9" />
