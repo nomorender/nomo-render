@@ -6,24 +6,25 @@ const date = formatDate(props.created_at)
 </script>
 
 <template>
-    <div class="lg:flex md:hidden hidden gap-10">
-        <div class="max-w-[550px] w-[550px] flex flex-col gap-7">
+    <div class="lg:flex md:flex hidden gap-10">
+        <div class="lg:max-w-[550px] lg:w-[550px] md:max-w-[330px] flex flex-col gap-7">
             <div>
-                <NuxtLink :to="`/inspire/${props.slug}`" class="font-[500] text-[25px] leading-[200%]">{{
-                    props.title }}</NuxtLink>
-                <p class="font-[300] text-[20px] italic leading-[150%]">{{ props.description }}</p>
+                <NuxtLink :to="`/inspire/${props.slug}`"
+                    class="font-[500] lg:text-[25px] md:text-[20px] leading-[200%]">{{
+                        props.title }}</NuxtLink>
+                <p class="font-[300] lg:text-[20px] text-[15px] italic leading-[150%]">{{ props.description }}</p>
             </div>
-            <div class="text-[20px] leading-[150%] font-[400]">
+            <div class="lg:text-[20px] md:text-[15px] leading-[150%] font-[400]">
                 <span>{{ date }}</span> | <span class="uppercase">{{ props.tag }}</span>
             </div>
         </div>
-        <div class="max-w-[380px]">
+        <div class="lg:max-w-[380px] md:max-w-[300px]">
             <NuxtImg :src="props.cover_url" :alt="props.title"
-                class="w-[380px] h-[250px] rounded-[8px] object-cover object-center" />
+                class="lg:w-[380px] w-[300px] lg:h-[250px] h-[200px] rounded-[8px] object-cover object-center" />
         </div>
     </div>
 
-    <div class="lg:hidden">
+    <div class="lg:hidden md:hidden">
         <div class=" max-w-[350px] w-[350px] flex flex-col">
             <div>
                 <NuxtImg :src="props.cover_url" :alt="props.title"
