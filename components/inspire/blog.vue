@@ -27,7 +27,7 @@ const date = formatDate(props.created_at)
                     <p class="lg:text-[20px] text-[13px] leading-[150%] italic font-[300]">{{ props.description }}</p>
                 </div>
                 <div>
-                    <UButton :id="'read-blog-inspire-' + props.id" aria-label="Click to see detail blog inspire"
+                    <UButton id="read-blog-inspire" aria-label="Click to see detail blog inspire"
                         :to="`/inspire/${props.slug}`" class=" hover:bg-[#D9D9D9] text-[#980C0C] ring-1 ring-[#980C0C] transition-all md:px-[18px]
                         lg:px-[20px] px-[12px] py-[6px] md:py-[12px] lg:py-[13px] rounded-[8px]" variant="outline"
                         :trailing="false" color="red">
