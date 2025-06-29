@@ -1,47 +1,47 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 import { usePortfolio } from '~/stores/portfolio/usePortfolio'
-import { useRouter, useRoute } from 'vue-router'
 
 const category = [
     { name: 'Interior', value: 'interior' },
     { name: 'Furniture', value: 'furniture' },
     { name: 'Exterior', value: 'exterior' },
 ]
+
 const page = ref(1)
 const LIMIT = 9
 const activeCategoryFilter = ref<string>(category[0].value)
+const loadingInitial = ref(true)
+const loadingMore = ref(false)
 
 const store = usePortfolio()
-
-onMounted(async () => {
-    await store.load({
-        category: activeCategoryFilter.value,
-        page: page.value,
-        limit: LIMIT,
-    })
-})
-
 const wrapperRef = ref<HTMLElement | null>(null)
+
+const loadFirstPage = async () => {
+    loadingInitial.value = true
+    page.value = 1
+    await store.load({ category: activeCategoryFilter.value, page: 1, limit: LIMIT })
+    loadingInitial.value = false
+}
+
+onMounted(loadFirstPage)
+
 const setFilter = async (value: string) => {
     activeCategoryFilter.value = value
-    page.value = 1
-    await store.load({
-        category: value,
-        page: page.value,
-        limit: LIMIT,
-    })
+    await loadFirstPage()
     wrapperRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 const loadMore = async () => {
+    loadingMore.value = true
     page.value += 1
-    await store.load({
-        category: activeCategoryFilter.value,
-        page: page.value,
-        limit: LIMIT,
-    }, true)
+    await store.load(
+        { category: activeCategoryFilter.value, page: page.value, limit: LIMIT },
+        true
+    )
+    loadingMore.value = false
 }
+
 const items = computed(() => store.res)
 </script>
 
@@ -60,10 +60,8 @@ const items = computed(() => store.res)
                 </div>
             </div>
 
-            <div v-if="store.loading" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-                <div v-for="n in 9" :key="n">
-                    <SkeletonPortfolio />
-                </div>
+            <div v-if="loadingInitial" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <SkeletonPortfolio v-for="n in 9" :key="n" />
             </div>
             <div v-else class="">
                 <div v-if="store.res.length"
@@ -72,6 +70,24 @@ const items = computed(() => store.res)
                         <PortfolioItem class="h-full" :items="items" :id="item.id" :founded="item.founded"
                             :pics="item.pics" :category="item.category" :cover_url="item.cover_url" :title="item.title"
                             :content="item.content" :location="item.location" />
+                    </div>
+                    <template v-if="loadingMore" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+                        <SkeletonPortfolio v-for="n in 3" :key="'more-' + n" />
+                    </template>
+                </div>
+
+                <div v-else class="lg:w-[1160px] lg:max-w-[1160px] md:w-[730px] md:max-w-[730px] w-[350px]">
+                    <div class="flex flex-col items-center justify-center">
+                        <h1 class="text-[25px]">There's nothing to display</h1>
+                        <p class="md:text-xl text-center text-md text-[#c8c7c7]">Currently, we are preparing more
+                            content to
+                            display.
+                            Please
+                            check it later !
+                        </p>
+                        <div>
+                            <NuxtImg src="/inspire/no-data.jpg" alt="no data picture" class="w-[300px] h-[300px]" />
+                        </div>
                     </div>
                 </div>
             </div>
