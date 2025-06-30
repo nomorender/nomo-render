@@ -13,12 +13,12 @@ const emit = defineEmits(['saved'])
 const toast = useToast();
 
 const schema = z.object({
-    title: z.string().optional(),
-    cover_url: z.string().optional(),
-    tag: z.string().optional(),
-    slug: z.string().optional(),
-    content: z.string().optional(),
-    description: z.string().optional(),
+    title: z.string().min(1, { message: "Missing title!" }),
+    cover_url: z.string().min(1, { message: "Missing cover_url!" }),
+    tag: z.string().min(1, { message: "Missing tag!" }),
+    slug: z.string().min(1, { message: "Missing slug!" }),
+    content: z.string().min(1, { message: "Missing content!" }),
+    description: z.string().min(1, { message: "Missing description!" }),
 })
 const state = reactive({
     title: '',
@@ -61,14 +61,39 @@ watch(
     { immediate: true }
 )
 
+async function slugExists(slug: string, excludeId?: string) {
+    let q = supabase
+        .from('blog')
+        .select('id', { count: 'exact', head: true })
+        .eq('slug', slug)
+
+    if (excludeId) q = q.neq('id', excludeId)
+
+    const { count, error } = await q
+    if (error) throw error
+    return (count ?? 0) > 0
+}
+
 const onSubmit = async (event: FormSubmitEvent<Schema>) => {
     if (props.mode === "edit") {
         const data = toRaw(event.data)
+        const slug = slugify(data.slug || '')
         const payload = {
             ...data,
-            slug: slugify(data.slug || '')
+            slug
         }
         try {
+            const duplicated = await slugExists(
+                slug,
+                props.id || undefined
+            )
+            if (duplicated) {
+                toast.add({
+                    title: "Something went wrong!",
+                    description: "That slug has been choosen before!"
+                })
+                return
+            }
             const { update } = useBlog()
             const res = await update(payload, props.id!)
             if (res) {
@@ -99,47 +124,46 @@ const onSubmit = async (event: FormSubmitEvent<Schema>) => {
         }
     } else if (props.mode === "add" && props.blog == null) {
         const data = toRaw(event.data)
+        const slug = slugify(data.slug || '')
         const payload = {
             ...data,
-            slug: slugify(data.slug || '')
+            slug
         }
-        if (data === null) {
-            toast.add({
-                title: 'Added failed!',
-                description: 'Please fill full data before add!',
-                color: 'red'
-            })
-            isOpen.value = false
-        } else {
-            try {
-                const { add, blog } = useBlog()
-                add(payload);
-                if (blog) {
-                    toast.add({
-                        title: 'Added successfull!',
-                        description: 'Your data has been added!',
-                        color: 'green'
-                    })
-                    isOpen.value = false
-                    emit('saved')
-                    resetState()
-                } else {
-                    toast.add({
-                        title: 'Added Failed!',
-                        description: 'Add again later!',
-                        color: 'red'
-                    })
-                    isOpen.value = false
-                    resetState()
-                }
-            } catch (error) {
+        try {
+            const duplicated = await slugExists(
+                slug,
+                undefined
+            )
+            if (duplicated) {
+                return
+            }
+            const { add, blog } = useBlog()
+            add(payload);
+            if (blog) {
                 toast.add({
-                    title: 'Something went wrong!',
-                    description: 'Please try again later!',
+                    title: 'Added successfull!',
+                    description: 'Your data has been added!',
+                    color: 'green'
+                })
+                isOpen.value = false
+                emit('saved')
+                resetState()
+            } else {
+                toast.add({
+                    title: 'Added Failed!',
+                    description: 'Add again later!',
                     color: 'red'
                 })
                 isOpen.value = false
+                resetState()
             }
+        } catch (error) {
+            toast.add({
+                title: 'Something went wrong!',
+                description: 'Please try again later!',
+                color: 'red'
+            })
+            isOpen.value = false
         }
     }
 }
