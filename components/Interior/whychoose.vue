@@ -3,10 +3,11 @@
         <div class="bg-[#D9D9D9] md:pb-[55px] md:pt-[50px] pb-[45px] pt-[40px]">
             <div
                 class="flex flex-col items-center justify-center lg:mb-[75px] md:mb-[35px] mb-[12px] md:gap-0 gap-[5px]">
-                <div class="font-[400] text-[16px] md:text-[32px] leading-[100%] md:leading-[150%]">Why choose Nomo
+                <div class="font-[400] text-[16px] lg:text-[32px] md:text-[25px] leading-[100%] md:leading-[150%]">Why
+                    choose Nomo
                     Render for</div>
                 <div
-                    class="md:w-full w-[321px] text-center leading-[130%] md:leading-[150%] text-[#8D7662] text-[30px] md:text-[64px] font-[600]">
+                    class="md:w-full w-[321px] text-center leading-[130%] md:leading-[150%] text-[#8D7662] text-[30px] md:text-[50px] lg:text-[64px] font-[600]">
                     Your
                     Interior
                     Rendering Service?</div>

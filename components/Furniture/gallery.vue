@@ -21,7 +21,7 @@ const items = computed(() => store.res)
                 'hidden md:block': item.mode === 'desktop',
             }">
                 <NuxtImg format="webp" :src="item.src" :alt="item.alt" loading="lazy" placeholder
-                    class="lg:w-full w-full md:w-full h-[123px] md:h-[370px] lg:h-[300px] object-cover object-center" />
+                    class="lg:w-full w-full md:w-full h-[123px] md:h-[500px] lg:h-[300px] object-cover object-center" />
             </div>
         </div>
 

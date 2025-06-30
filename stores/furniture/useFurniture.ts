@@ -16,7 +16,7 @@ export const useFurnitureStore = defineStore('furniture', () => {
             res.value = [];
             let dataQuery = supabase
                 .from('furniture')
-                .select('*', { count: 'exact' });
+                .select('*', { count: 'exact' }).order('stt', { ascending: true });
             if (filter.page && filter.limit) {
                 const from = (filter.page - 1) * filter.limit;
                 const to = from + filter.limit - 1;

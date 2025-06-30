@@ -59,20 +59,21 @@ const data = {
         <div class="md:w-[1150px] mt-5 md:mt-0">
             <div class="mt-20 flex flex-col items-center justify-center">
                 <div
-                    class="uppercase w-[306px] text-center text-[34px] font-semibold leading-[100%] text-[#8D7662] md:w-full md:text-[64px] md:leading-[150%]">
+                    class="uppercase w-[306px] text-center text-[34px] font-semibold leading-[100%] text-[#8D7662] md:w-full lg:text-[64px] md:text-[50px] md:leading-[150%]">
                     Pricing Plan
                 </div>
             </div>
             <div class="flex justify-center py-[20px] text-center">
                 <p
-                    class="hidden md:block w-[300px] text-center text-[18px] font-[300] italic leading-[180%] md:w-full md:text-[32px] md:leading-[150%]">
+                    class="hidden lg:block w-[300px] text-center text-[18px] font-[300] italic leading-[180%] md:w-full md:text-[32px] md:leading-[150%]">
                     Our pricing is clear, flexible, and built to deliver outstanding value. Whether you need
                     stunning interior renderings, eye-catching exteriors, or detailed furniture models, we
                     offer <span class="font-[600]">scalable solutions</span> tailored to your project's unique
                     needs and complexity.
                 </p>
 
-                <p class="md:hidden block w-[303px] text-center text-[15px] font-[300] italic leading-[150%]">
+                <p
+                    class="lg:hidden block w-[303px] md:max-w-[750px] md:w-full text-center text-[15px] md:text-[25px] font-[300] italic leading-[150%]">
                     Whether you need stunning interior renderings, eye-catching exteriors, or detailed furniture models,
                     we offer <span class="font-[500]">scalable solutions</span> tailored to your project's unique needs
                     and complexity.

@@ -11,7 +11,7 @@ const isOpen = ref(false)
             class="md:block lg:hidden block absolute inset-0 w-full h-full object-cover object-center z-0"
             alt="Interior Rendering Banner" preload />
         <div class="md:w-[1150px] relative">
-            <div class="md:w-[600px] lg:mt-0 md:mt-0 mt-[90px] lg:ml-0 md:ml-10 ml-0">
+            <div class="md:w-[600px] lg:mt-0 md:mt-0 mt-[90px] lg:ml-0 md:ml-10 ml-0 md:mb-[35vh]">
                 <div>
                     <h1
                         class="md:text-[72px] text-[34px] font-[700] leading-[100%] uppercase text-[#8D7662] mb-[10px] md:mb-0">

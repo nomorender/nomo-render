@@ -1,7 +1,7 @@
 <template>
     <div class="w-full flex flex-col items-center justify-center px-4 md:pt-[20px] md:pb-[70px] pt-[40px] pb-[45px]">
         <div
-            class="font-[600] text-[30px] text-center leading-[130%] md:text-[40px] md:leading-[100%] text-[#8D7662] md:mb-10 mb-[45px] uppercase">
+            class="font-[600] text-[30px] text-center leading-[130%] md:text-[35px] lg:text-[40px] md:leading-[100%] text-[#8D7662] md:mb-10 mb-[45px] uppercase">
             price range for each category
         </div>
         <div class="max-w-[1280px] w-full mx-auto space-y-5">
@@ -180,22 +180,22 @@ const items = [
                 title: 'Small Size Interior',
                 des: '(Small Bathroom, Powder Room, Pantry)',
                 pic: '/pricing/door.jpg',
-                price: 'Price: $120 - $220 | 2-3 days',
+                price: 'Price: $130 - $150/view | 2-3 days',
                 including: 'Including: ($80 - $120)/Area Fee',
                 plus: '+ ($40 - $100)/Modeling Furniture Fee'
             },
             {
-                title: 'Medium Size Interior',
+                title: 'Standard Size Interior',
                 des: '(Living Room, Bedroom, Master Bath, Kitchen)',
                 pic: '/pricing/pic2.jpg',
-                price: 'Price: $200 - $300 | 3-5 days',
+                price: 'Price: $150/view | 3-5 days',
                 including: 'Including: ($150 - $200)/Area Fee',
                 plus: '+ ($50 - $100)/Modeling Furniture Fee'
             }, {
                 title: 'Large Size Interior',
                 des: '(Living & Dining Room, Open Spaces)',
                 pic: '/pricing/pic4.jpg',
-                price: 'Price: $300 - $450 | 5-8 days',
+                price: 'Price: $180 - $250/view | 5-8 days',
                 including: 'Including: ($200 - $300)/Area Fee',
                 plus: '+ ($100 - $150)/Modeling Furniture Fee'
             }, {
@@ -229,12 +229,12 @@ const items = [
             {
                 title: 'Medium Size Exterior',
                 pic: '/pricing/pic6.png',
-                price: 'Price: $300 - $600',
+                price: 'Price: $300 - $500',
                 time: 'Time: 4-7 days'
             }, {
                 title: 'Large Size Exterior',
                 pic: '/pricing/pic7.png',
-                price: 'Price: $600 - $1000',
+                price: 'Price: $500 - $700',
                 time: 'Time: 8-10 days'
             }, {
                 title: 'Massive Area',

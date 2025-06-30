@@ -89,12 +89,13 @@ const submitForm = async () => {
         <div class="mt-5 mb-5 lg:w-[50%]">
           <div class="text-left">
             <div class="flex gap-4 md:mb-0">
-              <div class="md:text-[32px] text-[15px]">Subscribe to</div>
+              <div class="lg:text-[32px] md:text-[25px] text-[15px]">Subscribe to</div>
               <nuxt-img alt="Plane" src="/Plane.svg" class="md:w-[136px] md:h-[62px] w-[66px] h-[30px] rotate-2" />
             </div>
-            <div class="md:text-[64px] text-[30px] font-semibold text-[#8d7661] md:mb-5 mb-3">Nomo Render</div>
+            <div class="lg:text-[64px] md:text-[50px] text-[30px] font-semibold text-[#8d7661] md:mb-5 mb-3">Nomo Render
+            </div>
             <div class="flex md:block">
-              <p class="italic md:text-[20px] text-[15px] font-light">Subscribe now & start creating
+              <p class="italic lg:text-[20px] md:text-[20px] text-[15px] font-light">Subscribe now & start creating
                 stunning visuals with ease!</p>
             </div>
           </div>
@@ -122,11 +123,12 @@ const submitForm = async () => {
           </div>
         </div>
         <div class="lg:w-[50%]">
-          <div class="md:text-[25px] text-[15px] font-light text-justify leading-[200%]">
+          <div class="lg:text-[25px] md:text-[22px] text-[15px] font-light text-justify leading-[200%]">
             <span class="font-medium">FREE CHECKLIST AND GOODIES</span> including pricing guides, templates, checklists,
             and exclusive freebies - to streamline your workflow and enhance your 3D projects.
           </div>
-          <div class="italic md:text-[25px] text-[15px] font-light text-justify mt-2">No fluff, just the good stuff
+          <div class="italic lg:text-[25px] md:text-[22px] text-[15px] font-light text-justify mt-2">No fluff, just the
+            good stuff
           </div>
           <div class="flex items-center justify-center md:block">
             <div

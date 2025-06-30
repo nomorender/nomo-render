@@ -49,6 +49,19 @@ const supabase = useSupabaseClient();
 
 const store = useStorageStore();
 
+const compressIfNeeded = async (file: File, maxSizeMB = 1): Promise<File> => {
+    if (import.meta.server || file.size / 1_048_576 <= maxSizeMB) return file
+
+    const { default: imageCompression } = await import('browser-image-compression')
+
+    return (await imageCompression(file, {
+        maxSizeMB,
+        maxWidthOrHeight: 2048,
+        fileType: 'image/webp',
+        useWebWorker: true,
+    })) as File
+}
+
 const fetchData = async () => {
     isLoading.value = true;
     await store.load({ page: page.value, limit: LIMIT });
@@ -82,19 +95,32 @@ const loadImages = async () => {
 }
 
 const uploadImage = async () => {
-    if (!selectedFile.value) return;
-    const fileName = `${Date.now()}-${selectedFile.value.name}`;
-    const { error } = await supabase.storage.from('project').upload(fileName, selectedFile.value);
+    if (!selectedFile.value) return
+
+    const original = selectedFile.value
+    const optimized = await compressIfNeeded(original, 1)
+
+    const fileName = `NEW ${Date.now()}-${original.name.replace(/\.[^.]+$/, optimized.type === 'image/webp' ? '.webp' : '')}`
+
+    const { error } = await supabase.storage.from('project').upload(fileName, optimized, {
+        cacheControl: '31536000',
+        upsert: false,
+    })
     if (error) {
-        toast.add({ title: 'Upload failed', description: error.message, color: 'red' });
+        toast.add({ title: 'Failed to delete!', description: error.message, color: 'red' });
         return;
     }
-    const { data } = supabase.storage.from('project').getPublicUrl(fileName);
-    images.value.unshift({ name: fileName, url: data.publicUrl });
-    toast.add({ title: 'Uploaded!', description: 'Image added to storage.', color: 'green' });
-    selectedFile.value = undefined;
-    const inputEl = fileInputRef.value?.input;
-    if (inputEl) inputEl.value = '';
+
+    const { data } = supabase.storage.from('project').getPublicUrl(fileName)
+    images.value.unshift({ name: fileName, url: data.publicUrl })
+
+    toast.add({
+        title: "Add successfully!",
+        description: `Uploaded! (${(original.size / 1024).toFixed(0)} KB → ${(optimized.size / 1024).toFixed(0)} KB)`
+    })
+    selectedFile.value = undefined
+    const inputEl = fileInputRef.value?.input as HTMLInputElement | undefined
+    if (inputEl) inputEl.value = ''
 }
 
 const handleFileChange = async () => {

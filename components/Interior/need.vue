@@ -1,14 +1,14 @@
 <template>
-    <div class="md:pb-20 md:my-0 my-10">
+    <div class="md:pb-20 md:my-0 my-5 pb-0">
         <div class="bg-[#D9D9D9]">
             <div class="md:max-w-7xl md:py-20 py-[40px] md:mx-auto flex flex-col item-center justify-center">
                 <div class="flex items-center justify-center">
                     <div class="md:w-full w-[228px]">
                         <p
-                            class="text-center md:text-[32px] font-[400] text-[16px] leading-[100%] md:leading-[150%] mb-[5px]">
+                            class="text-center lg:text-[32px] md:text-[25px] font-[400] text-[16px] leading-[100%] md:leading-[150%] mb-[5px]">
                             What do we need</p>
                         <h2
-                            class="text-center font-semibold md:text-[64px] text-[30px] leading-[100%] md:leading-[150%] mb-5 md:mb-20 text-[#8D7662]">
+                            class="text-center font-semibold lg:text-[64px] md:text-[50px] text-[30px] leading-[100%] md:leading-[150%] mb-5 md:mb-20 text-[#8D7662]">
                             Before Crafting?
                         </h2>
                     </div>

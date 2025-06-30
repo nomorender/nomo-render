@@ -4,11 +4,11 @@
             <div class="flex flex-col justify-center items-center">
                 <div class="mb-8 md:mt-0 mt-[20px]">
                     <div
-                        class="text-[16px] md:text-[32px] leading-[150%] font-[400] text-[#000000] text-center md:text-center lg:text-left">
+                        class="text-[16px] lg:text-[32px] md:text-[25px] leading-[150%] font-[400] text-[#000000] text-center md:text-center lg:text-left">
                         What is the benefits of
                     </div>
                     <div
-                        class="text-[30px] md:text-[64px] font-semibold text-[#8D7662] mt-2 text-center leading-tight w-[250px] md:w-full md:px-0 lg:text-left">
+                        class="text-[30px] lg:text-[64px] md:text-[50px] font-semibold text-[#8D7662] mt-2 text-center leading-tight w-[250px] md:w-full md:px-0 lg:text-left">
                         partnering with Nomo Render?
                     </div>
                 </div>

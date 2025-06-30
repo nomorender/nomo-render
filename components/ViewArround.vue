@@ -32,8 +32,8 @@ onMounted(() => {
 
 @media (max-width: 768px) {
     .cloudpano-wrapper {
-        width: 500px;
-        max-width: 500px;
+        width: full;
+        max-width: 698px;
     }
 }
 

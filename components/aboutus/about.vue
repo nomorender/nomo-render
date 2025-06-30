@@ -7,13 +7,13 @@ const pics = [
 </script>
 
 <template>
-    <div class="ld:mt-20 md:mt-[100px] mt-[110px]">
-        <div class="flex flex-col items-center justify-center gap-3 mb-3">
+    <div class="lg:mt-[120px] md:mt-[100px] mt-[110px]">
+        <div class="flex flex-col items-center justify-center gap-3 mb-3 lg:mb-[40px]">
             <span
                 class="uppercase lg:text-[24px] md:text-[24px] text-[13px] leading-[150%] lg:tracking-[8px] md:tracking-[7px] tracking-[2px] font-[600]">meet
                 nomo render studio</span>
             <h1
-                class="lg:w-[600px] md:w-[600px] w-[200px] text-center font-qochy text-[#8D7662] lg:text-[64px] md:text-[48px] text-[24px] leading-[150%] font-[400]">
+                class="uppercase lg:w-[600px] md:w-[600px] w-[200px] text-center font-qochy text-[#8D7662] lg:text-[64px] md:text-[48px] text-[24px] leading-[150%] font-[400]">
                 Nomadic creativity timeless renders</h1>
         </div>
 

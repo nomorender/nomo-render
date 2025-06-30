@@ -55,7 +55,7 @@ watch(page, () => {
 <template>
     <div class="lg:mb-20 mb-10" ref="filterRef">
         <div id="filter-inspire"
-            class="lg:static sticky top-[100px] z-30 w-full flex items-center justify-center lg:my-20 my-10">
+            class="bg-white lg:py-0 md:py-5 md:top-[70px] py-5 lg:static sticky top-[80px] z-30 w-full flex items-center justify-center lg:my-20 my-5">
             <USelectMenu id="filter-inspire" v-model="tag" :options="category" placeholder="Filter"
                 value-attribute="value" option-attribute="name" size="xl" color="white"
                 :ui="{ color: { white: { outline: 'bg-[#faf8f6] border border-[#D8C3A5] ring-0' } }, icon: { base: 'lg:mr-4  text-black' }, placeholder: 'text-black', base: 'lg:w-[400px] w-[160px]', rounded: 'rounded-[40px]', padding: { xl: 'lg:px-[40px] px-5 lg:py-4 py-1 lg:text-[25px] text-[15px] leading-[200%] font-[300]' }, }"

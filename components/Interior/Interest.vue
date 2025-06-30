@@ -8,19 +8,19 @@ import { ViewArround } from '#components';
         <div class="lg:pt-[60px] lg:pb-[60px] pb-[45px] pt-[40px] bg-[#FAF8F5]">
             <div class="flex flex-col items-center justify-center">
                 <div
-                    class="lg:text-[32px] md:text-[32px] text-[16px] font-normal lg:leading-[150%] leading-[100%] lg:tracking-[2%] mb-[5px]">
+                    class="lg:text-[32px] md:text-[25px] text-[16px] font-normal lg:leading-[150%] leading-[100%] lg:tracking-[2%] mb-[5px]">
                     You may interest!
                 </div>
                 <div
-                    class="lg:w-full md:w-[600px] w-[306px] text-center text-[#8D7662] lg:leading-[50px] font-semibold leading-[130%] lg:text-[64px] md:text-[64px] text-[30px] lg:tracking-[2%]">
+                    class="lg:w-full md:w-[600px] w-[306px] text-center text-[#8D7662] lg:leading-[50px] font-semibold leading-[130%] lg:text-[64px] md:text-[50px] text-[30px] lg:tracking-[2%]">
                     Types of 3D Interior Visualization
                 </div>
             </div>
 
             <div class="flex flex-col items-center justify-center my-5">
                 <div
-                    class="pl-0 lg:w-[1200px] md:w-[650px] w-[303px] lg:text-[32px] md:text-[32px] text-[18px] lg:leading-[150%] leading-[180%] font-light mx-[35px] lg:mt-[70px] lg:mb-[18px] text-justify">
-                    <div class="text-center">
+                    class="pl-0 lg:w-[1200px] md:w-full md:max-w-[650px] w-[303px] lg:text-[32px] md:text-[28px] text-[18px] lg:leading-[150%] leading-[180%] font-light mx-[35px] lg:mt-[70px] lg:mb-[18px] text-justify">
+                    <div class="text-center md:text-justify">
                         3D interior visualization bridges the gap between <span class="font-[600] italic">concept and
                             reality</span>, making it easier for
                         designers and clients to <span class="font-[600] italic">visualize layouts, materials, and
@@ -34,7 +34,7 @@ import { ViewArround } from '#components';
                 <div class="lg:w-[1200px] flex flex-col gap-[30px] lg:gap-[50px]">
                     <div class="flex flex-col lg:gap-[50px] items-center justify-center">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-[500px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-[700px] md:max-w-[700px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] lg:py-0">
                                 <div
                                     class="text-[#8D7662] text-center lg:w-[336px] md:w-full lg:py-[37px] lg:px-[71px] lg:text-[32px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
@@ -56,7 +56,7 @@ import { ViewArround } from '#components';
                             </div>
                             <div>
                                 <NuxtImg format="webp" src="/Interior/Pic2.jpg" alt="pic2" loading="lazy"
-                                    class="lg:h-[360px] md:h-[360px] h-[180px] w-[303px] lg:w-full md:w-[500px] object-cover object-center rounded-[8px]" />
+                                    class="lg:h-[360px] md:h-[460px] h-[180px] w-[303px] lg:w-full md:w-[700px] md:max-w-[700px] object-cover object-center rounded-[8px]" />
                             </div>
                             <div class="hidden lg:block">
                                 <NuxtImg format="webp" src="/Interior/Pic3.jpg" alt="pic3" loading="lazy"
@@ -67,7 +67,7 @@ import { ViewArround } from '#components';
 
                     <div class="flex flex-col lg:gap-[50px] items-center justify-center">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-[500px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-[700px] md:max-w-[700px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] lg:py-0">
                                 <div
                                     class="text-[#8D7662] hidden lg:block text-center lg:w-[336px] md:w-full lg:py-[37px] lg:px-[71px] lg:text-[32px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
@@ -95,7 +95,7 @@ import { ViewArround } from '#components';
 
                     <div class="flex flex-col lg:gap-[50px] items-center justify-center lg:mt-0 md:mt-0 ">
                         <div
-                            class="bg-[#FFFFFF] w-[303px] md:w-[500px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                            class="bg-[#FFFFFF] w-[303px] md:w-[700px] md:max-w-[700px] lg:w-full lg:flex items-center lg:rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                             <div class="border-[3px] rounded-[8px] border-[#D8C3A5] py-[16px] lg:py-0">
                                 <div
                                     class="text-[#8D7662] text-center lg:w-[336px] md:w-full lg:py-[37px] lg:px-[71px] lg:text-[32px] md:text-[32px] text-[18px] font-[600] leading-[150%]">
@@ -126,11 +126,11 @@ import { ViewArround } from '#components';
                             </div>
                         </div>
                         <video autoplay loop muted controls playsinline
-                            class="rounded-[8px] lg:h-[675px] md:w-[500px] w-[303px] lg:w-full mt-[8px] pointer-events-none">
+                            class="rounded-[8px] lg:h-[675px] md:w-[700px] md:max-w-[700px] w-[303px] lg:w-full pointer-events-none">
                             <source src="/Interior/Video.mp4" alt="video showcase bathroom in 3D" type="video/mp4" />
                         </video>
                         <div
-                            class="lg:w-full w-[303px] md:w-[500px] font-[300] text-[15px] md:text-[25px] lg:text-[25px] leading-[180%] lg:leading-[200%] lg:text-center text-justify mt-[40px] lg:mt-[15px]">
+                            class="lg:w-full w-[303px] md:w-[700px] md:max-w-[700px] font-[300] text-[15px] md:text-[25px] lg:text-[25px] leading-[180%] lg:leading-[200%] lg:text-center text-justify mt-[40px] lg:mt-[15px]">
                             No matter the scale of your project, 3D interior visualization ensures <span
                                 class="font-[500]">every
                                 element is

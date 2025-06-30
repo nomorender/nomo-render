@@ -3,29 +3,33 @@ const social = [
     {
         id: 1,
         icon: '/contact/email.svg',
-        content: `<span class="font-[500]">Email: </span>team@nomorender.com`
+        content: `<span class="font-[500]">Email: </span>team@nomorender.com`,
+        link: ``
     },
     {
         id: 2,
         icon: '/contact/whatsapp.svg',
-        content: `<span class="font-[500]">WhatsApp: </span>+84967563407`
+        content: `<span class="font-[500]">WhatsApp: </span>+84967563407`,
+        link: 'https://wa.me/84967563407'
     },
     {
         id: 3,
         icon: '/contact/instagram.svg',
-        content: `<span class="font-[500]">Instagram: </span>@team.nomorender`
+        content: `<span class="font-[500]">Instagram: </span>@team.nomorender`,
+        link: 'https://www.instagram.com/team.nomorender'
     },
     {
         id: 4,
         icon: '/contact/benance.svg',
-        content: `<span class="font-[500]">Behance: </span>behance.net/nomorender`
+        content: `<span class="font-[500]">Behance: </span>behance.net/nomorender`,
+        link: 'https://www.behance.net/nomorender'
     }
 ]
 </script>
 
 <template>
     <div
-        class="flex flex-col lg:gap-[50px] md:gap-[40px] gap-[30px] items-center justify-center lg:mt-20 md:mt-[100px] mt-[110px]">
+        class="flex flex-col lg:gap-[50px] md:gap-[40px] gap-[30px] items-center justify-center lg:mt-[120px] md:mt-[100px] mt-[110px]">
         <div class="flex flex-col items-center justify-center gap-3">
             <span
                 class="uppercase lg:text-[24px] md:text-[24px] text-[13px] leading-[150%] lg:tracking-[8px] md:tracking-[7px] tracking-[2px] font-[600]">we're
@@ -54,8 +58,10 @@ const social = [
                 <div v-for="(item) in social" :key="item.id" class="lg:gap-[20px] md:gap-[20px] ">
                     <div
                         class="flex gap-[20px] lg:text-[25px] md:text-[25px] text-[15px] leading-[180%] font-[300] lg:leading-[200%]">
-                        <nuxt-img :src="item.icon" alt="icon-social"
-                            class="lg:w-[50px] lg:h-[50px] md:w-[50px] md:h-[50px] w-[30px] h-[30px]" />
+                        <NuxtLink :to="item.link" aria-label="go to social media of nomo render" target="_blank">
+                            <nuxt-img :src="item.icon" alt="icon-social"
+                                class="lg:w-[50px] lg:h-[50px] py-1 md:w-[50px] md:h-[50px] w-[30px] h-[30px]" />
+                        </NuxtLink>
                         <div v-html="item.content"></div>
                     </div>
                 </div>

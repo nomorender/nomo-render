@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-20">
+  <div class="lg:pb-20 pb-10">
     <div class="md:pb-[80px] pb-[20px] pt-[90px] md:flex justify-center items-center w-full">
       <div
         class="px-10 md:px-0 md:flex items-center justify-center gap-[30px] md:w-[81vw] md:max-w-[1200px] transition-all">
@@ -23,7 +23,7 @@
         </div>
         <div class="">
           <p
-            class="md:pt-0 mt-7 lg:text-[25px] md:text-[17px] text-[15px] lg:w-[480px] md:w-[300px] font-[300] md:leading-[200%] leading-[180%] text-justify">
+            class="md:pt-0 mt-7 lg:text-[25px] md:text-[18px] text-[15px] lg:w-[480px] md:w-[300px] font-[300] md:leading-[200%] leading-[180%] text-justify">
             <span class="font-[500]">Top-notch
               quality</span>
             3D exterior visualizations bring architectural concepts to life with photorealistic

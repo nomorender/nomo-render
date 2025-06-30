@@ -10,11 +10,12 @@ const data = [
             class="md:bg-[#D9D9D9] bg-[#FAF8F5] md:pt-[50px] md:pb-[60px] pb-[45px] pt-[40px] mx-auto flex flex-col items-center justify-center">
             <div class="md:w-[1150px]">
                 <div class="flex flex-col items-center justify-center">
-                    <div class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
+                    <div
+                        class="lg:text-[32px] md:text-[25px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
                         Who can benefit from
                     </div>
                     <div
-                        class="lg:w-full md:w-[600px] w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px]">
+                        class="lg:w-full md:w-[600px] w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] lg:text-[64px] md:text-[50px] text-[30px]">
                         3D Furniture Rendering Service?
                     </div>
                 </div>

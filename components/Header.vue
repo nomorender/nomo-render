@@ -5,9 +5,9 @@
         <div class="flex gap-4 items-center">
           <NuxtLink to="/" aria-label="Go to homepage">
             <nuxt-img
-              v-if="!isScrolled && (currRoute === '/interior' || currRoute === '/interior/' || currRoute === '/portfolio' || currRoute === '/portfolio/' || currRoute === '/' || currRoute === '')"
-              alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] md:hidden" src="/LogoWhite.svg" />
-            <NuxtImg format="webp" v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] md:hidden"
+              v-if="!isScrolled && (currRoute.startsWith('/interior') || currRoute.startsWith('/portfolio') || currRoute.startsWith('/library') || currRoute === '/' || currRoute === '' || currRoute.startsWith('/inspire'))"
+              alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] lg:hidden" src="/LogoWhite.svg" />
+            <NuxtImg format="webp" v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] lg:hidden"
               src="/logo.png" />
           </NuxtLink>
         </div>
@@ -17,18 +17,18 @@
               aria-label="Click here to go to choose page"
               class="md:text-[20px] cursor-pointer hover:underline font-semibold uppercase" :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' || isInspireDetail
                 ? 'text-[#8D7662]'
-                : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
+                : (currRoute.startsWith('/exterior') ? 'text-black' : 'text-white')">
               {{ item.name }}
             </NuxtLink>
             <UDropdown :ui="{ width: 'w-fit', item: { padding: 'py-4 px-4', label: 'text-[#000000] text-[18px]' } }"
               v-else :items="item.childen" :popper="{ placement: 'bottom-start' }">
               <div class="flex items-center gap-2">
                 <p class="text-xl hover:underline font-semibold uppercase" aria-label="Click here to go to choose page"
-                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' || isInspireDetail ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')">
+                  :class="isScrolled || currRoute.startsWith('/furniture') || currRoute.startsWith('/pricing') || currRoute.startsWith('/workflow') || currRoute.startsWith('/contact') || currRoute.startsWith('/about') || isInspireDetail ? 'text-[#8D7662]' : (currRoute.startsWith('/exterior') ? 'text-black' : 'text-white')">
                   {{ item.name }}
                 </p>
                 <UIcon name="i-heroicons-chevron-down" class="w-5 h-5"
-                  :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' || isInspireDetail ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')" />
+                  :class="isScrolled || currRoute.startsWith('/furniture') || currRoute.startsWith('/pricing') || currRoute.startsWith('/workflow') || currRoute.startsWith('/contact') || currRoute.startsWith('/about') || isInspireDetail ? 'text-[#8D7662]' : (currRoute.startsWith('/exterior') ? 'text-black' : 'text-white')" />
               </div>
             </UDropdown>
           </div>
@@ -37,7 +37,7 @@
           <UButton id="open-sub-menu-header" variant="ghost" color="gray" size="xl" icon="i-heroicons-bars-3-solid"
             aria-label="Click here to go to choose page"
             class=" hover:bg-transparent active:bg-transparent lg:hidden text-[#8d7662]"
-            :class="isScrolled || currRoute === '/furniture' || currRoute === '/pricing/' || currRoute === '/pricing' || currRoute === '/workflow/' || currRoute === '/workflow' || currRoute === '/contact/' || currRoute === '/contact' || currRoute === '/about' || currRoute === '/about/' || isInspireDetail ? 'text-[#8D7662]' : (currRoute === '/exterior' ? 'text-black' : 'text-white')"
+            :class="isScrolled || currRoute.startsWith('/furniture') || currRoute.startsWith('/pricing') || currRoute.startsWith('/workflow') || currRoute.startsWith('/contact') || currRoute.startsWith('/about') || isInspireDetail ? 'text-[#8D7662]' : (currRoute.startsWith('/exterior') ? 'text-black' : 'text-white')"
             square padded @click="isOpenMenu = true" />
           <USlideover v-model="isOpenMenu"
             :ui="{ overlay: { base: 'bg-black/80', background: '' }, wrapper: 'w-[75%] fixed right-0 left-auto' }"
@@ -102,12 +102,6 @@ const navList = [
     childen: [
       [
         {
-          label: "3D Exterior Rendering",
-          click: () => {
-            handleNavigate("/exterior")
-          },
-        },
-        {
           label: "3D Interior Rendering",
           click: () => {
             handleNavigate("/interior")
@@ -117,6 +111,12 @@ const navList = [
           label: "3D Furniture Modeling",
           click: () => {
             handleNavigate("/furniture")
+          },
+        },
+        {
+          label: "3D Exterior Rendering",
+          click: () => {
+            handleNavigate("/exterior")
           },
         },
         {

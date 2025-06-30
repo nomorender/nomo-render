@@ -272,9 +272,9 @@ const isLastItem = computed(() => {
     <div class="md:my-[5rem] my-[3rem]">
         <div class="bg-[#FAF8F5] pt-[55px] pb-[58px] md:px-0">
             <div class="">
-                <p class="text-center text-xl md:text-3xl uppercase md:mb-5">Feedbacks</p>
+                <p class="text-center text-xl lg:text-3xl md:text-[25px] uppercase md:mb-5">Feedbacks</p>
                 <h2
-                    class="md:px-0 px-20 text-center font-semibold text-3xl md:text-6xl md:mb-5 mb-2 md:pb-[40px] text-[#8D7662]">
+                    class="md:px-0 px-20 text-center font-semibold text-3xl lg:text-6xl md:text-[50px] md:mb-5 mb-2 md:pb-[40px] text-[#8D7662]">
                     What partners talk about us
                 </h2>
             </div>
@@ -480,8 +480,9 @@ const isLastItem = computed(() => {
                             </div>
 
                             <div class="flex w-full justify-center items-center py-10">
-                                <UButton id="see-more-project" color="gray" variant="solid" type="submit"
-                                    form="contactForm" aria-label="Click here to see more Nomorender's project"
+                                <UButton id="see-more-project" to="/portfolio" color="gray" variant="solid"
+                                    type="submit" form="contactForm"
+                                    aria-label="Click here to see more Nomorender's project"
                                     class="bg-gradient-to-r from-[#8D7662] to-[#27211B] lg:px-8 lg:py-5 px-6 py-4 hover:bg-[#90755e] rounded-[8px] md:w-auto">
                                     <span
                                         class="w-full flex justify-center items-center uppercase text-[#F5F5F5] leading-[16px] font-[600] md:text-[28px] text-[16px]">

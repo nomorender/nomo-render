@@ -45,14 +45,21 @@
                     </div>
                     <div class="lg:text-[25px] md:text-[25px] text-[15px] font-[300] leading-[200%]">
                         <span class="font-[500]">Project Timeline for Interior Render:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
-                            @click="navigateTo('/interior')">See
-                            more</span>
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                            <NuxtLink to="/interior" target="_blank" aria-label="go to page interior"
+                                class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                                See more
+                            </NuxtLink>
+                        </span>
                     </div>
                     <div class="lg:text-[25px] md:text-[25px] text-[15px] font-[300] leading-[200%]">
                         <span class="font-[500]">Project Timeline for Exterior Render:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
-                            @click="navigateTo('/exterior')">See more</span>
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                            <NuxtLink to="/exterior" target="_blank" aria-label="go to page exterior"
+                                class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                                See more
+                            </NuxtLink>
+                        </span>
                     </div>
                 </div>
 
@@ -72,8 +79,12 @@
                     </div>
                     <div class="lg:text-[25px] md:text-[25px] text-[15px] font-[300] leading-[200%]">
                         <span class="font-[500]">Project Timeline for Furniture Modeling:</span> <span
-                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all"
-                            @click="navigateTo('/furniture')">See more</span>
+                            class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                            <NuxtLink to="/furniture" target="_blank" aria-label="go to page furniture"
+                                class="hover:cursor-pointer italic hover:text-[#79aef1] transition-all">
+                                See more
+                            </NuxtLink>
+                        </span>
                     </div>
                 </div>
             </div>

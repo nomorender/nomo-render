@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center mb-20 mt-10">
+  <div class="flex justify-center items-center lg:mb-20 mb-10 mt-10">
     <div>
       <div class="lg:columns-3 md:columns-2 columns-2 gap-1 space-y-1">
         <div id="watch-project-exterior" class="relative group md:w-full md:h-[706.98828125px] h-[265px] cursor-pointer"

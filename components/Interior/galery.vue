@@ -2,11 +2,12 @@
     <div>
         <div class="md:my-20 mt-[50px] mb-[40px]">
             <div class="flex flex-col gap-[25px] md:mb-0 mb-[35px] justify-center items-center">
-                <div class="md:text-[64px] text-[30px] leading-[130%] md:leading-[150%]  font-[600] text-[#8D7662]">
+                <div
+                    class="lg:text-[64px] md:text-[50px] text-[30px] leading-[130%] md:leading-[150%]  font-[600] text-[#8D7662]">
                     Some Of Our Works
                 </div>
                 <div
-                    class="md:text-[32px] text-[18px] w-[315px] md:w-[750px] leading-[180%] md:leading-[150%] font-[300] lg:w-[1210px] text-center">
+                    class="lg:text-[32px] md:text-[28px] text-[18px] w-[315px] md:w-[750px] leading-[180%] md:leading-[150%] font-[300] lg:w-[1210px] text-center">
                     We leverage physically accurate material simulation, advanced ray tracing, and dynamic lighting
                     algorithms to produce <span class="font-[600] italic">high-resolution, precision-crafted interior
                         visualizations.</span>

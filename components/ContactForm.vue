@@ -105,11 +105,11 @@ const onError = async (event: FormErrorEvent) => {
         <div class="md:px-8 flex items-center justify-center">
             <div class="w-[1072px]">
                 <div class="px-20 md:block flex flex-col justify-center items-center">
-                    <p class="text-center text-xl md:text-3xl md:mb-[20px] uppercase">
+                    <p class="text-center text-xl lg:text-3xl md:text-[25px] md:mb-[20px] uppercase">
                         {{ title || 'contact' }}
                     </p>
                     <div
-                        class="text-center font-semibold text-3xl md:text-[64px] w-[220px] md:w-full leading-[100%] mb-5 md:mb-20 text-[#8D7662] md:px-6">
+                        class="text-center font-semibold text-3xl lg:text-[64px] md:text-[50px] w-[220px] md:w-full leading-[100%] mb-5 md:mb-[40px] lg:mb-20 text-[#8D7662] md:px-6">
                         {{ subtitle || "Let’s bring your vision to life!" }}
                     </div>
                 </div>

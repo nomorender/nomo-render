@@ -2,10 +2,11 @@
     <div class="md:my-20 my-10">
         <div class="relative h-fit w-full md:pb-[50px] md:pt-[55px] pt-[40px] pb-[40px] bg-[#FAF8F5]">
             <div class="flex flex-col items-center justify-center md:mb-[30px] mb-0">
-                <div class="font-[400] md:text-[32px] text-[16px] md:leading-[150%] text-[#000000]">
+                <div class="font-[400] lg:text-[32px] md:text-[25px] text-[16px] md:leading-[150%] text-[#000000]">
                     Who can benefit from
                 </div>
-                <div class="text-center font-[600] md:text-[64px] text-[30px] md:leading-[150%] text-[#8D7662]">
+                <div
+                    class="text-center font-[600] lg:text-[64px] md:text-[50px] text-[30px] md:leading-[150%] text-[#8D7662]">
                     3D Interior Rendering Service?
                 </div>
             </div>

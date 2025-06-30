@@ -11,7 +11,7 @@ const isOpen = ref(false)
             alt="Interior Rendering Mobile Banner" preload />
         <div class="text-[#FAF8F5] w-full relative z-10 flex flex-col items-center justify-center">
             <div
-                class="uppercase text-[13px] md:text-[32px] lg:text-[32px] lg:tracking-[15px] tracking-[5px] font-[600] mb-[15px] lg:leading-[150%] md:leading-[150%] leading-[150%] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+                class="uppercase text-[13px] md:text-[40px] lg:text-[32px] lg:tracking-[15px] tracking-[5px] font-[600] mb-[15px] lg:leading-[150%] md:leading-[150%] leading-[150%] text-[#FAF8F5] [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
                 nomo render portfolio
             </div>
             <div

@@ -2,11 +2,12 @@
     <div class="md:my-20 my-10">
         <div class="w-full md:pt-[50px] md:pb-[60px] pb-[45px] pt-[40px] md:bg-[#FAF8F5] bg-[#D9D9D9]">
             <div class="flex flex-col items-center justify-center">
-                <div class="md:text-[32px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
+                <div
+                    class="lg:text-[32px] md:text-[25px] text-[16px] font-normal md:leading-[150%] leading-[100%] mb-[5px]">
                     From Sketch Request to
                 </div>
                 <div
-                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] md:text-[64px] text-[30px] md:tracking-[2%]">
+                    class="md:w-full w-[306px] text-center text-[#8D7662] md:leading-[150%] font-semibold leading-[130%] lg:text-[64px] md:text-[50px] text-[30px] md:tracking-[2%]">
                     High-quality 3D Model
                 </div>
             </div>
@@ -89,12 +90,10 @@
                                 :ref="el => registerItemRef(el, index)">
                                 <div class="flex items-center w-full">
                                     <div :class="[
-                                        'md:border border-[#8D7662] flex items-center justify-center w-7 h-7 md:w-[60px] md:h-[60px] rounded-full',
-                                        activeStep === index ? 'bg-[#FAF8F5]' : 'bg-[#8D7662]'
+                                        'md:border border-[#8D7662] flex items-center justify-center w-7 h-7 md:w-[60px] md:h-[60px] rounded-full bg-[#8D7662]',
                                     ]">
                                         <span :class="[
-                                            'text-[15px] md:text-[25px] leading-[180%] md:leading-[200%] font-medium',
-                                            activeStep === index ? 'text-[#8D7662]' : 'text-[#FAF8F5]'
+                                            'text-[15px] md:text-[25px] leading-[180%] md:leading-[200%] font-medium text-[#FAF8F5]',
                                         ]">
                                             {{ item.id }}
                                         </span>

@@ -3,8 +3,8 @@
     <div class="bg-[#FAF8F5] flex flex-col justify-center items-center">
       <div class="md:py-10 py-[45px] md:pt-[70px] md:pb-0">
         <div class="md:mb-0 mb-5">
-          <p class="text-center text-[16px] lg:text-3xl lg:mb-7">SERVICES</p>
-          <h2 class="text-center font-semibold text-[30px] md:text-6xl md:mb-20 text-[#8D7662]">
+          <p class="text-center text-[16px] lg:text-3xl md:text-[25px] lg:mb-7">SERVICES</p>
+          <h2 class="text-center font-semibold text-[30px] md:text-[50px] lg:text-6xl md:mb-20 text-[#8D7662]">
             What we do?
           </h2>
         </div>
