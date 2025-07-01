@@ -30,16 +30,21 @@ onMounted(() => {
     height: auto;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .cloudpano-wrapper {
-        width: full;
-        max-width: 698px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cloudpano-wrapper {
+        max-width: 640px;
+        width: 100%;
     }
 }
 
 @media (max-width: 640px) {
     .cloudpano-wrapper {
-        width: 300px;
         max-width: 300px;
     }
 }

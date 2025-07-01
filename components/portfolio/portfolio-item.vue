@@ -8,6 +8,8 @@ const selectedIndex = ref<number | null>(null)
 const selectedItem = computed(() =>
     props.items.find((item) => item.id === props.id)
 )
+
+const errorPicture = ref(false);
 </script>
 
 <template>
@@ -22,8 +24,10 @@ const selectedItem = computed(() =>
                         class="text-white text-[25px] italic leading-[150%]">See
                         more</span>
                 </div>
-                <NuxtImg :id="'see-detail-portfolio-' + props.title" format="webp" :src="props.cover_url" loading="lazy"
-                    :alt="props.title"
+                <NuxtImg @error="errorPicture = true" v-if="props.cover_url && !errorPicture" id="see-detail-portfolio"
+                    format="webp" :src="props.cover_url" loading="lazy" :alt="props.title"
+                    class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[520px] object-cover object-center z-0" />
+                <NuxtImg v-else src="/NoImg.jpg" format="webp" alt="fallback picture"
                     class="lg:w-[360px] lg:h-[515px] md:w-full md:h-[515px] w-full h-[520px] object-cover object-center z-0" />
             </div>
             <div

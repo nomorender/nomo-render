@@ -149,9 +149,13 @@ const removePictureInput = (index: number) => {
     state.pics.splice(index, 1)
 }
 
+const handleCloseModal = () => {
+    isOpen.value = false
+}
+
 </script>
 <template>
-    <UModal v-model="isOpen">
+    <UModal v-model="isOpen" fullscreen>
         <UCard>
             <UForm :schema="schema" :state="state" class="space-y-4" @submit.prevent="onSubmit">
                 <UFormGroup label="Page" name="page">
@@ -189,10 +193,16 @@ const removePictureInput = (index: number) => {
                         </UButton>
                     </div>
                 </UFormGroup>
-                <UButton aria-label="Submit the edit content" type="submit"
-                    class="bg-black text-white hover:bg-white hover:text-black transition-all">
-                    Submit
-                </UButton>
+                <div class="flex gap-5 justify-end">
+                    <UButton aria-label="Submit the edit content" type="submit"
+                        class="bg-black text-white hover:bg-white hover:text-black transition-all">
+                        Submit
+                    </UButton>
+                    <UButton aria-label="Cancle the edit content" @click="handleCloseModal()"
+                        class="bg-gray-200 text-black hover:bg-white hover:text-black transition-all">
+                        Cancel
+                    </UButton>
+                </div>
             </UForm>
         </UCard>
     </UModal>

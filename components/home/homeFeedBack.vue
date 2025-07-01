@@ -279,7 +279,7 @@ const isLastItem = computed(() => {
                 </h2>
             </div>
             <div class="relative bg-[#FAF8F5]">
-                <div class="relative max-w-[1112px] pt-5 mx-auto">
+                <div class="relative lg:max-w-[1112px] md:max-w-[750px] pt-5 mx-auto">
                     <!-- BUTTON PREVIOUS PC -->
                     <UButton aria-label="Click here to see previous project" id="watch-previous-step"
                         class="hidden md:flex items-center justify-center p-2 absolute left-[-5rem] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-2xl"

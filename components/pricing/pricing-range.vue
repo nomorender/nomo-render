@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div id="watch-price-range"
-                        class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
+                        class="lg:text-[32px] md:text-[25px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                         {{ item.label }}
                     </div>
                 </div>
@@ -53,10 +53,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                            }}
+                                        }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                            }}
+                                        }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                            }}
+                                        }}
                                         </div>
                                     </div>
                                 </div>
@@ -90,11 +90,11 @@
                                         class="flex flex-col justify-center w-full bg-[#ffffff] rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.25)] mb-5">
                                         <div v-if="item.title || item.des" class="py-5">
                                             <div v-if="item.title"
-                                                class="w-full flex item-center justify-center md:text-[30px] text-[18px] font-[600] leading-[100%]">
+                                                class="w-full flex item-center justify-center md:text-[25px] text-[18px] font-[600] leading-[100%]">
                                                 {{ item.title }}
                                             </div>
                                             <div v-if="item.des"
-                                                class="mt-2 w-full flex item-center justify-center md:text-[22px] text-[12px] italic font-[300] leading-[150%]">
+                                                class="mt-2 w-full flex item-center justify-center md:text-[20px] text-[12px] italic font-[300] leading-[150%]">
                                                 {{ item.des }}
                                             </div>
                                         </div>

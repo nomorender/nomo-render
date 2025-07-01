@@ -67,7 +67,8 @@ const goToPrevItem = () => {
             </div>
         </div>
 
-        <div class="bg-[#FAF8F5] rounded-[8px] lg:w-[960px] md:w-[600px] w-[355px]">
+        <div
+            class="bg-[#FAF8F5] rounded-[8px] lg:w-[960px] md:max-w-[750px] md:w-full lg:max-w-[960px] w-[355px] max-w-[355px]">
             <div class="md:px-[50px] md:py-[40px] md:pb-2 px-[25px] pt-[28px] pb-[10px]">
                 <p class="text-[#8D7662] md:text-[32px] text-[16px] font-[600] uppercase leading-[150%]">
                     {{ selectedItem?.title }}
@@ -174,8 +175,7 @@ const goToPrevItem = () => {
                         <UIcon id="go-to-workflow-page" name="hugeicons:flowchart-02" class="size-12 text-[#8D7662]" />
                     </UButton>
                     <div class="font-[300] text-[20px] leading-[150%] text-[#FAF8F5] items-center justify-center">
-                        Our
-                        workflow
+                        Our workflow
                     </div>
                 </div>
             </div>
@@ -214,6 +214,7 @@ const goToPrevItem = () => {
                 </div>
                 <div class="flex flex-col items-center justify-center gap-1">
                     <UButton aria-label="Click here to see Nomorender's workflow" id="go-to-workflow-page"
+                        to="/workflow"
                         class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
                         <UIcon id="go-to-workflow-page" name="hugeicons:flowchart-02"
                             class="lg:size-12 md:size-11 size-5 text-[#8D7662]" />

@@ -36,7 +36,7 @@ const links =
             label: 'Storage',
             icon: 'material-symbols:home-storage',
             to: '/dashboard/storage'
-        }
+        },
     ]
 
 const items = [

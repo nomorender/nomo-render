@@ -17,7 +17,7 @@ export const usePortfolio = defineStore('portfolio', () => {
             if (!append) res.value = [];
             let dataQuery = supabase
                 .from('portfolio')
-                .select('*', { count: 'exact' });
+                .select('*', { count: 'exact' }).order('created_at', { ascending: false });;
             if (filter.category) {
                 dataQuery = dataQuery.eq('category', filter.category);
             }

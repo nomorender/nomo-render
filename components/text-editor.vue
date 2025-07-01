@@ -71,7 +71,7 @@
             @click="setColor('inherit')" />
         <UDivider orientation="vertical" />
         <editor-content :editor="editor"
-            class="focus:ring-0 focus:outline-none border border-gray-200 rounded-md px-3 prose editor-content" />
+            class="focus:ring-0 focus:outline-none border border-gray-200 rounded-md px-3 editor-content" />
     </div>
 </template>
 
@@ -156,6 +156,18 @@ const commandMap = {
     redo: () => editor?.chain().focus().redo().run(),
     insertBreak: () => editor?.chain().focus().setHardBreak().run(),
 }
+
+TextAlign.extend({
+    addKeyboardShortcuts() {
+        return {
+            'Mod-Shift-l': () => this.editor.commands.setTextAlign('left'),
+            'Mod-Shift-e': () => this.editor.commands.setTextAlign('center'),
+            'Mod-Shift-r': () => this.editor.commands.setTextAlign('right'),
+            'Mod-Shift-j': () => this.editor.commands.setTextAlign('justify'),
+        }
+    },
+})
+
 
 watch(() => props.modelValue, (newVal) => {
     if (editor && newVal !== editor.getHTML()) {
