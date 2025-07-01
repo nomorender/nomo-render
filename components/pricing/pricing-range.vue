@@ -30,9 +30,9 @@
                 </div>
                 <div class="md:text-[25px] text-[15px] font-light leading-[200%] text-justify text-[#000000]"
                     v-show="activeIndex === index">
-                    <div class="px-3" v-html="item.des" v-if="item.des"></div>
+                    <div class="px-3 lg:px-0" v-html="item.des" v-if="item.des"></div>
                     <!-- PC -->
-                    <div class="lg:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
+                    <div v-if="item.boxs" class="lg:grid hidden grid-cols-2 gap-[25px] mt-[20px]">
                         <div v-for="(box) in item.boxs" v-if="item.boxs" :key="box.title">
                             <div id="watch-price-range" class="bg-[#FFFFFF] col-span-1 rounded-[16px]">
                                 <div id="watch-price-range" class="py-10">
@@ -53,10 +53,10 @@
                                     <div v-if="box.price || box.time || box.including || box.plus"
                                         class="flex flex-col justify-center items-center gap-[10px] h-[200px]">
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.price">{{ box.price
-                                        }}
+                                            }}
                                         </div>
                                         <div class="font-[500] text-[25px] leading-[200%]" v-if="box.time">{{ box.time
-                                        }}
+                                            }}
                                         </div>
                                         <div class="h-[76px]" v-if="box.including || box.plus">
                                             <div class="font-[300] text-[25px] leading-[150%] italic text-center"
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="h-[200px] flex justify-center items-center" v-if="box.subdes">
                                         <div class="font-[500] text-[25px] leading-[200%]">{{ box.subdes
-                                        }}
+                                            }}
                                         </div>
                                     </div>
                                 </div>
@@ -148,9 +148,9 @@
                             </UCarousel>
                         </div>
                     </div>
-                    <div class="md:mt-0 md:pb-0 pb-5 px-3 md:px-0">
+                    <div class="md:mt-[20px] lg:mt-0 md:pb-0 mt-5 pb-5 px-3 md:px-0">
                         <div v-if="item.subtitle"
-                            class="font-[600] md:mt-10 md:text-[32px] text-[18px] leading-[150%] text-[#8D7662] md:mb-3 mb-2">
+                            class="font-[600] md:mt-10 lg:mt-[30px] md:text-[32px] text-[18px] leading-[150%] text-[#8D7662] md:mb-3 mb-2">
                             {{ item.subtitle }}
                         </div>
                         <div v-if="item.content"
@@ -189,7 +189,7 @@ const items = [
                 des: '(Living Room, Bedroom, Master Bath, Kitchen)',
                 pic: '/pricing/pic2.jpg',
                 price: 'Price: $150/view | 3-5 days',
-                including: 'Including: ($150 - $200)/Area Fee',
+                including: 'Including: $150/Area Fee',
                 plus: '+ ($50 - $100)/Modeling Furniture Fee'
             }, {
                 title: 'Large Size Interior',
@@ -210,8 +210,9 @@ const items = [
         subtitle: 'Additional Price',
         content:
             `
-                    <div><span class = "font-[500]">Additional View:</span> $30 - $50/view within the same space</div>
+                    <div><span class = "font-[500]">Additional View:</span> $20/view within the same space</div>
                     <div><span class = "font-[500]">Custom Furniture Modeling:</span> $10 - $30/piece for bespoke designs</div>
+                    <div><span class = "font-[500]">Revision:</span> 2 free revision rounds ($20/revision round afterward)</div>
                     <div><span class = "font-[500]">Video Walk-through</span> = Render Fees + $12 - $20 per second (each revision requires separate negotiation)</div>
                     <div><span class = "font-[500]">Virtual Tour</span> = Render Fees*30% (each revision requires separate negotiation)</div>
                     <div><span class = "font-[500]">Interior Render:</span> $30 - $50 per additional revision per image/photo. (Each image/photo includes 2-3 revisions by default at no additional cost) </div>   
@@ -250,31 +251,20 @@ const items = [
             `
     },
     {
-        label: 'Furniture Modeling',
-        boxs: [
-            {
-                title: 'Low Complexity',
-                pic: '/pricing/pic9.jpg',
-                price: 'Price: $10-$12/hour',
-                time: 'Time: 2-4 hours'
-            },
-            {
-                title: 'Medium Complexity',
-                pic: '/pricing/pic10.jpg',
-                price: 'Price: $10-$12/hour',
-                time: 'Time: 5-8 hours'
-            }, {
-                title: 'High Complexity',
-                pic: '/pricing/pic11.jpg',
-                price: 'Price: $12-$15/hour',
-                time: 'Time: 9-12 hours'
-            }, {
-                title: 'Very High Complexity',
-                pic: '/pricing/pic12.jpg',
-                price: 'Price: $12-$15/hour',
-                time: 'Time: 12-24 hours'
-            }
-        ],
+        label: '3D Modeling/White Clay',
+        des: `
+            <div class ="italic">
+                <span class="font-[500]">70%</span> of Rendering Price
+            </div>
+        `,
+    },
+    {
+        label: 'Furniture Modeling/Rendering',
+        des: `
+            <div class ="italic">
+                Pricing is based on the complexity of the design, calculated at a rate of <span class = "font-[500]">$70/model</span>
+            </div>
+        `,
         subtitle: 'Additional Price',
         content:
             `
@@ -284,7 +274,7 @@ const items = [
     {
         label: 'CAD Drawings',
         des: `
-            <div>
+            <div class ="italic">
                 Prices range from <span class="font-[500]">$30 - $50 per drawing</span>, depending on complexity
             </div>
         `,
@@ -300,7 +290,7 @@ const items = [
     {
         label: 'Customized Request',
         content: `
-            <div class="italic mb-[15px]">
+            <div class="italic">
                 We’re here to help bring your vision to life with precision and creativity. 
             </div>
             <div class="italic">
