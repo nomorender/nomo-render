@@ -1,14 +1,16 @@
 <template>
-  <div class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0" :class="{ 'bg-white': isScrolled }">
+  <div class="fixed inset-x-0 top-0 z-50 duration-200 group -translate-y-0 py-0 lg:py-0 md:py-2"
+    :class="{ 'bg-white': isScrolled }">
     <div class="mx-auto w-full xl:max-w-7xl relative">
       <nav class="flex items-center justify-between gap-4 duration-200 md:p-4 py-5 px-8 w-full">
         <div class="flex gap-4 items-center">
           <NuxtLink to="/" aria-label="Go to homepage">
             <nuxt-img
               v-if="!isScrolled && (currRoute.startsWith('/interior') || currRoute.startsWith('/portfolio') || currRoute.startsWith('/library') || currRoute === '/' || currRoute === '' || currRoute.startsWith('/inspire'))"
-              alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] lg:hidden" src="/LogoWhite.svg" />
-            <NuxtImg format="webp" v-else alt="Logo" preload class="!drop-shadow-2xl w-[50px] lg:hidden"
-              src="/logo.png" />
+              alt="Logo" preload class="text-white !drop-shadow-2xl w-[50px] lg:ml-0 ml-0 md:ml-5 lg:hidden"
+              src="/LogoWhite.svg" />
+            <NuxtImg format="webp" v-else alt="Logo" preload
+              class="!drop-shadow-2xl w-[52px] lg:hidden lg:ml-0 ml-0 md:ml-5" src="/logo.png" />
           </NuxtLink>
         </div>
         <div class="hidden gap-[100px] justify-center lg:flex">

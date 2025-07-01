@@ -397,19 +397,20 @@ const isLastItem = computed(() => {
                                 </div>
                             </div>
 
-                            <div class="fixed md:translate-x-[64.1rem] md:-translate-y-[-30px] -translate-x-[-19.5rem]">
-                                <UButton id="see-more-project-feedback"
-                                    aria-label="Click here to close modal of project" variant="ghost" size="xl"
-                                    class=" " @click="isOpen = false" :ui="{
+                            <div
+                                class="fixed lg:translate-x-[64.1rem] md:translate-x-[43rem] md:-translate-y-[-30px] md:fixed lg:-translate-y-[-30px] -translate-x-[-19.5rem]">
+                                <UButton id="close-modal-project" variant="ghost" size="xl" class=" "
+                                    @click="isOpen = false" :ui="{
                                         base: 'md:!p-[15px] !p-[10px] !focus:outline-none hover:none border-none md:!bg-[#8D7662] !bg-[#D9D9D9] !rounded-full hover:bg-none !ring-0',
                                     }">
-                                    <UIcon name="i-heroicons-x-mark-20-solid"
+                                    <UIcon id="close-modal-project" name="i-heroicons-x-mark-20-solid"
                                         class="size-7 md:text-white text-[#1D1B20]" />
                                 </UButton>
                             </div>
                         </div>
 
-                        <div class="bg-[#FAF8F5] rounded-[8px] lg:w-[960px] md:w-[600px] w-[355px]">
+                        <div
+                            class="bg-[#FAF8F5] rounded-[8px] lg:w-[960px] md:max-w-[750px] lg:max-w-full md:w-full w-[355px]">
                             <div class="md:px-[4rem] px-[35px] md:pt-[55px] pt-[40px] md:pb-5 pb-3">
                                 <p
                                     class="text-[#8D7662] lg:text-[32px] md:text-[32px] text-[16px] font-[600] mb-5 uppercase leading-[150%]">
@@ -419,7 +420,7 @@ const isLastItem = computed(() => {
                                 </div>
                             </div>
                             <div class="bg-[#FAF8F5]">
-                                <div class="lg:w-[960px] md:w-[600px] w-[355px] h-full">
+                                <div class="lg:w-[960px] md:max-w-[750px] md:w-full lg:max-w-full w-[355px] h-full">
                                     <NuxtImg format="webp" :alt="selectedItem?.name || 'picture of project'"
                                         :src="selectedItem?.picDes.pic1"
                                         class="w-full h-auto object-cover object-center" />

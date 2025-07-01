@@ -163,7 +163,7 @@ const slides = ref([
     {
         id: 5,
         name: 'Entertainment & Hospitality Industry',
-        desc: 'From designing breathtaking movie sets to showcasing luxury hotel interiors, 3D renderings bring creative visions to life, making them an essential tool for travel agencies, event planners, and production teams.',
+        desc: 'From movie sets to luxury hotels, 3D renderings turn creative visions into reality - an essential tool for travel, events, and production teams.',
         img: '/services/4.png',
         zIndex: 0,
     },
