@@ -48,4 +48,10 @@ onMounted(() => {
         max-width: 300px;
     }
 }
+
+@media (max-width: 1180px) {
+    .cloudpano-wrapper {
+        max-width: 700px;
+    }
+}
 </style>

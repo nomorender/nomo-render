@@ -90,8 +90,10 @@ const selected = ref(0)
         <!-- For Mobile -->
         <div class="block lg:hidden md:block max-w-[1280px] w-full mx-auto space-y-5">
             <div class="text-center mt-[100px] flex items-center justify-center flex-col gap-[10px]">
-                <h1 class="uppercase font-[700] text-[34px] leading-[100%] text-[#8D7662]">Workflow</h1>
-                <p class="text-[18px] leading-[150%] font-[600] max-w-[310px] italic">At Nomo Render: Great ideas start
+                <h1 class="uppercase font-[700] text-[34px] md:text-[50px] leading-[100%] text-[#8D7662]">Workflow</h1>
+                <p class="text-[18px] leading-[150%] md:text-[25px] font-[600] max-w-[310px] italic">At Nomo Render:
+                    Great ideas
+                    start
                     with a
                     simple
                     chat</p>
@@ -108,7 +110,7 @@ const selected = ref(0)
                         <div class="flex relative tems-center">
                             <UIcon :alt="item.label"
                                 :name="activeIndex === index ? 'iconoir:minus-circle-solid' : 'iconoir:plus-circle-solid'"
-                                class="md:w-[35px] md:h-[35px] w-[20px] h-[20px] transform transition-transform duration-200" />
+                                class="md:w-[30px] md:h-[30px] w-[20px] h-[20px] transform transition-transform duration-200" />
                             <div v-if="index === 0"
                                 class="md:hidden absolute -top-10 -left-[78px] z-10 text-xs text-[#8D7662] flex flex-col items-center">
                                 <div
@@ -119,7 +121,7 @@ const selected = ref(0)
                             </div>
                         </div>
                         <div
-                            class="md:text-[32px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
+                            class="md:text-[25px] text-[16px] leading-[100%] md:leading-[150%] font-[400] md:font-[500]">
                             {{ item.label }}
                         </div>
                     </div>

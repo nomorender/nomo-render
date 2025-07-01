@@ -54,10 +54,11 @@ if (store.res) {
             v-html="store?.res?.content">
         </div>
     </div>
+    <div
+        class="lg:text-[25px] md:text-[19px] text-[15px] lg:leading-[200%] leading-[180%] font-[600] uppercase text-[#8d7662] flex items-center justify-center lg:mb-6 md:mb-5 mb-5 ">
+        <span>Other posts</span>
+    </div>
     <div class="flex flex-col lg:gap-[70px] md:gap-[50px] gap-[30px] items-center justify-center lg:mb-20 mb-10">
-        <span
-            class="lg:text-[25px] md:text-[19px] text-[15px] lg:leading-[200%] leading-[180%] font-[500] uppercase text-[#8d7662]">Other
-            posts</span>
         <div v-for="blog in recommend.res.slice(0, 4)" :key="blog.id">
             <InspireRelatedBlog :id="blog.id" :slug="blog.slug" :tag="blog.tag" :title="blog.title"
                 :description="blog.description" :created_at="blog.created_at" :cover_url="blog.cover_url"

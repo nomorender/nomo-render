@@ -49,7 +49,7 @@ const openModal = (item: Project) => {
           </div>
           <USkeleton v-if="!loadedMap[item.cover_url || '']"
             class="absolute inset-0 w-[472px] lg:h-[725px] md:h-[600px] h-[550px] rounded-lg" />
-          <NuxtImg id='watch-project-homepage' :src="item.cover_url" alt="main img" loading="lazy" class="object-cover object-center w-[472px] lg:h-[725px] h-[550px] md:h-[600px] rounded-lg
+          <NuxtImg id='watch-project-homepage' :src="item.cover_url" alt="main img" loading="lazy" class="object-cover object-center lg:w-[472px] w-[472px] md:w-[600px] lg:h-[725px] h-[550px] md:h-[650px] rounded-lg
              transition-opacity duration-300" :class="loadedMap[item.cover_url || ''] ? 'opacity-100' : 'opacity-0'"
             draggable="false" @load="mark(item.cover_url)" />
         </div>
