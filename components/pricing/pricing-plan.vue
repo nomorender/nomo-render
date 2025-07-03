@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const data = {
     criteria: [
-        "Quality Control",
+        "XXXQuality Control",
         "Cost Efficiency",
         "Approx. Time to Finish",
         "Flexibility",
