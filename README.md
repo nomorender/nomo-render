@@ -10,6 +10,8 @@ Make sure to install dependencies:
 # npm
 npm install
 
+adadad
+
 # pnpm
 pnpm install
 
