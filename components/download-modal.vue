@@ -93,7 +93,7 @@ const submitForm = async () => {
 </script>
 
 <template>
-    <UModal v-model="props.modelValue" :ui="{
+    <UModal v-model="props.modelValue" prevent-close :ui="{
         rounded: 'rounded-[8px]',
         overlay: { background: 'bg-[#000000] opacity-[80%]' },
         container: 'border-none flex items-center justify-center shadow-none',
