@@ -251,14 +251,6 @@ const items = [
             `
     },
     {
-        label: '3D Modeling/White Clay',
-        des: `
-            <div class ="italic">
-                <span class="font-[500]">70%</span> of Rendering Price
-            </div>
-        `,
-    },
-    {
         label: 'Furniture Modeling',
         des: `
             <div class ="italic">
