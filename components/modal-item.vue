@@ -158,12 +158,12 @@ const goToPrevItem = () => {
         <div class="fixed -translate-x-[-1000px] -translate-y-[-140px] hidden lg:flex">
             <div class="lg:flex flex-col gap-7">
                 <div class="flex flex-col items-center justify-center">
-                    <NuxtLink aria-label="Click here to send message to Nomorender via WhatsApp"
-                        to="https://wa.me/84967563407" target="_blank">
-                        <UButton id="open-chatting-whatsapp"
-                            aria-label="Click here to send message to Nomorender via WhatsApp"
+                    <NuxtLink aria-label="Click here to send message to Nomorender"
+                        to="https://m.me/team.nomorender" target="_blank">
+                        <UButton id="open-chatting"
+                            aria-label="Click here to send message to Nomorender"
                             class="bg-[#FFFFFF] p-[20px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                            <UIcon id="open-chatting-whatsapp" name="material-symbols:mail"
+                            <UIcon id="open-chatting" name="material-symbols:mail"
                                 class="size-12 text-[#8D7662]" />
                         </UButton>
                     </NuxtLink>
@@ -200,12 +200,12 @@ const goToPrevItem = () => {
                 </div>
 
                 <div class="flex flex-col items-center justify-center gap-1">
-                    <NuxtLink to="https://wa.me/84967563407" target="_blank"
-                        aria-label="Click here to send message to Nomorender via WhatsApp">
-                        <UButton id="open-chatting-whatsapp"
-                            aria-label="Click here to send message to Nomorender via WhatsApp"
+                    <NuxtLink to="https://m.me/team.nomorender" target="_blank"
+                        aria-label="Click here to send message to Nomorender">
+                        <UButton id="open-chatting"
+                            aria-label="Click here to send message to Nomorender"
                             class="bg-[#FFFFFF] lg:p-[20px] md:p-[18px] p-[10px] rounded-full shadow-lg hover:bg-[#FFFFFF] hover:scale-105 transition">
-                            <UIcon id="open-chatting-whatsapp" name="material-symbols:mail"
+                            <UIcon id="open-chatting" name="material-symbols:mail"
                                 class="lg:size-11 md:size-12 size-5 text-[#8D7662]" />
                         </UButton>
                     </NuxtLink>

@@ -7,12 +7,6 @@ const social = [
         link: ``
     },
     {
-        id: 2,
-        icon: '/contact/whatsapp.svg',
-        content: `<span class="font-[500]">WhatsApp: </span>+84967563407`,
-        link: 'https://wa.me/84967563407'
-    },
-    {
         id: 3,
         icon: '/contact/instagram.svg',
         content: `<span class="font-[500]">Instagram: </span>@team.nomorender`,

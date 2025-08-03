@@ -39,8 +39,7 @@
                     <div>
                         <div
                             class="lg:text-[25px] md:text-[20px] text-[15px] font-[300] md:leading-[200%] leading-[180%] text-justify">
-                            Email: team@nomorender.com<br />
-                            WhatsApp: +84967563407
+                            Email: team@nomorender.com
                         </div>
                     </div>
                 </div>
@@ -58,12 +57,6 @@
                         <div class="flex items-center justify-center">
                             <NuxtLink to="https://www.instagram.com/team.nomorender" target="_blank">
                                 <nuxt-img alt="instagram" src="/SocialMedia/Instagram.svg"
-                                    class="md:w-[56px] md:h-[58px] w-[31px] h-[31px]" />
-                            </NuxtLink>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <NuxtLink to="https://wa.me/84967563407" target="_blank">
-                                <nuxt-img alt="whatsapp" src="/SocialMedia/whatsApp.svg"
                                     class="md:w-[56px] md:h-[58px] w-[31px] h-[31px]" />
                             </NuxtLink>
                         </div>
